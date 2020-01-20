@@ -1,0 +1,13 @@
+.github
+app
+bootstrap
+config
+database
+public
+routes
+storages
+docs
+tests
+vendor
+node_modules
+**/node_modules/**/*
