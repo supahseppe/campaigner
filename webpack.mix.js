@@ -18,6 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
                 '@': path.resolve('resources/'),
                 _Components: path.resolve('resources/js/components'),
                 _Layouts: path.resolve('resources/views/layouts/'),
+                _Pages: path.resolve('resources/views/pages/'),
             },
         },
     })
