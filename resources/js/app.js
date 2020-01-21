@@ -1,12 +1,14 @@
 // require('./bootstrap');
 
-import VueMeta from 'vue-meta';
-import { InertiaApp } from '@inertiajs/inertia-vue';
 import Vue from 'vue';
+Vue.config.productionTip = false;
+Vue.config.devtools = true;
 
-//Vue.config.productionTip = false
-//Vue.mixin({ methods: { route: window.route } })
+import { InertiaApp } from '@inertiajs/inertia-vue';
 Vue.use(InertiaApp);
+Vue.mixin({ methods: { route: window.route } });
+
+import VueMeta from 'vue-meta';
 Vue.use(VueMeta);
 
 const app = document.getElementById('app');

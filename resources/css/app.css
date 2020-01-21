@@ -1,10 +1,12 @@
-@import "tailwindcss/base";
-@import "./base";
+@import 'tailwindcss/base';
+@import './base';
+@import './typography';
 
-@import "tailwindcss/components";
-@import "./components";
+@import 'tailwindcss/components';
+@import './components';
 
-@import "tailwindcss/utilities";
-@import "./utilities";
+@import 'tailwindcss/utilities';
+@import './utilities';
 
-@import "./nprogress";
+@import './nprogress';
+@import './forms';

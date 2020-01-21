@@ -5,27 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Campaigner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Campaigner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Components/inputs/TextInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.stylelintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jsonfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsonfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +197,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WZx3LVCMthVbAOfBynCDR0OzsS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -200,6 +210,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/stubs/vue" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -217,15 +228,17 @@
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/stubs/vue" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Components/inputs" />
+      <recent name="$PROJECT_DIR$/resources/js/Components" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
       <recent name="$PROJECT_DIR$/stubs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/stubs/vue" />
     </key>
   </component>
   <component name="RunManager">
@@ -266,7 +279,10 @@
       <workItem from="1579492107102" duration="767000" />
       <workItem from="1579492897033" duration="934000" />
       <workItem from="1579497425577" duration="2231000" />
-      <workItem from="1579499897087" duration="392000" />
+      <workItem from="1579499897087" duration="4302000" />
+      <workItem from="1579582379539" duration="1253000" />
+      <workItem from="1579616092055" duration="324000" />
+      <workItem from="1579616432781" duration="2869000" />
     </task>
     <servers />
   </component>
@@ -278,6 +294,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#ESLint/0.0.1680.1050@0.0.1680.1050" timestamp="1579497574966" />
+    <state x="440" y="190" key="#Notifications" timestamp="1579582346854">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="190" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1579582346854" />
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579498149905">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -286,10 +306,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="492" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1579392769537" />
+    <state x="647" y="346" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1579579661479">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="647" y="346" key="#com.intellij.ide.macro.MacrosDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579579661479" />
     <state x="445" y="198" width="805" height="654" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1579377445278">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="445" y="198" width="805" height="654" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579377445278" />
+    <state x="2328" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579616413846">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2328" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616413846" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579583263208">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579583263208" />
     <state x="413" y="182" key="#phpunit.xml" timestamp="1579443108338">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -298,10 +330,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="571" y="358" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1579497565278" />
-    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog" timestamp="1579499801171">
+    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog" timestamp="1579580320584">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579499801171" />
+    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
     <state width="1640" height="276" key="GridCell.Tab.0.bottom" timestamp="1579492056690">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -326,31 +358,41 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="383" y="267" key="IDE.errors.dialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579492165958" />
-    <state x="200" y="99" width="1264" height="823" key="SettingsEditor" timestamp="1579499967101">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="1909" y="102" width="1264" height="823" key="SettingsEditor" timestamp="1579616954091">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="200" y="99" width="1264" height="823" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579499967101" />
+    <state x="1909" y="102" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616954091" />
+    <state x="200" y="99" width="1264" height="823" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579582439076" />
+    <state x="1909" y="102" key="SettingsEditor/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616250818" />
     <state x="570" y="275" width="540" height="540" key="StructurePopup" timestamp="1579490471260">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="570" y="275" width="540" height="540" key="StructurePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1579490471260" />
-    <state x="519" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1579499897756">
+    <state x="519" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1579582386417">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="519" y="369" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579499897756" />
+    <state x="519" y="383" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579582386417" />
     <state x="519" y="383" key="com.intellij.ide.util.TipDialog/0.22.1680.1028@0.22.1680.1028" timestamp="1579404507479" />
     <state x="519" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1579370722176" />
     <state x="476" y="147" width="730" height="756" key="find.popup" timestamp="1579396435201">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="476" y="147" width="730" height="756" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579396435201" />
+    <state x="2240" y="267" width="800" height="546" key="recent.locations.popup" timestamp="1579616831284">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2240" y="267" width="800" height="546" key="recent.locations.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616831284" />
+    <state x="490" y="260" width="700" height="530" key="recent.locations.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579582331967" />
+    <state x="2240" y="267" width="800" height="546" key="recent.locations.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616256754" />
     <state x="440" y="190" key="scopes" timestamp="1579396251907">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1579498636064">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1579617009820">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579498636064" />
+    <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579583012596" />
+    <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
 </project>

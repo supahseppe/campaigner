@@ -5,36 +5,23 @@
                 <div
                     class="flex flex-col break-words bg-white border border-2 rounded shadow-md"
                 >
-                    <div class="px-6 py-3 mb-0 font-semibold text-gray-700 bg-gray-200">
+                    <div
+                        class="px-6 py-3 mb-0 font-bold font-lg text-white bg-indigo-500"
+                    >
                         Login
                     </div>
 
                     <form class="w-full p-6" @submit.prevent="submit">
                         <div class="flex flex-wrap mb-6">
-                            <label
-                                for="email"
-                                class="block mb-2 text-sm font-bold text-gray-700"
-                            >
-                                E-Mail Address:
-                            </label>
-
-                            <input
-                                id="email"
+                            <text-input
+                                label="Email Address"
+                                :type="email"
+                                :errors="$page.errors.email"
                                 v-model="form.email"
-                                type="email"
-                                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                :class="{ 'border-red-500': $page.errors.email }"
-                                name="email"
+                                class="w-full"
                                 required
                                 autofocus
                             />
-
-                            <p
-                                v-if="$page.errors.email"
-                                class="mt-4 text-xs italic text-red-500"
-                            >
-                                {{ $page.errors.email[0] }}
-                            </p>
                         </div>
 
                         <div class="flex flex-wrap mb-6">
@@ -118,11 +105,13 @@
 <script>
     import Layout from '_Layouts/MainLayout';
     import LoadingButton from '_Components/LoadingButton';
+    import TextInput from '_Inputs/TextInput';
 
     export default {
         metaInfo: { title: 'Login' },
         layout: Layout,
         components: {
+            'text-input': TextInput,
             LoadingButton,
         },
         data() {

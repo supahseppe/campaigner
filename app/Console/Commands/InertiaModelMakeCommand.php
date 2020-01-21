@@ -125,24 +125,39 @@ class InertiaModelMakeCommand extends GeneratorCommand
     }
 
     /**
+     * Replaces dummy variables with name input
+     *
+     * @return string
+     */
+    protected function replaceDummy($file, $name)
+    {
+        return str_replace(
+            ['Dummy', 'Dummies', 'dummy', 'dummies'],
+            [Str::studly($name), Str::pluralStudly($name), Str::lower($name), Str::plural(Str::lower($name))],
+            $file
+        );
+    }
+
+    /**
      * Create Vue components for the model.
      *
      * @return void
      */
     protected function createVueComponents()
     {
-        $model_name = Str::studly(class_basename($this->argument('name')));
+        $input = Str::studly(class_basename($this->argument('name')));
+        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
 
         $stubs = $this->files->allFiles(base_path() . '/resources/stubs/vue/pages');
 
         foreach ($stubs as $stub) {
-            $path = base_path() . '/resources/views/pages/' . $model_name . '/' . $stub->getFilename();
+            $path = base_path() . '/resources/views/pages/' . $input . '/' . $stub->getFilename();
 
             if (! $this->files->isDirectory(dirname($path))) {
                 $this->files->makeDirectory(dirname($path), 0777, true, true);
             }
 
-            $file = $this->files->get($stub);
+            $file = $this->replaceDummy($this->files->get($stub), $name);
             $this->files->put($path, $file);
         }
 

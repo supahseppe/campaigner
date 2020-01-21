@@ -11,19 +11,32 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .purgeCss()
     .webpackConfig({
-        output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
+        output: {
+            chunkFilename: 'js/parts/[name].js?id=[chunkhash]',
+        },
         resolve: {
             alias: {
                 vue$: 'vue/dist/vue.runtime.esm.js',
                 '@': path.resolve('resources/'),
                 _Components: path.resolve('resources/js/components'),
-                _Layouts: path.resolve('resources/views/layouts/'),
-                _Pages: path.resolve('resources/views/pages/'),
+                _Layouts: path.resolve('resources/views/layouts'),
+                _Pages: path.resolve('resources/views/pages'),
+                _Inputs: path.resolve('resources/js/components/inputs'),
             },
         },
     })
     .babelConfig({
         plugins: ['@babel/plugin-syntax-dynamic-import'],
     })
-    .version();
-//.sourceMaps()
+    .autoload({
+        lodash: ['_', 'window._'],
+    })
+    .browserSync({
+        ui: false,
+        open: false,
+        proxy: 'https://campaigner.test',
+    });
+
+if (mix.inProduction()) {
+    mix.sourceMaps().version();
+}
