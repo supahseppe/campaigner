@@ -75,6 +75,7 @@ class InertiaModelMakeCommand extends GeneratorCommand
         $this->call('make:factory', [
             'name' => "{$factory}Factory",
             '--model' => $this->qualifyClass($this->getNameInput()),
+            '-n'
         ]);
     }
 
