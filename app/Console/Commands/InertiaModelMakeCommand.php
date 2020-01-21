@@ -3,10 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Support\Str;
-use Illuminate\Console\GeneratorCommand;
+use Illuminate\Foundation\Console\ModelMakeCommand;
 use Illuminate\Filesystem\Filesystem;
 
-class InertiaModelMakeCommand extends GeneratorCommand
+class InertiaModelMakeCommand extends ModelMakeCommand
 {
     /**
      * The console command name.
@@ -56,6 +56,10 @@ class InertiaModelMakeCommand extends GeneratorCommand
      */
     public function handle()
     {
+        if (parent::handle() === false && ! $this->option('force')) {
+            return false;
+        }
+
         $this->createFactory();
         $this->createMigration();
         $this->createController();
@@ -75,7 +79,6 @@ class InertiaModelMakeCommand extends GeneratorCommand
         $this->call('make:factory', [
             'name' => "{$factory}Factory",
             '--model' => $this->qualifyClass($this->getNameInput()),
-            '-n'
         ]);
     }
 
