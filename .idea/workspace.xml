@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Campaigner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Campaigner.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jsonfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsonfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +50,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -121,7 +152,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
-      <path value="$PROJECT_DIR$/vendor/laravel-frontend-presets/inertiajs" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/atehnix/laravel-stubs" />
       <path value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
@@ -148,29 +178,46 @@
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/org_heigl/ghostscript" />
       <path value="$PROJECT_DIR$/vendor/cybercog/laravel-love" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/lorisleiva/laravel-deployer" />
+      <path value="$PROJECT_DIR$/vendor/deployer/deployer" />
+      <path value="$PROJECT_DIR$/vendor/deployer/recipes" />
+      <path value="$PROJECT_DIR$/vendor/deployer/phar-update" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WZx3LVCMthVbAOfBynCDR0OzsS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/stubs/vue" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -215,7 +262,11 @@
       <workItem from="1579395575198" duration="1229000" />
       <workItem from="1579403475954" duration="6663000" />
       <workItem from="1579443097394" duration="344000" />
-      <workItem from="1579490458456" duration="1006000" />
+      <workItem from="1579490458456" duration="1605000" />
+      <workItem from="1579492107102" duration="767000" />
+      <workItem from="1579492897033" duration="934000" />
+      <workItem from="1579497425577" duration="2231000" />
+      <workItem from="1579499897087" duration="392000" />
     </task>
     <servers />
   </component>
@@ -223,10 +274,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579389021920">
+    <state x="440" y="190" key="#ESLint" timestamp="1579497574966">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579389021920" />
+    <state x="440" y="190" key="#ESLint/0.0.1680.1050@0.0.1680.1050" timestamp="1579497574966" />
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579498149905">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579498149905" />
     <state x="492" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579392769537">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -239,34 +294,50 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="413" y="182" key="#phpunit.xml/0.0.1680.1050@0.0.1680.1050" timestamp="1579443108338" />
-    <state width="1640" height="276" key="GridCell.Tab.0.bottom" timestamp="1579491350927">
+    <state x="571" y="358" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579497565278">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1579491350927" />
-    <state width="1640" height="276" key="GridCell.Tab.0.center" timestamp="1579491350926">
+    <state x="571" y="358" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1579497565278" />
+    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog" timestamp="1579499801171">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1640" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1579491350926" />
-    <state width="1640" height="276" key="GridCell.Tab.0.left" timestamp="1579491350925">
+    <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579499801171" />
+    <state width="1640" height="276" key="GridCell.Tab.0.bottom" timestamp="1579492056690">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1640" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1579491350925" />
-    <state width="1640" height="276" key="GridCell.Tab.0.right" timestamp="1579491350927">
+    <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1579492056690" />
+    <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037097" />
+    <state width="1640" height="276" key="GridCell.Tab.0.center" timestamp="1579492056689">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1640" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1579491350927" />
-    <state x="418" y="192" width="1046" height="722" key="SettingsEditor" timestamp="1579490701364">
+    <state width="1640" height="276" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1579492056689" />
+    <state width="1640" height="276" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037095" />
+    <state width="1640" height="276" key="GridCell.Tab.0.left" timestamp="1579492056689">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="418" y="192" width="1046" height="722" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579490701364" />
+    <state width="1640" height="276" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1579492056689" />
+    <state width="1640" height="276" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037094" />
+    <state width="1640" height="276" key="GridCell.Tab.0.right" timestamp="1579492056690">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1640" height="276" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1579492056690" />
+    <state width="1640" height="276" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037096" />
+    <state x="383" y="267" key="IDE.errors.dialog" timestamp="1579492165958">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="383" y="267" key="IDE.errors.dialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579492165958" />
+    <state x="200" y="99" width="1264" height="823" key="SettingsEditor" timestamp="1579499967101">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="200" y="99" width="1264" height="823" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579499967101" />
     <state x="570" y="275" width="540" height="540" key="StructurePopup" timestamp="1579490471260">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="570" y="275" width="540" height="540" key="StructurePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1579490471260" />
-    <state x="519" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1579490467729">
+    <state x="519" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1579499897756">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="519" y="369" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579490467729" />
+    <state x="519" y="369" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579499897756" />
     <state x="519" y="383" key="com.intellij.ide.util.TipDialog/0.22.1680.1028@0.22.1680.1028" timestamp="1579404507479" />
     <state x="519" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1579370722176" />
     <state x="476" y="147" width="730" height="756" key="find.popup" timestamp="1579396435201">
@@ -277,9 +348,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1579491414930">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1579498636064">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579491414930" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579498636064" />
   </component>
 </project>

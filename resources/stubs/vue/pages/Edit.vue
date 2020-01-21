@@ -4,11 +4,16 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    
+
     export default {
-        name: "Edit",
+        name: 'Dummy',
         components: {},
-        props: {},
+        props: {
+            dummy: {
+                type: Object,
+                default: () => {},
+            },
+        },
         data: () => ({
             title: '',
             description: '',

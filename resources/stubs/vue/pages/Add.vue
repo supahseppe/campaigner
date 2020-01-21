@@ -4,9 +4,9 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    
+
     export default {
-        name: "Add",
+        name: 'Add',
         components: {},
         props: {},
         data: () => ({

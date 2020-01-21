@@ -1,14 +1,23 @@
 <template>
-    <div></div>
+    <section>
+        <div v-for="dummy in dummies" :key="dummy.id">
+            <p>Dummy: {{ dummy.id }}</p>
+        </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    
+
     export default {
-        name: "Browse",
+        name: 'Browse',
         components: {},
-        props: {},
+        props: {
+            dummies: {
+                type: Array,
+                default: () => [],
+            },
+        },
         data: () => ({
             title: '',
             description: '',

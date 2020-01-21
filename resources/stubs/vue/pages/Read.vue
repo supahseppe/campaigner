@@ -1,16 +1,23 @@
 <template>
-    <div></div>
+    <div>
+        <h1 class="">Dummy {{ dummy.id }}</h1>
+    </div>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    
+
     export default {
-        name: "Read",
+        name: 'Dummy',
         components: {},
-        props: {},
+        props: {
+            dummy: {
+                type: Object,
+                default: () => {},
+            },
+        },
         data: () => ({
-            title: '',
+            title: 'Viewing Dummy',
             description: '',
         }),
         computed: {},

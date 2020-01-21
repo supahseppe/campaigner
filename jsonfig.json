@@ -4,11 +4,9 @@
         "paths": {
             "@/*": ["./resources/*"],
             "_Components/*": ["./resources/js/components/*"],
-            "_Layouts/*": ["./resources/views/layouts/*"]
+            "_Layouts/*": ["./resources/views/layouts/*"],
             "_Pages/*": ["./resources/views/pages/*"]
         }
     },
-    "exclude": [
-        "node_modules"
-    ]
+    "exclude": ["node_modules"]
 }
