@@ -169,7 +169,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
      */
     protected function addRoute($name)
     {
-        $plural = Str::pluralStudly($name);
+        $plural = strtolower(Str::pluralStudly($name));
         $file_loc = base_path() . '/routes/web.php';
         $route = "\nRoute::resource('$plural', '{$name}Controller');";
 
