@@ -116,6 +116,9 @@ class InertiaModelMakeCommand extends ModelMakeCommand
             'name' => "{$controller}Controller",
             '--model' => $model_name,
         ]);
+
+        $path = base_path() . "/app/Http/Controllers/{$controller}Controller.php";
+        $this->cleanupDummy($path, $model_name);
     }
 
     /**
@@ -132,9 +135,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
         ]);
 
         $path = base_path() . "/tests/Feature/{$model_name}Test.php";
-        $file = $this->files->get($path);
-        $content = $this->replaceDummy($file, $model_name);
-        $this->files->replace($path, $content);
+        $this->cleanupDummy($path, $model_name);
     }
 
     /**
@@ -149,6 +150,16 @@ class InertiaModelMakeCommand extends ModelMakeCommand
             [Str::studly($name), Str::pluralStudly($name), Str::lower($name), Str::plural(Str::lower($name))],
             $file
         );
+    }
+
+    /**
+     * A helper to fix files generated outside this command
+     */
+    protected function cleanupDummy($path, $name)
+    {
+        $file = $this->files->get($path);
+        $content = $this->replaceDummy($file, $name);
+        $this->files->replace($path, $content);
     }
 
     /**
