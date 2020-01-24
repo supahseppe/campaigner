@@ -68,8 +68,8 @@ class InertiaPageMakeCommand extends Command
     protected function replaceDummy($file, $name)
     {
         return str_replace(
-            ['DummyPage'],
-            [$name],
+            ['Dummy', 'Dummies', 'dummy', 'dummies'],
+            [Str::studly($name), Str::pluralStudly($name), Str::lower($name), Str::plural(Str::lower($name))],
             $file
         );
     }

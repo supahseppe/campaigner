@@ -8,44 +8,48 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
 
-class DummyClass extends TestCase
+class DummyTest extends TestCase
 {
     use RefreshDatabase;
 
     protected $user;
-    protected $dummy;
+    protected $test_dummy;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->user = factory('App\User')->create();
-        $this->dummy = factory('App\Dummy')->create();
+        $this->test_dummy = factory('App\Dummy')->create();
+
+        $this->user->dummies()->save($this->test_dummy);
     }
 
     /** @test */
     public function unauthenticated_users_cannot_see_dummy_pages()
     {
-        $this->get(route('dummys.index'))
+        $dummy = factory('App\Dummy')->create();
+
+        $this->get(route('dummies.index'))
             ->assertRedirect('/login');
 
-        $this->get(route('dummys.show', $this->dummy->slug))
+        $this->get(route('dummies.show', $dummy->slug))
             ->assertRedirect('/login');
 
-        $this->get(route('dummys.edit', $this->dummy->slug))
+        $this->get(route('dummies.edit', $dummy->slug))
             ->assertRedirect('/login');
     }
 
     /** @test */
-    public function user_can_see_own_dummys()
+    public function user_can_see_own_dummies()
     {
-        // We're making 4 more models, for a total of 5 (counting the one created in setUp)
-        $this->user->dummys()->saveMany(
+        // We're making 4 more dummies, for a total of 5 (counting the one created in setUp)
+        $this->user->dummies()->saveMany(
             factory('App\Dummy', 4)->make()
         );
 
         $this->actingAs($this->user)
-            ->get(route('dummys.index'))
+            ->get(route('dummies.index'))
             ->assertStatus(200)
             ->assertHasProp('pager.data')
             ->assertPropCount('pager.data', 5);
@@ -55,7 +59,7 @@ class DummyClass extends TestCase
     public function user_can_see_single_dummy()
     {
         $this->actingAs($this->user)
-            ->get(route('dummys.show', $this->dummy->slug))
+            ->get(route('dummies.show', $this->test_dummy->slug))
             ->assertStatus(200)
             ->assertHasProp('dummy');
     }
@@ -63,25 +67,41 @@ class DummyClass extends TestCase
     /** @test */
     public function user_can_create_dummy()
     {
-        $dummy = $this->dummy;
+        $dummy = factory('App\Dummy')->make();
+
         $this->actingAs($this->user)
-            ->get(route('dummys.create'), $dummy->toArray())
+            ->get(route('dummies.index'))
+            ->assertPropCount('pager.data', 1);
+
+        $this->actingAs($this->user)->get(route('dummies.create'), $dummy->toArray())
             ->assertStatus(200);
+
+        $request = $this->actingAs($this->user)
+            ->post(route('dummies.store'), $dummy->toArray());
+
+        $request = $this->actingAs($this->user)
+            ->get(route('dummies.index'))
+            ->assertPropCount('pager.data', 2);
+
+        $this->actingAs($this->user)
+            ->get(route('dummies.index'))
+            ->assertPropCount('pager.data', 2);
     }
 
     /** @test */
     public function user_can_edit_dummy()
     {
-        $this->actingAs($this->user)
-            ->get(route('dummys.update', $this->dummy->slug))
-            ->assertStatus(200);
+        $request = $this->actingAs($this->user)
+            ->put(route('dummies.update', $this->test_dummy->slug), $this->test_dummy->toArray())
+            ->assertRedirect(route('dummies.show', [$this->test_dummy->slug]));
     }
 
     /** @test */
     public function user_can_delete_dummy()
     {
+        $dummy = factory('App\Dummy')->create();
         $this->actingAs($this->user)
-            ->get(route('dummys.destroy', $this->dummy->slug))
-            ->assertStatus(200);
+            ->delete(route('dummies.destroy', $dummy->slug))
+            ->assertRedirect(route('dummies.index'));
     }
 }
