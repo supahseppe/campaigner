@@ -60,12 +60,15 @@ class InertiaModelMakeCommand extends ModelMakeCommand
             return false;
         }
 
+        $input = Str::studly(class_basename($this->argument('name')));
+        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
+
         $this->createFactory();
         $this->createMigration();
         $this->createController();
         $this->createFeatureTest();
-        $this->addRoute();
-        $this->createVueComponents();
+        $this->addRoute($name);
+        $this->createVueComponents($input, $name);
     }
 
     /**
@@ -148,9 +151,8 @@ class InertiaModelMakeCommand extends ModelMakeCommand
      *
      * @return void
      */
-    protected function addRoute()
+    protected function addRoute($name)
     {
-        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
         $plural = Str::pluralStudly($name);
         $file_loc = base_path() . '/routes/web.php';
         $route = "\nRoute::resource('$plural', '($name)Controller');";
@@ -164,11 +166,8 @@ class InertiaModelMakeCommand extends ModelMakeCommand
      *
      * @return void
      */
-    protected function createVueComponents()
+    protected function createVueComponents($input, $name)
     {
-        $input = Str::studly(class_basename($this->argument('name')));
-        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
-
         $stubs = $this->files->allFiles(base_path() . '/resources/stubs/vue/pages');
 
         foreach ($stubs as $stub) {
