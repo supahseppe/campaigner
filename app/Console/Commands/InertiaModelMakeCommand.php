@@ -140,7 +140,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     protected function replaceDummy($file, $name)
     {
         return preg_replace(
-            ['Dummy', 'Dummies', 'dummy', 'dummies'],
+            ['/Dummy/', '/Dummies/', '/dummy/', '/dummies/'],
             [Str::studly($name), Str::pluralStudly($name), Str::lower($name), Str::plural(Str::lower($name))],
             $file
         );
