@@ -130,6 +130,11 @@ class InertiaModelMakeCommand extends ModelMakeCommand
         $this->call('make:test', [
             'name' => "{$model_name}Test",
         ]);
+
+        $path = base_path() . "/tests/Feature/{$model_name}Test.php";
+        $file = $this->files->get($path);
+        $content = $this->replaceDummy($file, $model_name);
+        $this->files->replace($path, $content);
     }
 
     /**

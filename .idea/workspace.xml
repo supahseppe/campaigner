@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -270,13 +271,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.CampaignTest.unauthenticated_users_cannot_see_campaign_pages" />
-      <item itemvalue="PHPUnit.CampaignTest.user_can_delete_campaign" />
       <item itemvalue="PHPUnit.CampaignTest" />
-      <item itemvalue="PHPUnit.CampaignTest.user_can_edit_campaign" />
+      <item itemvalue="PHPUnit.CampaignTest.unauthenticated_users_cannot_see_campaign_pages" />
       <item itemvalue="PHPUnit.CampaignTest.user_can_create_campaign" />
+      <item itemvalue="PHPUnit.CampaignTest.user_can_delete_campaign" />
+      <item itemvalue="PHPUnit.CampaignTest.user_can_edit_campaign" />
+      <item itemvalue="PHP Web Page.Campaigner" />
     </list>
     <recent_temporary>
       <list>
