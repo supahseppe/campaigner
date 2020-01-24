@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaPageMakeCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/VueComponentCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/VueComponentCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/test.stub" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/test.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -507,10 +505,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="617" y="250" key="com.jetbrains.php.test.PhpNewTestDialog/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579625983826" />
-    <state x="476" y="147" width="730" height="756" key="find.popup" timestamp="1579396435201">
+    <state x="476" y="147" width="809" height="756" key="find.popup" timestamp="1579851241205">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="476" y="147" width="730" height="756" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579396435201" />
+    <state x="476" y="147" width="809" height="756" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579851241205" />
     <state x="560" y="267" width="800" height="546" key="recent.locations.popup" timestamp="1579630038237">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
