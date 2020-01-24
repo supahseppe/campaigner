@@ -4,15 +4,15 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    
+
     export default {
-        name: "DummyPage",
+        name: 'DummyPage',
         components: {},
         props: {},
-        data: () => ({
-            title: '',
-            description: '',
-        }),
+        data() {
+            pageTitle: '',
+            pageDescription: '',
+        },
         computed: {},
         watch: {},
         created() {},
@@ -21,11 +21,11 @@
         layout: MainLayout,
         metaInfo() {
             return {
-                title: this.title,
+                title: this.pageTitle,
                 meta: [
                     {
                         name: 'description',
-                        content: this.description,
+                        content: this.pageDescription,
                     },
                 ],
             };

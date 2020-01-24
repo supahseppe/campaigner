@@ -1,6 +1,14 @@
 <template>
     <div>
-        <h1 class="">Dummy {{ dummy.id }}</h1>
+        <section class="flex items-center justify-between">
+            <h1 class="text-3xl mb-6">{{ dummy.title }}</h1>
+            <inertia-link
+                :href="route('dummies.edit', dummy.slug)"
+                class="text-blue-200 font-bold py-2 px-4 bg-indigo-900 rounded"
+            >
+                Edit
+            </inertia-link>
+        </section>
     </div>
 </template>
 
@@ -16,10 +24,12 @@
                 default: () => {},
             },
         },
-        data: () => ({
-            title: 'Viewing Dummy',
-            description: '',
-        }),
+        data() {
+            return {
+                pageTitle: `Dummy: ${this.dummy.title}`,
+                pageDescription: `Viewing the ${this.dummy.title} dummy.`,
+            };
+        },
         computed: {},
         watch: {},
         created() {},
@@ -28,11 +38,11 @@
         layout: MainLayout,
         metaInfo() {
             return {
-                title: this.title,
+                title: this.pageTitle,
                 meta: [
                     {
                         name: 'description',
-                        content: this.description,
+                        content: this.pageDescription,
                     },
                 ],
             };

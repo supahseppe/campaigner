@@ -12,11 +12,14 @@
         "atehnix/laravel-stubs": "^6.4",
         "cviebrock/eloquent-sluggable": "^6.0",
         "cybercog/laravel-love": "^8.1",
+        "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
+        "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.5",
-        "inertiajs/inertia-laravel": "^0.1",
+        "inertiajs/inertia-laravel": "^0.2",
         "itsgoingd/clockwork": "^4.0",
         "laravel/framework": "^6.2",
+        "laravel/telescope": "^2.1",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
         "lorisleiva/laravel-deployer": "^0.2.16",
@@ -34,7 +37,7 @@
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^8.5"
     },
     "config": {
         "optimize-autoloader": true,

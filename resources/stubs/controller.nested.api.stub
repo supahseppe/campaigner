@@ -17,7 +17,7 @@ class DummyClass extends Controller
      */
     public function index(ParentDummyModelClass $ParentDummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**

@@ -14,22 +14,22 @@ class DummyClass extends Controller
      * Display a listing of the resource.
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function index(ParentDummyModelClass $ParentDummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]) Inertia::render('Path/To/View', [...data])
+        // return Inertia::render('Path/To/View', [...data]) Inertia::render('Path/To/View', [...data])
     }
 
     /**
      * Show the form for creating a new resource.
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function create(ParentDummyModelClass $ParentDummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -37,11 +37,11 @@ class DummyClass extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function store(Request $request, ParentDummyModelClass $ParentDummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -49,11 +49,11 @@ class DummyClass extends Controller
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function show(ParentDummyModelClass $ParentDummyModelVariable, DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -61,11 +61,11 @@ class DummyClass extends Controller
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function edit(ParentDummyModelClass $ParentDummyModelVariable, DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -74,11 +74,11 @@ class DummyClass extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function update(Request $request, ParentDummyModelClass $ParentDummyModelVariable, DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -86,10 +86,10 @@ class DummyClass extends Controller
      *
      * @param  \ParentDummyFullModelClass  $ParentDummyModelVariable
      * @param  \DummyFullModelClass  $DummyModelVariable
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function destroy(ParentDummyModelClass $ParentDummyModelVariable, DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 }

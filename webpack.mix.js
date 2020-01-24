@@ -17,11 +17,12 @@ mix.js('resources/js/app.js', 'public/js')
         resolve: {
             alias: {
                 vue$: 'vue/dist/vue.runtime.esm.js',
-                '@': path.resolve('resources/'),
-                _Components: path.resolve('resources/js/components'),
-                _Layouts: path.resolve('resources/views/layouts'),
-                _Pages: path.resolve('resources/views/pages'),
-                _Inputs: path.resolve('resources/js/components/inputs'),
+                '@': path.resolve(__dirname, 'resources/'),
+                _Components: path.resolve(__dirname, 'resources/js/components'),
+                _Layouts: path.resolve(__dirname, 'resources/views/layouts'),
+                _Pages: path.resolve(__dirname, 'resources/views/pages'),
+                _Inputs: path.resolve(__dirname, 'resources/js/components/inputs'),
+                _Icons: path.resolve(__dirname, 'node_modules/vue-material-design-icons'),
             },
         },
     })
@@ -38,5 +39,5 @@ mix.js('resources/js/app.js', 'public/js')
     });
 
 if (mix.inProduction()) {
-    mix.sourceMaps().version();
+    mix.version();
 }

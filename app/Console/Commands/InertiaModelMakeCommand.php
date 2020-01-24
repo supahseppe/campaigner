@@ -64,6 +64,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
         $this->createMigration();
         $this->createController();
         $this->createFeatureTest();
+        $this->addRoute();
         $this->createVueComponents();
     }
 
@@ -140,6 +141,22 @@ class InertiaModelMakeCommand extends ModelMakeCommand
             [Str::studly($name), Str::pluralStudly($name), Str::lower($name), Str::plural(Str::lower($name))],
             $file
         );
+    }
+
+    /**
+     * Add route to Routes file
+     *
+     * @return void
+     */
+    protected function addRoute()
+    {
+        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
+        $plural = Str::pluralStudly($name);
+        $file_loc = base_path() . '/routes/web.php';
+        $route = "\nRoute::resource('$plural', '($name)Controller');";
+
+        $this->files->append($file_loc, $route);
+        $this->info('Model resource route created successfully.');
     }
 
     /**

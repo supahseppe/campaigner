@@ -8,12 +8,13 @@
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Spectral:400,400i&display=swap" rel="stylesheet">
-        
+
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
         <script src="{{ mix('js/app.js') }}" defer></script>
 
         @preload
+        @routes
     </head>
         <body class="h-screen antialiased leading-none bg-gray-100">
     @inertia

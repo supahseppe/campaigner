@@ -12,28 +12,27 @@
                     <form class="w-full p-6" @submit.prevent="submit">
                         <div class="flex flex-wrap mb-6">
                             <label
-                                for="name"
+                                for="username"
                                 class="block mb-2 text-sm font-bold text-gray-700"
                             >
-                                Name:
+                                Username:
                             </label>
 
                             <input
-                                id="name"
-                                v-model="form.name"
+                                id="username"
+                                v-model="form.username"
                                 type="text"
                                 class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                :class="{ 'border-red-500': $page.errors.name }"
-                                name="name"
-                                required
+                                :class="{ 'border-red-500': $page.errors.username }"
+                                name="username"
                                 autofocus
                             />
 
                             <p
-                                v-if="$page.errors.name"
+                                v-if="$page.errors.username"
                                 class="mt-4 text-xs italic text-red-500"
                             >
-                                {{ $page.errors.name[0] }}
+                                {{ $page.errors.username[0] }}
                             </p>
                         </div>
 

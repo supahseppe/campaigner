@@ -6,6 +6,7 @@ Vue.config.devtools = true;
 
 import { InertiaApp } from '@inertiajs/inertia-vue';
 Vue.use(InertiaApp);
+
 Vue.mixin({ methods: { route: window.route } });
 
 import VueMeta from 'vue-meta';

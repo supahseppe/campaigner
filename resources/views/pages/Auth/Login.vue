@@ -15,7 +15,7 @@
                         <div class="flex flex-wrap mb-6">
                             <text-input
                                 label="Email Address"
-                                :type="email"
+                                type="email"
                                 :errors="$page.errors.email"
                                 v-model="form.email"
                                 class="w-full"

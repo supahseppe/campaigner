@@ -3,12 +3,15 @@
 namespace DummyNamespace;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 use Venturecraft\Revisionable\RevisionableTrait;
 
 class DummyClass extends Model
 {
-    use RevisionableTrait, Sluggable;
+    use RevisionableTrait, Sluggable, SluggableScopeHelpers;
+
+    protected $fillable = ['title'];
 
     /**
      * Revision Settings
@@ -33,5 +36,10 @@ class DummyClass extends Model
                 'source' => 'title'
             ]
         ];
+    }
+
+    public function getRouteKeyName()
+    {
+        return $this->getSlugKeyName();
     }
 }

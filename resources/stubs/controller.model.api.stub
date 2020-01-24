@@ -5,6 +5,8 @@ namespace DummyNamespace;
 use DummyFullModelClass;
 use DummyRootNamespaceHttp\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class DummyClass extends Controller
@@ -16,7 +18,7 @@ class DummyClass extends Controller
      */
     public function index()
     {
-        // Inertia::render('Path/To/View', [...data]) Inertia::render('Path/To/View', [...data])
+        // return Inertia::render('Path/To/View', [...data]) Inertia::render('Path/To/View', [...data])
     }
 
     /**
@@ -27,7 +29,7 @@ class DummyClass extends Controller
      */
     public function store(Request $request)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -38,7 +40,7 @@ class DummyClass extends Controller
      */
     public function show(DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -50,7 +52,7 @@ class DummyClass extends Controller
      */
     public function update(Request $request, DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
@@ -61,6 +63,6 @@ class DummyClass extends Controller
      */
     public function destroy(DummyModelClass $DummyModelVariable)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 }

@@ -30,3 +30,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'PageController@serve')->name('page.about');
 
 Route::get('/contact', 'PageController@serve')->name('page.contact');
+
+/**
+ * Models
+ */
+
+Route::resource('campaigns', 'CampaignController');

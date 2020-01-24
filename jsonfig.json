@@ -6,7 +6,8 @@
             "_Components/*": ["./resources/js/components/*"],
             "_Layouts/*": ["./resources/views/layouts/*"],
             "_Pages/*": ["./resources/views/pages/*"],
-            "_Inputs/*": ["./resources/views/pages/inputs/*"]
+            "_Inputs/*": ["./resources/views/pages/inputs/*"],
+            "_Icons": ["./node_modules/vue-material-design-icons"]
         }
     },
     "exclude": ["node_modules"]

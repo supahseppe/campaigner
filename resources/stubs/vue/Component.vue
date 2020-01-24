@@ -4,9 +4,12 @@
 
 <script>
     export default {
+        name: 'Dummy',
         components: {},
         props: {},
-        data: () => ({}),
+        data() {
+            return {};
+        },
         computed: {},
         watch: {},
         created() {},

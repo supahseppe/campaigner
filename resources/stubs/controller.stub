@@ -11,54 +11,58 @@ class DummyClass extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function index()
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function create()
     {
-        // Inertia::render('Path/To/View', [...data]);\
+        // return Inertia::render('Path/To/View', [...data]);\
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function store(Request $request)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Dummy $dummy
+     * @return \Inertia\Response
      */
-    public function show($id)
+    public function show(Dummy $dummy)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        return Inertia::render('Dummy/Read', [
+            'dummy' => $dummy
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Dummy $dummy
+     * @return \Inertia\Response
      */
-    public function edit($id)
+    public function edit(Dummy $dummy)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        return Inertia::render('Dummy/Edit', [
+            'dummy' => $dummy
+        ]);
     }
 
     /**
@@ -66,21 +70,21 @@ class DummyClass extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function update(Request $request, $id)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function destroy($id)
     {
-        // Inertia::render('Path/To/View', [...data]);
+        // return Inertia::render('Path/To/View', [...data]);
     }
 }

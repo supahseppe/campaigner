@@ -19,8 +19,9 @@
 
 <script>
     export default {
-        inheritAttrs: false,
+        name: 'TExtInput',
         components: {},
+        inheritAttrs: false,
         props: {
             id: {
                 type: String,
@@ -39,7 +40,9 @@
                 default: () => [],
             },
         },
-        data: () => ({}),
+        data() {
+            return {};
+        },
         computed: {
             styles() {
                 return {
