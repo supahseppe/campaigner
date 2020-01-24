@@ -41,6 +41,10 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Campaign')->withPivot('role');
     }
 
+    public function characters () {
+        return $this->belongsToMany('App\Character')->withPivot('role');
+    }
+
     /**
      * Scope a query to only include campaigns where user has a particular role
      *

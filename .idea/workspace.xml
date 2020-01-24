@@ -7,6 +7,8 @@
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,17 +248,9 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.CharacterTest">
     <configuration name="CampaignTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CampaignTest.unauthenticated_users_cannot_see_campaign_pages" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" method="unauthenticated_users_cannot_see_campaign_pages" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CampaignTest.user_can_create_campaign" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" method="user_can_create_campaign" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CampaignTest.user_can_delete_campaign" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -267,25 +261,33 @@
       <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" method="user_can_edit_campaign" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="CharacterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="migrations" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/database/migrations" />
+      <method v="2" />
+    </configuration>
     <configuration name="Campaigner" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Laravel">
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.CampaignTest" />
-      <item itemvalue="PHPUnit.CampaignTest.unauthenticated_users_cannot_see_campaign_pages" />
-      <item itemvalue="PHPUnit.CampaignTest.user_can_create_campaign" />
       <item itemvalue="PHPUnit.CampaignTest.user_can_delete_campaign" />
       <item itemvalue="PHPUnit.CampaignTest.user_can_edit_campaign" />
-      <item itemvalue="PHP Web Page.Campaigner" />
+      <item itemvalue="PHPUnit.migrations" />
+      <item itemvalue="PHPUnit.CharacterTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CharacterTest" />
+        <item itemvalue="PHPUnit.migrations" />
         <item itemvalue="PHPUnit.CampaignTest" />
         <item itemvalue="PHPUnit.CampaignTest.user_can_delete_campaign" />
         <item itemvalue="PHPUnit.CampaignTest.user_can_edit_campaign" />
-        <item itemvalue="PHPUnit.CampaignTest.user_can_create_campaign" />
-        <item itemvalue="PHPUnit.CampaignTest.unauthenticated_users_cannot_see_campaign_pages" />
       </list>
     </recent_temporary>
   </component>
@@ -414,33 +416,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
-    <state width="1630" height="242" key="GridCell.Tab.0.bottom" timestamp="1579850503546">
+    <state width="1630" height="242" key="GridCell.Tab.0.bottom" timestamp="1579853476430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1880" height="284" key="GridCell.Tab.0.bottom/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579640666827" />
     <state width="1880" height="285" key="GridCell.Tab.0.bottom/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1630" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1579850503546" />
+    <state width="1630" height="242" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1579853476430" />
     <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037097" />
-    <state width="1630" height="242" key="GridCell.Tab.0.center" timestamp="1579850503545">
+    <state width="1630" height="242" key="GridCell.Tab.0.center" timestamp="1579853476429">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1880" height="284" key="GridCell.Tab.0.center/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579640666825" />
     <state width="1880" height="285" key="GridCell.Tab.0.center/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225867" />
-    <state width="1630" height="242" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1579850503545" />
+    <state width="1630" height="242" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1579853476429" />
     <state width="1640" height="276" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037095" />
-    <state width="1630" height="242" key="GridCell.Tab.0.left" timestamp="1579850503544">
+    <state width="1630" height="242" key="GridCell.Tab.0.left" timestamp="1579853476428">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1880" height="284" key="GridCell.Tab.0.left/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579640666824" />
     <state width="1880" height="285" key="GridCell.Tab.0.left/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225865" />
-    <state width="1630" height="242" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1579850503544" />
+    <state width="1630" height="242" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1579853476428" />
     <state width="1640" height="276" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037094" />
-    <state width="1630" height="242" key="GridCell.Tab.0.right" timestamp="1579850503546">
+    <state width="1630" height="242" key="GridCell.Tab.0.right" timestamp="1579853476430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1880" height="284" key="GridCell.Tab.0.right/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579640666826" />
     <state width="1880" height="285" key="GridCell.Tab.0.right/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1630" height="242" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1579850503546" />
+    <state width="1630" height="242" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1579853476430" />
     <state width="1640" height="276" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037096" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1579626555045">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -520,12 +522,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1579816863068">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1579853261349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="766" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579640663390" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579816863068" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579853261349" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
 </project>

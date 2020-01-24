@@ -171,7 +171,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     {
         $plural = Str::pluralStudly($name);
         $file_loc = base_path() . '/routes/web.php';
-        $route = "\nRoute::resource('$plural', '($name)Controller');";
+        $route = "\nRoute::resource('$plural', '{$name}Controller');";
 
         $this->files->append($file_loc, $route);
         $this->info('Model resource route created successfully.');
