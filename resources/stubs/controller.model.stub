@@ -5,6 +5,8 @@ namespace DummyNamespace;
 use DummyFullModelClass;
 use DummyRootNamespaceHttp\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class DummyClass extends Controller
@@ -28,7 +30,7 @@ class DummyClass extends Controller
      */
     public function create()
     {
-        // return Inertia::render('Path/To/View', [...data]);
+        return Inertia::render('Dummy/Add');
     }
 
     /**
@@ -39,7 +41,15 @@ class DummyClass extends Controller
      */
     public function store(Request $request)
     {
-        // return Inertia::render('Path/To/View', [...data]);
+        $dummy = Dummy::create(
+            $request->validate([
+                'title' => ['required'],
+                'description' => ['nullable', 'max:1500'],
+            ])
+        );
+        Auth::user()->dummies()->save($dummy);
+
+        return Redirect::route('dummies.show', [$dummy])->with('success', 'Dummy created.');
     }
 
     /**
@@ -72,22 +82,43 @@ class DummyClass extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \DummyFullModelClass  $DummyModelVariable
+     * @param  \App\Dummy $dummy
      * @return \Inertia\Response
      */
-    public function update(Request $request, DummyModelClass $DummyModelVariable)
+    public function update(Request $request, Dummy $dummy)
     {
-        // return Inertia::render('Path/To/View', [...data]);
+        $dummy->update(
+            $request->validate([
+                'title' => ['required'],
+                'description' => ['nullable', 'max:1500'],
+            ])
+        );
+        return Redirect::route('dummies.show', [$dummy])->with('success', 'Dummy updated.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \DummyFullModelClass  $DummyModelVariable
-     * @return \Inertia\Response
+     * @param  Dummy  $dummy
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws
      */
-    public function destroy(DummyModelClass $DummyModelVariable)
+    public function destroy(Dummy $dummy)
     {
-        // return Inertia::render('Path/To/View', [...data]);
+        $dummy->users()->detach();
+        $dummy->delete();
+        return Redirect::route('dummies.index')->with('success', 'Dummy deleted.');
+    }
+
+    /**
+     * Restores the specified resource.
+     *
+     * @param  \App\Dummy  $dummy
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function restore(Dummy $dummy)
+    {
+        $dummy->restore();
+        return Redirect::back()->with('success', 'Dummy restored.');
     }
 }

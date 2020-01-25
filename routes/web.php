@@ -38,3 +38,4 @@ Route::get('/contact', 'PageController@serve')->name('page.contact');
 Route::resource('campaigns', 'CampaignController');
 
 Route::resource('characters', 'CharacterController');
+

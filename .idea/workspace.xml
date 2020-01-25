@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/css/main_layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/InertiaModelMakeCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/controller.model.stub" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/controller.model.stub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -401,11 +395,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579583263208" />
-    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579914004778">
+    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579959057668">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579642056416" />
-    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579914004778" />
+    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579959057668" />
     <state x="549" y="338" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1579624644034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

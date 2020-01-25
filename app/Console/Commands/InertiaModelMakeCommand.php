@@ -110,7 +110,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     {
         $controller = Str::studly(class_basename($this->argument('name')));
         $model_name = $this->qualifyClass($this->getNameInput());
-        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
+        $name = Str::contains($model_name, ['\\']) ? Str::afterLast($model_name, '\\') : $model_name;
 
         $this->call('make:controller', [
             'name' => "{$controller}Controller",
@@ -129,7 +129,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     protected function createFeatureTest()
     {
         $model_name = Str::studly(class_basename($this->argument('name')));
-        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
+        $name = Str::contains($model_name, ['\\']) ? Str::afterLast($model_name, '\\') : $model_name;
 
         $this->call('make:test', [
             'name' => "{$model_name}Test",
