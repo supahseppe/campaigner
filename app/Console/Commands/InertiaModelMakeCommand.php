@@ -109,8 +109,8 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     protected function createController()
     {
         $controller = Str::studly(class_basename($this->argument('name')));
-
         $model_name = $this->qualifyClass($this->getNameInput());
+        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
 
         $this->call('make:controller', [
             'name' => "{$controller}Controller",
@@ -118,7 +118,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
         ]);
 
         $path = base_path() . "/app/Http/Controllers/{$controller}Controller.php";
-        $this->cleanupDummy($path, $model_name);
+        $this->cleanupDummy($path, $name);
     }
 
     /**
@@ -129,13 +129,14 @@ class InertiaModelMakeCommand extends ModelMakeCommand
     protected function createFeatureTest()
     {
         $model_name = Str::studly(class_basename($this->argument('name')));
+        $name = Str::contains($input, ['/']) ? Str::afterLast($input, '/') : $input;
 
         $this->call('make:test', [
             'name' => "{$model_name}Test",
         ]);
 
         $path = base_path() . "/tests/Feature/{$model_name}Test.php";
-        $this->cleanupDummy($path, $model_name);
+        $this->cleanupDummy($path, $name);
     }
 
     /**

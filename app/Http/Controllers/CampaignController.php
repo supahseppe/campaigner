@@ -79,19 +79,6 @@ class CampaignController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Campaign $campaign
-     * @return \Inertia\Response
-     */
-    public function edit(Campaign $campaign)
-    {
-        return Inertia::render('Campaign/Edit', [
-            'campaign' => $campaign
-        ]);
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -107,6 +94,19 @@ class CampaignController extends Controller
             ])
         );
         return Redirect::route('campaigns.show', [$campaign])->with('success', 'Campaign updated.');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Campaign $campaign
+     * @return \Inertia\Response
+     */
+    public function edit(Campaign $campaign)
+    {
+        return Inertia::render('Campaign/Edit', [
+            'campaign' => $campaign
+        ]);
     }
 
     /**

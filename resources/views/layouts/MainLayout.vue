@@ -26,26 +26,3 @@
         },
     };
 </script>
-
-<style lang="css" scoped>
-    .main-layout {
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        grid-template-rows: 64px 1fr;
-        grid-template-areas:
-            'navbar navbar'
-            'sidebar content';
-    }
-
-    .navbar {
-        grid-area: navbar;
-    }
-
-    .sidebar {
-        grid-area: sidebar;
-    }
-
-    .main-content {
-        grid-area: content;
-    }
-</style>

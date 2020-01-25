@@ -1,0 +1,106 @@
+<template>
+    <div>
+        <form
+            class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+            @submit.prevent="submit"
+        >
+            <div class="flex flex-wrap mb-6">
+                <text-input
+                    label="Name"
+                    type="text"
+                    :errors="$page.errors.name"
+                    v-model="form.name"
+                    class="w-full mb-6"
+                    required
+                    autofocus
+                />
+                <text-input
+                    label="Alias"
+                    type="text"
+                    :errors="$page.errors.alias"
+                    v-model="form.alias"
+                    class="w-full mb-6"
+                    required
+                    autofocus
+                />
+                <text-input
+                    label="High Concept"
+                    type="text"
+                    :errors="$page.errors.high_concept"
+                    v-model="form.high_concept"
+                    class="w-full mb-6"
+                    required
+                    autofocus
+                />
+                <div class="w-full mb-6">
+                    <wysiwyg label="Bio" v-model="form.bio" />
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center">
+                <loading-button
+                    :loading="sending"
+                    type="submit"
+                    class="px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                >
+                    Submit
+                </loading-button>
+            </div>
+        </form>
+    </div>
+</template>
+
+<script>
+    import MainLayout from '_Layouts/MainLayout';
+    import TextInput from '_Components/inputs/TextInput';
+    import LoadingButton from '_Components/LoadingButton';
+    import Wysiwyg from '_Components/inputs/Wysiwyg';
+
+    export default {
+        name: 'Create',
+        components: {
+            Wysiwyg,
+            'text-input': TextInput,
+            'loading-button': LoadingButton,
+        },
+        props: {},
+        data() {
+            return {
+                pageTitle: 'Adding new character',
+                pageDescription: 'Adding a new character',
+                sending: false,
+                form: {
+                    name: null,
+                    alias: null,
+                    high_concept: null,
+                    bio: null,
+                    active: true,
+                },
+            };
+        },
+        computed: {},
+        watch: {},
+        created() {},
+        mounted() {},
+        methods: {
+            submit() {
+                this.sending = true;
+                this.$inertia
+                    .post(this.route('characters.store'), this.form)
+                    .then(() => (this.sending = false));
+            },
+        },
+        layout: MainLayout,
+        metaInfo() {
+            return {
+                title: this.pageTitle,
+                meta: [
+                    {
+                        name: 'description',
+                        content: this.pageDescription,
+                    },
+                ],
+            };
+        },
+    };
+</script>

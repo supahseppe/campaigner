@@ -1,16 +1,18 @@
 <template>
     <div>
         <section class="flex items-start justify-between">
-            <h1 class="text-3xl mb-6">{{ campaign.title }}</h1>
+            <div>
+                <h1 class="text-3xl mb-4">{{ character.name }}</h1>
+                <p v-if="character.alias" class="text-xl italic opacity-75 mb-6">
+                    {{ character.alias }}
+                </p>
+            </div>
             <inertia-link
-                :href="route('campaigns.edit', campaign.slug)"
+                :href="route('characters.edit', character.slug)"
                 class="text-blue-200 font-bold py-2 px-4 bg-indigo-900 rounded"
             >
                 Edit
             </inertia-link>
-        </section>
-        <section>
-            <div v-html="campaign.description" />
         </section>
     </div>
 </template>
@@ -19,18 +21,18 @@
     import MainLayout from '_Layouts/MainLayout';
 
     export default {
-        name: 'Campaign',
+        name: 'Character',
         components: {},
         props: {
-            campaign: {
+            character: {
                 type: Object,
                 default: () => {},
             },
         },
         data() {
             return {
-                pageTitle: `Campaign: ${this.campaign.title}`,
-                pageDescription: `Viewing the ${this.campaign.title} campaign.`,
+                pageTitle: `Character: ${this.character.title}`,
+                pageDescription: `Viewing the ${this.character.title} character.`,
             };
         },
         computed: {},
