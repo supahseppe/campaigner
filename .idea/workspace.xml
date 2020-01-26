@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/BrowseLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/components.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/main_layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main_layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/cards/CardHorizontal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/cards/CardHorizontal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,19 +251,19 @@
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/stubs/vue" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/components/cards" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
       <recent name="$PROJECT_DIR$/resources/js/Components/inputs" />
       <recent name="$PROJECT_DIR$/resources/js/Components" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Auth" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/stubs/vue" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.CharacterTest">
@@ -335,6 +351,7 @@
       <workItem from="1579756264357" duration="3264000" />
       <workItem from="1579804865545" duration="13650000" />
       <workItem from="1580005214238" duration="287000" />
+      <workItem from="1580012536502" duration="3123000" />
     </task>
     <servers />
   </component>
@@ -389,11 +406,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="445" y="198" width="805" height="654" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579377445278" />
-    <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579804832713">
+    <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580012520169">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="2328" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616413846" />
-    <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579804832713" />
+    <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580012520169" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579583263208">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -484,13 +501,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="383" y="267" key="IDE.errors.dialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579492165958" />
-    <state x="200" y="99" width="1155" height="722" key="SettingsEditor" timestamp="1579831793611">
+    <state x="200" y="99" width="1264" height="897" key="SettingsEditor" timestamp="1580008301057">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="229" y="102" width="1155" height="722" key="SettingsEditor/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579641007693" />
     <state x="229" y="102" key="SettingsEditor/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626212203" />
     <state x="1909" y="102" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616954091" />
-    <state x="200" y="99" width="1264" height="823" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1579831793611" />
+    <state x="200" y="99" width="1264" height="897" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1580008301057" />
     <state x="1909" y="102" key="SettingsEditor/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616250818" />
     <state x="651" y="283" width="645" height="556" key="StructurePopup" timestamp="1579629382573">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -533,5 +550,17 @@
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
     <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579903237791" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/views/pages/Character/Read.vue</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

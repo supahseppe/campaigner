@@ -1,26 +1,30 @@
 <template>
-    <div>
-        <section class="flex items-start justify-between">
-            <h1 class="text-3xl mb-6">{{ campaign.title }}</h1>
-            <inertia-link
-                :href="route('campaigns.edit', campaign.slug)"
-                class="text-blue-200 font-bold py-2 px-4 bg-indigo-900 rounded"
-            >
-                Edit
-            </inertia-link>
-        </section>
-        <section>
+    <section class="h-screen container">
+        <section-header class="px-4">
+            <h1>{{ campaign.title }}</h1>
+            <template #aside>
+                <btn :href="route('campaigns.edit', campaign.slug)">
+                    Edit
+                </btn>
+            </template>
+        </section-header>
+        <section class="p-4">
             <div v-html="campaign.description" />
         </section>
-    </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import SectionHeader from '_Components/SectionHeader';
+    import Btn from '_Components/Btn';
 
     export default {
         name: 'Campaign',
-        components: {},
+        components: {
+            SectionHeader,
+            Btn,
+        },
         props: {
             campaign: {
                 type: Object,

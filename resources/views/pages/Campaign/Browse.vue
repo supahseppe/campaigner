@@ -1,31 +1,29 @@
 <template>
-    <section class="h-screen">
-        <div class="flex items-center justify-between mb-6">
-            <h1 class="text-3xl">Your Campaigns</h1>
-            <inertia-link :href="route('campaigns.create')">
-                Create new Campaign
-            </inertia-link>
-        </div>
-        <div v-for="campaign in campaigns" :key="campaign.id">
-            <card>
-                <template v-slot:title>
-                    <inertia-link :href="route('campaigns.show', campaign.slug)">
-                        {{ campaign.title }}
-                    </inertia-link>
-                </template>
-                <div v-html="campaign.description" />
-            </card>
-        </div>
+    <section class="h-screen container">
+        <browse-layout model="campaign">
+            <div v-for="campaign in campaigns" :key="campaign.id">
+                <card>
+                    <template v-slot:title>
+                        <inertia-link :href="route('campaigns.show', campaign.slug)">
+                            {{ campaign.title }}
+                        </inertia-link>
+                    </template>
+                    <div v-html="campaign.description" />
+                </card>
+            </div>
+        </browse-layout>
     </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import BrowseLayout from '_Layouts/BrowseLayout';
     import CardHorizontal from '_Components/cards/CardHorizontal';
 
     export default {
         name: 'Browse',
         components: {
+            BrowseLayout,
             card: CardHorizontal,
         },
         props: {

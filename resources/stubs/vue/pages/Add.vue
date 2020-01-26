@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section class="h-screen container">
         <form
             class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
             @submit.prevent="submit"

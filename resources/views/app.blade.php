@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="bg-gray-900 font-sans leading-normal tracking-normal mt-12">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -16,7 +16,7 @@
         @preload
         @routes
     </head>
-        <body class="h-screen antialiased leading-none bg-gray-100">
-    @inertia
+    <body>
+        @inertia
     </body>
 </html>

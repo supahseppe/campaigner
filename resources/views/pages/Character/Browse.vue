@@ -1,11 +1,5 @@
 <template>
-    <section class="h-screen">
-        <div class="w-full flex items-center justify-between mb-6">
-            <h1 class="text-3xl">Your Characters</h1>
-            <inertia-link :href="route('characters.create')">
-                Create new Character
-            </inertia-link>
-        </div>
+    <browse-layout model="character">
         <div v-for="character in characters" :key="character.id">
             <card>
                 <template v-slot:title>
@@ -16,17 +10,19 @@
                 <div v-html="character.bio" />
             </card>
         </div>
-    </section>
+    </browse-layout>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import BrowseLayout from '_Layouts/BrowseLayout';
     import CardHorizontal from '_Components/cards/CardHorizontal';
 
     export default {
         name: 'Browse',
         components: {
             card: CardHorizontal,
+            BrowseLayout,
         },
         props: {
             pager: {

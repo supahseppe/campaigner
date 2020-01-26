@@ -1,34 +1,28 @@
 <template>
-    <section class="h-screen">
-        <div class="">
-            <div class="flex items-center justify-between mb-6">
-                <h1 class="text-3xl">Your Dummies</h1>
-                <inertia-link :href="route('dummies.create')">
-                    Create new Dummy
-                </inertia-link>
-            </div>
-            <div v-for="dummy in dummies" :key="dummy.id">
-                <card>
-                    <template v-slot:title>
-                        <inertia-link :href="route('dummies.show', dummy.slug)">
-                            {{ dummy.title }}
-                        </inertia-link>
-                    </template>
-                    <div v-html="dummy.description" />
-                </card>
-            </div>
+    <browse-layout model="dummy">
+        <div v-for="dummy in dummies" :key="dummy.id">
+            <card>
+                <template v-slot:title>
+                    <inertia-link :href="route('dummies.show', dummy.slug)">
+                        {{ dummy.title }}
+                    </inertia-link>
+                </template>
+                <div v-html="dummy.description" />
+            </card>
         </div>
-    </section>
+    </browse-layout>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import BrowseLayout from '_Layouts/BrowseLayout';
     import CardHorizontal from '_Components/cards/CardHorizontal';
 
     export default {
         name: 'Browse',
         components: {
             card: CardHorizontal,
+            BrowseLayout,
         },
         props: {
             pager: {

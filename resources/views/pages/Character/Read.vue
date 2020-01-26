@@ -1,28 +1,41 @@
 <template>
-    <div>
+    <section class="h-screen container">
         <section class="flex items-start justify-between">
-            <div>
-                <h1 class="text-3xl mb-4">{{ character.name }}</h1>
-                <p v-if="character.alias" class="text-xl italic opacity-75 mb-6">
-                    {{ character.alias }}
-                </p>
-            </div>
-            <inertia-link
-                :href="route('characters.edit', character.slug)"
-                class="text-blue-200 font-bold py-2 px-4 bg-indigo-900 rounded"
-            >
-                Edit
-            </inertia-link>
+            <section-header>
+                <div>
+                    <h1>{{ character.name }}</h1>
+                    <p
+                        v-if="character.alias"
+                        class="text-base font-normal italic opacity-75"
+                    >
+                        ( {{ character.alias }} )
+                    </p>
+                </div>
+                <template #aside>
+                    <btn :href="route('characters.edit', character.slug)">
+                        Edit
+                    </btn>
+                </template>
+            </section-header>
         </section>
-    </div>
+        <section class="p-4">
+            <p>High Concept: {{ character.high_concept }}</p>
+            <div v-html="character.bio" />
+        </section>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import SectionHeader from '_Components/SectionHeader';
+    import Btn from '_Components/Btn';
 
     export default {
         name: 'Character',
-        components: {},
+        components: {
+            SectionHeader,
+            Btn,
+        },
         props: {
             character: {
                 type: Object,
@@ -31,8 +44,8 @@
         },
         data() {
             return {
-                pageTitle: `Character: ${this.character.title}`,
-                pageDescription: `Viewing the ${this.character.title} character.`,
+                pageTitle: `Character: ${this.character.name}`,
+                pageDescription: `Viewing the character ${this.character.name}.`,
             };
         },
         computed: {},

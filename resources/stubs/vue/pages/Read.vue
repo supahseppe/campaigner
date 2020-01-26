@@ -1,23 +1,30 @@
 <template>
-    <div>
-        <section class="flex items-center justify-between">
-            <h1 class="text-3xl mb-6">{{ dummy.title }}</h1>
-            <inertia-link
-                :href="route('dummies.edit', dummy.slug)"
-                class="text-blue-200 font-bold py-2 px-4 bg-indigo-900 rounded"
-            >
-                Edit
-            </inertia-link>
+    <section class="h-screen container">
+        <section-header class="px-4">
+            <h1>{{ dummy.title }}</h1>
+            <template #aside>
+                <btn :href="route('dummies.edit', dummy.slug)">
+                    Edit
+                </btn>
+            </template>
+        </section-header>
+        <section class="p-4">
+            <p>{{ dummy.id }}</p>
         </section>
-    </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import Btn from '_Components/Btn';
+    import SectionHeader from '_Components/SectionHeader';
 
     export default {
         name: 'Dummy',
-        components: {},
+        components: {
+            Btn,
+            SectionHeader,
+        },
         props: {
             dummy: {
                 type: Object,

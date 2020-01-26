@@ -1,5 +1,8 @@
 <template>
-    <div>
+    <section class="h-screen container">
+        <section-header>
+            Creating Campaign
+        </section-header>
         <form
             class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
             @submit.prevent="submit"
@@ -29,11 +32,12 @@
                 </loading-button>
             </div>
         </form>
-    </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import SectionHeader from '_Components/SectionHeader';
     import TextInput from '_Components/inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
@@ -41,6 +45,7 @@
     export default {
         name: 'Create',
         components: {
+            SectionHeader,
             Wysiwyg,
             'text-input': TextInput,
             'loading-button': LoadingButton,

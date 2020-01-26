@@ -1,9 +1,15 @@
 <template>
-    <div>
+    <section class="h-screen container">
+        <section-header>
+            Editing Character
+        </section-header>
         <trashed-message v-if="character.deleted_at" class="mb-6" @restore="restore">
             This character has been deleted.
         </trashed-message>
-        <form class="w-full p-6 bg-white rounded" @submit.prevent="submit">
+        <form
+            class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+            @submit.prevent="submit"
+        >
             <div class="flex flex-wrap mb-6">
                 <text-input
                     label="Name"
@@ -60,11 +66,12 @@
                 </loading-button>
             </div>
         </form>
-    </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
+    import SectionHeader from '_Components/SectionHeader';
     import TextInput from '_Components/inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
     import TrashedMessage from '_Components/TrashedMessage';
@@ -73,6 +80,7 @@
     export default {
         name: 'Edit',
         components: {
+            SectionHeader,
             TextInput,
             LoadingButton,
             TrashedMessage,
