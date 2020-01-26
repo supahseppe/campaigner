@@ -54,6 +54,7 @@
         "vue-loader": "^15.7",
         "vue-material-design-icons": "^4.4",
         "vue-meta": "^2.3",
+        "vue-rippler": "^1.3.0",
         "vue-smooth-reflow": "^0.1",
         "vue-template-compiler": "^2.6",
         "vuetensils": "^0.5",

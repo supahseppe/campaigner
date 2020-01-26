@@ -1,5 +1,5 @@
 <template>
-    <header class="navbar bg-black">
+    <header class="bg-black">
         <div
             class="w-full max-w-6xl mx-auto sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3"
         >

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="font-sans bg-indigo-800">
+<html class="bg-gray-900 font-sans leading-normal tracking-normal mt-12">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
