@@ -41,10 +41,14 @@
                 <div class="w-full mb-6">
                     <wysiwyg label="Description" v-model="form.bio" />
                 </div>
-                <label for="active-field">
-                    Active: {{ form.active }}
+                <label for="active-field" class="w-full mb-6">
+                    Active: {{ !!form.active }}
                     <input type="checkbox" id="active-field" v-model="form.active" />
                 </label>
+                <btn @click.stop.prevent="form.npc = !form.npc">
+                    <p v-if="form.npc">Convert to Character</p>
+                    <p v-else>Convert to Npc</p>
+                </btn>
             </div>
 
             <div class="flex flex-wrap items-center justify-between">
@@ -76,6 +80,7 @@
     import LoadingButton from '_Components/LoadingButton';
     import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
+    import Btn from '_Components/Btn';
 
     export default {
         name: 'Edit',
@@ -85,6 +90,7 @@
             LoadingButton,
             TrashedMessage,
             Wysiwyg,
+            Btn,
         },
         props: {
             character: {
@@ -103,6 +109,7 @@
                     high_concept: this.character.high_concept,
                     bio: this.character.bio,
                     active: this.character.active,
+                    npc: !!this.character.npc,
                 },
             };
         },

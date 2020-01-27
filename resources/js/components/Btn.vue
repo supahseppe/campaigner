@@ -2,12 +2,14 @@
     <inertia-link
         v-if="href"
         :href="href"
+        v-on="$listeners"
         class="text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
     >
         <slot />
     </inertia-link>
     <button
         v-else
+        v-on="$listeners"
         class="text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
     >
         <slot />

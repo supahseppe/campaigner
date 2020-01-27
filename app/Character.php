@@ -11,7 +11,7 @@ class Character extends Model
 {
     use RevisionableTrait, Sluggable, SluggableScopeHelpers;
 
-    protected $fillable = ['name', 'alias', 'high_concept', 'bio', 'active'];
+    protected $fillable = ['name', 'alias', 'high_concept', 'bio', 'active', 'npc'];
 
     /**
      * Revision Settings

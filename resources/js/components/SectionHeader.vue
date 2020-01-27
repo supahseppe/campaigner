@@ -5,7 +5,9 @@
         <span class="font-bold pl-2">
             <slot />
         </span>
-        <slot name="aside" />
+        <div class="flex">
+            <slot name="aside" />
+        </div>
     </div>
 </template>
 

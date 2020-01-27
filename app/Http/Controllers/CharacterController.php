@@ -6,6 +6,7 @@ use App\Character;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 
 class CharacterController extends Controller
@@ -20,10 +21,12 @@ class CharacterController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $is_npc = Str::afterLast($request->getPathInfo(), '/') === 'npcs';
         return Inertia::render('Character/Browse', [
-            'pager' => Character::paginate(15)
+            'npcs' => $is_npc,
+            'pager' => Character::where('npc', $is_npc)->paginate(15)->only('name', 'high_concept', 'slug')
         ]);
     }
 
@@ -32,9 +35,12 @@ class CharacterController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return Inertia::render('Character/Add');
+        $is_npc = Str::contains($request->getPathInfo(), '/npcs/');
+        return Inertia::render('Character/Add', [
+            'npc' => $is_npc,
+        ]);
     }
 
     /**
@@ -52,6 +58,7 @@ class CharacterController extends Controller
                 'high_concept' => ['nullable'],
                 'bio' => ['nullable', 'max:1500'],
                 'active' => ['nullable'],
+                'npc' => ['boolean'],
             ])
         );
         Auth::user()->characters()->save($character);
@@ -88,6 +95,7 @@ class CharacterController extends Controller
                 'high_concept' => ['nullable'],
                 'bio' => ['nullable', 'max:1500'],
                 'active' => ['nullable'],
+                'npc' => ['boolean'],
             ])
         );
         return Redirect::route('characters.show', [$character])->with('success', 'Character updated.');
@@ -130,5 +138,15 @@ class CharacterController extends Controller
     {
         $character->restore();
         return Redirect::back()->with('success', 'Character restored.');
+    }
+
+    /**
+     * Returns only NPC Characters
+     */
+    public function npcs()
+    {
+        return Inertia::render('Character/Browse', [
+            'pager' => Character::paginate(15)
+        ]);
     }
 }

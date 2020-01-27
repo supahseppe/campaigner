@@ -12,6 +12,9 @@ Vue.mixin({ methods: { route: window.route } });
 import VueMeta from 'vue-meta';
 Vue.use(VueMeta);
 
+import VueTailwind from './helpers/Tailwind';
+Vue.use(VueTailwind);
+
 const app = document.getElementById('app');
 
 new Vue({

@@ -37,5 +37,6 @@ Route::get('/contact', 'PageController@serve')->name('page.contact');
 
 Route::resource('campaigns', 'CampaignController');
 
+// Characters
 Route::resource('characters', 'CharacterController');
-
+Route::resource('npcs', 'CharacterController');

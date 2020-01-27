@@ -1,11 +1,15 @@
 <template>
     <section class="h-full">
         <section-header>
-            <h1>Your {{ capitalize(models) }}</h1>
+            <h1 v-if="title">{{ title }}</h1>
+            <h1 v-else>Your {{ capitalize(models) }}</h1>
             <template #aside>
-                <btn :href="route(`${models}.create`)">
-                    Create new {{ capitalize(model) }}
-                </btn>
+                <slot name="header-buttons">
+                    <btn :href="route(`${models}.create`)">
+                        Create new {{ capitalize(model) }}
+                    </btn>
+                </slot>
+                <slot name="extra-header-buttons" />
             </template>
         </section-header>
         <div class="px-4 py-2 flex items-center border-b bg-gray-200">
@@ -25,7 +29,9 @@
                 </svg>
             </button>
         </div>
-        <div class="flex items-start justify-start w-full h-full border-b bg-gray-300">
+        <div
+            class="flex items-start justify-start w-full h-full border-b bg-gray-300 p-4"
+        >
             <slot />
         </div>
     </section>
@@ -47,6 +53,10 @@
                 default: 'Model',
             },
             plural: {
+                type: String,
+                default: null,
+            },
+            title: {
                 type: String,
                 default: null,
             },

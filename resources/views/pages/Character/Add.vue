@@ -68,7 +68,12 @@
             'text-input': TextInput,
             'loading-button': LoadingButton,
         },
-        props: {},
+        props: {
+            npc: {
+                type: Boolean,
+                default: false,
+            },
+        },
         data() {
             return {
                 pageTitle: 'Adding new character',
@@ -80,6 +85,7 @@
                     high_concept: null,
                     bio: null,
                     active: true,
+                    npc: this.npc,
                 },
             };
         },

@@ -1,9 +1,14 @@
 <template>
-    <component :is="icon" />
+    <component
+        :is="icon"
+        :title="title"
+        :fillColor="hex"
+        :size="size"
+        :decorative="decorative"
+    />
 </template>
 
 <script>
-    import 'vue-material-design-icons/styles.css';
     import Minus from '_Icons/Minus';
     import FormatBold from '_Icons/FormatBold';
     import FormatItalic from '_Icons/FormatItalic';
@@ -17,6 +22,10 @@
     import Undo from '_Icons/Undo';
     import Redo from '_Icons/Redo';
     import Delete from '_Icons/Delete';
+    import GlobeModel from '_Icons/GlobeModel';
+    import DramaMasks from '_Icons/DramaMasks';
+    import GuyFawkesMask from '_Icons/GuyFawkesMask';
+    import AccountMultipleOutline from '_Icons/AccountMultipleOutline';
 
     export default {
         name: 'Icon',
@@ -34,12 +43,46 @@
             Undo,
             Redo,
             Delete,
+            GlobeModel,
+            DramaMasks,
+            GuyFawkesMask,
+            AccountMultipleOutline,
         },
-        props: ['title', 'decorative', 'fillColor', 'size', 'icon'],
+        props: {
+            icon: {
+                type: String,
+                default: null,
+            },
+            title: {
+                type: String,
+                default: null,
+            },
+            color: {
+                type: String,
+                default: null,
+            },
+            size: {
+                type: Number,
+                default: 24,
+            },
+            decorative: {
+                type: Boolean,
+                default: true,
+            },
+        },
         data() {
             return {};
         },
-        computed: {},
+        computed: {
+            hex() {
+                if (this.color) {
+                    const color = this.color.split('-');
+                    return this.$tailwind.theme.colors[color[0]][color[1]];
+                }
+
+                return null;
+            },
+        },
         watch: {},
         created() {},
         mounted() {},
