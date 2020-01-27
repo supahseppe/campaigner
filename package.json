@@ -49,6 +49,7 @@
         "v-click-outside": "^3.0",
         "v-show-slide": "^1.8",
         "vue": "^2.6",
+        "vue-avatar": "^2.1.8",
         "vue-dummy": "^1.1",
         "vue-js-toggle-button": "^1.3",
         "vue-loader": "^15.7",

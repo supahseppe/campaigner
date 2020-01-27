@@ -15,7 +15,7 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    import BrowseLayout from '_Layouts/BrowseLayout';
+    import BrowseLayout from '_Layouts/Browse/BrowseLayout';
     import CardHorizontal from '_Components/cards/CardHorizontal';
 
     export default {

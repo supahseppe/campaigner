@@ -40,6 +40,21 @@ class Campaign extends Model
         return $this->getSlugKeyName();
     }
 
+    /**
+     * Get the campaign's summary
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getSummaryAttribute()
+    {
+        $str = strip_tags($this->description);
+        $str = wordwrap($str, 140);
+        $str = explode("\n", $str);
+        $str = $str[0] . '...';
+        return $str;
+    }
+
     public function users() {
         return $this->belongsToMany('App\User')->withPivot('role');
     }

@@ -18,7 +18,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
-});
+})->name('page.welcome');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

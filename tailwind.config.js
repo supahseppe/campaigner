@@ -282,6 +282,8 @@ module.exports = {
                 'screen-90': '90vh',
             },
             spacing: {
+                '7': '1.75rem',
+                '9': '2.25rem',
                 'px-2': '2px',
                 'px-3': '3px',
                 'px-4': '4px',

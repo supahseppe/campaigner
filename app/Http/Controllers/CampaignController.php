@@ -30,7 +30,7 @@ class CampaignController extends Controller
                      'id',
                      'title',
                      'slug',
-                     'description',
+                     'summary',
                      'users'
                  )
          ]);

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-blue-800 p-2 shadow text-xl text-white flex items-center justify-between mb-6 w-full"
+        class="bg-grey-800 p-2 shadow text-xl text-white flex items-center justify-between w-full"
     >
         <span class="font-bold pl-2">
             <slot />

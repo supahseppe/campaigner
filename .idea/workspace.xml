@@ -5,27 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/BrowseLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/main_layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main_layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/main_layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/cards/CardHorizontal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/cards/CardHorizontal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/cards/Panel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/cards/Panel.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/BrowseLayout.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/MainLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Sidebar.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Read.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,20 +255,21 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/components/cards" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
-      <recent name="$PROJECT_DIR$/resources/js/Components/inputs" />
-      <recent name="$PROJECT_DIR$/resources/js/Components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/stubs/vue" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layouts/Menus" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts/Browse" />
+      <recent name="$PROJECT_DIR$/resources/js/components/cards" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+      <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.CharacterTest">
-    <configuration name="TextInput.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="https://campaigner.test/resources/js/components/inputs/TextInput.vue">
+    <configuration name="CampaignTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="CharacterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -290,21 +292,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.TextInput.vue" />
       <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.CharacterTest" />
       <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_create_character" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_edit_character" />
+      <item itemvalue="PHPUnit.CampaignTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CharacterTest" />
+        <item itemvalue="PHPUnit.CampaignTest" />
         <item itemvalue="PHPUnit.CharacterTest.user_can_edit_character" />
         <item itemvalue="PHPUnit.CharacterTest.user_can_create_character" />
         <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
-        <item itemvalue="JavaScript Debug.TextInput.vue" />
       </list>
     </recent_temporary>
   </component>
@@ -352,6 +354,7 @@
       <workItem from="1579804865545" duration="13650000" />
       <workItem from="1580005214238" duration="287000" />
       <workItem from="1580012536502" duration="3123000" />
+      <workItem from="1580064234642" duration="9897000" />
     </task>
     <servers />
   </component>
@@ -411,10 +414,10 @@
     </state>
     <state x="2328" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616413846" />
     <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580012520169" />
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579583263208">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580091124565">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579583263208" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580091124565" />
     <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579959057668">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -437,33 +440,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580005765929">
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580141601269">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.bottom/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388908" />
     <state width="1880" height="285" key="GridCell.Tab.0.bottom/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580005765929" />
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580141601269" />
     <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037097" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580005765928">
+    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580141601268">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.center/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388906" />
     <state width="1880" height="285" key="GridCell.Tab.0.center/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225867" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580005765928" />
+    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580141601268" />
     <state width="1640" height="276" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037095" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580005765927">
+    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580141601267">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.left/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388902" />
     <state width="1880" height="285" key="GridCell.Tab.0.left/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225865" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580005765927" />
+    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580141601267" />
     <state width="1640" height="276" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037094" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580005765928">
+    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580141601268">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.right/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388907" />
     <state width="1880" height="285" key="GridCell.Tab.0.right/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580005765928" />
+    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580141601268" />
     <state width="1640" height="276" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037096" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1579626555045">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -543,12 +546,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1579903237791">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580066878525">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="838" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884246883" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579903237791" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580066878525" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
   <component name="XDebuggerManager">
@@ -557,7 +560,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/views/pages/Character/Read.vue</url>
           <line>2</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

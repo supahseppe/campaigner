@@ -1,15 +1,19 @@
 <template>
     <section class="h-screen container">
         <browse-layout model="campaign">
-            <div v-for="campaign in campaigns" :key="campaign.id">
-                <card>
-                    <template v-slot:title>
-                        <inertia-link :href="route('campaigns.show', campaign.slug)">
+            <div class="flex-grow w-full pt-2 p-4 flex">
+                <template v-for="campaign in campaigns">
+                    <panel
+                        class="flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
+                        :key="campaign.id"
+                    >
+                        <h1
+                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
+                        >
                             {{ campaign.title }}
-                        </inertia-link>
-                    </template>
-                    <div v-html="campaign.description" />
-                </card>
+                        </h1>
+                    </panel>
+                </template>
             </div>
         </browse-layout>
     </section>
@@ -17,14 +21,14 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    import BrowseLayout from '_Layouts/BrowseLayout';
-    import CardHorizontal from '_Components/cards/CardHorizontal';
+    import BrowseLayout from '_Layouts/Browse/BrowseLayout';
+    import Panel from '_Components/cards/Panel';
 
     export default {
         name: 'Browse',
         components: {
             BrowseLayout,
-            card: CardHorizontal,
+            Panel,
         },
         props: {
             pager: {
