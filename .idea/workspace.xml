@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/helpers/Tailwind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Campaigner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Campaigner.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Character.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Character.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Btn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Btn.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Icon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Read.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/PagesNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/PagesNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Contact.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,8 +227,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/public/css/app.css" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT&#10;HTML&#10;JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -260,17 +261,13 @@
       <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CharacterTest">
+  <component name="RunManager" selected="PHPUnit.FactionsTest">
     <configuration name="CampaignTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="CharacterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CharacterTest.unauthenticated_users_cannot_see_character_pages" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" method="unauthenticated_users_cannot_see_character_pages" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CharacterTest.user_can_create_character" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -281,6 +278,10 @@
       <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" method="user_can_edit_character" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="FactionsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\FactionsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="Campaigner" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Laravel">
       <method v="2" />
     </configuration>
@@ -288,18 +289,18 @@
       <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.CharacterTest" />
-      <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_create_character" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_edit_character" />
       <item itemvalue="PHPUnit.CampaignTest" />
+      <item itemvalue="PHPUnit.FactionsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.FactionsTest" />
         <item itemvalue="PHPUnit.CharacterTest" />
         <item itemvalue="PHPUnit.CampaignTest" />
         <item itemvalue="PHPUnit.CharacterTest.user_can_edit_character" />
         <item itemvalue="PHPUnit.CharacterTest.user_can_create_character" />
-        <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +348,9 @@
       <workItem from="1579804865545" duration="13650000" />
       <workItem from="1580005214238" duration="287000" />
       <workItem from="1580012536502" duration="3123000" />
-      <workItem from="1580064234642" duration="16971000" />
+      <workItem from="1580064234642" duration="20861000" />
+      <workItem from="1580331731770" duration="49000" />
+      <workItem from="1580348138217" duration="3472000" />
     </task>
     <servers />
   </component>
@@ -411,6 +414,10 @@
     </state>
     <state x="2328" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616413846" />
     <state x="567" y="267" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580012520169" />
+    <state x="456" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580159337997">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="456" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580159337997" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580091124565">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -437,33 +444,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580141904203">
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580331709472">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.bottom/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388908" />
     <state width="1880" height="285" key="GridCell.Tab.0.bottom/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580141904203" />
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580331709472" />
     <state width="1640" height="276" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037097" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580141904201">
+    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580331709471">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.center/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388906" />
     <state width="1880" height="285" key="GridCell.Tab.0.center/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225867" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580141904201" />
+    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580331709471" />
     <state width="1640" height="276" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037095" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580141904200">
+    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580331709470">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.left/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388902" />
     <state width="1880" height="285" key="GridCell.Tab.0.left/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225865" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580141904200" />
+    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580331709470" />
     <state width="1640" height="276" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037094" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580141904202">
+    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580331709471">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.right/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388907" />
     <state width="1880" height="285" key="GridCell.Tab.0.right/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580141904202" />
+    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580331709471" />
     <state width="1640" height="276" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1579492037096" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1579626555045">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -543,12 +550,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580157125712">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580172879994">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="838" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884246883" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580157125712" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580172879994" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
   <component name="XDebuggerManager">

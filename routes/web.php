@@ -40,3 +40,5 @@ Route::resource('campaigns', 'CampaignController');
 // Characters
 Route::resource('characters', 'CharacterController');
 Route::resource('npcs', 'CharacterController');
+
+Route::resource('factions', 'FactionsController');

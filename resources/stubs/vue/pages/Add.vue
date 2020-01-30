@@ -8,8 +8,8 @@
                 <text-input
                     label="Title"
                     type="text"
-                    :errors="$page.errors.title"
-                    v-model="form.title"
+                    :errors="$page.errors.name"
+                    v-model="form.name"
                     class="w-full mb-6"
                     required
                     autofocus
@@ -29,7 +29,7 @@
                 </loading-button>
             </div>
         </form>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -67,7 +67,7 @@
                 this.sending = true;
                 this.$inertia
                     .post(url, {
-                        title: this.form.title,
+                        title: this.form.name,
                         description: this.form.description,
                     })
                     .then(() => (this.sending = false));

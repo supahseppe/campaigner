@@ -44,6 +44,7 @@
         "stylelint-prettier": "^1.1",
         "stylelint-scss": "^3.12",
         "tailwindcss": "^1.2.0-canary.5",
+        "tailwindcss-alpha": "github:hacknug/tailwindcss-alpha",
         "tailwindcss-dark-mode": "^1.1.2",
         "tailwindcss-elevation": "^0.3",
         "v-click-outside": "^3.0",
@@ -64,6 +65,7 @@
     },
     "dependencies": {
         "axios": "^0.19.2",
+        "tailwindcss-typography": "^2.2.0",
         "tiptap": "^1.26.6",
         "tiptap-extensions": "^1.28.6"
     }

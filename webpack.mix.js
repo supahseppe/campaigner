@@ -9,6 +9,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('postcss-nesting'),
     ])
+    .copyDirectory('resources/img', 'public/img')
     .purgeCss()
     .webpackConfig({
         output: {

@@ -12,7 +12,7 @@
                     },
                     {
                         label: 'Dashboard',
-                        route: 'page.welcome',
+                        route: 'home',
                     },
                     {
                         label: 'About',

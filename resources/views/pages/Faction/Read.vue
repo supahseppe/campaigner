@@ -1,15 +1,15 @@
 <template>
     <section class="h-screen container">
         <section-header class="px-4">
-            <h1>{{ dummy.name }}</h1>
+            <h1>{{ faction.name }}</h1>
             <template #aside>
-                <btn :href="route('dummies.edit', dummy.slug)">
+                <btn :href="route('factions.edit', faction.slug)">
                     Edit
                 </btn>
             </template>
         </section-header>
         <section class="p-4">
-            <p>{{ dummy.id }}</p>
+            <p>{{ faction.id }}</p>
         </section>
     </section>
 </template>
@@ -20,21 +20,21 @@
     import SectionHeader from '_Components/SectionHeader';
 
     export default {
-        name: 'Dummy',
+        name: 'Factions',
         components: {
             Btn,
             SectionHeader,
         },
         props: {
-            dummy: {
+            faction: {
                 type: Object,
                 default: () => {},
             },
         },
         data() {
             return {
-                pageTitle: `Dummy: ${this.dummy.name}`,
-                pageDescription: `Viewing the ${this.dummy.name} dummy.`,
+                pageTitle: `Factions: ${this.faction.name}`,
+                pageDescription: `Viewing the ${this.faction.name} factions.`,
             };
         },
         computed: {},

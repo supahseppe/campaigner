@@ -1,9 +1,9 @@
 <template>
     <section class="h-screen container">
-        <trashed-message v-if="dummy.deleted_at" class="mb-6" @restore="restore">
-            This dummy has been deleted.
-        </trashed-message>
-        <form class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto" @submit.prevent="submit">
+        <form
+            class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+            @submit.prevent="submit"
+        >
             <div class="flex flex-wrap mb-6">
                 <text-input
                     label="Title"
@@ -14,21 +14,12 @@
                     required
                     autofocus
                 />
-                <div class="w-full mb-6">
+                <div class="w-full">
                     <wysiwyg label="Description" v-model="form.description" />
                 </div>
             </div>
 
-            <div class="flex flex-wrap items-center justify-between">
-                <button
-                    v-if="!dummy.deleted_at"
-                    class="text-red-600 hover:underline"
-                    tabindex="-1"
-                    type="button"
-                    @click="destroy"
-                >
-                    Delete Dummy
-                </button>
+            <div class="flex flex-wrap items-center">
                 <loading-button
                     :loading="sending"
                     type="submit"
@@ -38,38 +29,31 @@
                 </loading-button>
             </div>
         </form>
-    </div>
+    </section>
 </template>
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
     import TextInput from '_Components/inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
-    import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
 
     export default {
-        name: 'Edit',
+        name: 'Create',
         components: {
-            TextInput,
-            LoadingButton,
-            TrashedMessage,
             Wysiwyg,
+            'text-input': TextInput,
+            'loading-button': LoadingButton,
         },
-        props: {
-            dummy: {
-                type: Object,
-                default: () => {},
-            },
-        },
+        props: {},
         data() {
             return {
-                pageTitle: `Editing ${this.dummy.name}`,
-                pageDescription: 'Updating a dummy.',
+                pageTitle: 'Adding new faction',
+                pageDescription: 'Adding a new faction',
                 sending: false,
                 form: {
-                    title: this.dummy.name,
-                    description: this.dummy.description,
+                    title: null,
+                    description: null,
                 },
             };
         },
@@ -79,20 +63,14 @@
         mounted() {},
         methods: {
             submit() {
+                const url = this.route('factions.store');
                 this.sending = true;
                 this.$inertia
-                    .patch(this.route('dummies.update', this.dummy.slug), this.form)
+                    .post(url, {
+                        title: this.form.name,
+                        description: this.form.description,
+                    })
                     .then(() => (this.sending = false));
-            },
-            destroy() {
-                if (confirm('Are you sure you want to delete this dummy?')) {
-                    this.$inertia.delete(this.route('dummies.destroy', this.dummy.slug));
-                }
-            },
-            restore() {
-                if (confirm('Are you sure you want to restore this dummy?')) {
-                    this.$inertia.put(this.route('dummies.restore', this.dummy.slug));
-                }
             },
         },
         layout: MainLayout,

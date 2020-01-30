@@ -1,16 +1,16 @@
 <template>
     <section class="h-screen container">
-        <browse-layout model="dummy">
+        <browse-layout model="factions">
             <div class="flex-grow w-full pt-2 p-4 flex">
-                <template v-for="dummy in dummies">
+                <template v-for="faction in factions">
                     <panel
                         class="flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
-                        :key="dummy.id"
+                        :key="faction.id"
                     >
                         <h1
                             class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
                         >
-                            {{ dummy.name }}
+                            {{ faction.name }}
                         </h1>
                     </panel>
                 </template>
@@ -37,11 +37,11 @@
             },
         },
         data: () => ({
-            pageTitle: 'Browsing Dummies',
-            description: 'Viewing all dummies associated with the current user',
+            pageTitle: 'Browsing Faction',
+            description: 'Viewing all factions associated with the current user',
         }),
         computed: {
-            dummies() {
+            factions() {
                 return this.pager.data;
             },
         },

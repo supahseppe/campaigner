@@ -1,8 +1,8 @@
 <template>
-    <layout>
+    <section class="p-4">
         <h1 class="mb-3 text-2xl font-semibold">Contact</h1>
         <p>Contact me about my first Inertia.js app!</p>
-    </layout>
+    </section>
 </template>
 
 <script>
@@ -10,8 +10,7 @@
 
     export default {
         metaInfo: { title: 'Contact' },
-        components: {
-            Layout,
-        },
+        components: {},
+        layout: Layout,
     };
 </script>
