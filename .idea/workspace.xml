@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Icon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Edit.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CharacterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CharacterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Location/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Location/Edit.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,13 +275,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.LocationTest" />
       <item itemvalue="PHPUnit.CharacterTest" />
+      <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_see_own_characters" />
       <item itemvalue="PHPUnit.CharacterTest.user_can_see_single_character" />
-      <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
+      <item itemvalue="PHPUnit.LocationTest" />
+      <item itemvalue="PHP Web Page.Campaigner" />
     </list>
     <recent_temporary>
       <list>
@@ -344,7 +342,7 @@
       <workItem from="1580348138217" duration="7839000" />
       <workItem from="1580918601172" duration="2813000" />
       <workItem from="1580921511236" duration="66000" />
-      <workItem from="1580921594720" duration="8111000" />
+      <workItem from="1580921594720" duration="9108000" />
     </task>
     <servers />
   </component>
@@ -548,12 +546,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580932959081">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580933313971">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="838" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884246883" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580932959081" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580933313971" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
   <component name="XDebuggerManager">

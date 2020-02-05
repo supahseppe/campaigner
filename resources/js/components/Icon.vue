@@ -26,6 +26,10 @@
     import DramaMasks from '_Icons/DramaMasks';
     import GuyFawkesMask from '_Icons/GuyFawkesMask';
     import AccountMultipleOutline from '_Icons/AccountMultipleOutline';
+    import ImageFilterHdr from '_Icons/ImageFilterHdr';
+    import HomeGroup from '_Icons/HomeGroup';
+    import AccountGroup from '_Icons/AccountGroup';
+    import Tools from '_Icons/Tools';
 
     export default {
         name: 'Icon',
@@ -47,6 +51,10 @@
             DramaMasks,
             GuyFawkesMask,
             AccountMultipleOutline,
+            mountains: ImageFilterHdr,
+            houses: HomeGroup,
+            group: AccountGroup,
+            Tools,
         },
         props: {
             icon: {

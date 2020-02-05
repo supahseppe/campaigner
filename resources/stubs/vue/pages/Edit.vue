@@ -3,7 +3,10 @@
         <trashed-message v-if="dummy.deleted_at" class="mb-6" @restore="restore">
             This dummy has been deleted.
         </trashed-message>
-        <form class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto" @submit.prevent="submit">
+        <form
+            class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+            @submit.prevent="submit"
+        >
             <div class="flex flex-wrap mb-6">
                 <text-input
                     label="Title"
@@ -38,7 +41,7 @@
                 </loading-button>
             </div>
         </form>
-    </div>
+    </section>
 </template>
 
 <script>

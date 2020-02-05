@@ -9,17 +9,22 @@
                     {
                         label: 'Factions',
                         route: 'factions.index',
-                        icon: 'drama-masks',
-                    },
-                    {
-                        label: 'Locations',
-                        route: 'locations.index',
-                        icon: 'drama-masks',
+                        icon: 'group',
                     },
                     {
                         label: 'NPCs',
                         route: 'npcs.index',
                         icon: 'drama-masks',
+                    },
+                    {
+                        label: 'Locations',
+                        route: 'locations.index',
+                        icon: 'mountains',
+                    },
+                    {
+                        label: 'Tasks',
+                        route: 'locations.index',
+                        icon: 'tools',
                     },
                 ],
             };
