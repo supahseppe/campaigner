@@ -13,7 +13,9 @@
         </div>
         <div class="flex flex-col h-full">
             <div class="mt-12 sm:mt-4 px-6">
-                <p class="text-lg font-bold">Current Campaign Title</p>
+                <p class="text-lg font-bold">
+                    {{ $page.auth.user.campaign.title }}
+                </p>
                 <inertia-link :href="route('campaigns.index')">
                     <p class="italic text-sm">View All Campaigns</p>
                 </inertia-link>

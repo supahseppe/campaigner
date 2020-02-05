@@ -1,6 +1,6 @@
 <template>
     <section class="h-screen container">
-        <trashed-message v-if="factions.deleted_at" class="mb-6" @restore="restore">
+        <trashed-message v-if="faction.deleted_at" class="mb-6" @restore="restore">
             This faction has been deleted.
         </trashed-message>
         <form
@@ -9,7 +9,7 @@
         >
             <div class="flex flex-wrap mb-6">
                 <text-input
-                    label="Title"
+                    label="Name"
                     type="text"
                     :errors="$page.errors.name"
                     v-model="form.name"
@@ -71,7 +71,7 @@
                 pageDescription: 'Updating a faction.',
                 sending: false,
                 form: {
-                    title: this.faction.name,
+                    name: this.faction.name,
                     description: this.faction.description,
                 },
             };

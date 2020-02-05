@@ -6,7 +6,7 @@
         >
             <div class="flex flex-wrap mb-6">
                 <text-input
-                    label="Title"
+                    label="Name"
                     type="text"
                     :errors="$page.errors.name"
                     v-model="form.name"
@@ -52,7 +52,7 @@
                 pageDescription: 'Adding a new faction',
                 sending: false,
                 form: {
-                    title: null,
+                    name: null,
                     description: null,
                 },
             };
@@ -65,12 +65,7 @@
             submit() {
                 const url = this.route('factions.store');
                 this.sending = true;
-                this.$inertia
-                    .post(url, {
-                        title: this.form.name,
-                        description: this.form.description,
-                    })
-                    .then(() => (this.sending = false));
+                this.$inertia.post(url, this.form).then(() => (this.sending = false));
             },
         },
         layout: MainLayout,

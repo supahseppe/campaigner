@@ -11,7 +11,7 @@
                             <h1
                                 class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
                             >
-                                {{ faction.title }}
+                                {{ faction.name }}
                             </h1>
                         </inertia-link>
                     </panel>

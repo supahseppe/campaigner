@@ -23,9 +23,9 @@ class FactionController extends Controller
      */
     public function index()
     {
-        $campaign = Campaign::find(session('campaign.id'));
+        $factions = Auth::user()->campaign->factions();
         return Inertia::render('Faction/Browse', [
-            'pager' => $campaign->factions()->paginate(15)
+            'pager' => $factions->paginate(15)
         ]);
     }
 
@@ -49,11 +49,11 @@ class FactionController extends Controller
     {
         $factions = Faction::create(
             $request->validate([
-                'title' => ['required'],
+                'name' => ['required'],
                 'description' => ['nullable', 'max:1500'],
             ])
         );
-        Auth::user()->factions()->save($factions);
+        Auth::user()->campaign->factions()->save($factions);
 
         return Redirect::route('factions.show', [$factions])->with('success', 'Faction created.');
     }
@@ -61,26 +61,26 @@ class FactionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Faction $factions
+     * @param  \App\Faction $faction
      * @return \Inertia\Response
      */
-    public function show(Faction $factions)
+    public function show(Faction $faction)
     {
         return Inertia::render('Faction/Read', [
-            'factions' => $factions
+            'faction' => $faction
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Faction $factions
+     * @param  \App\Faction $faction
      * @return \Inertia\Response
      */
-    public function edit(Faction $factions)
+    public function edit(Faction $faction)
     {
         return Inertia::render('Faction/Edit', [
-            'factions' => $factions
+            'faction' => $faction
         ]);
     }
 
@@ -91,40 +91,40 @@ class FactionController extends Controller
      * @param  \App\Faction $factions
      * @return \Inertia\Response
      */
-    public function update(Request $request, Faction $factions)
+    public function update(Request $request, Faction $faction)
     {
-        $factions->update(
+        $faction->update(
             $request->validate([
-                'title' => ['required'],
+                'name' => ['required'],
                 'description' => ['nullable', 'max:1500'],
             ])
         );
-        return Redirect::route('factions.show', [$factions])->with('success', 'Faction updated.');
+        return Redirect::route('factions.show', [$faction])->with('success', 'Faction updated.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Faction  $factions
+     * @param  Faction  $faction
      * @return \Illuminate\Http\RedirectResponse
      * @throws
      */
-    public function destroy(Faction $factions)
+    public function destroy(Faction $faction)
     {
-        $factions->users()->detach();
-        $factions->delete();
+        $faction->campaigns()->detach();
+        $faction->delete();
         return Redirect::route('factions.index')->with('success', 'Faction deleted.');
     }
 
     /**
      * Restores the specified resource.
      *
-     * @param  \App\Faction  $factions
+     * @param  \App\Faction  $faction
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function restore(Faction $factions)
+    public function restore(Faction $faction)
     {
-        $factions->restore();
+        $faction->restore();
         return Redirect::back()->with('success', 'Faction restored.');
     }
 }

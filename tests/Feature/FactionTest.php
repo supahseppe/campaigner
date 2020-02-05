@@ -65,7 +65,7 @@ class FactionTest extends TestCase
         $this->actingAs($this->user)
             ->get(route('factions.show', $this->test_faction->slug))
             ->assertStatus(200)
-            ->assertHasProp('factions');
+            ->assertHasProp('faction');
     }
 
     /** @test */
