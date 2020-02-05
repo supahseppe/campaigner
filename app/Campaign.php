@@ -63,6 +63,10 @@ class Campaign extends Model
         return $this->belongsToMany('App\Faction');
     }
 
+    public function locations() {
+        return $this->belongsToMany('App\Location');
+    }
+
     /**
      * Scope a query to only include campaigns where user has a particular role
      *

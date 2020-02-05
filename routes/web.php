@@ -43,3 +43,5 @@ Route::resource('characters', 'CharacterController');
 Route::resource('npcs', 'CharacterController');
 
 Route::resource('factions', 'FactionController');
+
+Route::resource('locations', 'LocationController');

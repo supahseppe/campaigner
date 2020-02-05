@@ -12,6 +12,11 @@
                         icon: 'drama-masks',
                     },
                     {
+                        label: 'Locations',
+                        route: 'locations.index',
+                        icon: 'drama-masks',
+                    },
+                    {
                         label: 'NPCs',
                         route: 'npcs.index',
                         icon: 'drama-masks',

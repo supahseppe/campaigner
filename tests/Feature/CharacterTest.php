@@ -13,16 +13,21 @@ class CharacterTest extends TestCase
     use RefreshDatabase;
 
     protected $user;
-    protected $test_character;
+    protected $character;
+    protected $campaign;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->user = factory('App\User')->create();
-        $this->test_character = factory('App\Character')->create();
+        $this->character = factory('App\Character')->create();
+        $this->campaign = factory('App\Campaign')->create();
 
-        $this->user->characters()->save($this->test_character);
+        $this->user->campaigns()->save($this->campaign);
+        $this->user->campaign = $this->campaign;
+
+        $this->user->characters()->save($this->character);
     }
 
     /** @test */
@@ -59,7 +64,7 @@ class CharacterTest extends TestCase
     public function user_can_see_single_character()
     {
         $this->actingAs($this->user)
-            ->get(route('characters.show', $this->test_character->slug))
+            ->get(route('characters.show', $this->character->slug))
             ->assertStatus(200)
             ->assertHasProp('character');
     }
@@ -92,8 +97,8 @@ class CharacterTest extends TestCase
     public function user_can_edit_character()
     {
         $this->actingAs($this->user)
-            ->put(route('characters.update', $this->test_character->slug), $this->test_character->toArray())
-            ->assertRedirect(route('characters.show', [$this->test_character->slug]));
+            ->put(route('characters.update', $this->character->slug), $this->character->toArray())
+            ->assertRedirect(route('characters.show', [$this->character->slug]));
     }
 
     /** @test */

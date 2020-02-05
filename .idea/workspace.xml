@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FactionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Faction/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Faction/Add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Faction/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Faction/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Faction/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Faction/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/FactionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/FactionTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CharacterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CharacterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,46 +252,46 @@
       <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.FactionTest">
-    <configuration name="FactionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FactionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.CharacterTest">
+    <configuration name="CharacterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="FactionTest.user_can_create_factions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FactionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionTest.php" method="user_can_create_factions" scope="Method" />
+    <configuration name="CharacterTest.unauthenticated_users_cannot_see_character_pages" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" method="unauthenticated_users_cannot_see_character_pages" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FactionTest.user_can_edit_factions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FactionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionTest.php" method="user_can_edit_factions" scope="Method" />
+    <configuration name="CharacterTest.user_can_see_own_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" method="user_can_see_own_characters" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FactionTest.user_can_see_own_factions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FactionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionTest.php" method="user_can_see_own_factions" scope="Method" />
+    <configuration name="CharacterTest.user_can_see_single_character" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" method="user_can_see_single_character" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FactionTest.user_can_see_single_factions" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\FactionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/FactionTest.php" method="user_can_see_single_factions" scope="Method" />
+    <configuration name="LocationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LocationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LocationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="Campaigner" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Laravel">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.FactionTest" />
-      <item itemvalue="PHPUnit.FactionTest.user_can_create_factions" />
-      <item itemvalue="PHPUnit.FactionTest.user_can_edit_factions" />
-      <item itemvalue="PHPUnit.FactionTest.user_can_see_own_factions" />
-      <item itemvalue="PHPUnit.FactionTest.user_can_see_single_factions" />
       <item itemvalue="PHP Web Page.Campaigner" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.LocationTest" />
+      <item itemvalue="PHPUnit.CharacterTest" />
+      <item itemvalue="PHPUnit.CharacterTest.user_can_see_own_characters" />
+      <item itemvalue="PHPUnit.CharacterTest.user_can_see_single_character" />
+      <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.FactionTest" />
-        <item itemvalue="PHPUnit.FactionTest.user_can_edit_factions" />
-        <item itemvalue="PHPUnit.FactionTest.user_can_create_factions" />
-        <item itemvalue="PHPUnit.FactionTest.user_can_see_single_factions" />
-        <item itemvalue="PHPUnit.FactionTest.user_can_see_own_factions" />
+        <item itemvalue="PHPUnit.CharacterTest" />
+        <item itemvalue="PHPUnit.CharacterTest.user_can_see_own_characters" />
+        <item itemvalue="PHPUnit.CharacterTest.unauthenticated_users_cannot_see_character_pages" />
+        <item itemvalue="PHPUnit.CharacterTest.user_can_see_single_character" />
+        <item itemvalue="PHPUnit.LocationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,6 +306,7 @@
         </serviceView>
       </list>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -343,7 +344,7 @@
       <workItem from="1580348138217" duration="7839000" />
       <workItem from="1580918601172" duration="2813000" />
       <workItem from="1580921511236" duration="66000" />
-      <workItem from="1580921594720" duration="5571000" />
+      <workItem from="1580921594720" duration="8111000" />
     </task>
     <servers />
   </component>
@@ -441,33 +442,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580928851250">
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580932986574">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.bottom/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388908" />
     <state width="1880" height="285" key="GridCell.Tab.0.bottom/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580928851250" />
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580932986574" />
     <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918054" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580928851249">
+    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580932986572">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.center/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388906" />
     <state width="1880" height="285" key="GridCell.Tab.0.center/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225867" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580928851249" />
+    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580932986572" />
     <state width="1628" height="241" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918052" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580928851249">
+    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580932986572">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.left/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388902" />
     <state width="1880" height="285" key="GridCell.Tab.0.left/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225865" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580928851249" />
+    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580932986572" />
     <state width="1628" height="241" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918052" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580928851250">
+    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580932986573">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.right/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388907" />
     <state width="1880" height="285" key="GridCell.Tab.0.right/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580928851250" />
+    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580932986573" />
     <state width="1628" height="241" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918053" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1579626555045">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -547,12 +548,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580928581318">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580932959081">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="838" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884246883" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580928581318" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580932959081" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
   <component name="XDebuggerManager">

@@ -48,11 +48,11 @@
         props: {},
         data() {
             return {
-                pageTitle: 'Adding new dummy',
-                pageDescription: 'Adding a new dummy',
+                pageTitle: 'Adding new location',
+                pageDescription: 'Adding a new location',
                 sending: false,
                 form: {
-                    title: null,
+                    name: null,
                     description: null,
                 },
             };
@@ -63,7 +63,7 @@
         mounted() {},
         methods: {
             submit() {
-                const url = this.route('dummies.store');
+                const url = this.route('locations.store');
                 this.sending = true;
                 this.$inertia.post(url, this.form).then(() => (this.sending = false));
             },
