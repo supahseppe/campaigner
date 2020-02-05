@@ -7,11 +7,13 @@
                         class="flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
                         :key="campaign.id"
                     >
-                        <h1
-                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        >
-                            {{ campaign.title }}
-                        </h1>
+                        <inertia-link :href="route('campaigns.show', campaign.slug)">
+                            <h1
+                                class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
+                            >
+                                {{ campaign.title }}
+                            </h1>
+                        </inertia-link>
                     </panel>
                 </template>
             </div>

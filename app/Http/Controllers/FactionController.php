@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Campaign;
 use App\Faction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
-class Factionsontroller extends Controller
+class FactionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,8 +23,9 @@ class Factionsontroller extends Controller
      */
     public function index()
     {
+        $campaign = Campaign::find(session('campaign.id'));
         return Inertia::render('Faction/Browse', [
-            'pager' => Faction::paginate(15)
+            'pager' => $campaign->factions()->paginate(15)
         ]);
     }
 

@@ -11,22 +11,15 @@
                 </svg>
             </button>
         </div>
-        <nav class="mt-16 sm:mt-0">
-            <div class="px-6 sm:hidden">
-                <a href="#" class="block py-1  text-sm font-medium text-gray-900">
-                    Mailbox
-                </a>
-                <a href="#" class="mt-2 block py-1  text-sm font-medium text-gray-900">
-                    Customers
-                </a>
-                <a href="#" class="mt-2 block py-1  text-sm font-medium text-gray-900">
-                    Reporting
-                </a>
-                <a href="#" class="mt-2 block py-1  text-sm font-medium text-gray-900">
-                    Manage
-                </a>
+        <div class="flex flex-col h-full">
+            <div class="mt-12 sm:mt-4 px-6">
+                <p class="text-lg font-bold">Current Campaign Title</p>
+                <inertia-link :href="route('campaigns.index')">
+                    <p class="italic text-sm">View All Campaigns</p>
+                </inertia-link>
+                <hr class="border border-b mt-3 mb-3" />
             </div>
-            <div class="mt-4 px-6">
+            <div class="px-6">
                 <nav id="nav" class="relative">
                     <span
                         class="absolute h-10 w-full bg-gray-200 rounded-lg shadow ease-out transition-transform transition-medium border-b border-r border-gray-400"
@@ -70,24 +63,25 @@
                         </models-nav>
                     </ul>
                 </nav>
-                <h2
-                    class="mt-8 text-xs font-semibold text-gray-600 uppercase tracking-wide"
-                >
-                    Folders
-                </h2>
-                <div class="mt-4">
-                    <a href="#" class="block text-sm font-medium text-gray-700">
-                        Refunds
-                    </a>
-                    <a href="#" class="mt-4 block text-sm font-medium text-gray-700">
-                        Discounts
-                    </a>
-                    <a href="#" class="mt-4 block text-sm font-medium text-gray-700">
-                        Bugs
-                    </a>
-                </div>
             </div>
-            <div class="mt-8 p-6 border-t sm:hidden">
+            <pages-nav>
+                <template v-slot="{ pages }">
+                    <nav class="px-4 sm:hidden">
+                        <hr class="border border-b my-3" />
+                        <inertia-link
+                            v-for="(page, i) in pages"
+                            :href="route(page.route)"
+                            :key="i"
+                            class="h-10 py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                        >
+                            <p class="text-sm font-medium">
+                                {{ page.label }}
+                            </p>
+                        </inertia-link>
+                    </nav>
+                </template>
+            </pages-nav>
+            <div class="mt-auto p-6 border-t sm:hidden">
                 <div class="flex items-center w-full">
                     <img
                         v-if="$page.auth.user.avatar"
@@ -114,13 +108,14 @@
                     </a>
                 </div>
             </div>
-        </nav>
+        </div>
     </div>
 </template>
 
 <script>
     import Avatar from 'vue-avatar';
     import ModelsNav from '_Layouts/Menus/ModelsNav';
+    import PagesNav from '_Layouts/Menus/PagesNav';
     import Icon from '_Components/Icon';
 
     export default {
@@ -128,6 +123,7 @@
         components: {
             Avatar,
             Icon,
+            PagesNav,
             ModelsNav,
         },
         data() {

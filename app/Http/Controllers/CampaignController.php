@@ -6,6 +6,7 @@ use App\Campaign;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
 
 class CampaignController extends Controller
@@ -47,6 +48,16 @@ class CampaignController extends Controller
     }
 
     /**
+     * Show the form for creating a new campaign if the user has no campaigns.
+     *
+     * @return \Inertia\Response
+     */
+    public function initial()
+    {
+        return Inertia::render('Campaign/Initial');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -60,6 +71,7 @@ class CampaignController extends Controller
                 'description' => ['nullable', 'max:1500'],
             ])
         );
+
         Auth::user()->campaigns()->save($campaign);
 
         return Redirect::route('campaigns.show', [$campaign])->with('success', 'Campaign created.');
@@ -73,6 +85,10 @@ class CampaignController extends Controller
      */
     public function show(Campaign $campaign)
     {
+        Session::put('campaign', [
+            'id' => $campaign->id,
+            'slug' => $campaign->slug,
+        ]);
         return Inertia::render('Campaign/Read', [
             'campaign' => $campaign
         ]);

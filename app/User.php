@@ -38,7 +38,11 @@ class User extends Authenticatable
     ];
 
     public function campaigns () {
-        return $this->belongsToMany('App\Campaign')->withPivot('role');
+        return $this->belongsToMany('App\Campaign')->withPivot(['role']);
+    }
+
+    public function campaign () {
+        return $this->belongsTo('App\Campaign');
     }
 
     public function characters () {

@@ -37,7 +37,7 @@ class Faction extends Model
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'name'
             ]
         ];
     }
@@ -45,5 +45,10 @@ class Faction extends Model
     public function getRouteKeyName()
     {
         return $this->getSlugKeyName();
+    }
+
+    public function campaigns()
+    {
+        return $this->belongsToMany('App\Campaign');
     }
 }

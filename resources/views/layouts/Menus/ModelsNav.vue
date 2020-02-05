@@ -7,14 +7,9 @@
             return {
                 pages: [
                     {
-                        label: 'Campaigns',
-                        route: 'campaigns.index',
-                        icon: 'globe-model',
-                    },
-                    {
-                        label: 'Characters',
-                        route: 'characters.index',
-                        icon: 'account-multiple-outline',
+                        label: 'Factions',
+                        route: 'factions.index',
+                        icon: 'drama-masks',
                     },
                     {
                         label: 'NPCs',

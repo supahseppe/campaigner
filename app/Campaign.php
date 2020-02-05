@@ -59,6 +59,10 @@ class Campaign extends Model
         return $this->belongsToMany('App\User')->withPivot('role');
     }
 
+    public function factions() {
+        return $this->belongsToMany('App\Faction');
+    }
+
     /**
      * Scope a query to only include campaigns where user has a particular role
      *

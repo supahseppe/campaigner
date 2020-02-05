@@ -8,19 +8,24 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
 
-class FactionsTest extends TestCase
+class FactionTest extends TestCase
 {
     use RefreshDatabase;
 
     protected $user;
-    protected $test_factions;
+    protected $test_campaign;
+    protected $test_faction;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->user = factory('App\User')->create();
-        $this->test_factions = factory('App\Faction')->create();
+        $this->test_campaign = factory('App\Campaign')->create();
+        $this->test_faction = factory('App\Faction')->create();
+
+        $this->test_campaign->factions()->save($this->test_faction);
+        $this->user->campaigns()->save($this->test_campaign);
     }
 
     /** @test */
@@ -41,8 +46,9 @@ class FactionsTest extends TestCase
     /** @test */
     public function user_can_see_own_factions()
     {
+        $campaign = $this->user->campaigns()->first();
         // We're making 4 more factions, for a total of 5 (counting the one created in setUp)
-        $this->user->factions()->saveMany(
+        $campaign->factions()->saveMany(
             factory('App\Faction', 4)->make()
         );
 
@@ -57,7 +63,7 @@ class FactionsTest extends TestCase
     public function user_can_see_single_factions()
     {
         $this->actingAs($this->user)
-            ->get(route('factions.show', $this->test_factions->slug))
+            ->get(route('factions.show', $this->test_faction->slug))
             ->assertStatus(200)
             ->assertHasProp('factions');
     }
@@ -90,8 +96,8 @@ class FactionsTest extends TestCase
     public function user_can_edit_factions()
     {
         $request = $this->actingAs($this->user)
-            ->put(route('factions.update', $this->test_factions->slug), $this->test_factions->toArray())
-            ->assertRedirect(route('factions.show', [$this->test_factions->slug]));
+            ->put(route('factions.update', $this->test_faction->slug), $this->test_faction->toArray())
+            ->assertRedirect(route('factions.show', [$this->test_faction->slug]));
     }
 
     /** @test */

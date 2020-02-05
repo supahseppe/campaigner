@@ -35,10 +35,11 @@ Route::get('/contact', 'PageController@serve')->name('page.contact');
  * Models
  */
 
+Route::get('/campaigns/initial', 'CampaignController@initial')->name('campaigns.initial');
 Route::resource('campaigns', 'CampaignController');
 
 // Characters
 Route::resource('characters', 'CharacterController');
 Route::resource('npcs', 'CharacterController');
 
-Route::resource('factions', 'FactionsController');
+Route::resource('factions', 'FactionController');

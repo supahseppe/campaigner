@@ -1,19 +1,21 @@
 <template>
-    <browse-layout model="character" :title="npcTitle">
-        <template v-if="npcs" #header-buttons>
-            <btn :href="route('npcs.create')" class="ml-4">Add New NPC</btn>
-        </template>
-        <div v-for="character in characters" :key="character.id">
-            <card class="mx-2">
-                <template v-slot:title>
-                    <inertia-link :href="route('characters.show', character.slug)">
-                        {{ character.name }}
-                    </inertia-link>
-                </template>
-                <p>{{ character.high_concept }}</p>
-            </card>
-        </div>
-    </browse-layout>
+    <section class="h-screen container">
+        <browse-layout model="character" :title="npcTitle">
+            <template v-if="npcs" #header-buttons>
+                <btn :href="route('npcs.create')" class="ml-4">Add New NPC</btn>
+            </template>
+            <div v-for="character in characters" :key="character.id">
+                <card class="mx-2">
+                    <template v-slot:title>
+                        <inertia-link :href="route('characters.show', character.slug)">
+                            {{ character.name }}
+                        </inertia-link>
+                    </template>
+                    <p>{{ character.high_concept }}</p>
+                </card>
+            </div>
+        </browse-layout>
+    </section>
 </template>
 
 <script>
