@@ -51,4 +51,8 @@ class Faction extends Model
     {
         return $this->belongsToMany('App\Campaign');
     }
+
+    public function tasks() {
+        return $this->belongsToMany('App\Task');
+    }
 }

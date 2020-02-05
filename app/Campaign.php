@@ -55,6 +55,18 @@ class Campaign extends Model
         return $str;
     }
 
+    /**
+     * Scope a query to only include campaigns where user has a particular role
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  mixed  $role
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeWithRole($query, $role)
+    {
+        return $query->where('role', $role);
+    }
+
     public function users() {
         return $this->belongsToMany('App\User')->withPivot('role');
     }
@@ -67,15 +79,7 @@ class Campaign extends Model
         return $this->belongsToMany('App\Location');
     }
 
-    /**
-     * Scope a query to only include campaigns where user has a particular role
-     *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  mixed  $role
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    public function scopeWithRole($query, $role)
-    {
-        return $query->where('role', $role);
+    public function tasks() {
+        return $this->belongsToMany('App\Task');
     }
 }

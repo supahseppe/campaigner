@@ -45,3 +45,4 @@ Route::resource('npcs', 'CharacterController');
 Route::resource('factions', 'FactionController');
 
 Route::resource('locations', 'LocationController');
+Route::resource('tasks', 'TaskController');

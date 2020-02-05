@@ -47,4 +47,8 @@ class Character extends Model
     {
         return $this->belongsToMany('App\User')->withPivot('role');
     }
+
+    public function tasks() {
+        return $this->belongsToMany('App\Task');
+    }
 }

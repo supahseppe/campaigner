@@ -7,7 +7,7 @@ use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 use Venturecraft\Revisionable\RevisionableTrait;
 
-class Location extends Model
+class Task extends Model
 {
     use RevisionableTrait, Sluggable, SluggableScopeHelpers;
 
@@ -47,7 +47,19 @@ class Location extends Model
         return $this->belongsToMany('App\Campaign');
     }
 
+    public function characters() {
+        return $this->belongsToMany('App\Character');
+    }
+
+    public function factions() {
+        return $this->belongsToMany('App\Faction');
+    }
+
+    public function locations() {
+        return $this->belongsToMany('App\Location');
+    }
+
     public function tasks() {
-        return $this->belongsToMany('App\Task');
+        return $this->belongsToMany('App\Task', 'related_id');
     }
 }
