@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Auth/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,13 +274,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.CampaignTest" />
       <item itemvalue="PHPUnit.TaskTest" />
       <item itemvalue="PHPUnit.TaskTest.unauthenticated_users_cannot_see_task_pages" />
       <item itemvalue="PHPUnit.TaskTest.user_can_see_own_tasks" />
       <item itemvalue="PHPUnit.app" />
-      <item itemvalue="PHPUnit.CampaignTest" />
+      <item itemvalue="PHP Web Page.Campaigner" />
     </list>
     <recent_temporary>
       <list>
@@ -360,7 +341,7 @@
       <workItem from="1580348138217" duration="7839000" />
       <workItem from="1580918601172" duration="2813000" />
       <workItem from="1580921511236" duration="66000" />
-      <workItem from="1580921594720" duration="26276000" />
+      <workItem from="1580921594720" duration="27047000" />
     </task>
     <servers />
   </component>
