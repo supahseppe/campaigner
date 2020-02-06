@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'basic',
+    'default' => 'firstdeploy',
 
     /*
     |--------------------------------------------------------------------------
@@ -144,7 +144,7 @@ return [
     */
 
     'include' => [
-        'deployer/custom.php',
+        //
     ],
 
     /*
