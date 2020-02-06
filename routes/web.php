@@ -35,14 +35,20 @@ Route::get('/contact', 'PageController@serve')->name('page.contact');
  * Models
  */
 
+// Campaigns
 Route::get('/campaigns/initial', 'CampaignController@initial')->name('campaigns.initial');
 Route::resource('campaigns', 'CampaignController');
 
 // Characters
+Route::get('/campaign/{campaign}/characters', 'CharacterController@in_campaign')->name('characters.in_campaign');
 Route::resource('characters', 'CharacterController');
 Route::resource('npcs', 'CharacterController');
 
+// Factions
 Route::resource('factions', 'FactionController');
 
+//Locations
 Route::resource('locations', 'LocationController');
+
+// Tasks
 Route::resource('tasks', 'TaskController');

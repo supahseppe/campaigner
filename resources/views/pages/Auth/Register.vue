@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center">
+    <div class="container mx-auto h-screen">
+        <div class="flex flex-wrap justify-center items-center h-full">
             <div class="w-full max-w-sm">
                 <div
                     class="flex flex-col break-words bg-white border border-2 rounded shadow-md"
@@ -135,12 +135,10 @@
 </template>
 
 <script>
-    import Layout from '_Layouts/MainLayout';
     import LoadingButton from '_Components/LoadingButton';
 
     export default {
         metaInfo: { title: 'Register' },
-        layout: Layout,
         components: {
             LoadingButton,
         },

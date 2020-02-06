@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Campaign;
 use App\Character;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,14 +22,27 @@ class CharacterController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $is_npc = Str::afterLast($request->getPathInfo(), '/') === 'npcs';
         return Inertia::render('Character/Browse', [
-            'npcs' => $is_npc,
-            'pager' => Character::where('npc', $is_npc)->paginate(15)->only('name', 'high_concept', 'slug')
+            'pager' => Character::where('npc', false)->paginate(15)->only('name', 'high_concept', 'slug')
         ]);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @param \App\Campaign $campaign
+     * @return \Inertia\Response
+     */
+    public function in_campaign(Campaign $campaign)
+    {
+        return Inertia::render('Character/Browse', [
+            'pager' => $campaign->characters()->paginate(15)->only('name', 'high_concept', 'slug'),
+        ]);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -145,8 +159,10 @@ class CharacterController extends Controller
      */
     public function npcs()
     {
+        $npcs = Auth::user()->campaign->npcs();
         return Inertia::render('Character/Browse', [
-            'pager' => Character::paginate(15)
+            'npcs' => true,
+            'pager' => $npcs->paginate(15),
         ]);
     }
 }

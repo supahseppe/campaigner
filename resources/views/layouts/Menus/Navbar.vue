@@ -1,6 +1,6 @@
 <template>
     <header class="flex flex-shrink-0">
-        <div class="flex-shrink-0 px-4 py-3 bg-gray-700 lg:w-64 lg:bg-gray-800">
+        <div class="flex-shrink-0 px-4 py-3 bg-indigo-700 lg:w-64 lg:bg-indigo-800">
             <button class="block text-gray-400 hover:text-gray-200 sm:hidden">
                 <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
                     <path
@@ -34,7 +34,7 @@
             </button>
         </div>
         <div
-            class="flex-1 flex items-center justify-between pl-2 pr-6 bg-gray-700 lg:px-6"
+            class="flex-1 flex items-center justify-between pl-2 pr-6 bg-indigo-700 lg:px-6"
         >
             <pages-nav>
                 <template v-slot="{ pages }">
@@ -71,7 +71,7 @@
                     </span>
                     <input
                         placeholder="Search"
-                        class="block pl-9 pr-4 py-2 w-full bg-gray-800 rounded-lg text-sm placeholder-gray-400 text-white focus:bg-white focus:placeholder-gray-600 focus:text-gray-900 focus:outline-none"
+                        class="block pl-9 pr-4 py-2 w-full bg-indigo-800 rounded-lg text-sm placeholder-gray-400 text-white focus:bg-white focus:placeholder-gray-600 focus:text-gray-900 focus:outline-none"
                     />
                 </div>
                 <button class="ml-5 text-gray-400 hover:text-gray-200">

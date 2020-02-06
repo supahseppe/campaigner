@@ -103,13 +103,11 @@
 </template>
 
 <script>
-    import Layout from '_Layouts/MainLayout';
     import LoadingButton from '_Components/LoadingButton';
     import TextInput from '_Inputs/TextInput';
 
     export default {
         metaInfo: { title: 'Login' },
-        layout: Layout,
         components: {
             'text-input': TextInput,
             LoadingButton,

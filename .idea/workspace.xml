@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="148998db-a461-4b3f-a6d3-d7a74b3ab6b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Campaign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campaign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Character.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Character.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Faction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Faction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CampaignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SectionHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/stubs/vue/pages/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Browse/BrowseLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/ModelsNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/Menus/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Auth/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Campaign/Browse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/Character/Browse.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +216,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WZx3LVCMthVbAOfBynCDR0OzsS" />
@@ -251,9 +268,9 @@
       <recent name="$PROJECT_DIR$/resources/js/components/inputs" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.TaskTest">
-    <configuration name="CharacterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CharacterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CharacterTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.CampaignTest">
+    <configuration name="CampaignTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CampaignTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CampaignTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="TaskTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -268,8 +285,8 @@
       <TestRunner class="Tests\Feature\TaskTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/TaskTest.php" method="user_can_see_own_tasks" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="TaskTest.user_can_see_single_task" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\TaskTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/TaskTest.php" method="user_can_see_single_task" scope="Method" />
+    <configuration name="app" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/app" />
       <method v="2" />
     </configuration>
     <configuration name="Campaigner" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Laravel">
@@ -278,19 +295,19 @@
     <list>
       <item itemvalue="PHP Web Page.Campaigner" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.CharacterTest" />
       <item itemvalue="PHPUnit.TaskTest" />
       <item itemvalue="PHPUnit.TaskTest.unauthenticated_users_cannot_see_task_pages" />
       <item itemvalue="PHPUnit.TaskTest.user_can_see_own_tasks" />
-      <item itemvalue="PHPUnit.TaskTest.user_can_see_single_task" />
+      <item itemvalue="PHPUnit.app" />
+      <item itemvalue="PHPUnit.CampaignTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CampaignTest" />
+        <item itemvalue="PHPUnit.app" />
         <item itemvalue="PHPUnit.TaskTest" />
         <item itemvalue="PHPUnit.TaskTest.user_can_see_own_tasks" />
         <item itemvalue="PHPUnit.TaskTest.unauthenticated_users_cannot_see_task_pages" />
-        <item itemvalue="PHPUnit.TaskTest.user_can_see_single_task" />
-        <item itemvalue="PHPUnit.CharacterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -343,7 +360,7 @@
       <workItem from="1580348138217" duration="7839000" />
       <workItem from="1580918601172" duration="2813000" />
       <workItem from="1580921511236" duration="66000" />
-      <workItem from="1580921594720" duration="11872000" />
+      <workItem from="1580921594720" duration="26276000" />
     </task>
     <servers />
   </component>
@@ -419,11 +436,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1580091124565" />
-    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579959057668">
+    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581004783815">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="698" y="302" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579642056416" />
-    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579959057668" />
+    <state x="611" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1581004783815" />
     <state x="549" y="338" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1579624644034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -441,33 +458,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="409" y="290" width="901" height="689" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1579580320584" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580938938732">
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom" timestamp="1580999179334">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.bottom/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388908" />
     <state width="1880" height="285" key="GridCell.Tab.0.bottom/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580938938732" />
+    <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1580999179334" />
     <state width="1628" height="241" key="GridCell.Tab.0.bottom/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918054" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580938938730">
+    <state width="1628" height="241" key="GridCell.Tab.0.center" timestamp="1580999179332">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.center/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388906" />
     <state width="1880" height="285" key="GridCell.Tab.0.center/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225867" />
-    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580938938730" />
+    <state width="1628" height="241" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1580999179332" />
     <state width="1628" height="241" key="GridCell.Tab.0.center/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918052" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580938938729">
+    <state width="1628" height="241" key="GridCell.Tab.0.left" timestamp="1580999179331">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.left/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388902" />
     <state width="1880" height="285" key="GridCell.Tab.0.left/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225865" />
-    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580938938729" />
+    <state width="1628" height="241" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580999179331" />
     <state width="1628" height="241" key="GridCell.Tab.0.left/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918052" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580938938731">
+    <state width="1628" height="241" key="GridCell.Tab.0.right" timestamp="1580999179333">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1870" height="242" key="GridCell.Tab.0.right/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884388907" />
     <state width="1880" height="285" key="GridCell.Tab.0.right/-1680.23.1680.1027/0.0.1920.1080@0.0.1920.1080" timestamp="1579626225868" />
-    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580938938731" />
+    <state width="1628" height="241" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1580999179333" />
     <state width="1628" height="241" key="GridCell.Tab.0.right/0.22.1680.1028@0.22.1680.1028" timestamp="1580361918053" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1579626555045">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -536,10 +553,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1580936729066" />
-    <state x="476" y="147" width="809" height="756" key="find.popup" timestamp="1579851241205">
+    <state x="476" y="147" width="809" height="756" key="find.popup" timestamp="1580999382336">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="476" y="147" width="809" height="756" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1579851241205" />
+    <state x="476" y="147" width="809" height="756" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580999382336" />
     <state x="560" y="267" width="800" height="546" key="recent.locations.popup" timestamp="1579630038237">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -551,12 +568,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/0.0.1680.1050@0.0.1680.1050" timestamp="1579396251907" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1580938757915">
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup" timestamp="1581017079040">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="577" y="240" width="838" height="696" key="search.everywhere.popup/-1680.0.1680.1050/0.0.1920.1080@0.0.1920.1080" timestamp="1579884246883" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579617009820" />
-    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1580938757915" />
+    <state x="505" y="233" width="838" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1581017079040" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1579616465478" />
   </component>
   <component name="XDebuggerManager">

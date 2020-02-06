@@ -1,6 +1,6 @@
 <template>
     <div
-        class="z-30 fixed inset-y-0 left-0 w-64 bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium"
+        class="z-30 fixed inset-y-0 left-0 w-64 bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium flex-none"
     >
         <div class="absolute top-0 left-0 pl-4 pt-3 sm:hidden">
             <button class="block text-gray-600 hover:text-gray-800">
@@ -13,12 +13,11 @@
         </div>
         <div class="flex flex-col h-full">
             <div class="mt-12 sm:mt-4 px-6">
-                <p class="text-lg font-bold">
-                    {{ $page.auth.user.campaign.title }}
-                </p>
-                <inertia-link :href="route('campaigns.index')">
-                    <p class="italic text-sm">View All Campaigns</p>
-                </inertia-link>
+                <h2 class="text-lg font-bold">
+                    <template v-if="$page.auth.user">
+                        {{ $page.auth.user.campaign.title }}
+                    </template>
+                </h2>
                 <hr class="border border-b mt-3 mb-3" />
             </div>
             <div class="px-6">
@@ -29,14 +28,14 @@
                             transform: `translateY(calc(100% * ${selected}))`,
                         }"
                     ></span>
-                    <ul class="relative">
+                    <div class="relative">
                         <models-nav>
                             <template v-slot="{ pages }">
-                                <div>
+                                <ul>
                                     <li v-for="(page, i) in pages" :key="i">
                                         <inertia-link
                                             :aria-selected="selected === i"
-                                            :href="route(page.route)"
+                                            :href="route(page.route, page.routeParams)"
                                             class="h-10 py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
                                             @click="select(i)"
                                         >
@@ -60,10 +59,10 @@
                                             </p>
                                         </inertia-link>
                                     </li>
-                                </div>
+                                </ul>
                             </template>
                         </models-nav>
-                    </ul>
+                    </div>
                 </nav>
             </div>
             <pages-nav>

@@ -21,13 +21,15 @@ class CampaignController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function index()
+    public function index($own = true)
     {
+        if ($own) {
+            $campaigns = Auth::user()->campaigns()->paginate();
+        } else {
+            $campaigns = Campaign::all()->paginate();
+        }
          return Inertia::render('Campaign/Browse', [
-             'pager' => Auth::user()
-                 ->campaigns()
-                 ->paginate()
-                 ->only(
+             'pager' => $campaigns->only(
                      'id',
                      'title',
                      'slug',

@@ -1,11 +1,15 @@
 <template>
-    <section class="h-screen container">
+    <section class="min-h-screen container">
         <browse-layout model="character" :title="npcTitle">
             <template v-if="npcs" #header-buttons>
                 <btn :href="route('npcs.create')" class="ml-4">Add New NPC</btn>
             </template>
-            <div v-for="character in characters" :key="character.id">
-                <card class="mx-2">
+            <div
+                v-for="character in characters"
+                class="flex-auto w-full p-2 md:max-w-5/12 lg:max-w-4/12 xl:max-w-3/12"
+                :key="character.id"
+            >
+                <card class="w-full h-full">
                     <template v-slot:title>
                         <inertia-link :href="route('characters.show', character.slug)">
                             {{ character.name }}

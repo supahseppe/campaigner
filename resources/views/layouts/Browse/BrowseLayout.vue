@@ -1,5 +1,5 @@
 <template>
-    <section class="h-full">
+    <section class="min-h-screen h-screen max-h-screen pb-40 bg-gray-300">
         <section-header>
             <h1 v-if="title">{{ title }}</h1>
             <h1 v-else>Your {{ capitalize(models) }}</h1>
@@ -30,7 +30,7 @@
             </button>
         </div>
         <div
-            class="flex items-start justify-start w-full h-full border-b bg-gray-300 p-4"
+            class="flex flex-wrap justify-start w-full h-full border-b p-2 overflow-y-auto"
         >
             <slot />
         </div>

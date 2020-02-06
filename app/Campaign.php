@@ -71,6 +71,14 @@ class Campaign extends Model
         return $this->belongsToMany('App\User')->withPivot('role');
     }
 
+    public function characters() {
+        return $this->belongsToMany('App\Character')->where('npc', false);
+    }
+
+    public function npcs() {
+        return $this->belongsToMany('App\Character')->where('npc', true);
+    }
+
     public function factions() {
         return $this->belongsToMany('App\Faction');
     }
