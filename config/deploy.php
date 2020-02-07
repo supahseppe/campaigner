@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'firstdeploy',
+    'default' => 'basic',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,6 @@ return [
             'artisan:config:cache',
             'artisan:migrate',
             'artisan:telescope:prune',
-            'ziggy',
         ],
 
         // Deployment is done and live
