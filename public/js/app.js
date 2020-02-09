@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"4ef2101cc24258dc42e1","1":"81c5f73d4d0f4b0a4043","2":"b623fe5939de5a81bf6d","3":"fe6e4f62090abc1e29f2","4":"7024401748420f8a649b","5":"6325d2ab9fcebf14feae","6":"cdf64c34bf9218a023ad","7":"6dce3355082ea31dad98","8":"bfd9c8d2b31c896856d4","9":"325c8fa7720e6315ea84","10":"924ef512f88fe22ab9a9","11":"f7838a802f0e116003a8","12":"e346f787cc778cf291a0","13":"327c63526fc4ece081c6","14":"cc08b123eb0b0196594d","15":"3a92d2f27b8c94e7a2b2","16":"26f53f8ef33b5eaf0576","17":"0073893fda7eb8129fcd","18":"6228fb29aeedd24a1153","19":"0b08d1203c6431f61309","20":"bfc03cb908d059ad2650","21":"d00cbb93cd743ea661fe","22":"34bc030045701c6c9dca","23":"30aeb60695e90af877bd","24":"8642f264cdd324b34060","25":"b13a477942901b91672d","26":"c4d44b976818eca4a24a","27":"1ca43ffe38819294e2ed","28":"15ff713c040fc0b28fab","29":"906fe464d93f6347a1ac","30":"ad8e8f35b431c65d24dd","31":"8a7ba6cd3d9093309ce4","32":"14c75069aa6f6b4d1635","33":"b7ab034f46edbb77bc87","34":"af55358163e706d94a78","35":"386d0662fe1919709b03"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"4ef2101cc24258dc42e1","1":"2201c1a57bb3e946cca0","2":"b623fe5939de5a81bf6d","3":"fe6e4f62090abc1e29f2","4":"7024401748420f8a649b","5":"d0241b0da7cc7cd1a38b","6":"cdf64c34bf9218a023ad","7":"6dce3355082ea31dad98","8":"bfd9c8d2b31c896856d4","9":"325c8fa7720e6315ea84","10":"924ef512f88fe22ab9a9","11":"f7838a802f0e116003a8","12":"e346f787cc778cf291a0","13":"327c63526fc4ece081c6","14":"f79f2f521861a0a23d00","15":"3a92d2f27b8c94e7a2b2","16":"26f53f8ef33b5eaf0576","17":"0073893fda7eb8129fcd","18":"6228fb29aeedd24a1153","19":"0b08d1203c6431f61309","20":"bfc03cb908d059ad2650","21":"d00cbb93cd743ea661fe","22":"34bc030045701c6c9dca","23":"30aeb60695e90af877bd","24":"8642f264cdd324b34060","25":"b13a477942901b91672d","26":"c4d44b976818eca4a24a","27":"c03cc881e3f435b139bc","28":"15ff713c040fc0b28fab","29":"906fe464d93f6347a1ac","30":"0e6462647fe5d7d55722","31":"8a7ba6cd3d9093309ce4","32":"14c75069aa6f6b4d1635","33":"6701fdd2a6394d237f07","34":"af55358163e706d94a78","35":"85d8ecd8bb5dee0dccb1"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -29089,57 +29089,73 @@ module.exports = {
       height: _objectSpread({}, w_h_sizes, {
         '250': '250px',
         screen: '100vh',
-        'screen-5': '5vh',
         'screen-10': '10vh',
-        'screen-15': '15vh',
         'screen-20': '20vh',
         'screen-25': '25vh',
         'screen-30': '30vh',
-        'screen-35': '35vh',
         'screen-40': '40vh',
-        'screen-45': '45vh',
         'screen-50': '50vh',
-        'screen-55': '55vh',
         'screen-60': '60vh',
-        'screen-65': '65vh',
         'screen-70': '70vh',
         'screen-75': '75vh',
         'screen-80': '80vh',
-        'screen-85': '85vh',
-        'screen-90': '90vh',
-        'screen-95': '95vh'
+        'screen-90': '90vh'
       }),
       maxHeight: _objectSpread({}, w_h_sizes, {
-        '250': '250px',
-        screen: '100vh'
-      }),
-      maxWidth: _objectSpread({}, w_h_sizes, {
-        '300': '300px'
-      }),
-      minHeight: _objectSpread({}, w_h_sizes, {
-        '250': '250px',
         screen: '100vh',
         'screen-10': '10vh',
         'screen-20': '20vh',
+        'screen-25': '25vh',
         'screen-30': '30vh',
         'screen-40': '40vh',
         'screen-50': '50vh',
         'screen-60': '60vh',
         'screen-70': '70vh',
+        'screen-75': '75vh',
+        'screen-80': '80vh',
+        'screen-90': '90vh'
+      }),
+      maxWidth: _objectSpread({}, w_h_sizes, {
+        screen: '100vw',
+        'screen-10': '10vw',
+        'screen-20': '20vw',
+        'screen-25': '25vw',
+        'screen-30': '30vw',
+        'screen-40': '40vw',
+        'screen-50': '50vw',
+        'screen-60': '60vw',
+        'screen-70': '70vw',
+        'screen-75': '75vw',
+        'screen-80': '80vw',
+        'screen-90': '90vw'
+      }),
+      minHeight: _objectSpread({}, w_h_sizes, {
+        screen: '100vh',
+        'screen-10': '10vh',
+        'screen-20': '20vh',
+        'screen-25': '25vh',
+        'screen-30': '30vh',
+        'screen-40': '40vh',
+        'screen-50': '50vh',
+        'screen-60': '60vh',
+        'screen-70': '70vh',
+        'screen-75': '75vh',
         'screen-80': '80vh',
         'screen-90': '90vh'
       }),
       minWidth: _objectSpread({}, w_h_sizes, {
-        '300': '300px',
-        'screen-10': '10vh',
-        'screen-20': '20vh',
-        'screen-30': '30vh',
-        'screen-40': '40vh',
-        'screen-50': '50vh',
-        'screen-60': '60vh',
-        'screen-70': '70vh',
-        'screen-80': '80vh',
-        'screen-90': '90vh'
+        screen: '100vw',
+        'screen-10': '10vw',
+        'screen-20': '20vw',
+        'screen-25': '25vw',
+        'screen-30': '30vw',
+        'screen-40': '40vw',
+        'screen-50': '50vw',
+        'screen-60': '60vw',
+        'screen-70': '70vw',
+        'screen-75': '75vw',
+        'screen-80': '80vw',
+        'screen-90': '90vw'
       }),
       spacing: {
         '7': '1.75rem',
@@ -29153,25 +29169,17 @@ module.exports = {
         'px-8': '8px',
         'px-9': '9px',
         'px-10': '10px',
-        'percent-5': '5%',
         'percent-10': '10%',
-        'percent-15': '15%',
         'percent-20': '20%',
         'percent-25': '25%',
         'percent-30': '30%',
-        'percent-35': '35%',
         'percent-40': '40%',
-        'percent-45': '45%',
         'percent-50': '50%',
-        'percent-55': '55%',
         'percent-60': '60%',
-        'percent-65': '65%',
         'percent-70': '70%',
         'percent-75': '75%',
         'percent-80': '80%',
-        'percent-85': '85%',
         'percent-90': '90%',
-        'percent-95': '95%',
         bsu: '1.5rem',
         'bsu-1/2': '.75rem',
         'bsu-1.5': '2.25rem',
@@ -29185,26 +29193,17 @@ module.exports = {
       },
       width: _objectSpread({}, w_h_sizes, {
         screen: '100vw',
-        '300': '300px',
-        'screen-5': '5vw',
         'screen-10': '10vw',
-        'screen-15': '15vw',
         'screen-20': '20vw',
         'screen-25': '25vw',
         'screen-30': '30vw',
-        'screen-35': '35vw',
         'screen-40': '40vw',
-        'screen-45': '45vw',
         'screen-50': '50vw',
-        'screen-55': '55vw',
         'screen-60': '60vw',
-        'screen-65': '65vw',
         'screen-70': '70vw',
         'screen-75': '75vw',
         'screen-80': '80vw',
-        'screen-85': '85vw',
-        'screen-90': '90vw',
-        'screen-95': '95vw'
+        'screen-90': '90vw'
       })
     }
   },

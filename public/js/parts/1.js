@@ -267,6 +267,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -922,28 +924,33 @@ var render = function() {
     "div",
     {
       staticClass:
-        "bg-gray-200 font-sans leading-normal tracking-normal h-screen flex flex-col"
+        "bg-gray-200 font-sans leading-normal tracking-normal min-h-screen max-h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-0"
     },
     [
-      _c("navbar"),
-      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex flex-1 overflow-hidden" },
         [
-          _c("sidebar"),
+          _c("navbar"),
           _vm._v(" "),
           _c(
-            "main",
-            { staticClass: "flex-1 bg-gray-200" },
-            [_vm._t("default")],
-            2
+            "div",
+            { staticClass: "grid grid-cols-4 grid-rows-1 gap-0 h-full" },
+            [
+              _c("sidebar"),
+              _vm._v(" "),
+              _c(
+                "main",
+                { staticClass: "col-span-3 bg-gray-200" },
+                [_vm._t("default")],
+                2
+              )
+            ],
+            1
           )
         ],
         1
       )
-    ],
-    1
+    ]
   )
 }
 var staticRenderFns = []
@@ -973,7 +980,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "flex-shrink-0 px-4 py-3 bg-indigo-700 lg:w-64 lg:bg-indigo-800"
+          "flex-shrink-0 px-4 py-3 bg-indigo-700 lg:w-1/4 lg:bg-indigo-800"
       },
       [
         _c(
@@ -1245,7 +1252,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "z-30 fixed inset-y-0 left-0 w-64 bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium flex-none"
+        "z-30 fixed inset-y-0 left-0 w-64 sm:w-auto bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium flex-none"
     },
     [
       _c("div", { staticClass: "absolute top-0 left-0 pl-4 pt-3 sm:hidden" }, [

@@ -1,21 +1,15 @@
 <template>
-    <section class="min-h-screen container">
-        <browse-layout model="campaign">
-            <div
+    <section class="h-full container">
+        <browse-layout model="campaign" :pagination="pager.links">
+            <panel
                 v-for="campaign in campaigns"
-                class="flex-auto w-full p-2 md:max-w-5/12 lg:max-w-4/12 xl:max-w-3/12"
+                class="w-full h-full"
                 :key="campaign.id"
             >
-                <panel class="w-full h-full">
-                    <inertia-link :href="route('campaigns.show', campaign.slug)">
-                        <h1
-                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        >
-                            {{ campaign.title }}
-                        </h1>
-                    </inertia-link>
-                </panel>
-            </div>
+                <inertia-link :href="route('campaigns.show', campaign.slug)">
+                    {{ campaign.title }}
+                </inertia-link>
+            </panel>
         </browse-layout>
     </section>
 </template>

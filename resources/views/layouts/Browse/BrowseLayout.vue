@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen h-screen max-h-screen bg-gray-300">
+    <section class="bg-gray-300 h-full">
         <section-header>
             <h1 v-if="title">{{ title }}</h1>
             <h1 v-else>Your {{ capitalize(models) }}</h1>
@@ -29,12 +29,17 @@
                 </svg>
             </button>
         </div>
-        <div
-            class="flex flex-wrap justify-start w-full h-full border-b p-2 overflow-y-auto"
-        >
-            <slot />
+        <div>
+            <div
+                class="grid grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-4 px-4 max-h-screen-75 overflow-y-auto border-b border-gray-400"
+            >
+                <slot />
+                <span class="h-4">&nbsp;</span>
+            </div>
+            <div class="flex flex-col justify-center h-20">
+                <pagination :links="pagination" v-if="pagination.length > 3" />
+            </div>
         </div>
-        <pagination :links="pagination" />
     </section>
 </template>
 

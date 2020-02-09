@@ -1,20 +1,15 @@
 <template>
-    <section class="h-screen container">
-        <browse-layout model="task">
-            <div class="flex-grow w-full pt-2 p-4 flex">
-                <template v-for="task in tasks">
-                    <panel
-                        class="flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
-                        :key="task.id"
-                    >
-                        <h1
-                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        >
-                            {{ task.name }}
-                        </h1>
-                    </panel>
-                </template>
-            </div>
+    <section class="h-full container">
+        <browse-layout model="task" :pagination="pager.links">
+            <panel
+                v-for="task in tasks"
+                class="w-full h-full"
+                :key="task.id"
+            >
+                <inertia-link :href="route('tasks.show', task.slug)">
+                    {{ task.name }}
+                </inertia-link>
+            </panel>
         </browse-layout>
     </section>
 </template>

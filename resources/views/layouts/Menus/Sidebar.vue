@@ -1,6 +1,6 @@
 <template>
     <div
-        class="z-30 fixed inset-y-0 left-0 w-64 bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium flex-none"
+        class="z-30 fixed inset-y-0 left-0 w-64 sm:w-auto bg-gray-100 border-r overflow-y-auto sm:static sm:block sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium flex-none"
     >
         <div class="absolute top-0 left-0 pl-4 pt-3 sm:hidden">
             <button class="block text-gray-600 hover:text-gray-800">

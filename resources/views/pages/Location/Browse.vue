@@ -1,20 +1,15 @@
 <template>
-    <section class="h-screen container">
-        <browse-layout model="location">
-            <div class="flex-grow w-full pt-2 p-4 flex">
-                <template v-for="location in locations">
-                    <panel
-                        class="flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
-                        :key="location.id"
-                    >
-                        <h1
-                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        >
-                            {{ location.name }}
-                        </h1>
-                    </panel>
-                </template>
-            </div>
+    <section class="h-full container">
+        <browse-layout model="location" :pagination="pager.links">
+            <panel
+                v-for="location in locations"
+                class="w-full h-full mb-24"
+                :key="location.id"
+            >
+                <inertia-link :href="route('locations.show', location.slug)">
+                    {{ location.name }}
+                </inertia-link>
+            </panel>
         </browse-layout>
     </section>
 </template>

@@ -28,11 +28,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -94,44 +89,33 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "h-screen container" },
+    { staticClass: "h-full container" },
     [
-      _c("browse-layout", { attrs: { model: "location" } }, [
-        _c(
-          "div",
-          { staticClass: "flex-grow w-full pt-2 p-4 flex" },
-          [
-            _vm._l(_vm.locations, function(location) {
-              return [
-                _c(
-                  "panel",
-                  {
-                    key: location.id,
-                    staticClass: "flex-1 max-w-sm lg:max-w-md first:mr-0 mr-4"
-                  },
-                  [
-                    _c(
-                      "h1",
-                      {
-                        staticClass:
-                          "text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                      },
-                      [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(location.name) +
-                            "\n                    "
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            })
-          ],
-          2
-        )
-      ])
+      _c(
+        "browse-layout",
+        { attrs: { model: "location", pagination: _vm.pager.links } },
+        _vm._l(_vm.locations, function(location) {
+          return _c(
+            "panel",
+            { key: location.id, staticClass: "w-full h-full mb-24" },
+            [
+              _c(
+                "inertia-link",
+                { attrs: { href: _vm.route("locations.show", location.slug) } },
+                [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(location.name) +
+                      "\n            "
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        }),
+        1
+      )
     ],
     1
   )

@@ -1,23 +1,19 @@
 <template>
-    <section class="min-h-screen container">
+    <section class="h-full container">
         <browse-layout model="character" :title="npcTitle" :pagination="pager.links">
             <template v-if="npcs" #header-buttons>
                 <btn :href="route('npcs.create')" class="ml-4">Add New NPC</btn>
             </template>
-            <div
+            <panel
                 v-for="character in characters"
-                class="flex-auto w-full p-2 md:max-w-5/12 lg:max-w-4/12 xl:max-w-3/12"
+                class="w-full h-full"
                 :key="character.id"
             >
-                <card class="w-full h-full">
-                    <template v-slot:title>
-                        <inertia-link :href="route('characters.show', character.slug)">
-                            {{ character.name }}
-                        </inertia-link>
-                    </template>
-                    <p>{{ character.high_concept }}</p>
-                </card>
-            </div>
+                <inertia-link :href="route('characters.show', character.slug)">
+                    {{ character.name }}
+                </inertia-link>
+                <p>{{ character.high_concept }}</p>
+            </panel>
         </browse-layout>
     </section>
 </template>
@@ -25,13 +21,13 @@
 <script>
     import MainLayout from '_Layouts/MainLayout';
     import BrowseLayout from '_Layouts/Browse/BrowseLayout';
-    import CardHorizontal from '_Components/cards/CardHorizontal';
+    import Panel from '_Components/cards/Panel';
     import Btn from '_Components/Btn';
 
     export default {
         name: 'Browse',
         components: {
-            card: CardHorizontal,
+            Panel,
             BrowseLayout,
             Btn,
         },

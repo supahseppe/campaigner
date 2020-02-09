@@ -1,21 +1,15 @@
 <template>
-    <section class="min-h-screen container">
-        <browse-layout model="campaign">
-            <div
+    <section class="h-full container">
+        <browse-layout model="dummy" :pagination="pager.links">
+            <panel
                 v-for="dummy in dummies"
-                class="flex-auto w-full p-2 md:max-w-5/12 lg:max-w-4/12 xl:max-w-3/12"
+                class="w-full h-full"
                 :key="dummy.id"
             >
-                <panel class="w-full h-full">
-                    <inertia-link :href="route('dummies.show', dummy.slug)">
-                        <h1
-                            class="text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        >
-                            {{ dummy.title }}
-                        </h1>
-                    </inertia-link>
-                </panel>
-            </div>
+                <inertia-link :href="route('dummies.show', dummy.slug)">
+                    {{ dummy.name }}
+                </inertia-link>
+            </panel>
         </browse-layout>
     </section>
 </template>

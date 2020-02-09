@@ -1,16 +1,18 @@
 <template>
     <div
-        class="bg-gray-200 font-sans leading-normal tracking-normal h-screen flex flex-col"
+        class="bg-gray-200 font-sans leading-normal tracking-normal min-h-screen max-h-screen overflow-hidden grid grid-cols-1 grid-rows-1 gap-0"
     >
-        <!--Nav-->
-        <navbar />
+        <div>
+            <!--Nav-->
+            <navbar />
 
-        <div class="flex flex-1 overflow-hidden">
-            <sidebar />
+            <div class="grid grid-cols-4 grid-rows-1 gap-0 h-full">
+                <sidebar />
 
-            <main class="flex-1 bg-gray-200">
-                <slot />
-            </main>
+                <main class="col-span-3 bg-gray-200">
+                    <slot />
+                </main>
+            </div>
         </div>
     </div>
 </template>

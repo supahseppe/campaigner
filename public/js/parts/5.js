@@ -66,6 +66,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Pagination',
   components: {},
@@ -160,6 +178,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_SectionHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! _Components/SectionHeader */ "./resources/js/components/SectionHeader.vue");
 /* harmony import */ var _Components_Pagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! _Components/Pagination */ "./resources/js/components/Pagination.vue");
 /* harmony import */ var _Components_Btn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! _Components/Btn */ "./resources/js/components/Btn.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -315,7 +338,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "mt-6 -mb-1 flex flex-wrap" },
+    { staticClass: "flex flex-wrap" },
     [
       _vm._l(_vm.links, function(link, key) {
         return [
@@ -325,24 +348,24 @@ var render = function() {
                 {
                   key: key,
                   staticClass:
-                    "mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-400",
+                    "mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-800",
                   class: { "ml-auto": link.label === "Next" }
                 },
-                [_vm._v(_vm._s(link.label))]
+                [_vm._v("\n            " + _vm._s(link.label) + "\n        ")]
               )
             : _c(
                 "inertia-link",
                 {
                   key: key,
                   staticClass:
-                    "mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white focus:border-indigo-500 focus:text-indigo-500",
+                    "mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white hover:text-black focus:border-indigo-500 focus:text-indigo-500",
                   class: {
-                    "bg-white": link.active,
+                    "bg-gray-700 text-white": link.active,
                     "ml-auto": link.label === "Next"
                   },
                   attrs: { href: link.url }
                 },
-                [_vm._v(_vm._s(link.label))]
+                [_vm._v("\n            " + _vm._s(link.label) + "\n        ")]
               )
         ]
       })
@@ -441,7 +464,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "min-h-screen h-screen max-h-screen bg-gray-300" },
+    { staticClass: "bg-gray-300 h-full" },
     [
       _c(
         "section-header",
@@ -533,17 +556,32 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "flex flex-wrap justify-start w-full h-full border-b p-2 overflow-y-auto"
-        },
-        [_vm._t("default")],
-        2
-      ),
-      _vm._v(" "),
-      _c("pagination", { attrs: { links: _vm.pagination } })
+      _c("div", [
+        _c(
+          "div",
+          {
+            staticClass:
+              "grid grid-cols-2 lg:grid-cols-3 grid-rows-1 gap-4 px-4 max-h-screen-75 overflow-y-auto border-b border-gray-400"
+          },
+          [
+            _vm._t("default"),
+            _vm._v(" "),
+            _c("span", { staticClass: "h-4" }, [_vm._v(" ")])
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "flex flex-col justify-center h-20" },
+          [
+            _vm.pagination.length > 3
+              ? _c("pagination", { attrs: { links: _vm.pagination } })
+              : _vm._e()
+          ],
+          1
+        )
+      ])
     ],
     1
   )

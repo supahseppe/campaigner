@@ -28,12 +28,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -95,56 +89,32 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "min-h-screen container" },
+    { staticClass: "h-full container" },
     [
       _c(
         "browse-layout",
-        { attrs: { model: "campaign" } },
+        { attrs: { model: "campaign", pagination: _vm.pager.links } },
         _vm._l(_vm.campaigns, function(campaign) {
           return _c(
-            "div",
-            {
-              key: campaign.id,
-              staticClass:
-                "flex-auto w-full p-2 md:max-w-5/12 lg:max-w-4/12 xl:max-w-3/12"
-            },
+            "panel",
+            { key: campaign.id, staticClass: "w-full h-full" },
             [
               _c(
-                "panel",
-                { staticClass: "w-full h-full" },
+                "inertia-link",
+                { attrs: { href: _vm.route("campaigns.show", campaign.slug) } },
                 [
-                  _c(
-                    "inertia-link",
-                    {
-                      attrs: {
-                        href: _vm.route("campaigns.show", campaign.slug)
-                      }
-                    },
-                    [
-                      _c(
-                        "h1",
-                        {
-                          staticClass:
-                            "text-base font-semibold leading-tight xl:text-lg text-gray-900"
-                        },
-                        [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(campaign.title) +
-                              "\n                    "
-                          )
-                        ]
-                      )
-                    ]
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(campaign.title) +
+                      "\n            "
                   )
-                ],
-                1
+                ]
               )
             ],
             1
           )
         }),
-        0
+        1
       )
     ],
     1

@@ -1,6 +1,6 @@
 <template>
     <header class="flex flex-shrink-0">
-        <div class="flex-shrink-0 px-4 py-3 bg-indigo-700 lg:w-64 lg:bg-indigo-800">
+        <div class="flex-shrink-0 px-4 py-3 bg-indigo-700 lg:w-1/4 lg:bg-indigo-800">
             <button class="block text-gray-400 hover:text-gray-200 sm:hidden">
                 <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
                     <path
