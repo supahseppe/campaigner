@@ -644,6 +644,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -663,8 +665,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    select: function select(i) {
-      this.selected = i;
+    select: function select(selected) {
+      this.selected = selected;
     }
   }
 });
@@ -1310,7 +1312,8 @@ var render = function() {
                 staticClass:
                   "absolute h-10 w-full bg-gray-200 rounded-lg shadow ease-out transition-transform transition-medium border-b border-r border-gray-400",
                 style: {
-                  transform: "translateY(calc(100% * " + _vm.selected + "))"
+                  transform:
+                    "translateY(calc(100% * " + _vm.selected.index + "))"
                 }
               }),
               _vm._v(" "),
@@ -1338,7 +1341,8 @@ var render = function() {
                                         staticClass:
                                           "h-10 py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline",
                                         attrs: {
-                                          "aria-selected": _vm.selected === i,
+                                          "aria-selected":
+                                            _vm.selected === _vm.selected.index,
                                           href: _vm.route(
                                             page.route,
                                             page.routeParams
@@ -1346,7 +1350,10 @@ var render = function() {
                                         },
                                         on: {
                                           click: function($event) {
-                                            return _vm.select(i)
+                                            return _vm.select({
+                                              route: page.route,
+                                              index: i
+                                            })
                                           }
                                         }
                                       },
@@ -1355,7 +1362,8 @@ var render = function() {
                                           attrs: {
                                             icon: page.icon,
                                             color:
-                                              _vm.selected === i
+                                              _vm.selected ===
+                                              _vm.selected.index
                                                 ? "indigo-600"
                                                 : "gray-700"
                                           }
@@ -1367,7 +1375,8 @@ var render = function() {
                                             staticClass:
                                               "ml-2 text-sm font-medium transition-all ease-out transition-medium",
                                             class:
-                                              _vm.selected === i
+                                              _vm.selected ===
+                                              _vm.selected.index
                                                 ? "text-indigo-600"
                                                 : "text-gray-700"
                                           },

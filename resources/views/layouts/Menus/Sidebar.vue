@@ -25,7 +25,7 @@
                     <span
                         class="absolute h-10 w-full bg-gray-200 rounded-lg shadow ease-out transition-transform transition-medium border-b border-r border-gray-400"
                         :style="{
-                            transform: `translateY(calc(100% * ${selected}))`,
+                            transform: `translateY(calc(100% * ${selected.index}))`,
                         }"
                     ></span>
                     <div class="relative">
@@ -34,22 +34,24 @@
                                 <ul>
                                     <li v-for="(page, i) in pages" :key="i">
                                         <inertia-link
-                                            :aria-selected="selected === i"
+                                            :aria-selected="selected === selected.index"
                                             :href="route(page.route, page.routeParams)"
                                             class="h-10 py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
-                                            @click="select(i)"
+                                            @click="
+                                                select({ route: page.route, index: i })
+                                            "
                                         >
                                             <icon
                                                 :icon="page.icon"
                                                 :color="
-                                                    selected === i
+                                                    selected === selected.index
                                                         ? 'indigo-600'
                                                         : 'gray-700'
                                                 "
                                             />
                                             <p
                                                 :class="
-                                                    selected === i
+                                                    selected === selected.index
                                                         ? 'text-indigo-600'
                                                         : 'text-gray-700'
                                                 "
@@ -134,8 +136,8 @@
             };
         },
         methods: {
-            select(i) {
-                this.selected = i;
+            select(selected) {
+                this.selected = selected;
             },
         },
     };
