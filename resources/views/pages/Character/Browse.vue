@@ -1,6 +1,6 @@
 <template>
     <section class="min-h-screen container">
-        <browse-layout model="character" :title="npcTitle">
+        <browse-layout model="character" :title="npcTitle" :pagination="pager.links">
             <template v-if="npcs" #header-buttons>
                 <btn :href="route('npcs.create')" class="ml-4">Add New NPC</btn>
             </template>

@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen h-screen max-h-screen pb-40 bg-gray-300">
+    <section class="min-h-screen h-screen max-h-screen bg-gray-300">
         <section-header>
             <h1 v-if="title">{{ title }}</h1>
             <h1 v-else>Your {{ capitalize(models) }}</h1>
@@ -34,17 +34,20 @@
         >
             <slot />
         </div>
+        <pagination :links="pagination" />
     </section>
 </template>
 
 <script>
     import SectionHeader from '_Components/SectionHeader';
+    import Pagination from '_Components/Pagination';
     import Btn from '_Components/Btn';
 
     export default {
         name: 'BrowseLayout',
         components: {
             SectionHeader,
+            Pagination,
             Btn,
         },
         props: {
@@ -59,6 +62,10 @@
             title: {
                 type: String,
                 default: null,
+            },
+            pagination: {
+                type: Array,
+                default: () => [],
             },
         },
         computed: {

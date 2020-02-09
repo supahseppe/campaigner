@@ -22,8 +22,10 @@
                     },
                     {
                         label: 'NPCs',
-                        route: 'npcs.index',
-                        routeParams: {},
+                        route: 'npcs.in_campaign',
+                        routeParams: {
+                            campaign: this.$page.auth.user.campaign.slug,
+                        },
                         icon: 'drama-masks',
                     },
                     {

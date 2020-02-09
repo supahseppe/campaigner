@@ -42,6 +42,7 @@ Route::resource('campaigns', 'CampaignController');
 // Characters
 Route::get('/campaign/{campaign}/characters', 'CharacterController@in_campaign')->name('characters.in_campaign');
 Route::resource('characters', 'CharacterController');
+Route::get('/campaign/{campaign}/npcs', 'CharacterController@in_campaign')->name('npcs.in_campaign');
 Route::resource('npcs', 'NpcController');
 
 // Factions
