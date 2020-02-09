@@ -19,7 +19,10 @@
             </section-header>
         </section>
         <section class="p-4">
-            <p>High Concept: {{ character.high_concept }}</p>
+            <p>
+                High Concept: {{ character.high_concept }}
+                <span v-if="character.npc" class="p-2 bg-indigo-300">NPC</span>
+            </p>
             <div v-html="character.bio" />
         </section>
     </section>

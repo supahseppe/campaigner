@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 
-class CharacterController extends Controller
+class NpcController extends Controller
 {
     public function __construct()
     {
@@ -25,8 +25,8 @@ class CharacterController extends Controller
     public function index()
     {
         return Inertia::render('Character/Browse', [
-            'pager' => Character::where('npc', false)->paginate(15)->only('name', 'high_concept', 'slug'),
-            'npcs' => false,
+            'pager' => Character::where('npc', true)->paginate(15)->only('name', 'high_concept', 'slug'),
+            'npcs' => true,
         ]);
     }
 
@@ -40,10 +40,10 @@ class CharacterController extends Controller
     {
         return Inertia::render('Character/Browse', [
             'pager' => $campaign->characters()
-                ->where('npc', false)
+                ->where('npc', true)
                 ->paginate(15)
                 ->only('name', 'high_concept', 'slug'),
-            'npcs' => false,
+            'npcs' => true,
         ]);
     }
 
