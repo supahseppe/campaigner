@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/campaigns/{user}', 'CampaignController@autocomplete')->name('campaigns.autocomplete');
+Route::get('/characters', 'CharacterController@autocomplete')->name('characters.autocomplete');
+Route::get('/factions', 'FactionController@autocomplete')->name('factions.autocomplete');
+Route::get('/locations', 'LocationController@autocomplete')->name('locations.autocomplete');
+Route::get('/tasks', 'TaskController@autocomplete')->name('tasks.autocomplete');

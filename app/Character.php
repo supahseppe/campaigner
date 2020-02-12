@@ -51,4 +51,14 @@ class Character extends Model
     public function tasks() {
         return $this->belongsToMany('App\Task');
     }
+
+    public function factions() {
+        return $this->belongsToMany('App\Faction');
+    }
+
+    public function locations()
+    {
+        return $this->belongsToMany('App\Location');
+    }
+
 }

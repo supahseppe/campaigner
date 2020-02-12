@@ -6,10 +6,55 @@
 </template>
 
 <script>
-    import Layout from '_Layouts/MainLayout';
+    import MainLayout from '_Layouts/MainLayout';
+    import SectionHeader from '_Components/SectionHeader';
+    import Btn from '_Components/Btn';
+    import axios from 'axios';
 
     export default {
-        metaInfo: { title: 'Dashboard' },
-        layout: Layout,
+        name: 'Character',
+        components: {
+            SectionHeader,
+            Btn,
+        },
+        props: {},
+        data() {
+            return {
+                pageTitle: 'Dashboard',
+                pageDescription: 'User Dashboard',
+            };
+        },
+        computed: {},
+        watch: {},
+        created() {},
+        mounted() {
+            axios
+                .get(
+                    route('campaigns.autocomplete', {
+                        user: this.$page.auth.user.slug
+                    }),
+                    {
+                        headers: {
+                            Accept: 'application/json',
+                        },
+                    }
+                )
+                .then(response => {
+                    console.log(response);
+                });
+        },
+        methods: {},
+        layout: MainLayout,
+        metaInfo() {
+            return {
+                title: this.pageTitle,
+                meta: [
+                    {
+                        name: 'description',
+                        content: this.pageDescription,
+                    },
+                ],
+            };
+        },
     };
 </script>

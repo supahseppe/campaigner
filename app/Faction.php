@@ -55,4 +55,15 @@ class Faction extends Model
     public function tasks() {
         return $this->belongsToMany('App\Task');
     }
+
+    public function players()
+    {
+        return $this->belongsToMany('App\Character')->where('npc', false);
+    }
+
+    public function npcs()
+    {
+        return $this->belongsToMany('App\Character')->where('npc', true);
+    }
+
 }
