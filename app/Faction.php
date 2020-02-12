@@ -66,4 +66,9 @@ class Faction extends Model
         return $this->belongsToMany('App\Character')->where('npc', true);
     }
 
+    public function locations()
+    {
+        return $this->belongsToMany('App\Location');
+    }
+
 }
