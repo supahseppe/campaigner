@@ -17,12 +17,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
     title: 'Dashboard'
   },
-  layout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  layout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
+  props: ['campaigns', 'characters']
 });
 
 /***/ }),
@@ -42,24 +50,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-4" }, [
+  return _c(
+    "div",
+    { staticClass: "p-4" },
+    [
       _c("h1", { staticClass: "mb-3 text-2xl font-semibold" }, [
         _vm._v("Dashboard")
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "mb-12 leading-normal" }, [
-        _vm._v("You are logged in!")
-      ])
-    ])
-  }
-]
+      _c("h2", { staticClass: "h2" }, [_vm._v("Campaigns")]),
+      _vm._v(" "),
+      _vm._l(_vm.campaigns.data, function(campaign, i) {
+        return _c("div", { key: i }, [
+          _c("p", [_vm._v(_vm._s(campaign.title))])
+        ])
+      }),
+      _vm._v(" "),
+      _c("h2", { staticClass: "h2" }, [_vm._v("Characters")]),
+      _vm._v(" "),
+      _vm._l(_vm.characters.data, function(character, i) {
+        return _c("div", { key: i }, [
+          _c("p", [_vm._v(_vm._s(character.name))])
+        ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

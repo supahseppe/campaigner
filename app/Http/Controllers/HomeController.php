@@ -21,10 +21,18 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Inertia\Response
      */
     public function index()
     {
-        return Inertia::render('Home');
+        dd(Auth::user()->characters);
+        return Inertia::render('Home', [
+            'campaigns' => Auth::user()->campaigns()
+                ->paginate(5)
+                ->only('title'),
+            'characters' => Auth::user()->characters()
+                ->paginate(5)
+                ->only('name'),
+        ]);
     }
 }

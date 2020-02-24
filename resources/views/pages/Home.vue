@@ -1,7 +1,14 @@
 <template>
     <div class="p-4">
         <h1 class="mb-3 text-2xl font-semibold">Dashboard</h1>
-        <p class="mb-12 leading-normal">You are logged in!</p>
+        <h2 class="h2">Campaigns</h2>
+        <div v-for="(campaign, i) in campaigns.data" :key="i">
+            <p>{{ campaign.title }}</p>
+        </div>
+        <h2 class="h2">Characters</h2>
+        <div v-for="(character, i) in characters.data" :key="i">
+            <p>{{ character.name }}</p>
+        </div>
     </div>
 </template>
 
@@ -11,5 +18,6 @@
     export default {
         metaInfo: { title: 'Dashboard' },
         layout: Layout,
+        props: ['campaigns', 'characters'],
     };
 </script>
