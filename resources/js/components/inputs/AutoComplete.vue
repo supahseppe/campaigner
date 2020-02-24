@@ -39,15 +39,21 @@
                 type: String,
                 default: 'text',
             },
-            value: String,
-            label: String,
+            value: {
+                type: String,
+                default: '',
+            },
+            label: {
+                type: String,
+                default: '',
+            },
             errors: {
                 type: Array,
-                default: () => [],
+                default: null,
             },
             items: {
                 type: Array,
-                default: [],
+                default: null,
             },
         },
         data() {
