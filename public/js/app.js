@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"4ef2101cc24258dc42e1","1":"2ea30d8cdedaa8339e15","2":"b623fe5939de5a81bf6d","3":"fe6e4f62090abc1e29f2","4":"7024401748420f8a649b","5":"d0241b0da7cc7cd1a38b","6":"cdf64c34bf9218a023ad","7":"6dce3355082ea31dad98","8":"bfd9c8d2b31c896856d4","9":"325c8fa7720e6315ea84","10":"924ef512f88fe22ab9a9","11":"f7838a802f0e116003a8","12":"4bbe254a2f33ce7579b9","13":"7459650b2ff2e591bd9c","14":"4bc113a13b5dd3849451","15":"3a92d2f27b8c94e7a2b2","16":"26f53f8ef33b5eaf0576","17":"0073893fda7eb8129fcd","18":"6228fb29aeedd24a1153","19":"0b08d1203c6431f61309","20":"bfc03cb908d059ad2650","21":"d00cbb93cd743ea661fe","22":"34bc030045701c6c9dca","23":"30aeb60695e90af877bd","24":"8642f264cdd324b34060","25":"b13a477942901b91672d","26":"c4d44b976818eca4a24a","27":"c03cc881e3f435b139bc","28":"a3cadb670302f1a76cb7","29":"2e970e030979294dc254","30":"d28de6dfd21c8716647a","31":"20a186f9dd78a8862a27","32":"14c75069aa6f6b4d1635","33":"6701fdd2a6394d237f07","34":"af55358163e706d94a78","35":"85d8ecd8bb5dee0dccb1"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f1c57713d879d3108194","1":"bf801de4e0036b87bd41","2":"b623fe5939de5a81bf6d","3":"54adf8799eeef29b9810","4":"58711c37554c58f08f74","5":"0a5a9f13afba66e9b045","6":"6760f0f88c0ea4d19150","7":"3db7076385c75da5825f","8":"e5a35ff74863bf220b8c","9":"e12f4b1388819abe5bdb","10":"33ad00d2be25d83f587b","11":"f2878dce49a957c42d36","12":"6dc9dbc9ee1fda5394f2","13":"c9527d86eba57781de7c","14":"d10625ec90cc600f09bb","15":"a5d6b409a19940f41f1e","16":"a8ea6fabfd7bf2875011","17":"6544a54e6faecd7c6a49","18":"ed610683793a4053157c","19":"ade35c1eb43567f962b8","20":"fcdf72010ba0db52a441","21":"a72b7115ad64cbf5667c","22":"06ed324158e7364dbda9","23":"c3b242a34196d8494205","24":"74b35e1c200f1abaa45d","25":"68522f6e4465f64c2863","26":"87bd6d48602be8330862","27":"a8712dccf47e6fa74aa4","28":"7f5d19c6a2e8cd63e272","29":"41ed8e7097317f8b3b4a","30":"a956d5c7cb3fdb0136da","31":"df21ff1651bebb5a49f0","32":"3bc478690396c70de2ab","33":"c9bc61e896bde5db38ee","34":"0693f6f367857179835c","35":"0b92e33910c7c76b6e7c"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -45808,14 +45808,14 @@ var map = {
 		0,
 		2,
 		1,
-		25
+		24
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
 		0,
 		2,
 		1,
-		25
+		24
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
@@ -45830,50 +45830,50 @@ var map = {
 		0,
 		2,
 		1,
-		18
+		17
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
 		0,
 		2,
 		1,
-		18
+		17
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		0,
 		2,
 		1,
-		19
+		18
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		0,
 		2,
 		1,
-		19
+		18
 	],
 	"./Auth/Register": [
 		"./resources/views/pages/Auth/Register.vue",
-		16
+		15
 	],
 	"./Auth/Register.vue": [
 		"./resources/views/pages/Auth/Register.vue",
-		16
+		15
 	],
 	"./Auth/Verify": [
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
 		2,
 		1,
-		26
+		25
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
 		2,
 		1,
-		26
+		25
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
@@ -45882,7 +45882,7 @@ var map = {
 		3,
 		1,
 		4,
-		20
+		19
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
@@ -45891,7 +45891,7 @@ var map = {
 		3,
 		1,
 		4,
-		20
+		19
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
@@ -45899,7 +45899,7 @@ var map = {
 		2,
 		1,
 		5,
-		27
+		26
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
@@ -45907,7 +45907,7 @@ var map = {
 		2,
 		1,
 		5,
-		27
+		26
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -45916,7 +45916,7 @@ var map = {
 		3,
 		1,
 		4,
-		15
+		14
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -45925,21 +45925,21 @@ var map = {
 		3,
 		1,
 		4,
-		15
+		14
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
 		0,
 		3,
 		4,
-		17
+		16
 	],
 	"./Campaign/Initial.vue": [
 		"./resources/views/pages/Campaign/Initial.vue",
 		0,
 		3,
 		4,
-		17
+		16
 	],
 	"./Campaign/Read": [
 		"./resources/views/pages/Campaign/Read.vue",
@@ -45962,7 +45962,7 @@ var map = {
 		3,
 		1,
 		4,
-		21
+		20
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
@@ -45971,7 +45971,7 @@ var map = {
 		3,
 		1,
 		4,
-		21
+		20
 	],
 	"./Character/Browse": [
 		"./resources/views/pages/Character/Browse.vue",
@@ -45979,7 +45979,7 @@ var map = {
 		2,
 		1,
 		5,
-		28
+		27
 	],
 	"./Character/Browse.vue": [
 		"./resources/views/pages/Character/Browse.vue",
@@ -45987,7 +45987,7 @@ var map = {
 		2,
 		1,
 		5,
-		28
+		27
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -46026,14 +46026,14 @@ var map = {
 		0,
 		2,
 		1,
-		29
+		28
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
 		0,
 		2,
 		1,
-		29
+		28
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -46042,7 +46042,7 @@ var map = {
 		3,
 		1,
 		4,
-		30
+		29
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -46051,7 +46051,7 @@ var map = {
 		3,
 		1,
 		4,
-		30
+		29
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
@@ -46059,7 +46059,7 @@ var map = {
 		2,
 		1,
 		5,
-		31
+		30
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
@@ -46067,7 +46067,7 @@ var map = {
 		2,
 		1,
 		5,
-		31
+		30
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -46076,7 +46076,7 @@ var map = {
 		3,
 		1,
 		4,
-		22
+		21
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -46085,7 +46085,7 @@ var map = {
 		3,
 		1,
 		4,
-		22
+		21
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
@@ -46106,14 +46106,14 @@ var map = {
 		0,
 		2,
 		1,
-		12
+		31
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
 		0,
 		2,
 		1,
-		12
+		31
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
@@ -46156,7 +46156,7 @@ var map = {
 		3,
 		1,
 		4,
-		23
+		22
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
@@ -46165,21 +46165,21 @@ var map = {
 		3,
 		1,
 		4,
-		23
+		22
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
 		2,
 		1,
-		13
+		12
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
 		2,
 		1,
-		13
+		12
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
@@ -46222,7 +46222,7 @@ var map = {
 		3,
 		1,
 		4,
-		24
+		23
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
@@ -46231,21 +46231,21 @@ var map = {
 		3,
 		1,
 		4,
-		24
+		23
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
 		2,
 		1,
-		14
+		13
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
 		2,
 		1,
-		14
+		13
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",
@@ -46783,8 +46783,8 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/a206576552/www/Campaigner/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/a206576552/www/Campaigner/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/a206576552/www/campaigner/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/a206576552/www/campaigner/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })
