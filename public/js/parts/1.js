@@ -646,6 +646,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -1292,10 +1294,16 @@ var render = function() {
               [
                 _vm.$page.auth.user
                   ? [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(_vm.$page.auth.user.campaign.title) +
-                          "\n                "
+                      _c(
+                        "inertia-link",
+                        { attrs: { href: _vm.route("home") } },
+                        [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(_vm.$page.auth.user.campaign.title) +
+                              "\n                    "
+                          )
+                        ]
                       )
                     ]
                   : _vm._e()

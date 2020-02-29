@@ -25,7 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd(Auth::user()->characters);
         return Inertia::render('Home', [
             'campaigns' => Auth::user()->campaigns()
                 ->paginate(5)

@@ -38,7 +38,7 @@ class CharacterController extends Controller
      */
     public function in_campaign(Campaign $campaign)
     {
-        return Inertia::render('Cha~racter/Browse', [
+        return Inertia::render('Character/Browse', [
             'pager' => $campaign->characters()
                 ->where('npc', false)
                 ->paginate(15)

@@ -24,6 +24,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
@@ -68,11 +74,24 @@ var render = function() {
       _vm._v(" "),
       _c("h2", { staticClass: "h2" }, [_vm._v("Characters")]),
       _vm._v(" "),
-      _vm._l(_vm.characters.data, function(character, i) {
-        return _c("div", { key: i }, [
-          _c("p", [_vm._v(_vm._s(character.name))])
-        ])
-      })
+      _vm.characters.length
+        ? _vm._l(_vm.characters.data, function(character, i) {
+            return _c("div", { key: i }, [
+              _c("p", [_vm._v(_vm._s(character.name))])
+            ])
+          })
+        : _c(
+            "p",
+            [
+              _vm._v("\n        You have no characters.\n        "),
+              _c(
+                "inertia-link",
+                { attrs: { href: _vm.route("characters.create") } },
+                [_vm._v("Make one now!")]
+              )
+            ],
+            1
+          )
     ],
     2
   )

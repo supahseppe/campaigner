@@ -63,28 +63,22 @@ class DatabaseSeeder extends Seeder
             ->each(function($user){
                 $user->assignRole('authenticated');
             })
-            ->prepend($admin->first())
-            ->each(function($user, $key){
-                $user->campaigns()->saveMany(
-                    factory('App\Campaign', 2)->make()
-                );
+            ->prepend($admin->first());
 
-                $user->campaigns()
-                    ->each(function ($campaign) {
-                        $campaign->factions()->saveMany(
-                            factory('App\Faction', 3)->make()
-                        );
+        $users->each(function($user) {
+            $campaign = factory('App\Campaign')->create();
+            $campaign->users()->attach($user, ['role' => 'owner']);
+            $campaign->factions()->saveMany(factory('App\Faction', 5)->make());
+            $campaign->locations()->saveMany(factory('App\Location', 5)->make());
 
-                        $campaign->locations()->saveMany(
-                            factory('App\Location', 3)->make()
-                        );
+            $npcs = factory('App\Character', 10, ['npc' => true])->create();
+            $campaign->npcs()->saveMany($npcs);
 
-                        $party = factory('App\Character', 4)->make();
-                        $campaign->characters()->saveMany($party);
-
-                        $npcs = factory('App\Character', 10)->make(['npc' => true]);
-                        $campaign->npcs()->saveMany($npcs);
-                    });
+            $party = factory('App\Character', 5)->create();
+            $party->each(function($char) {
+                $char->users()->save(factory('App\Character')->make());
             });
+            $campaign->characters()->saveMany($party);
+        });
     }
 }

@@ -15,7 +15,9 @@
             <div class="mt-12 sm:mt-4 px-6">
                 <h2 class="text-lg font-bold">
                     <template v-if="$page.auth.user">
-                        {{ $page.auth.user.campaign.title }}
+                        <inertia-link :href="route('home')">
+                            {{ $page.auth.user.campaign.title }}
+                        </inertia-link>
                     </template>
                 </h2>
                 <hr class="border border-b mt-3 mb-3" />

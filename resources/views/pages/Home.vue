@@ -6,9 +6,15 @@
             <p>{{ campaign.title }}</p>
         </div>
         <h2 class="h2">Characters</h2>
-        <div v-for="(character, i) in characters.data" :key="i">
-            <p>{{ character.name }}</p>
-        </div>
+        <template v-if="characters.length">
+            <div v-for="(character, i) in characters.data" :key="i">
+                <p>{{ character.name }}</p>
+            </div>
+        </template>
+        <p v-else>
+            You have no characters.
+            <inertia-link :href="route('characters.create')">Make one now!</inertia-link>
+        </p>
     </div>
 </template>
 
