@@ -19,6 +19,8 @@ class CreateCharacterFactionTable extends Migration
             $table->foreign('character_id')->references('id')->on('characters');
             $table->unsignedBigInteger('faction_id');
             $table->foreign('faction_id')->references('id')->on('factions');
+            $table->string('standing')->default('neutral');
+            $table->unsignedBigInteger('reputation')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

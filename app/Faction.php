@@ -58,12 +58,12 @@ class Faction extends Model
 
     public function players()
     {
-        return $this->belongsToMany('App\Character')->where('npc', false);
+        return $this->belongsToMany('App\Character')->where('npc', false)->withPivot(['standing', 'reputation']);
     }
 
     public function npcs()
     {
-        return $this->belongsToMany('App\Character')->where('npc', true);
+        return $this->belongsToMany('App\Character')->where('npc', true)->withPivot(['standing', 'reputation']);
     }
 
     public function locations()

@@ -84,10 +84,12 @@ class DatabaseSeeder extends Seeder
             $campaign->npcs()->saveMany($npcs);
 
             // Create factions
-            $campaign->factions()->saveMany(factory('App\Faction', 5)->create());
+            $factions = factory('App\Faction', 5)->create();
+            $campaign->factions()->saveMany($factions);
 
             // Create locations
-            $campaign->locations()->saveMany(factory('App\Location', 25)->create());
+            $locations = factory('App\Location', 25)->create();
+            $campaign->locations()->saveMany($locations);
 
             // Tie factions, PCs, NPCs, and Locations together
             $factions->each(function($faction) use($locations) {

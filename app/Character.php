@@ -53,7 +53,7 @@ class Character extends Model
     }
 
     public function factions() {
-        return $this->belongsToMany('App\Faction');
+        return $this->belongsToMany('App\Faction')->withPivot(['standing', 'reputation']);
     }
 
     public function locations()

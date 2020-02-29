@@ -27,7 +27,7 @@
     export default {
         name: 'Dashboard',
         metaInfo: { title: 'Dashboard' },
-        layout: Layout,
+        layout: MainLayout,
         components: {
             SectionHeader,
             Btn,
@@ -46,7 +46,7 @@
             axios
                 .get(
                     route('campaigns.autocomplete', {
-                        user: this.$page.auth.user.slug
+                        user: this.$page.auth.user.slug,
                     }),
                     {
                         headers: {

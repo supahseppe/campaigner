@@ -133,7 +133,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   metaInfo: {
     title: 'Dashboard'
   },
-  layout: Layout,
+  layout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   components: {
     SectionHeader: _Components_SectionHeader__WEBPACK_IMPORTED_MODULE_1__["default"],
     Btn: _Components_Btn__WEBPACK_IMPORTED_MODULE_2__["default"]
