@@ -32,6 +32,7 @@ class InertiaJsServiceProvider extends ServiceProvider
                     'user' => Auth::user() ? [
                         'id' => Auth::user()->id,
                         'username' => Auth::user()->name,
+                        'slug' => Auth::user()->slug,
                         'email' => Auth::user()->email,
                         'campaign' => Auth::user()->campaign,
                     ] : null,

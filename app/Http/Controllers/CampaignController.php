@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Campaign;
+use App\Http\Resources\Campaign as CampaignResource;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -13,7 +15,7 @@ class CampaignController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('autocomplete');
     }
 
     /**
@@ -28,7 +30,8 @@ class CampaignController extends Controller
         } else {
             $campaigns = Campaign::all()->paginate();
         }
-         return Inertia::render('Campaign/Browse', [
+
+        return Inertia::render('Campaign/Browse', [
              'pager' => $campaigns->only(
                      'id',
                      'title',
@@ -37,6 +40,13 @@ class CampaignController extends Controller
                      'users'
                  )
          ]);
+    }
+
+    public function autocomplete(Request $request, User $user)
+    {
+        if ($request->wantsJson()) {
+            return CampaignResource::collection($user->campaigns);
+        }
     }
 
     /**

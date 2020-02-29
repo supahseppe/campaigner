@@ -50,4 +50,10 @@ class Location extends Model
     public function tasks() {
         return $this->belongsToMany('App\Task');
     }
+
+    public function factions()
+    {
+        return $this->belongsToMany('App\Faction');
+    }
+
 }
