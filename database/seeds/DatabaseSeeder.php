@@ -65,20 +65,43 @@ class DatabaseSeeder extends Seeder
             })
             ->prepend($admin->first());
 
+        // These users will be DMs, so let's make them campaigns!
         $users->each(function($user) {
             $campaign = factory('App\Campaign')->create();
             $campaign->users()->attach($user, ['role' => 'owner']);
-            $campaign->factions()->saveMany(factory('App\Faction', 5)->make());
-            $campaign->locations()->saveMany(factory('App\Location', 5)->make());
 
-            $npcs = factory('App\Character', 10, ['npc' => true])->create();
-            $campaign->npcs()->saveMany($npcs);
-
+            // Create party, Players and Characters
             $party = factory('App\Character', 5)->create();
             $party->each(function($char) {
-                $char->users()->save(factory('App\Character')->make());
+                $user = factory('App\User')->create();
+                $char->users()->attach($user, ['role' => 'owner']);
             });
             $campaign->characters()->saveMany($party);
+
+            // Create NPCs
+            $npcs = factory('App\Character', 10, ['npc' => true])->create();
+            $user->characters()->saveMany($npcs);
+            $campaign->npcs()->saveMany($npcs);
+
+            // Create factions
+            $campaign->factions()->saveMany(factory('App\Faction', 5)->create());
+
+            // Create locations
+            $campaign->locations()->saveMany(factory('App\Location', 25)->create());
+
+            // Tie factions, PCs, NPCs, and Locations together
+            $factions->each(function($faction) use($locations) {
+                $faction->locations()->saveMany($locations->random(2));
+            });
+
+            $npcs->each(function($npc) use($factions, $locations) {
+                $npc->locations()->saveMany($locations->random(2));
+                $npc->factions()->saveMany($factions->random(2));
+            });
+
+            $party->each(function($pc) use($factions) {
+                $pc->factions()->saveMany($factions->random(3));
+            });
         });
     }
 }

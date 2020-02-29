@@ -55,4 +55,8 @@ class Faction extends Model
     public function tasks() {
         return $this->belongsToMany('App\Task');
     }
+
+    public function characters() {
+        return $this->belongsToMany('App\Character');
+    }
 }
