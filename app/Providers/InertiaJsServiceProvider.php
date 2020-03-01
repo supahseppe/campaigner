@@ -49,14 +49,17 @@ class InertiaJsServiceProvider extends ServiceProvider
                     ? Session::get('errors')->getBag('default')->getMessages()
                     : (object) [];
             },
-            // Lazily
+            'route' => function () {
+                return [
+                    'name' => Route::currentRouteName(),
+                ];
+            },
             'auth_sessions' => function () {
                 return [
                     'resent' => Session::get('resent'),
                     'status' => Session::get('status'),
                 ];
             },
-            // Lazily
             'auth_routes' => function () {
                 return [
                     'login' => Route::has('login'),

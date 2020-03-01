@@ -16,11 +16,11 @@ use Spatie\WelcomeNotification\WelcomesNewUsers;
 
 Auth::routes();
 
-Route::get('/', function () {
+Route::get('/', 'HomeController@index')->name('dashboard');
+
+Route::get('/welcome', function () {
     return Inertia::render('Welcome');
 })->name('page.welcome');
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::group(['middleware' => ['web', WelcomesNewUsers::class,]], function () {
 //    Route::get('welcome/{user}', 'WelcomeController@showWelcomeForm')->name('welcome');

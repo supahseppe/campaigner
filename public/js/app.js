@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f1c57713d879d3108194","1":"9fd1f573a597c6d22252","2":"b623fe5939de5a81bf6d","3":"fe6e4f62090abc1e29f2","4":"58711c37554c58f08f74","5":"0a5a9f13afba66e9b045","6":"6760f0f88c0ea4d19150","7":"3db7076385c75da5825f","8":"e5a35ff74863bf220b8c","9":"e12f4b1388819abe5bdb","10":"33ad00d2be25d83f587b","11":"f2878dce49a957c42d36","12":"6dc9dbc9ee1fda5394f2","13":"c9527d86eba57781de7c","14":"d10625ec90cc600f09bb","15":"a5d6b409a19940f41f1e","16":"a8ea6fabfd7bf2875011","17":"6544a54e6faecd7c6a49","18":"ed610683793a4053157c","19":"ade35c1eb43567f962b8","20":"fcdf72010ba0db52a441","21":"a72b7115ad64cbf5667c","22":"06ed324158e7364dbda9","23":"c3b242a34196d8494205","24":"74b35e1c200f1abaa45d","25":"68522f6e4465f64c2863","26":"87bd6d48602be8330862","27":"a8712dccf47e6fa74aa4","28":"7f5d19c6a2e8cd63e272","29":"41ed8e7097317f8b3b4a","30":"a956d5c7cb3fdb0136da","31":"050aa5c12b62dc6500a9","32":"3bc478690396c70de2ab","33":"c9bc61e896bde5db38ee","34":"0693f6f367857179835c","35":"0b92e33910c7c76b6e7c"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","2":"709dfeaae33f742cde78","11":"5b4e94f9b38b0e61a689","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","22":"df1410afe7b6b7e6a2b4","25":"ff730408530e21b28106","34":"cddb4d317ad8267377d7","35":"9ae2f541c09840e02c56","36":"9d4a0b1a77fad4a5b00f","37":"8b94e318ca428eb7497b","38":"f8875cd4f1b06526285c","39":"d794d23dc655bc8ed5aa","40":"9027a8d2399f28af5b2d","41":"d6f229c9c67b4bde12b3","42":"00c6c6cf0dafee07d4c0","43":"9e88914433c3ccc3e29c","44":"591b6123fb08f887c612","45":"8088b8f321c7ef522608","46":"3b7e62725a9ab7b7c11e","47":"c21da8678d2ceab4826a","48":"bc69a5ca7e22989a1554","49":"9b30d7bccfbb48a1cdb4","50":"b93e14de6b6cbc6cf3e5","51":"562876eabe3e88b2b73c","52":"0e4a63e73d8ebd72d922","53":"af1fd86242c476ce4323","54":"cf9dcc12bce8574c92e5","55":"d3eeacaf90445a5facac","56":"4077ad0c99ed00b77524","57":"f5ebd3e8314402e60b18","58":"4dc708bbf9dd35b6dc0a","59":"1fadf1c7f6c6945f8188","60":"b10cc3bbd01483b7d980"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -224,6 +224,5178 @@ var e=__webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/i
 function e(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var t=e(__webpack_require__(/*! axios */ "./node_modules/axios/index.js")),i=e(__webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js")),n={modal:null,listener:null,show:function(e){var t=this,i=document.createElement("html");i.innerHTML=e,i.querySelectorAll("a").forEach(function(e){return e.setAttribute("target","_top")}),this.modal=document.createElement("div"),this.modal.style.position="fixed",this.modal.style.width="100vw",this.modal.style.height="100vh",this.modal.style.padding="50px",this.modal.style.backgroundColor="rgba(0, 0, 0, .6)",this.modal.style.zIndex=2e5,this.modal.addEventListener("click",function(){return t.hide()});var n=document.createElement("iframe");n.style.backgroundColor="white",n.style.borderRadius="5px",n.style.width="100%",n.style.height="100%",this.modal.appendChild(n),document.body.prepend(this.modal),document.body.style.overflow="hidden",n.contentWindow.document.open(),n.contentWindow.document.write(i.outerHTML),n.contentWindow.document.close(),this.listener=this.hideOnEscape.bind(this),document.addEventListener("keydown",this.listener)},hide:function(){this.modal.outerHTML="",this.modal=null,document.body.style.overflow="visible",document.removeEventListener("keydown",this.listener)},hideOnEscape:function(e){27===e.keyCode&&this.hide()}};i.configure({showSpinner:!1});var o={delay:null,loading:!1,start:function(){var e=this;clearTimeout(this.delay),this.delay=setTimeout(function(){e.loading=!0,i.set(0),i.start()},250)},increment:function(){this.loading&&i.inc(.4)},stop:function(){clearTimeout(this.delay),this.loading&&(i.done(),this.loading=!1)}};exports.Inertia={resolveComponent:null,updatePage:null,version:null,visitId:null,cancelToken:null,page:null,init:function(e){var t=e.initialPage,i=e.updatePage;this.resolveComponent=e.resolveComponent,this.updatePage=i,window.history.state&&"back_forward"===this.navigationType()?this.setPage(window.history.state):window.sessionStorage.getItem("inertia.hardVisit")?(window.sessionStorage.removeItem("inertia.hardVisit"),this.setPage(t,{preserveState:!0})):(t.url+=window.location.hash,this.setPage(t)),window.addEventListener("popstate",this.restoreState.bind(this))},navigationType:function(){if(window.performance&&window.performance.getEntriesByType("navigation").length)return window.performance.getEntriesByType("navigation")[0].type},isInertiaResponse:function(e){return e&&e.headers["x-inertia"]},cancelActiveVisits:function(){this.cancelToken&&this.cancelToken.cancel(this.cancelToken),this.cancelToken=t.CancelToken.source()},createVisitId:function(){return this.visitId={},this.visitId},visit:function(e,i){var s=this;void 0===i&&(i={});var r=i.method;void 0===r&&(r="get");var a=i.data;void 0===a&&(a={});var d=i.replace;void 0===d&&(d=!1);var c=i.preserveScroll;void 0===c&&(c=!1);var l=i.preserveState;void 0===l&&(l=!1);var h=i.only;void 0===h&&(h=[]),o.start(),this.cancelActiveVisits();var u=this.createVisitId();return t({method:r,url:e.toString(),data:"get"===r.toLowerCase()?{}:a,params:"get"===r.toLowerCase()?a:{},cancelToken:this.cancelToken.token,headers:Object.assign({},{Accept:"text/html, application/xhtml+xml","X-Requested-With":"XMLHttpRequest","X-Inertia":!0},h.length?{"X-Inertia-Partial-Component":this.page.component,"X-Inertia-Partial-Data":h.join(",")}:{},this.version?{"X-Inertia-Version":this.version}:{})}).then(function(e){if(s.isInertiaResponse(e))return e.data;n.show(e.data)}).catch(function(e){if(!t.isCancel(e))return 409===e.response.status&&e.response.headers["x-inertia-location"]?(o.stop(),s.hardVisit(!0,e.response.headers["x-inertia-location"])):s.isInertiaResponse(e.response)?e.response.data:e.response?(o.stop(),void n.show(e.response.data)):Promise.reject(e)}).then(function(e){if(e)return h.length&&(e.props=Object.assign({},s.page.props,e.props)),s.setPage(e,{visitId:u,replace:d,preserveScroll:c,preserveState:l})})},hardVisit:function(e,t){window.sessionStorage.setItem("inertia.hardVisit",!0),e?window.location.replace(t):window.location.href=t},setPage:function(e,t){var i=this;void 0===t&&(t={});var n=t.visitId;void 0===n&&(n=this.createVisitId());var s=t.replace;void 0===s&&(s=!1);var r=t.preserveScroll;void 0===r&&(r=!1);var a=t.preserveState;return void 0===a&&(a=!1),this.page=e,o.increment(),Promise.resolve(this.resolveComponent(e.component)).then(function(t){n===i.visitId&&(i.version=e.version,i.setState(e,s,a),i.updatePage(t,e.props,{preserveState:a}),i.setScroll(r),o.stop())})},setScroll:function(e){e||document.querySelectorAll("html,body,[scroll-region]").forEach(function(e){return e.scrollTo(0,0)})},setState:function(e,t,i){void 0===t&&(t=!1),void 0===i&&(i=!1),t||e.url===""+window.location.pathname+window.location.search?window.history.replaceState(Object.assign({},{cache:i&&window.history.state?window.history.state.cache:{}},e),"",e.url):window.history.pushState(Object.assign({},{cache:{}},e),"",e.url)},restoreState:function(e){e.state&&this.setPage(e.state)},replace:function(e,t){return void 0===t&&(t={}),this.visit(e,Object.assign({},{preserveState:!0},t,{replace:!0}))},reload:function(e){return void 0===e&&(e={}),this.replace(window.location.href,e)},post:function(e,t,i){return void 0===t&&(t={}),void 0===i&&(i={}),this.visit(e,Object.assign({},{preserveState:!0},i,{method:"post",data:t}))},put:function(e,t,i){return void 0===t&&(t={}),void 0===i&&(i={}),this.visit(e,Object.assign({},{preserveState:!0},i,{method:"put",data:t}))},patch:function(e,t,i){return void 0===t&&(t={}),void 0===i&&(i={}),this.visit(e,Object.assign({},{preserveState:!0},i,{method:"patch",data:t}))},delete:function(e,t){return void 0===t&&(t={}),this.visit(e,Object.assign({},t,{method:"delete"}))},remember:function(e,t){void 0===t&&(t="default");var i=Object.assign({},window.history.state);i.cache=i.cache||{},i.cache[t]=e,this.setState(i)},restore:function(e){if(void 0===e&&(e="default"),window.history.state.cache&&window.history.state.cache[e])return window.history.state.cache[e]}},exports.shouldIntercept=function(e){return!(e.target&&e.target.isContentEditable||e.defaultPrevented||e.which>1||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)};
 //# sourceMappingURL=index.js.map
 
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/custom-forms/src/defaultOptions.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@tailwindcss/custom-forms/src/defaultOptions.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const defaultTheme = __webpack_require__(/*! tailwindcss/resolveConfig */ "./node_modules/tailwindcss/resolveConfig.js")(__webpack_require__(/*! tailwindcss/defaultConfig */ "./node_modules/tailwindcss/defaultConfig.js")).theme
+
+module.exports = {
+  input: {
+    appearance: 'none',
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    borderRadius: defaultTheme.borderRadius.default,
+    paddingTop: defaultTheme.spacing[2],
+    paddingRight: defaultTheme.spacing[3],
+    paddingBottom: defaultTheme.spacing[2],
+    paddingLeft: defaultTheme.spacing[3],
+    fontSize: defaultTheme.fontSize.base,
+    lineHeight: defaultTheme.lineHeight.normal,
+    '&::placeholder': {
+      color: defaultTheme.colors.gray[500],
+      opacity: '1',
+    },
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+  },
+  textarea: {
+    appearance: 'none',
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    borderRadius: defaultTheme.borderRadius.default,
+    paddingTop: defaultTheme.spacing[2],
+    paddingRight: defaultTheme.spacing[3],
+    paddingBottom: defaultTheme.spacing[2],
+    paddingLeft: defaultTheme.spacing[3],
+    fontSize: defaultTheme.fontSize.base,
+    lineHeight: defaultTheme.lineHeight.normal,
+    '&::placeholder': {
+      color: defaultTheme.colors.gray[500],
+      opacity: '1',
+    },
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+  },
+  multiselect: {
+    appearance: 'none',
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    borderRadius: defaultTheme.borderRadius.default,
+    paddingTop: defaultTheme.spacing[2],
+    paddingRight: defaultTheme.spacing[3],
+    paddingBottom: defaultTheme.spacing[2],
+    paddingLeft: defaultTheme.spacing[3],
+    fontSize: defaultTheme.fontSize.base,
+    lineHeight: defaultTheme.lineHeight.normal,
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+  },
+  select: {
+    appearance: 'none',
+    colorAdjust: 'exact',
+    '&::-ms-expand': {
+      border: 'none', // The select padding is causing some whitespace around the chevron which looks weird with a border
+      '@media not print': {
+        display: 'none',
+      },
+    },
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    borderRadius: defaultTheme.borderRadius.default,
+    paddingTop: defaultTheme.spacing[2],
+    paddingRight: defaultTheme.spacing[10],
+    paddingBottom: defaultTheme.spacing[2],
+    paddingLeft: defaultTheme.spacing[3],
+    fontSize: defaultTheme.fontSize.base,
+    lineHeight: defaultTheme.lineHeight.normal,
+    backgroundPosition: `right ${defaultTheme.spacing[2]} center`,
+    backgroundSize: `1.5em 1.5em`,
+    iconColor: defaultTheme.colors.gray[500],
+    icon: iconColor => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${iconColor}"><path d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"/></svg>`,
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+  },
+  checkbox: {
+    appearance: 'none',
+    colorAdjust: 'exact',
+    '&::-ms-check': {
+      '@media not print': {
+        color: 'transparent', // Hide the check
+        background: 'inherit',
+        borderColor: 'inherit',
+        borderRadius: 'inherit',
+      }
+    },
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    backgroundOrigin: 'border-box',
+    userSelect: 'none',
+    flexShrink: 0,
+    height: '1em',
+    width: '1em',
+    color: defaultTheme.colors.blue[500],
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    borderRadius: defaultTheme.borderRadius.default,
+    iconColor: defaultTheme.colors.white,
+    icon: iconColor => `<svg viewBox="0 0 16 16" fill="${iconColor}" xmlns="http://www.w3.org/2000/svg"><path d="M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z"/></svg>`,
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+    '&:checked': {
+      borderColor: 'transparent',
+      backgroundColor: 'currentColor',
+      backgroundSize: '100% 100%',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    },
+  },
+  radio: {
+    appearance: 'none',
+    colorAdjust: 'exact',
+    '&::-ms-check': {
+      '@media not print': {
+        color: 'transparent', // Hide the check
+        background: 'inherit',
+        borderColor: 'inherit',
+        borderRadius: 'inherit',
+      }
+    },
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    backgroundOrigin: 'border-box',
+    userSelect: 'none',
+    flexShrink: 0,
+    borderRadius: '100%',
+    height: '1em',
+    width: '1em',
+    color: defaultTheme.colors.blue[500],
+    backgroundColor: defaultTheme.colors.white,
+    borderColor: defaultTheme.borderColor.default,
+    borderWidth: defaultTheme.borderWidth.default,
+    iconColor: defaultTheme.colors.white,
+    icon: iconColor => `<svg viewBox="0 0 16 16" fill="${iconColor}" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`,
+    '&:focus': {
+      outline: 'none',
+      boxShadow: defaultTheme.boxShadow.outline,
+      borderColor: defaultTheme.colors.blue[400],
+    },
+    '&:checked': {
+      borderColor: 'transparent',
+      backgroundColor: 'currentColor',
+      backgroundSize: '100% 100%',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    },
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/custom-forms/src/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@tailwindcss/custom-forms/src/index.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const tap = __webpack_require__(/*! lodash/tap */ "./node_modules/lodash/tap.js")
+const map = __webpack_require__(/*! lodash/map */ "./node_modules/lodash/map.js")
+const toPairs = __webpack_require__(/*! lodash/toPairs */ "./node_modules/lodash/toPairs.js")
+const fromPairs = __webpack_require__(/*! lodash/fromPairs */ "./node_modules/lodash/fromPairs.js")
+const mergeWith = __webpack_require__(/*! lodash/mergeWith */ "./node_modules/lodash/mergeWith.js")
+const flatMap = __webpack_require__(/*! lodash/flatMap */ "./node_modules/lodash/flatMap.js")
+const isEmpty = __webpack_require__(/*! lodash/isEmpty */ "./node_modules/lodash/isEmpty.js")
+const isArray = __webpack_require__(/*! lodash/isArray */ "./node_modules/lodash/isArray.js")
+const isFunction = __webpack_require__(/*! lodash/isFunction */ "./node_modules/lodash/isFunction.js")
+const isUndefined = __webpack_require__(/*! lodash/isUndefined */ "./node_modules/lodash/isUndefined.js")
+const isPlainObject = __webpack_require__(/*! lodash/isPlainObject */ "./node_modules/lodash/isPlainObject.js")
+const defaultOptions = __webpack_require__(/*! ./defaultOptions */ "./node_modules/@tailwindcss/custom-forms/src/defaultOptions.js")
+const svgToDataUri = __webpack_require__(/*! mini-svg-data-uri */ "./node_modules/mini-svg-data-uri/index.js")
+const traverse = __webpack_require__(/*! traverse */ "./node_modules/traverse/index.js")
+
+function merge(...options) {
+  function mergeCustomizer(objValue, srcValue, key, obj, src, stack) {
+    if (isPlainObject(srcValue)) {
+      return mergeWith(objValue, srcValue, mergeCustomizer)
+    }
+    return Object.keys(src).includes(key)
+      // Convert undefined to null otherwise lodash won't replace the key
+      // PostCSS still omits properties with a null value so it behaves
+      // the same as undefined.
+      ? (srcValue === undefined ? null : srcValue)
+      : objValue
+  }
+
+  return mergeWith({}, ...options, mergeCustomizer)
+}
+
+function flattenOptions(options) {
+  return merge(...flatMap(toPairs(options), ([keys, value]) => {
+    return fromPairs(keys.split(', ').map(key => [key, value]))
+  }))
+}
+
+function resolveOptions(userOptions) {
+  return merge({
+    default: defaultOptions,
+  }, fromPairs(map(userOptions, (value, key) => [key, flattenOptions(value)])))
+}
+
+function replaceIconDeclarations(component, replace) {
+  return traverse(component).map(function (value) {
+    if (!isPlainObject(value)) {
+      return
+    }
+
+    if (Object.keys(value).includes('iconColor') || Object.keys(value).includes('icon')) {
+      const { iconColor, icon, ...rest } = value
+      this.update(merge(replace({ icon, iconColor }), rest))
+    }
+  })
+}
+
+module.exports = function ({ addUtilities, addComponents, theme, postcss }) {
+  function addInput(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents({ [`.form-input${modifier}`]: options })
+  }
+
+  function addTextarea(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents({ [`.form-textarea${modifier}`]: options })
+  }
+
+  function addMultiselect(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents({ [`.form-multiselect${modifier}`]: options })
+  }
+
+  function addSelect(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents(replaceIconDeclarations({
+      [`.form-select${modifier}`]: merge({
+        '&::-ms-expand': {
+          color: options.iconColor,
+        },
+        ...isUndefined(options.paddingLeft) ? {} : {
+          '@media print and (-ms-high-contrast: active), print and (-ms-high-contrast: none)': {
+            paddingRight: options.paddingLeft, // Fix padding for print in IE
+          },
+        },
+      }, options)
+    }, ({ icon = options.icon, iconColor = options.iconColor }) => {
+      return {
+        backgroundImage: `url("${svgToDataUri(isFunction(icon) ? icon(iconColor) : icon)}")`
+      }
+    }))
+  }
+
+  function addCheckbox(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents(replaceIconDeclarations({
+      [`.form-checkbox${modifier}`]: merge({
+        ...isUndefined(options.borderWidth) ? {} : {
+          '&::-ms-check': {
+            '@media not print': {
+              borderWidth: options.borderWidth,
+            }
+          },
+        },
+      }, options)
+    }, ({ icon = options.icon, iconColor = options.iconColor }) => {
+      return {
+        '&:checked': {
+          backgroundImage: `url("${svgToDataUri(isFunction(icon) ? icon(iconColor) : icon)}")`
+        }
+      }
+    }))
+  }
+
+  function addRadio(options, modifier = '') {
+    if (isEmpty(options)) {
+      return
+    }
+
+    addComponents(replaceIconDeclarations({
+      [`.form-radio${modifier}`]: merge({
+        ...isUndefined(options.borderWidth) ? {} : {
+          '&::-ms-check': {
+            '@media not print': {
+              borderWidth: options.borderWidth,
+            }
+          },
+        },
+      }, options)
+    }, ({ icon = options.icon, iconColor = options.iconColor }) => {
+      return {
+        '&:checked': {
+          backgroundImage: `url("${svgToDataUri(isFunction(icon) ? icon(iconColor) : icon)}")`
+        }
+      }
+    }))
+  }
+
+  function registerComponents() {
+    const options = resolveOptions(theme('customForms'))
+
+    addInput(options.default.input)
+    addTextarea(options.default.textarea)
+    addMultiselect(options.default.multiselect)
+    addSelect(options.default.select)
+    addCheckbox(options.default.checkbox)
+    addRadio(options.default.radio)
+
+    Object.keys((({ default: _default, ...rest }) => rest)(options)).forEach(key => {
+      const modifier = `-${key}`
+
+      addInput(options[key].input || {}, modifier)
+      addTextarea(options[key].textarea || {}, modifier)
+      addMultiselect(options[key].multiselect || {}, modifier)
+      addSelect(options[key].select || {}, modifier)
+      addCheckbox(options[key].checkbox || {}, modifier)
+      addRadio(options[key].radio || {}, modifier)
+    })
+  }
+
+  registerComponents()
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/colors.js":
+/*!************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/colors.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  transparent: 'transparent',
+  white: '#ffffff',
+  black: '#000000',
+  gray: {
+    '50': '#f9fafb',
+    '100': '#f4f5f7',
+    '200': '#e5e7eb',
+    '300': '#d2d6dc',
+    '400': '#9fa6b2',
+    '500': '#6b7280',
+    '600': '#4b5563',
+    '700': '#374151',
+    '800': '#252f3f',
+    '900': '#161e2e',
+  },
+  'cool-gray': {
+    '50': '#fbfdfe',
+    '100': '#f1f5f9',
+    '200': '#e2e8f0',
+    '300': '#cfd8e3',
+    '400': '#97a6ba',
+    '500': '#64748b',
+    '600': '#475569',
+    '700': '#364152',
+    '800': '#27303f',
+    '900': '#1a202e',
+  },
+  red: {
+    '50': '#fdf2f2',
+    '100': '#fde8e8',
+    '200': '#fbd5d5',
+    '300': '#f8b4b4',
+    '400': '#f98080',
+    '500': '#f05252',
+    '600': '#e02424',
+    '700': '#c81e1e',
+    '800': '#9b1c1c',
+    '900': '#771d1d',
+  },
+  orange: {
+    '50': '#fff8f1',
+    '100': '#feecdc',
+    '200': '#fcd9bd',
+    '300': '#fdba8c',
+    '400': '#ff8a4c',
+    '500': '#ff5a1f',
+    '600': '#d03801',
+    '700': '#b43403',
+    '800': '#8a2c0d',
+    '900': '#771d1d',
+  },
+  yellow: {
+    '50': '#fdfdea',
+    '100': '#fdf6b2',
+    '200': '#fce96a',
+    '300': '#faca15',
+    '400': '#e3a008',
+    '500': '#c27803',
+    '600': '#9f580a',
+    '700': '#8e4b10',
+    '800': '#723b13',
+    '900': '#633112',
+  },
+  green: {
+    '50': '#f3faf7',
+    '100': '#def7ec',
+    '200': '#bcf0da',
+    '300': '#84e1bc',
+    '400': '#31c48d',
+    '500': '#0e9f6e',
+    '600': '#057a55',
+    '700': '#046c4e',
+    '800': '#03543f',
+    '900': '#014737',
+  },
+  teal: {
+    '50': '#edfafa',
+    '100': '#d5f5f6',
+    '200': '#afecef',
+    '300': '#7edce2',
+    '400': '#16bdca',
+    '500': '#0694a2',
+    '600': '#047481',
+    '700': '#036672',
+    '800': '#05505c',
+    '900': '#014451',
+  },
+  blue: {
+    '50': '#ebf5ff',
+    '100': '#e1effe',
+    '200': '#c3ddfd',
+    '300': '#a4cafe',
+    '400': '#76a9fa',
+    '500': '#3f83f8',
+    '600': '#1c64f2',
+    '700': '#1a56db',
+    '800': '#1e429f',
+    '900': '#233876',
+  },
+  indigo: {
+    '50': '#f0f5ff',
+    '100': '#e5edff',
+    '200': '#cddbfe',
+    '300': '#b4c6fc',
+    '400': '#8da2fb',
+    '500': '#6875f5',
+    '600': '#5850ec',
+    '700': '#5145cd',
+    '800': '#42389d',
+    '900': '#362f78',
+  },
+  purple: {
+    '50': '#f6f5ff',
+    '100': '#edebfe',
+    '200': '#dcd7fe',
+    '300': '#cabffd',
+    '400': '#ac94fa',
+    '500': '#9061f9',
+    '600': '#7e3af2',
+    '700': '#6c2bd9',
+    '800': '#5521b5',
+    '900': '#4a1d96',
+  },
+  pink: {
+    '50': '#fdf2f8',
+    '100': '#fce8f3',
+    '200': '#fad1e8',
+    '300': '#f8b4d9',
+    '400': '#f17eb8',
+    '500': '#e74694',
+    '600': '#d61f69',
+    '700': '#bf125d',
+    '800': '#99154b',
+    '900': '#751a3d',
+  },
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const plugin = __webpack_require__(/*! tailwindcss/plugin */ "./node_modules/tailwindcss/plugin.js")
+const defaultTheme = __webpack_require__(/*! tailwindcss/defaultTheme */ "./node_modules/tailwindcss/defaultTheme.js")
+const selectorParser = __webpack_require__(/*! postcss-selector-parser */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/index.js")
+const rgba = __webpack_require__(/*! hex-to-rgba */ "./node_modules/hex-to-rgba/build/index.js")
+const colors = __webpack_require__(/*! ./colors */ "./node_modules/@tailwindcss/ui/colors.js")
+const customFormsPlugin = __webpack_require__(/*! @tailwindcss/custom-forms */ "./node_modules/@tailwindcss/custom-forms/src/index.js")
+
+const spacing = {
+  px: '1px',
+  '0': '0',
+  '0.5': '0.125rem',
+  '1': '0.25rem',
+  '1.5': '0.375rem',
+  '2': '0.5rem',
+  '2.5': '0.625rem',
+  '3': '0.75rem',
+  '3.5': '0.875rem',
+  '4': '1rem',
+  '5': '1.25rem',
+  '6': '1.5rem',
+  '7': '1.75rem',
+  '8': '2rem',
+  '9': '2.25rem',
+  '10': '2.5rem',
+  '11': '2.75rem',
+  '12': '3rem',
+  '13': '3.25rem',
+  '14': '3.5rem',
+  '15': '3.75rem',
+  '16': '4rem',
+  '20': '5rem',
+  '24': '6rem',
+  '28': '7rem',
+  '32': '8rem',
+  '36': '9rem',
+  '40': '10rem',
+  '48': '12rem',
+  '56': '14rem',
+  '60': '15rem',
+  '64': '16rem',
+  '72': '18rem',
+  '80': '20rem',
+  '96': '24rem',
+  '1/2': '50%',
+  '1/3': '33.333333%',
+  '2/3': '66.666667%',
+  '1/4': '25%',
+  '2/4': '50%',
+  '3/4': '75%',
+  '1/5': '20%',
+  '2/5': '40%',
+  '3/5': '60%',
+  '4/5': '80%',
+  '1/6': '16.666667%',
+  '2/6': '33.333333%',
+  '3/6': '50%',
+  '4/6': '66.666667%',
+  '5/6': '83.333333%',
+  '1/12': '8.333333%',
+  '2/12': '16.666667%',
+  '3/12': '25%',
+  '4/12': '33.333333%',
+  '5/12': '41.666667%',
+  '6/12': '50%',
+  '7/12': '58.333333%',
+  '8/12': '66.666667%',
+  '9/12': '75%',
+  '10/12': '83.333333%',
+  '11/12': '91.666667%',
+  full: '100%',
+}
+
+const boxShadow = {
+  ...defaultTheme.boxShadow,
+  solid: '0 0 0 2px currentColor',
+  outline: `0 0 0 3px ${rgba(colors.blue[400], 0.45)}`,
+  'outline-gray': `0 0 0 3px ${rgba(colors.gray[400], 0.45)}`,
+  'outline-blue': `0 0 0 3px ${rgba(colors.blue[300], 0.45)}`,
+  'outline-teal': `0 0 0 3px ${rgba(colors.teal[300], 0.45)}`,
+  'outline-green': `0 0 0 3px ${rgba(colors.green[300], 0.45)}`,
+  'outline-yellow': `0 0 0 3px ${rgba(colors.yellow[300], 0.45)}`,
+  'outline-orange': `0 0 0 3px ${rgba(colors.orange[300], 0.45)}`,
+  'outline-red': `0 0 0 3px ${rgba(colors.red[300], 0.45)}`,
+  'outline-pink': `0 0 0 3px ${rgba(colors.pink[300], 0.45)}`,
+  'outline-purple': `0 0 0 3px ${rgba(colors.purple[300], 0.45)}`,
+  'outline-indigo': `0 0 0 3px ${rgba(colors.indigo[300], 0.45)}`,
+}
+
+const maxWidth = (theme, { breakpoints }) => ({
+  none: 'none',
+  xs: '20rem',
+  sm: '24rem',
+  md: '28rem',
+  lg: '32rem',
+  xl: '36rem',
+  '2xl': '42rem',
+  '3xl': '48rem',
+  '4xl': '56rem',
+  '5xl': '64rem',
+  '6xl': '72rem',
+  '7xl': '80rem',
+  full: '100%',
+  ...breakpoints(theme('screens')),
+})
+
+const maxHeight = theme => ({
+  screen: '100vh',
+  ...theme('spacing'),
+})
+
+const inset = theme => ({
+  auto: 'auto',
+  ...theme('spacing'),
+})
+
+const customForms = theme => ({
+  default: {
+    input: {
+      appearance: 'none',
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      borderRadius: defaultTheme.borderRadius.md,
+      paddingTop: spacing[2],
+      paddingRight: spacing[3],
+      paddingBottom: spacing[2],
+      paddingLeft: spacing[3],
+      fontSize: defaultTheme.fontSize.base,
+      lineHeight: defaultTheme.lineHeight.normal,
+      '&::placeholder': {
+        color: colors.gray[400],
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+    },
+    textarea: {
+      appearance: 'none',
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      borderRadius: defaultTheme.borderRadius.md,
+      paddingTop: spacing[2],
+      paddingRight: spacing[3],
+      paddingBottom: spacing[2],
+      paddingLeft: spacing[3],
+      fontSize: defaultTheme.fontSize.base,
+      lineHeight: defaultTheme.lineHeight.normal,
+      '&::placeholder': {
+        color: colors.gray[400],
+        opacity: '1',
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+    },
+    multiselect: {
+      appearance: 'none',
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      borderRadius: defaultTheme.borderRadius.md,
+      paddingTop: spacing[2],
+      paddingRight: spacing[3],
+      paddingBottom: spacing[2],
+      paddingLeft: spacing[3],
+      fontSize: defaultTheme.fontSize.base,
+      lineHeight: defaultTheme.lineHeight.normal,
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+    },
+    select: {
+      appearance: 'none',
+      colorAdjust: 'exact',
+      '&::-ms-expand': {
+        border: 'none', // The select padding is causing some whitespace around the chevron which looks weird with a border
+        '@media not print': {
+          display: 'none',
+        },
+      },
+      backgroundRepeat: 'no-repeat',
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      borderRadius: defaultTheme.borderRadius.md,
+      paddingTop: spacing[2],
+      paddingRight: spacing[10],
+      paddingBottom: spacing[2],
+      paddingLeft: spacing[3],
+      fontSize: defaultTheme.fontSize.base,
+      lineHeight: defaultTheme.lineHeight.normal,
+      backgroundPosition: `right ${spacing[2]} center`,
+      backgroundSize: `1.5em 1.5em`,
+      iconColor: colors.gray[400],
+      icon: iconColor =>
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke="${iconColor}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+    },
+    checkbox: {
+      appearance: 'none',
+      colorAdjust: 'exact',
+      '&::-ms-check': {
+        '@media not print': {
+          color: 'transparent', // Hide the check
+          background: 'inherit',
+          borderColor: 'inherit',
+          borderRadius: 'inherit',
+        },
+      },
+      display: 'inline-block',
+      verticalAlign: 'middle',
+      backgroundOrigin: 'border-box',
+      userSelect: 'none',
+      flexShrink: 0,
+      height: spacing[4],
+      width: spacing[4],
+      color: colors.blue[500],
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      borderRadius: defaultTheme.borderRadius.default,
+      iconColor: colors.white,
+      icon: iconColor =>
+        `<svg viewBox="0 0 16 16" fill="${iconColor}" xmlns="http://www.w3.org/2000/svg"><path d="M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z"/></svg>`,
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+      '&:checked': {
+        borderColor: 'transparent',
+        backgroundColor: 'currentColor',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      },
+      '&:checked:focus': {
+        borderColor: 'transparent',
+      },
+    },
+    radio: {
+      appearance: 'none',
+      colorAdjust: 'exact',
+      '&::-ms-check': {
+        '@media not print': {
+          color: 'transparent', // Hide the check
+          background: 'inherit',
+          borderColor: 'inherit',
+          borderRadius: 'inherit',
+        },
+      },
+      display: 'inline-block',
+      verticalAlign: 'middle',
+      backgroundOrigin: 'border-box',
+      userSelect: 'none',
+      flexShrink: 0,
+      borderRadius: '100%',
+      height: spacing[4],
+      width: spacing[4],
+      color: colors.blue[500],
+      backgroundColor: colors.white,
+      borderColor: colors.gray[300],
+      borderWidth: defaultTheme.borderWidth.default,
+      iconColor: colors.white,
+      icon: iconColor =>
+        `<svg viewBox="0 0 16 16" fill="${iconColor}" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3"/></svg>`,
+      '&:focus': {
+        outline: 'none',
+        boxShadow: boxShadow['outline-blue'],
+        borderColor: colors.blue[300],
+      },
+      '&:checked': {
+        borderColor: 'transparent',
+        backgroundColor: 'currentColor',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      },
+      '&:checked:focus': {
+        borderColor: 'transparent',
+      },
+    },
+  },
+})
+
+module.exports = plugin.withOptions(
+  function() {
+    return function(options) {
+      const { addUtilities, addVariant, theme, e, prefix, variants } = options
+
+      customFormsPlugin(options)
+
+      addVariant('group-focus', ({ modifySelectors, separator }) => {
+        return modifySelectors(({ selector }) => {
+          return selectorParser(selectors => {
+            selectors.walkClasses(sel => {
+              sel.value = `group-focus${separator}${sel.value}`
+              sel.parent.insertBefore(sel, selectorParser().astSync(prefix('.group:focus ')))
+            })
+          }).processSync(selector)
+        })
+      })
+    }
+  },
+  function(options = {}) {
+    return {
+      theme: {
+        ...(options.layout === 'sidebar'
+          ? {
+              screens: {
+                sm: '640px',
+                md: '1024px', // 768 + 256
+                lg: '1280px', // 1024 + 256
+                xl: '1536px', // 1280 + 256
+              },
+            }
+          : {}),
+        colors,
+        spacing,
+        boxShadow,
+        maxWidth,
+        maxHeight,
+        inset,
+        customForms: customForms,
+      },
+      variants: {
+        backgroundColor: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus', 'active'],
+        borderColor: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus'],
+        textColor: [
+          'responsive',
+          'group-hover',
+          'group-focus',
+          'hover',
+          'focus-within',
+          'focus',
+          'active',
+        ],
+        textDecoration: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus'],
+        zIndex: ['responsive', 'focus-within', 'focus'],
+      },
+    }
+  }
+)
+
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/cssesc/cssesc.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/cssesc/cssesc.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*! https://mths.be/cssesc v3.0.0 by @mathias */
+
+
+var object = {};
+var hasOwnProperty = object.hasOwnProperty;
+var merge = function merge(options, defaults) {
+	if (!options) {
+		return defaults;
+	}
+	var result = {};
+	for (var key in defaults) {
+		// `if (defaults.hasOwnProperty(key) { … }` is not needed here, since
+		// only recognized option names are used.
+		result[key] = hasOwnProperty.call(options, key) ? options[key] : defaults[key];
+	}
+	return result;
+};
+
+var regexAnySingleEscape = /[ -,\.\/:-@\[-\^`\{-~]/;
+var regexSingleEscape = /[ -,\.\/:-@\[\]\^`\{-~]/;
+var regexAlwaysEscape = /['"\\]/;
+var regexExcessiveSpaces = /(^|\\+)?(\\[A-F0-9]{1,6})\x20(?![a-fA-F0-9\x20])/g;
+
+// https://mathiasbynens.be/notes/css-escapes#css
+var cssesc = function cssesc(string, options) {
+	options = merge(options, cssesc.options);
+	if (options.quotes != 'single' && options.quotes != 'double') {
+		options.quotes = 'single';
+	}
+	var quote = options.quotes == 'double' ? '"' : '\'';
+	var isIdentifier = options.isIdentifier;
+
+	var firstChar = string.charAt(0);
+	var output = '';
+	var counter = 0;
+	var length = string.length;
+	while (counter < length) {
+		var character = string.charAt(counter++);
+		var codePoint = character.charCodeAt();
+		var value = void 0;
+		// If it’s not a printable ASCII character…
+		if (codePoint < 0x20 || codePoint > 0x7E) {
+			if (codePoint >= 0xD800 && codePoint <= 0xDBFF && counter < length) {
+				// It’s a high surrogate, and there is a next character.
+				var extra = string.charCodeAt(counter++);
+				if ((extra & 0xFC00) == 0xDC00) {
+					// next character is low surrogate
+					codePoint = ((codePoint & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000;
+				} else {
+					// It’s an unmatched surrogate; only append this code unit, in case
+					// the next code unit is the high surrogate of a surrogate pair.
+					counter--;
+				}
+			}
+			value = '\\' + codePoint.toString(16).toUpperCase() + ' ';
+		} else {
+			if (options.escapeEverything) {
+				if (regexAnySingleEscape.test(character)) {
+					value = '\\' + character;
+				} else {
+					value = '\\' + codePoint.toString(16).toUpperCase() + ' ';
+				}
+			} else if (/[\t\n\f\r\x0B]/.test(character)) {
+				value = '\\' + codePoint.toString(16).toUpperCase() + ' ';
+			} else if (character == '\\' || !isIdentifier && (character == '"' && quote == character || character == '\'' && quote == character) || isIdentifier && regexSingleEscape.test(character)) {
+				value = '\\' + character;
+			} else {
+				value = character;
+			}
+		}
+		output += value;
+	}
+
+	if (isIdentifier) {
+		if (/^-[-\d]/.test(output)) {
+			output = '\\-' + output.slice(1);
+		} else if (/\d/.test(firstChar)) {
+			output = '\\3' + firstChar + ' ' + output.slice(1);
+		}
+	}
+
+	// Remove spaces after `\HEX` escapes that are not followed by a hex digit,
+	// since they’re redundant. Note that this is only possible if the escape
+	// sequence isn’t preceded by an odd number of backslashes.
+	output = output.replace(regexExcessiveSpaces, function ($0, $1, $2) {
+		if ($1 && $1.length % 2) {
+			// It’s not safe to remove the space, so don’t.
+			return $0;
+		}
+		// Strip the space.
+		return ($1 || '') + $2;
+	});
+
+	if (!isIdentifier && options.wrap) {
+		return quote + output + quote;
+	}
+	return output;
+};
+
+// Expose default options (so they can be overridden globally).
+cssesc.options = {
+	'escapeEverything': false,
+	'isIdentifier': false,
+	'quotes': 'single',
+	'wrap': false
+};
+
+cssesc.version = '3.0.0';
+
+module.exports = cssesc;
+
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/index.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/index.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _processor = _interopRequireDefault(__webpack_require__(/*! ./processor */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/processor.js"));
+
+var selectors = _interopRequireWildcard(__webpack_require__(/*! ./selectors */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/index.js"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var parser = function parser(processor) {
+  return new _processor.default(processor);
+};
+
+Object.assign(parser, selectors);
+delete parser.__esModule;
+var _default = parser;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/parser.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/parser.js ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _indexesOf = _interopRequireDefault(__webpack_require__(/*! indexes-of */ "./node_modules/indexes-of/index.js"));
+
+var _uniq = _interopRequireDefault(__webpack_require__(/*! uniq */ "./node_modules/uniq/uniq.js"));
+
+var _root = _interopRequireDefault(__webpack_require__(/*! ./selectors/root */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/root.js"));
+
+var _selector = _interopRequireDefault(__webpack_require__(/*! ./selectors/selector */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/selector.js"));
+
+var _className = _interopRequireDefault(__webpack_require__(/*! ./selectors/className */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/className.js"));
+
+var _comment = _interopRequireDefault(__webpack_require__(/*! ./selectors/comment */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/comment.js"));
+
+var _id = _interopRequireDefault(__webpack_require__(/*! ./selectors/id */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/id.js"));
+
+var _tag = _interopRequireDefault(__webpack_require__(/*! ./selectors/tag */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/tag.js"));
+
+var _string = _interopRequireDefault(__webpack_require__(/*! ./selectors/string */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/string.js"));
+
+var _pseudo = _interopRequireDefault(__webpack_require__(/*! ./selectors/pseudo */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/pseudo.js"));
+
+var _attribute = _interopRequireWildcard(__webpack_require__(/*! ./selectors/attribute */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/attribute.js"));
+
+var _universal = _interopRequireDefault(__webpack_require__(/*! ./selectors/universal */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/universal.js"));
+
+var _combinator = _interopRequireDefault(__webpack_require__(/*! ./selectors/combinator */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/combinator.js"));
+
+var _nesting = _interopRequireDefault(__webpack_require__(/*! ./selectors/nesting */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/nesting.js"));
+
+var _sortAscending = _interopRequireDefault(__webpack_require__(/*! ./sortAscending */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/sortAscending.js"));
+
+var _tokenize = _interopRequireWildcard(__webpack_require__(/*! ./tokenize */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenize.js"));
+
+var tokens = _interopRequireWildcard(__webpack_require__(/*! ./tokenTypes */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenTypes.js"));
+
+var types = _interopRequireWildcard(__webpack_require__(/*! ./selectors/types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js"));
+
+var _util = __webpack_require__(/*! ./util */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js");
+
+var _WHITESPACE_TOKENS, _Object$assign;
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var WHITESPACE_TOKENS = (_WHITESPACE_TOKENS = {}, _WHITESPACE_TOKENS[tokens.space] = true, _WHITESPACE_TOKENS[tokens.cr] = true, _WHITESPACE_TOKENS[tokens.feed] = true, _WHITESPACE_TOKENS[tokens.newline] = true, _WHITESPACE_TOKENS[tokens.tab] = true, _WHITESPACE_TOKENS);
+var WHITESPACE_EQUIV_TOKENS = Object.assign({}, WHITESPACE_TOKENS, (_Object$assign = {}, _Object$assign[tokens.comment] = true, _Object$assign));
+
+function tokenStart(token) {
+  return {
+    line: token[_tokenize.FIELDS.START_LINE],
+    column: token[_tokenize.FIELDS.START_COL]
+  };
+}
+
+function tokenEnd(token) {
+  return {
+    line: token[_tokenize.FIELDS.END_LINE],
+    column: token[_tokenize.FIELDS.END_COL]
+  };
+}
+
+function getSource(startLine, startColumn, endLine, endColumn) {
+  return {
+    start: {
+      line: startLine,
+      column: startColumn
+    },
+    end: {
+      line: endLine,
+      column: endColumn
+    }
+  };
+}
+
+function getTokenSource(token) {
+  return getSource(token[_tokenize.FIELDS.START_LINE], token[_tokenize.FIELDS.START_COL], token[_tokenize.FIELDS.END_LINE], token[_tokenize.FIELDS.END_COL]);
+}
+
+function getTokenSourceSpan(startToken, endToken) {
+  if (!startToken) {
+    return undefined;
+  }
+
+  return getSource(startToken[_tokenize.FIELDS.START_LINE], startToken[_tokenize.FIELDS.START_COL], endToken[_tokenize.FIELDS.END_LINE], endToken[_tokenize.FIELDS.END_COL]);
+}
+
+function unescapeProp(node, prop) {
+  var value = node[prop];
+
+  if (typeof value !== "string") {
+    return;
+  }
+
+  if (value.indexOf("\\") !== -1) {
+    (0, _util.ensureObject)(node, 'raws');
+    node[prop] = (0, _util.unesc)(value);
+
+    if (node.raws[prop] === undefined) {
+      node.raws[prop] = value;
+    }
+  }
+
+  return node;
+}
+
+var Parser =
+/*#__PURE__*/
+function () {
+  function Parser(rule, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    this.rule = rule;
+    this.options = Object.assign({
+      lossy: false,
+      safe: false
+    }, options);
+    this.position = 0;
+    this.css = typeof this.rule === 'string' ? this.rule : this.rule.selector;
+    this.tokens = (0, _tokenize.default)({
+      css: this.css,
+      error: this._errorGenerator(),
+      safe: this.options.safe
+    });
+    var rootSource = getTokenSourceSpan(this.tokens[0], this.tokens[this.tokens.length - 1]);
+    this.root = new _root.default({
+      source: rootSource
+    });
+    this.root.errorGenerator = this._errorGenerator();
+    var selector = new _selector.default({
+      source: {
+        start: {
+          line: 1,
+          column: 1
+        }
+      }
+    });
+    this.root.append(selector);
+    this.current = selector;
+    this.loop();
+  }
+
+  var _proto = Parser.prototype;
+
+  _proto._errorGenerator = function _errorGenerator() {
+    var _this = this;
+
+    return function (message, errorOptions) {
+      if (typeof _this.rule === 'string') {
+        return new Error(message);
+      }
+
+      return _this.rule.error(message, errorOptions);
+    };
+  };
+
+  _proto.attribute = function attribute() {
+    var attr = [];
+    var startingToken = this.currToken;
+    this.position++;
+
+    while (this.position < this.tokens.length && this.currToken[_tokenize.FIELDS.TYPE] !== tokens.closeSquare) {
+      attr.push(this.currToken);
+      this.position++;
+    }
+
+    if (this.currToken[_tokenize.FIELDS.TYPE] !== tokens.closeSquare) {
+      return this.expected('closing square bracket', this.currToken[_tokenize.FIELDS.START_POS]);
+    }
+
+    var len = attr.length;
+    var node = {
+      source: getSource(startingToken[1], startingToken[2], this.currToken[3], this.currToken[4]),
+      sourceIndex: startingToken[_tokenize.FIELDS.START_POS]
+    };
+
+    if (len === 1 && !~[tokens.word].indexOf(attr[0][_tokenize.FIELDS.TYPE])) {
+      return this.expected('attribute', attr[0][_tokenize.FIELDS.START_POS]);
+    }
+
+    var pos = 0;
+    var spaceBefore = '';
+    var commentBefore = '';
+    var lastAdded = null;
+    var spaceAfterMeaningfulToken = false;
+
+    while (pos < len) {
+      var token = attr[pos];
+      var content = this.content(token);
+      var next = attr[pos + 1];
+
+      switch (token[_tokenize.FIELDS.TYPE]) {
+        case tokens.space:
+          // if (
+          //     len === 1 ||
+          //     pos === 0 && this.content(next) === '|'
+          // ) {
+          //     return this.expected('attribute', token[TOKEN.START_POS], content);
+          // }
+          spaceAfterMeaningfulToken = true;
+
+          if (this.options.lossy) {
+            break;
+          }
+
+          if (lastAdded) {
+            (0, _util.ensureObject)(node, 'spaces', lastAdded);
+            var prevContent = node.spaces[lastAdded].after || '';
+            node.spaces[lastAdded].after = prevContent + content;
+            var existingComment = (0, _util.getProp)(node, 'raws', 'spaces', lastAdded, 'after') || null;
+
+            if (existingComment) {
+              node.raws.spaces[lastAdded].after = existingComment + content;
+            }
+          } else {
+            spaceBefore = spaceBefore + content;
+            commentBefore = commentBefore + content;
+          }
+
+          break;
+
+        case tokens.asterisk:
+          if (next[_tokenize.FIELDS.TYPE] === tokens.equals) {
+            node.operator = content;
+            lastAdded = 'operator';
+          } else if ((!node.namespace || lastAdded === "namespace" && !spaceAfterMeaningfulToken) && next) {
+            if (spaceBefore) {
+              (0, _util.ensureObject)(node, 'spaces', 'attribute');
+              node.spaces.attribute.before = spaceBefore;
+              spaceBefore = '';
+            }
+
+            if (commentBefore) {
+              (0, _util.ensureObject)(node, 'raws', 'spaces', 'attribute');
+              node.raws.spaces.attribute.before = spaceBefore;
+              commentBefore = '';
+            }
+
+            node.namespace = (node.namespace || "") + content;
+            var rawValue = (0, _util.getProp)(node, 'raws', 'namespace') || null;
+
+            if (rawValue) {
+              node.raws.namespace += content;
+            }
+
+            lastAdded = 'namespace';
+          }
+
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.dollar:
+          if (lastAdded === "value") {
+            var oldRawValue = (0, _util.getProp)(node, 'raws', 'value');
+            node.value += "$";
+
+            if (oldRawValue) {
+              node.raws.value = oldRawValue + "$";
+            }
+
+            break;
+          }
+
+        // Falls through
+
+        case tokens.caret:
+          if (next[_tokenize.FIELDS.TYPE] === tokens.equals) {
+            node.operator = content;
+            lastAdded = 'operator';
+          }
+
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.combinator:
+          if (content === '~' && next[_tokenize.FIELDS.TYPE] === tokens.equals) {
+            node.operator = content;
+            lastAdded = 'operator';
+          }
+
+          if (content !== '|') {
+            spaceAfterMeaningfulToken = false;
+            break;
+          }
+
+          if (next[_tokenize.FIELDS.TYPE] === tokens.equals) {
+            node.operator = content;
+            lastAdded = 'operator';
+          } else if (!node.namespace && !node.attribute) {
+            node.namespace = true;
+          }
+
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.word:
+          if (next && this.content(next) === '|' && attr[pos + 2] && attr[pos + 2][_tokenize.FIELDS.TYPE] !== tokens.equals && // this look-ahead probably fails with comment nodes involved.
+          !node.operator && !node.namespace) {
+            node.namespace = content;
+            lastAdded = 'namespace';
+          } else if (!node.attribute || lastAdded === "attribute" && !spaceAfterMeaningfulToken) {
+            if (spaceBefore) {
+              (0, _util.ensureObject)(node, 'spaces', 'attribute');
+              node.spaces.attribute.before = spaceBefore;
+              spaceBefore = '';
+            }
+
+            if (commentBefore) {
+              (0, _util.ensureObject)(node, 'raws', 'spaces', 'attribute');
+              node.raws.spaces.attribute.before = commentBefore;
+              commentBefore = '';
+            }
+
+            node.attribute = (node.attribute || "") + content;
+
+            var _rawValue = (0, _util.getProp)(node, 'raws', 'attribute') || null;
+
+            if (_rawValue) {
+              node.raws.attribute += content;
+            }
+
+            lastAdded = 'attribute';
+          } else if (!node.value && node.value !== "" || lastAdded === "value" && !spaceAfterMeaningfulToken) {
+            var _unescaped = (0, _util.unesc)(content);
+
+            var _oldRawValue = (0, _util.getProp)(node, 'raws', 'value') || '';
+
+            var oldValue = node.value || '';
+            node.value = oldValue + _unescaped;
+            node.quoteMark = null;
+
+            if (_unescaped !== content || _oldRawValue) {
+              (0, _util.ensureObject)(node, 'raws');
+              node.raws.value = (_oldRawValue || oldValue) + content;
+            }
+
+            lastAdded = 'value';
+          } else {
+            var insensitive = content === 'i' || content === "I";
+
+            if ((node.value || node.value === '') && (node.quoteMark || spaceAfterMeaningfulToken)) {
+              node.insensitive = insensitive;
+
+              if (!insensitive || content === "I") {
+                (0, _util.ensureObject)(node, 'raws');
+                node.raws.insensitiveFlag = content;
+              }
+
+              lastAdded = 'insensitive';
+
+              if (spaceBefore) {
+                (0, _util.ensureObject)(node, 'spaces', 'insensitive');
+                node.spaces.insensitive.before = spaceBefore;
+                spaceBefore = '';
+              }
+
+              if (commentBefore) {
+                (0, _util.ensureObject)(node, 'raws', 'spaces', 'insensitive');
+                node.raws.spaces.insensitive.before = commentBefore;
+                commentBefore = '';
+              }
+            } else if (node.value || node.value === '') {
+              lastAdded = 'value';
+              node.value += content;
+
+              if (node.raws.value) {
+                node.raws.value += content;
+              }
+            }
+          }
+
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.str:
+          if (!node.attribute || !node.operator) {
+            return this.error("Expected an attribute followed by an operator preceding the string.", {
+              index: token[_tokenize.FIELDS.START_POS]
+            });
+          }
+
+          var _unescapeValue = (0, _attribute.unescapeValue)(content),
+              unescaped = _unescapeValue.unescaped,
+              quoteMark = _unescapeValue.quoteMark;
+
+          node.value = unescaped;
+          node.quoteMark = quoteMark;
+          lastAdded = 'value';
+          (0, _util.ensureObject)(node, 'raws');
+          node.raws.value = content;
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.equals:
+          if (!node.attribute) {
+            return this.expected('attribute', token[_tokenize.FIELDS.START_POS], content);
+          }
+
+          if (node.value) {
+            return this.error('Unexpected "=" found; an operator was already defined.', {
+              index: token[_tokenize.FIELDS.START_POS]
+            });
+          }
+
+          node.operator = node.operator ? node.operator + content : content;
+          lastAdded = 'operator';
+          spaceAfterMeaningfulToken = false;
+          break;
+
+        case tokens.comment:
+          if (lastAdded) {
+            if (spaceAfterMeaningfulToken || next && next[_tokenize.FIELDS.TYPE] === tokens.space || lastAdded === 'insensitive') {
+              var lastComment = (0, _util.getProp)(node, 'spaces', lastAdded, 'after') || '';
+              var rawLastComment = (0, _util.getProp)(node, 'raws', 'spaces', lastAdded, 'after') || lastComment;
+              (0, _util.ensureObject)(node, 'raws', 'spaces', lastAdded);
+              node.raws.spaces[lastAdded].after = rawLastComment + content;
+            } else {
+              var lastValue = node[lastAdded] || '';
+              var rawLastValue = (0, _util.getProp)(node, 'raws', lastAdded) || lastValue;
+              (0, _util.ensureObject)(node, 'raws');
+              node.raws[lastAdded] = rawLastValue + content;
+            }
+          } else {
+            commentBefore = commentBefore + content;
+          }
+
+          break;
+
+        default:
+          return this.error("Unexpected \"" + content + "\" found.", {
+            index: token[_tokenize.FIELDS.START_POS]
+          });
+      }
+
+      pos++;
+    }
+
+    unescapeProp(node, "attribute");
+    unescapeProp(node, "namespace");
+    this.newNode(new _attribute.default(node));
+    this.position++;
+  }
+  /**
+   * return a node containing meaningless garbage up to (but not including) the specified token position.
+   * if the token position is negative, all remaining tokens are consumed.
+   *
+   * This returns an array containing a single string node if all whitespace,
+   * otherwise an array of comment nodes with space before and after.
+   *
+   * These tokens are not added to the current selector, the caller can add them or use them to amend
+   * a previous node's space metadata.
+   *
+   * In lossy mode, this returns only comments.
+   */
+  ;
+
+  _proto.parseWhitespaceEquivalentTokens = function parseWhitespaceEquivalentTokens(stopPosition) {
+    if (stopPosition < 0) {
+      stopPosition = this.tokens.length;
+    }
+
+    var startPosition = this.position;
+    var nodes = [];
+    var space = "";
+    var lastComment = undefined;
+
+    do {
+      if (WHITESPACE_TOKENS[this.currToken[_tokenize.FIELDS.TYPE]]) {
+        if (!this.options.lossy) {
+          space += this.content();
+        }
+      } else if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.comment) {
+        var spaces = {};
+
+        if (space) {
+          spaces.before = space;
+          space = "";
+        }
+
+        lastComment = new _comment.default({
+          value: this.content(),
+          source: getTokenSource(this.currToken),
+          sourceIndex: this.currToken[_tokenize.FIELDS.START_POS],
+          spaces: spaces
+        });
+        nodes.push(lastComment);
+      }
+    } while (++this.position < stopPosition);
+
+    if (space) {
+      if (lastComment) {
+        lastComment.spaces.after = space;
+      } else if (!this.options.lossy) {
+        var firstToken = this.tokens[startPosition];
+        var lastToken = this.tokens[this.position - 1];
+        nodes.push(new _string.default({
+          value: '',
+          source: getSource(firstToken[_tokenize.FIELDS.START_LINE], firstToken[_tokenize.FIELDS.START_COL], lastToken[_tokenize.FIELDS.END_LINE], lastToken[_tokenize.FIELDS.END_COL]),
+          sourceIndex: firstToken[_tokenize.FIELDS.START_POS],
+          spaces: {
+            before: space,
+            after: ''
+          }
+        }));
+      }
+    }
+
+    return nodes;
+  }
+  /**
+   * 
+   * @param {*} nodes 
+   */
+  ;
+
+  _proto.convertWhitespaceNodesToSpace = function convertWhitespaceNodesToSpace(nodes, requiredSpace) {
+    var _this2 = this;
+
+    if (requiredSpace === void 0) {
+      requiredSpace = false;
+    }
+
+    var space = "";
+    var rawSpace = "";
+    nodes.forEach(function (n) {
+      var spaceBefore = _this2.lossySpace(n.spaces.before, requiredSpace);
+
+      var rawSpaceBefore = _this2.lossySpace(n.rawSpaceBefore, requiredSpace);
+
+      space += spaceBefore + _this2.lossySpace(n.spaces.after, requiredSpace && spaceBefore.length === 0);
+      rawSpace += spaceBefore + n.value + _this2.lossySpace(n.rawSpaceAfter, requiredSpace && rawSpaceBefore.length === 0);
+    });
+
+    if (rawSpace === space) {
+      rawSpace = undefined;
+    }
+
+    var result = {
+      space: space,
+      rawSpace: rawSpace
+    };
+    return result;
+  };
+
+  _proto.isNamedCombinator = function isNamedCombinator(position) {
+    if (position === void 0) {
+      position = this.position;
+    }
+
+    return this.tokens[position + 0] && this.tokens[position + 0][_tokenize.FIELDS.TYPE] === tokens.slash && this.tokens[position + 1] && this.tokens[position + 1][_tokenize.FIELDS.TYPE] === tokens.word && this.tokens[position + 2] && this.tokens[position + 2][_tokenize.FIELDS.TYPE] === tokens.slash;
+  };
+
+  _proto.namedCombinator = function namedCombinator() {
+    if (this.isNamedCombinator()) {
+      var nameRaw = this.content(this.tokens[this.position + 1]);
+      var name = (0, _util.unesc)(nameRaw).toLowerCase();
+      var raws = {};
+
+      if (name !== nameRaw) {
+        raws.value = "/" + nameRaw + "/";
+      }
+
+      var node = new _combinator.default({
+        value: "/" + name + "/",
+        source: getSource(this.currToken[_tokenize.FIELDS.START_LINE], this.currToken[_tokenize.FIELDS.START_COL], this.tokens[this.position + 2][_tokenize.FIELDS.END_LINE], this.tokens[this.position + 2][_tokenize.FIELDS.END_COL]),
+        sourceIndex: this.currToken[_tokenize.FIELDS.START_POS],
+        raws: raws
+      });
+      this.position = this.position + 3;
+      return node;
+    } else {
+      this.unexpected();
+    }
+  };
+
+  _proto.combinator = function combinator() {
+    var _this3 = this;
+
+    if (this.content() === '|') {
+      return this.namespace();
+    } // We need to decide between a space that's a descendant combinator and meaningless whitespace at the end of a selector.
+
+
+    var nextSigTokenPos = this.locateNextMeaningfulToken(this.position);
+
+    if (nextSigTokenPos < 0 || this.tokens[nextSigTokenPos][_tokenize.FIELDS.TYPE] === tokens.comma) {
+      var nodes = this.parseWhitespaceEquivalentTokens(nextSigTokenPos);
+
+      if (nodes.length > 0) {
+        var last = this.current.last;
+
+        if (last) {
+          var _this$convertWhitespa = this.convertWhitespaceNodesToSpace(nodes),
+              space = _this$convertWhitespa.space,
+              rawSpace = _this$convertWhitespa.rawSpace;
+
+          if (rawSpace !== undefined) {
+            last.rawSpaceAfter += rawSpace;
+          }
+
+          last.spaces.after += space;
+        } else {
+          nodes.forEach(function (n) {
+            return _this3.newNode(n);
+          });
+        }
+      }
+
+      return;
+    }
+
+    var firstToken = this.currToken;
+    var spaceOrDescendantSelectorNodes = undefined;
+
+    if (nextSigTokenPos > this.position) {
+      spaceOrDescendantSelectorNodes = this.parseWhitespaceEquivalentTokens(nextSigTokenPos);
+    }
+
+    var node;
+
+    if (this.isNamedCombinator()) {
+      node = this.namedCombinator();
+    } else if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.combinator) {
+      node = new _combinator.default({
+        value: this.content(),
+        source: getTokenSource(this.currToken),
+        sourceIndex: this.currToken[_tokenize.FIELDS.START_POS]
+      });
+      this.position++;
+    } else if (WHITESPACE_TOKENS[this.currToken[_tokenize.FIELDS.TYPE]]) {// pass
+    } else if (!spaceOrDescendantSelectorNodes) {
+      this.unexpected();
+    }
+
+    if (node) {
+      if (spaceOrDescendantSelectorNodes) {
+        var _this$convertWhitespa2 = this.convertWhitespaceNodesToSpace(spaceOrDescendantSelectorNodes),
+            _space = _this$convertWhitespa2.space,
+            _rawSpace = _this$convertWhitespa2.rawSpace;
+
+        node.spaces.before = _space;
+        node.rawSpaceBefore = _rawSpace;
+      }
+    } else {
+      // descendant combinator
+      var _this$convertWhitespa3 = this.convertWhitespaceNodesToSpace(spaceOrDescendantSelectorNodes, true),
+          _space2 = _this$convertWhitespa3.space,
+          _rawSpace2 = _this$convertWhitespa3.rawSpace;
+
+      if (!_rawSpace2) {
+        _rawSpace2 = _space2;
+      }
+
+      var spaces = {};
+      var raws = {
+        spaces: {}
+      };
+
+      if (_space2.endsWith(' ') && _rawSpace2.endsWith(' ')) {
+        spaces.before = _space2.slice(0, _space2.length - 1);
+        raws.spaces.before = _rawSpace2.slice(0, _rawSpace2.length - 1);
+      } else if (_space2.startsWith(' ') && _rawSpace2.startsWith(' ')) {
+        spaces.after = _space2.slice(1);
+        raws.spaces.after = _rawSpace2.slice(1);
+      } else {
+        raws.value = _rawSpace2;
+      }
+
+      node = new _combinator.default({
+        value: ' ',
+        source: getTokenSourceSpan(firstToken, this.tokens[this.position - 1]),
+        sourceIndex: firstToken[_tokenize.FIELDS.START_POS],
+        spaces: spaces,
+        raws: raws
+      });
+    }
+
+    if (this.currToken && this.currToken[_tokenize.FIELDS.TYPE] === tokens.space) {
+      node.spaces.after = this.optionalSpace(this.content());
+      this.position++;
+    }
+
+    return this.newNode(node);
+  };
+
+  _proto.comma = function comma() {
+    if (this.position === this.tokens.length - 1) {
+      this.root.trailingComma = true;
+      this.position++;
+      return;
+    }
+
+    this.current._inferEndPosition();
+
+    var selector = new _selector.default({
+      source: {
+        start: tokenStart(this.tokens[this.position + 1])
+      }
+    });
+    this.current.parent.append(selector);
+    this.current = selector;
+    this.position++;
+  };
+
+  _proto.comment = function comment() {
+    var current = this.currToken;
+    this.newNode(new _comment.default({
+      value: this.content(),
+      source: getTokenSource(current),
+      sourceIndex: current[_tokenize.FIELDS.START_POS]
+    }));
+    this.position++;
+  };
+
+  _proto.error = function error(message, opts) {
+    throw this.root.error(message, opts);
+  };
+
+  _proto.missingBackslash = function missingBackslash() {
+    return this.error('Expected a backslash preceding the semicolon.', {
+      index: this.currToken[_tokenize.FIELDS.START_POS]
+    });
+  };
+
+  _proto.missingParenthesis = function missingParenthesis() {
+    return this.expected('opening parenthesis', this.currToken[_tokenize.FIELDS.START_POS]);
+  };
+
+  _proto.missingSquareBracket = function missingSquareBracket() {
+    return this.expected('opening square bracket', this.currToken[_tokenize.FIELDS.START_POS]);
+  };
+
+  _proto.unexpected = function unexpected() {
+    return this.error("Unexpected '" + this.content() + "'. Escaping special characters with \\ may help.", this.currToken[_tokenize.FIELDS.START_POS]);
+  };
+
+  _proto.namespace = function namespace() {
+    var before = this.prevToken && this.content(this.prevToken) || true;
+
+    if (this.nextToken[_tokenize.FIELDS.TYPE] === tokens.word) {
+      this.position++;
+      return this.word(before);
+    } else if (this.nextToken[_tokenize.FIELDS.TYPE] === tokens.asterisk) {
+      this.position++;
+      return this.universal(before);
+    }
+  };
+
+  _proto.nesting = function nesting() {
+    if (this.nextToken) {
+      var nextContent = this.content(this.nextToken);
+
+      if (nextContent === "|") {
+        this.position++;
+        return;
+      }
+    }
+
+    var current = this.currToken;
+    this.newNode(new _nesting.default({
+      value: this.content(),
+      source: getTokenSource(current),
+      sourceIndex: current[_tokenize.FIELDS.START_POS]
+    }));
+    this.position++;
+  };
+
+  _proto.parentheses = function parentheses() {
+    var last = this.current.last;
+    var unbalanced = 1;
+    this.position++;
+
+    if (last && last.type === types.PSEUDO) {
+      var selector = new _selector.default({
+        source: {
+          start: tokenStart(this.tokens[this.position - 1])
+        }
+      });
+      var cache = this.current;
+      last.append(selector);
+      this.current = selector;
+
+      while (this.position < this.tokens.length && unbalanced) {
+        if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.openParenthesis) {
+          unbalanced++;
+        }
+
+        if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.closeParenthesis) {
+          unbalanced--;
+        }
+
+        if (unbalanced) {
+          this.parse();
+        } else {
+          this.current.source.end = tokenEnd(this.currToken);
+          this.current.parent.source.end = tokenEnd(this.currToken);
+          this.position++;
+        }
+      }
+
+      this.current = cache;
+    } else {
+      // I think this case should be an error. It's used to implement a basic parse of media queries
+      // but I don't think it's a good idea.
+      var parenStart = this.currToken;
+      var parenValue = "(";
+      var parenEnd;
+
+      while (this.position < this.tokens.length && unbalanced) {
+        if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.openParenthesis) {
+          unbalanced++;
+        }
+
+        if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.closeParenthesis) {
+          unbalanced--;
+        }
+
+        parenEnd = this.currToken;
+        parenValue += this.parseParenthesisToken(this.currToken);
+        this.position++;
+      }
+
+      if (last) {
+        last.appendToPropertyAndEscape("value", parenValue, parenValue);
+      } else {
+        this.newNode(new _string.default({
+          value: parenValue,
+          source: getSource(parenStart[_tokenize.FIELDS.START_LINE], parenStart[_tokenize.FIELDS.START_COL], parenEnd[_tokenize.FIELDS.END_LINE], parenEnd[_tokenize.FIELDS.END_COL]),
+          sourceIndex: parenStart[_tokenize.FIELDS.START_POS]
+        }));
+      }
+    }
+
+    if (unbalanced) {
+      return this.expected('closing parenthesis', this.currToken[_tokenize.FIELDS.START_POS]);
+    }
+  };
+
+  _proto.pseudo = function pseudo() {
+    var _this4 = this;
+
+    var pseudoStr = '';
+    var startingToken = this.currToken;
+
+    while (this.currToken && this.currToken[_tokenize.FIELDS.TYPE] === tokens.colon) {
+      pseudoStr += this.content();
+      this.position++;
+    }
+
+    if (!this.currToken) {
+      return this.expected(['pseudo-class', 'pseudo-element'], this.position - 1);
+    }
+
+    if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.word) {
+      this.splitWord(false, function (first, length) {
+        pseudoStr += first;
+
+        _this4.newNode(new _pseudo.default({
+          value: pseudoStr,
+          source: getTokenSourceSpan(startingToken, _this4.currToken),
+          sourceIndex: startingToken[_tokenize.FIELDS.START_POS]
+        }));
+
+        if (length > 1 && _this4.nextToken && _this4.nextToken[_tokenize.FIELDS.TYPE] === tokens.openParenthesis) {
+          _this4.error('Misplaced parenthesis.', {
+            index: _this4.nextToken[_tokenize.FIELDS.START_POS]
+          });
+        }
+      });
+    } else {
+      return this.expected(['pseudo-class', 'pseudo-element'], this.currToken[_tokenize.FIELDS.START_POS]);
+    }
+  };
+
+  _proto.space = function space() {
+    var content = this.content(); // Handle space before and after the selector
+
+    if (this.position === 0 || this.prevToken[_tokenize.FIELDS.TYPE] === tokens.comma || this.prevToken[_tokenize.FIELDS.TYPE] === tokens.openParenthesis) {
+      this.spaces = this.optionalSpace(content);
+      this.position++;
+    } else if (this.position === this.tokens.length - 1 || this.nextToken[_tokenize.FIELDS.TYPE] === tokens.comma || this.nextToken[_tokenize.FIELDS.TYPE] === tokens.closeParenthesis) {
+      this.current.last.spaces.after = this.optionalSpace(content);
+      this.position++;
+    } else {
+      this.combinator();
+    }
+  };
+
+  _proto.string = function string() {
+    var current = this.currToken;
+    this.newNode(new _string.default({
+      value: this.content(),
+      source: getTokenSource(current),
+      sourceIndex: current[_tokenize.FIELDS.START_POS]
+    }));
+    this.position++;
+  };
+
+  _proto.universal = function universal(namespace) {
+    var nextToken = this.nextToken;
+
+    if (nextToken && this.content(nextToken) === '|') {
+      this.position++;
+      return this.namespace();
+    }
+
+    var current = this.currToken;
+    this.newNode(new _universal.default({
+      value: this.content(),
+      source: getTokenSource(current),
+      sourceIndex: current[_tokenize.FIELDS.START_POS]
+    }), namespace);
+    this.position++;
+  };
+
+  _proto.splitWord = function splitWord(namespace, firstCallback) {
+    var _this5 = this;
+
+    var nextToken = this.nextToken;
+    var word = this.content();
+
+    while (nextToken && ~[tokens.dollar, tokens.caret, tokens.equals, tokens.word].indexOf(nextToken[_tokenize.FIELDS.TYPE])) {
+      this.position++;
+      var current = this.content();
+      word += current;
+
+      if (current.lastIndexOf('\\') === current.length - 1) {
+        var next = this.nextToken;
+
+        if (next && next[_tokenize.FIELDS.TYPE] === tokens.space) {
+          word += this.requiredSpace(this.content(next));
+          this.position++;
+        }
+      }
+
+      nextToken = this.nextToken;
+    }
+
+    var hasClass = (0, _indexesOf.default)(word, '.').filter(function (i) {
+      return word[i - 1] !== '\\';
+    });
+    var hasId = (0, _indexesOf.default)(word, '#').filter(function (i) {
+      return word[i - 1] !== '\\';
+    }); // Eliminate Sass interpolations from the list of id indexes
+
+    var interpolations = (0, _indexesOf.default)(word, '#{');
+
+    if (interpolations.length) {
+      hasId = hasId.filter(function (hashIndex) {
+        return !~interpolations.indexOf(hashIndex);
+      });
+    }
+
+    var indices = (0, _sortAscending.default)((0, _uniq.default)([0].concat(hasClass, hasId)));
+    indices.forEach(function (ind, i) {
+      var index = indices[i + 1] || word.length;
+      var value = word.slice(ind, index);
+
+      if (i === 0 && firstCallback) {
+        return firstCallback.call(_this5, value, indices.length);
+      }
+
+      var node;
+      var current = _this5.currToken;
+      var sourceIndex = current[_tokenize.FIELDS.START_POS] + indices[i];
+      var source = getSource(current[1], current[2] + ind, current[3], current[2] + (index - 1));
+
+      if (~hasClass.indexOf(ind)) {
+        var classNameOpts = {
+          value: value.slice(1),
+          source: source,
+          sourceIndex: sourceIndex
+        };
+        node = new _className.default(unescapeProp(classNameOpts, "value"));
+      } else if (~hasId.indexOf(ind)) {
+        var idOpts = {
+          value: value.slice(1),
+          source: source,
+          sourceIndex: sourceIndex
+        };
+        node = new _id.default(unescapeProp(idOpts, "value"));
+      } else {
+        var tagOpts = {
+          value: value,
+          source: source,
+          sourceIndex: sourceIndex
+        };
+        unescapeProp(tagOpts, "value");
+        node = new _tag.default(tagOpts);
+      }
+
+      _this5.newNode(node, namespace); // Ensure that the namespace is used only once
+
+
+      namespace = null;
+    });
+    this.position++;
+  };
+
+  _proto.word = function word(namespace) {
+    var nextToken = this.nextToken;
+
+    if (nextToken && this.content(nextToken) === '|') {
+      this.position++;
+      return this.namespace();
+    }
+
+    return this.splitWord(namespace);
+  };
+
+  _proto.loop = function loop() {
+    while (this.position < this.tokens.length) {
+      this.parse(true);
+    }
+
+    this.current._inferEndPosition();
+
+    return this.root;
+  };
+
+  _proto.parse = function parse(throwOnParenthesis) {
+    switch (this.currToken[_tokenize.FIELDS.TYPE]) {
+      case tokens.space:
+        this.space();
+        break;
+
+      case tokens.comment:
+        this.comment();
+        break;
+
+      case tokens.openParenthesis:
+        this.parentheses();
+        break;
+
+      case tokens.closeParenthesis:
+        if (throwOnParenthesis) {
+          this.missingParenthesis();
+        }
+
+        break;
+
+      case tokens.openSquare:
+        this.attribute();
+        break;
+
+      case tokens.dollar:
+      case tokens.caret:
+      case tokens.equals:
+      case tokens.word:
+        this.word();
+        break;
+
+      case tokens.colon:
+        this.pseudo();
+        break;
+
+      case tokens.comma:
+        this.comma();
+        break;
+
+      case tokens.asterisk:
+        this.universal();
+        break;
+
+      case tokens.ampersand:
+        this.nesting();
+        break;
+
+      case tokens.slash:
+      case tokens.combinator:
+        this.combinator();
+        break;
+
+      case tokens.str:
+        this.string();
+        break;
+      // These cases throw; no break needed.
+
+      case tokens.closeSquare:
+        this.missingSquareBracket();
+
+      case tokens.semicolon:
+        this.missingBackslash();
+
+      default:
+        this.unexpected();
+    }
+  }
+  /**
+   * Helpers
+   */
+  ;
+
+  _proto.expected = function expected(description, index, found) {
+    if (Array.isArray(description)) {
+      var last = description.pop();
+      description = description.join(', ') + " or " + last;
+    }
+
+    var an = /^[aeiou]/.test(description[0]) ? 'an' : 'a';
+
+    if (!found) {
+      return this.error("Expected " + an + " " + description + ".", {
+        index: index
+      });
+    }
+
+    return this.error("Expected " + an + " " + description + ", found \"" + found + "\" instead.", {
+      index: index
+    });
+  };
+
+  _proto.requiredSpace = function requiredSpace(space) {
+    return this.options.lossy ? ' ' : space;
+  };
+
+  _proto.optionalSpace = function optionalSpace(space) {
+    return this.options.lossy ? '' : space;
+  };
+
+  _proto.lossySpace = function lossySpace(space, required) {
+    if (this.options.lossy) {
+      return required ? ' ' : '';
+    } else {
+      return space;
+    }
+  };
+
+  _proto.parseParenthesisToken = function parseParenthesisToken(token) {
+    var content = this.content(token);
+
+    if (token[_tokenize.FIELDS.TYPE] === tokens.space) {
+      return this.requiredSpace(content);
+    } else {
+      return content;
+    }
+  };
+
+  _proto.newNode = function newNode(node, namespace) {
+    if (namespace) {
+      if (/^ +$/.test(namespace)) {
+        if (!this.options.lossy) {
+          this.spaces = (this.spaces || '') + namespace;
+        }
+
+        namespace = true;
+      }
+
+      node.namespace = namespace;
+      unescapeProp(node, "namespace");
+    }
+
+    if (this.spaces) {
+      node.spaces.before = this.spaces;
+      this.spaces = '';
+    }
+
+    return this.current.append(node);
+  };
+
+  _proto.content = function content(token) {
+    if (token === void 0) {
+      token = this.currToken;
+    }
+
+    return this.css.slice(token[_tokenize.FIELDS.START_POS], token[_tokenize.FIELDS.END_POS]);
+  };
+
+  /**
+   * returns the index of the next non-whitespace, non-comment token.
+   * returns -1 if no meaningful token is found.
+   */
+  _proto.locateNextMeaningfulToken = function locateNextMeaningfulToken(startPosition) {
+    if (startPosition === void 0) {
+      startPosition = this.position + 1;
+    }
+
+    var searchPosition = startPosition;
+
+    while (searchPosition < this.tokens.length) {
+      if (WHITESPACE_EQUIV_TOKENS[this.tokens[searchPosition][_tokenize.FIELDS.TYPE]]) {
+        searchPosition++;
+        continue;
+      } else {
+        return searchPosition;
+      }
+    }
+
+    return -1;
+  };
+
+  _createClass(Parser, [{
+    key: "currToken",
+    get: function get() {
+      return this.tokens[this.position];
+    }
+  }, {
+    key: "nextToken",
+    get: function get() {
+      return this.tokens[this.position + 1];
+    }
+  }, {
+    key: "prevToken",
+    get: function get() {
+      return this.tokens[this.position - 1];
+    }
+  }]);
+
+  return Parser;
+}();
+
+exports.default = Parser;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/processor.js":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/processor.js ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _parser = _interopRequireDefault(__webpack_require__(/*! ./parser */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/parser.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Processor =
+/*#__PURE__*/
+function () {
+  function Processor(func, options) {
+    this.func = func || function noop() {};
+
+    this.funcRes = null;
+    this.options = options;
+  }
+
+  var _proto = Processor.prototype;
+
+  _proto._shouldUpdateSelector = function _shouldUpdateSelector(rule, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    var merged = Object.assign({}, this.options, options);
+
+    if (merged.updateSelector === false) {
+      return false;
+    } else {
+      return typeof rule !== "string";
+    }
+  };
+
+  _proto._isLossy = function _isLossy(options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    var merged = Object.assign({}, this.options, options);
+
+    if (merged.lossless === false) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  _proto._root = function _root(rule, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    var parser = new _parser.default(rule, this._parseOptions(options));
+    return parser.root;
+  };
+
+  _proto._parseOptions = function _parseOptions(options) {
+    return {
+      lossy: this._isLossy(options)
+    };
+  };
+
+  _proto._run = function _run(rule, options) {
+    var _this = this;
+
+    if (options === void 0) {
+      options = {};
+    }
+
+    return new Promise(function (resolve, reject) {
+      try {
+        var root = _this._root(rule, options);
+
+        Promise.resolve(_this.func(root)).then(function (transform) {
+          var string = undefined;
+
+          if (_this._shouldUpdateSelector(rule, options)) {
+            string = root.toString();
+            rule.selector = string;
+          }
+
+          return {
+            transform: transform,
+            root: root,
+            string: string
+          };
+        }).then(resolve, reject);
+      } catch (e) {
+        reject(e);
+        return;
+      }
+    });
+  };
+
+  _proto._runSync = function _runSync(rule, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    var root = this._root(rule, options);
+
+    var transform = this.func(root);
+
+    if (transform && typeof transform.then === "function") {
+      throw new Error("Selector processor returned a promise to a synchronous call.");
+    }
+
+    var string = undefined;
+
+    if (options.updateSelector && typeof rule !== "string") {
+      string = root.toString();
+      rule.selector = string;
+    }
+
+    return {
+      transform: transform,
+      root: root,
+      string: string
+    };
+  }
+  /**
+   * Process rule into a selector AST.
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {Promise<parser.Root>} The AST of the selector after processing it.
+   */
+  ;
+
+  _proto.ast = function ast(rule, options) {
+    return this._run(rule, options).then(function (result) {
+      return result.root;
+    });
+  }
+  /**
+   * Process rule into a selector AST synchronously.
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {parser.Root} The AST of the selector after processing it.
+   */
+  ;
+
+  _proto.astSync = function astSync(rule, options) {
+    return this._runSync(rule, options).root;
+  }
+  /**
+   * Process a selector into a transformed value asynchronously
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {Promise<any>} The value returned by the processor.
+   */
+  ;
+
+  _proto.transform = function transform(rule, options) {
+    return this._run(rule, options).then(function (result) {
+      return result.transform;
+    });
+  }
+  /**
+   * Process a selector into a transformed value synchronously.
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {any} The value returned by the processor.
+   */
+  ;
+
+  _proto.transformSync = function transformSync(rule, options) {
+    return this._runSync(rule, options).transform;
+  }
+  /**
+   * Process a selector into a new selector string asynchronously.
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {string} the selector after processing.
+   */
+  ;
+
+  _proto.process = function process(rule, options) {
+    return this._run(rule, options).then(function (result) {
+      return result.string || result.root.toString();
+    });
+  }
+  /**
+   * Process a selector into a new selector string synchronously.
+   *
+   * @param rule {postcss.Rule | string} The css selector to be processed
+   * @param options The options for processing
+   * @returns {string} the selector after processing.
+   */
+  ;
+
+  _proto.processSync = function processSync(rule, options) {
+    var result = this._runSync(rule, options);
+
+    return result.string || result.root.toString();
+  };
+
+  return Processor;
+}();
+
+exports.default = Processor;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/attribute.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/attribute.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.unescapeValue = unescapeValue;
+exports.default = void 0;
+
+var _cssesc = _interopRequireDefault(__webpack_require__(/*! cssesc */ "./node_modules/@tailwindcss/ui/node_modules/cssesc/cssesc.js"));
+
+var _unesc = _interopRequireDefault(__webpack_require__(/*! ../util/unesc */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/unesc.js"));
+
+var _namespace = _interopRequireDefault(__webpack_require__(/*! ./namespace */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/namespace.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+var _CSSESC_QUOTE_OPTIONS;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var _require = __webpack_require__(/*! util */ "./node_modules/util/util.js"),
+    deprecate = _require.deprecate;
+
+var WRAPPED_IN_QUOTES = /^('|")(.*)\1$/;
+var warnOfDeprecatedValueAssignment = deprecate(function () {}, "Assigning an attribute a value containing characters that might need to be escaped is deprecated. " + "Call attribute.setValue() instead.");
+var warnOfDeprecatedQuotedAssignment = deprecate(function () {}, "Assigning attr.quoted is deprecated and has no effect. Assign to attr.quoteMark instead.");
+var warnOfDeprecatedConstructor = deprecate(function () {}, "Constructing an Attribute selector with a value without specifying quoteMark is deprecated. Note: The value should be unescaped now.");
+
+function unescapeValue(value) {
+  var deprecatedUsage = false;
+  var quoteMark = null;
+  var unescaped = value;
+  var m = unescaped.match(WRAPPED_IN_QUOTES);
+
+  if (m) {
+    quoteMark = m[1];
+    unescaped = m[2];
+  }
+
+  unescaped = (0, _unesc.default)(unescaped);
+
+  if (unescaped !== value) {
+    deprecatedUsage = true;
+  }
+
+  return {
+    deprecatedUsage: deprecatedUsage,
+    unescaped: unescaped,
+    quoteMark: quoteMark
+  };
+}
+
+function handleDeprecatedContructorOpts(opts) {
+  if (opts.quoteMark !== undefined) {
+    return opts;
+  }
+
+  if (opts.value === undefined) {
+    return opts;
+  }
+
+  warnOfDeprecatedConstructor();
+
+  var _unescapeValue = unescapeValue(opts.value),
+      quoteMark = _unescapeValue.quoteMark,
+      unescaped = _unescapeValue.unescaped;
+
+  if (!opts.raws) {
+    opts.raws = {};
+  }
+
+  if (opts.raws.value === undefined) {
+    opts.raws.value = opts.value;
+  }
+
+  opts.value = unescaped;
+  opts.quoteMark = quoteMark;
+  return opts;
+}
+
+var Attribute =
+/*#__PURE__*/
+function (_Namespace) {
+  _inheritsLoose(Attribute, _Namespace);
+
+  function Attribute(opts) {
+    var _this;
+
+    if (opts === void 0) {
+      opts = {};
+    }
+
+    _this = _Namespace.call(this, handleDeprecatedContructorOpts(opts)) || this;
+    _this.type = _types.ATTRIBUTE;
+    _this.raws = _this.raws || {};
+    Object.defineProperty(_this.raws, 'unquoted', {
+      get: deprecate(function () {
+        return _this.value;
+      }, "attr.raws.unquoted is deprecated. Call attr.value instead."),
+      set: deprecate(function () {
+        return _this.value;
+      }, "Setting attr.raws.unquoted is deprecated and has no effect. attr.value is unescaped by default now.")
+    });
+    _this._constructed = true;
+    return _this;
+  }
+  /**
+   * Returns the Attribute's value quoted such that it would be legal to use
+   * in the value of a css file. The original value's quotation setting
+   * used for stringification is left unchanged. See `setValue(value, options)`
+   * if you want to control the quote settings of a new value for the attribute.
+   *
+   * You can also change the quotation used for the current value by setting quoteMark.
+   *
+   * Options:
+   *   * quoteMark {'"' | "'" | null} - Use this value to quote the value. If this
+   *     option is not set, the original value for quoteMark will be used. If
+   *     indeterminate, a double quote is used. The legal values are:
+   *     * `null` - the value will be unquoted and characters will be escaped as necessary.
+   *     * `'` - the value will be quoted with a single quote and single quotes are escaped.
+   *     * `"` - the value will be quoted with a double quote and double quotes are escaped.
+   *   * preferCurrentQuoteMark {boolean} - if true, prefer the source quote mark
+   *     over the quoteMark option value.
+   *   * smart {boolean} - if true, will select a quote mark based on the value
+   *     and the other options specified here. See the `smartQuoteMark()`
+   *     method.
+   **/
+
+
+  var _proto = Attribute.prototype;
+
+  _proto.getQuotedValue = function getQuotedValue(options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    var quoteMark = this._determineQuoteMark(options);
+
+    var cssescopts = CSSESC_QUOTE_OPTIONS[quoteMark];
+    var escaped = (0, _cssesc.default)(this._value, cssescopts);
+    return escaped;
+  };
+
+  _proto._determineQuoteMark = function _determineQuoteMark(options) {
+    return options.smart ? this.smartQuoteMark(options) : this.preferredQuoteMark(options);
+  }
+  /**
+   * Set the unescaped value with the specified quotation options. The value
+   * provided must not include any wrapping quote marks -- those quotes will
+   * be interpreted as part of the value and escaped accordingly.
+   */
+  ;
+
+  _proto.setValue = function setValue(value, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    this._value = value;
+    this._quoteMark = this._determineQuoteMark(options);
+
+    this._syncRawValue();
+  }
+  /**
+   * Intelligently select a quoteMark value based on the value's contents. If
+   * the value is a legal CSS ident, it will not be quoted. Otherwise a quote
+   * mark will be picked that minimizes the number of escapes.
+   *
+   * If there's no clear winner, the quote mark from these options is used,
+   * then the source quote mark (this is inverted if `preferCurrentQuoteMark` is
+   * true). If the quoteMark is unspecified, a double quote is used.
+   *
+   * @param options This takes the quoteMark and preferCurrentQuoteMark options
+   * from the quoteValue method.
+   */
+  ;
+
+  _proto.smartQuoteMark = function smartQuoteMark(options) {
+    var v = this.value;
+    var numSingleQuotes = v.replace(/[^']/g, '').length;
+    var numDoubleQuotes = v.replace(/[^"]/g, '').length;
+
+    if (numSingleQuotes + numDoubleQuotes === 0) {
+      var escaped = (0, _cssesc.default)(v, {
+        isIdentifier: true
+      });
+
+      if (escaped === v) {
+        return Attribute.NO_QUOTE;
+      } else {
+        var pref = this.preferredQuoteMark(options);
+
+        if (pref === Attribute.NO_QUOTE) {
+          // pick a quote mark that isn't none and see if it's smaller
+          var quote = this.quoteMark || options.quoteMark || Attribute.DOUBLE_QUOTE;
+          var opts = CSSESC_QUOTE_OPTIONS[quote];
+          var quoteValue = (0, _cssesc.default)(v, opts);
+
+          if (quoteValue.length < escaped.length) {
+            return quote;
+          }
+        }
+
+        return pref;
+      }
+    } else if (numDoubleQuotes === numSingleQuotes) {
+      return this.preferredQuoteMark(options);
+    } else if (numDoubleQuotes < numSingleQuotes) {
+      return Attribute.DOUBLE_QUOTE;
+    } else {
+      return Attribute.SINGLE_QUOTE;
+    }
+  }
+  /**
+   * Selects the preferred quote mark based on the options and the current quote mark value.
+   * If you want the quote mark to depend on the attribute value, call `smartQuoteMark(opts)`
+   * instead.
+   */
+  ;
+
+  _proto.preferredQuoteMark = function preferredQuoteMark(options) {
+    var quoteMark = options.preferCurrentQuoteMark ? this.quoteMark : options.quoteMark;
+
+    if (quoteMark === undefined) {
+      quoteMark = options.preferCurrentQuoteMark ? options.quoteMark : this.quoteMark;
+    }
+
+    if (quoteMark === undefined) {
+      quoteMark = Attribute.DOUBLE_QUOTE;
+    }
+
+    return quoteMark;
+  };
+
+  _proto._syncRawValue = function _syncRawValue() {
+    var rawValue = (0, _cssesc.default)(this._value, CSSESC_QUOTE_OPTIONS[this.quoteMark]);
+
+    if (rawValue === this._value) {
+      if (this.raws) {
+        delete this.raws.value;
+      }
+    } else {
+      this.raws.value = rawValue;
+    }
+  };
+
+  _proto._handleEscapes = function _handleEscapes(prop, value) {
+    if (this._constructed) {
+      var escaped = (0, _cssesc.default)(value, {
+        isIdentifier: true
+      });
+
+      if (escaped !== value) {
+        this.raws[prop] = escaped;
+      } else {
+        delete this.raws[prop];
+      }
+    }
+  };
+
+  _proto._spacesFor = function _spacesFor(name) {
+    var attrSpaces = {
+      before: '',
+      after: ''
+    };
+    var spaces = this.spaces[name] || {};
+    var rawSpaces = this.raws.spaces && this.raws.spaces[name] || {};
+    return Object.assign(attrSpaces, spaces, rawSpaces);
+  };
+
+  _proto._stringFor = function _stringFor(name, spaceName, concat) {
+    if (spaceName === void 0) {
+      spaceName = name;
+    }
+
+    if (concat === void 0) {
+      concat = defaultAttrConcat;
+    }
+
+    var attrSpaces = this._spacesFor(spaceName);
+
+    return concat(this.stringifyProperty(name), attrSpaces);
+  }
+  /**
+   * returns the offset of the attribute part specified relative to the
+   * start of the node of the output string.
+   *
+   * * "ns" - alias for "namespace"
+   * * "namespace" - the namespace if it exists.
+   * * "attribute" - the attribute name
+   * * "attributeNS" - the start of the attribute or its namespace
+   * * "operator" - the match operator of the attribute
+   * * "value" - The value (string or identifier)
+   * * "insensitive" - the case insensitivity flag;
+   * @param part One of the possible values inside an attribute.
+   * @returns -1 if the name is invalid or the value doesn't exist in this attribute.
+   */
+  ;
+
+  _proto.offsetOf = function offsetOf(name) {
+    var count = 1;
+
+    var attributeSpaces = this._spacesFor("attribute");
+
+    count += attributeSpaces.before.length;
+
+    if (name === "namespace" || name === "ns") {
+      return this.namespace ? count : -1;
+    }
+
+    if (name === "attributeNS") {
+      return count;
+    }
+
+    count += this.namespaceString.length;
+
+    if (this.namespace) {
+      count += 1;
+    }
+
+    if (name === "attribute") {
+      return count;
+    }
+
+    count += this.stringifyProperty("attribute").length;
+    count += attributeSpaces.after.length;
+
+    var operatorSpaces = this._spacesFor("operator");
+
+    count += operatorSpaces.before.length;
+    var operator = this.stringifyProperty("operator");
+
+    if (name === "operator") {
+      return operator ? count : -1;
+    }
+
+    count += operator.length;
+    count += operatorSpaces.after.length;
+
+    var valueSpaces = this._spacesFor("value");
+
+    count += valueSpaces.before.length;
+    var value = this.stringifyProperty("value");
+
+    if (name === "value") {
+      return value ? count : -1;
+    }
+
+    count += value.length;
+    count += valueSpaces.after.length;
+
+    var insensitiveSpaces = this._spacesFor("insensitive");
+
+    count += insensitiveSpaces.before.length;
+
+    if (name === "insensitive") {
+      return this.insensitive ? count : -1;
+    }
+
+    return -1;
+  };
+
+  _proto.toString = function toString() {
+    var _this2 = this;
+
+    var selector = [this.rawSpaceBefore, '['];
+    selector.push(this._stringFor('qualifiedAttribute', 'attribute'));
+
+    if (this.operator && (this.value || this.value === '')) {
+      selector.push(this._stringFor('operator'));
+      selector.push(this._stringFor('value'));
+      selector.push(this._stringFor('insensitiveFlag', 'insensitive', function (attrValue, attrSpaces) {
+        if (attrValue.length > 0 && !_this2.quoted && attrSpaces.before.length === 0 && !(_this2.spaces.value && _this2.spaces.value.after)) {
+          attrSpaces.before = " ";
+        }
+
+        return defaultAttrConcat(attrValue, attrSpaces);
+      }));
+    }
+
+    selector.push(']');
+    selector.push(this.rawSpaceAfter);
+    return selector.join('');
+  };
+
+  _createClass(Attribute, [{
+    key: "quoted",
+    get: function get() {
+      var qm = this.quoteMark;
+      return qm === "'" || qm === '"';
+    },
+    set: function set(value) {
+      warnOfDeprecatedQuotedAssignment();
+    }
+    /**
+     * returns a single (`'`) or double (`"`) quote character if the value is quoted.
+     * returns `null` if the value is not quoted.
+     * returns `undefined` if the quotation state is unknown (this can happen when
+     * the attribute is constructed without specifying a quote mark.)
+     */
+
+  }, {
+    key: "quoteMark",
+    get: function get() {
+      return this._quoteMark;
+    }
+    /**
+     * Set the quote mark to be used by this attribute's value.
+     * If the quote mark changes, the raw (escaped) value at `attr.raws.value` of the attribute
+     * value is updated accordingly.
+     *
+     * @param {"'" | '"' | null} quoteMark The quote mark or `null` if the value should be unquoted.
+     */
+    ,
+    set: function set(quoteMark) {
+      if (!this._constructed) {
+        this._quoteMark = quoteMark;
+        return;
+      }
+
+      if (this._quoteMark !== quoteMark) {
+        this._quoteMark = quoteMark;
+
+        this._syncRawValue();
+      }
+    }
+  }, {
+    key: "qualifiedAttribute",
+    get: function get() {
+      return this.qualifiedName(this.raws.attribute || this.attribute);
+    }
+  }, {
+    key: "insensitiveFlag",
+    get: function get() {
+      return this.insensitive ? 'i' : '';
+    }
+  }, {
+    key: "value",
+    get: function get() {
+      return this._value;
+    }
+    /**
+     * Before 3.0, the value had to be set to an escaped value including any wrapped
+     * quote marks. In 3.0, the semantics of `Attribute.value` changed so that the value
+     * is unescaped during parsing and any quote marks are removed.
+     *
+     * Because the ambiguity of this semantic change, if you set `attr.value = newValue`,
+     * a deprecation warning is raised when the new value contains any characters that would
+     * require escaping (including if it contains wrapped quotes).
+     *
+     * Instead, you should call `attr.setValue(newValue, opts)` and pass options that describe
+     * how the new value is quoted.
+     */
+    ,
+    set: function set(v) {
+      if (this._constructed) {
+        var _unescapeValue2 = unescapeValue(v),
+            deprecatedUsage = _unescapeValue2.deprecatedUsage,
+            unescaped = _unescapeValue2.unescaped,
+            quoteMark = _unescapeValue2.quoteMark;
+
+        if (deprecatedUsage) {
+          warnOfDeprecatedValueAssignment();
+        }
+
+        if (unescaped === this._value && quoteMark === this._quoteMark) {
+          return;
+        }
+
+        this._value = unescaped;
+        this._quoteMark = quoteMark;
+
+        this._syncRawValue();
+      } else {
+        this._value = v;
+      }
+    }
+  }, {
+    key: "attribute",
+    get: function get() {
+      return this._attribute;
+    },
+    set: function set(name) {
+      this._handleEscapes("attribute", name);
+
+      this._attribute = name;
+    }
+  }]);
+
+  return Attribute;
+}(_namespace.default);
+
+exports.default = Attribute;
+Attribute.NO_QUOTE = null;
+Attribute.SINGLE_QUOTE = "'";
+Attribute.DOUBLE_QUOTE = '"';
+var CSSESC_QUOTE_OPTIONS = (_CSSESC_QUOTE_OPTIONS = {
+  "'": {
+    quotes: 'single',
+    wrap: true
+  },
+  '"': {
+    quotes: 'double',
+    wrap: true
+  }
+}, _CSSESC_QUOTE_OPTIONS[null] = {
+  isIdentifier: true
+}, _CSSESC_QUOTE_OPTIONS);
+
+function defaultAttrConcat(attrValue, attrSpaces) {
+  return "" + attrSpaces.before + attrValue + attrSpaces.after;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/className.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/className.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _cssesc = _interopRequireDefault(__webpack_require__(/*! cssesc */ "./node_modules/@tailwindcss/ui/node_modules/cssesc/cssesc.js"));
+
+var _util = __webpack_require__(/*! ../util */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js");
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var ClassName =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(ClassName, _Node);
+
+  function ClassName(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.CLASS;
+    _this._constructed = true;
+    return _this;
+  }
+
+  var _proto = ClassName.prototype;
+
+  _proto.toString = function toString() {
+    return [this.rawSpaceBefore, String('.' + this.stringifyProperty("value")), this.rawSpaceAfter].join('');
+  };
+
+  _createClass(ClassName, [{
+    key: "value",
+    set: function set(v) {
+      if (this._constructed) {
+        var escaped = (0, _cssesc.default)(v, {
+          isIdentifier: true
+        });
+
+        if (escaped !== v) {
+          (0, _util.ensureObject)(this, "raws");
+          this.raws.value = escaped;
+        } else if (this.raws) {
+          delete this.raws.value;
+        }
+      }
+
+      this._value = v;
+    },
+    get: function get() {
+      return this._value;
+    }
+  }]);
+
+  return ClassName;
+}(_node.default);
+
+exports.default = ClassName;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/combinator.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/combinator.js ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Combinator =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(Combinator, _Node);
+
+  function Combinator(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.COMBINATOR;
+    return _this;
+  }
+
+  return Combinator;
+}(_node.default);
+
+exports.default = Combinator;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/comment.js":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/comment.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Comment =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(Comment, _Node);
+
+  function Comment(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.COMMENT;
+    return _this;
+  }
+
+  return Comment;
+}(_node.default);
+
+exports.default = Comment;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/constructors.js":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/constructors.js ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.universal = exports.tag = exports.string = exports.selector = exports.root = exports.pseudo = exports.nesting = exports.id = exports.comment = exports.combinator = exports.className = exports.attribute = void 0;
+
+var _attribute = _interopRequireDefault(__webpack_require__(/*! ./attribute */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/attribute.js"));
+
+var _className = _interopRequireDefault(__webpack_require__(/*! ./className */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/className.js"));
+
+var _combinator = _interopRequireDefault(__webpack_require__(/*! ./combinator */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/combinator.js"));
+
+var _comment = _interopRequireDefault(__webpack_require__(/*! ./comment */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/comment.js"));
+
+var _id = _interopRequireDefault(__webpack_require__(/*! ./id */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/id.js"));
+
+var _nesting = _interopRequireDefault(__webpack_require__(/*! ./nesting */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/nesting.js"));
+
+var _pseudo = _interopRequireDefault(__webpack_require__(/*! ./pseudo */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/pseudo.js"));
+
+var _root = _interopRequireDefault(__webpack_require__(/*! ./root */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/root.js"));
+
+var _selector = _interopRequireDefault(__webpack_require__(/*! ./selector */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/selector.js"));
+
+var _string = _interopRequireDefault(__webpack_require__(/*! ./string */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/string.js"));
+
+var _tag = _interopRequireDefault(__webpack_require__(/*! ./tag */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/tag.js"));
+
+var _universal = _interopRequireDefault(__webpack_require__(/*! ./universal */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/universal.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var attribute = function attribute(opts) {
+  return new _attribute.default(opts);
+};
+
+exports.attribute = attribute;
+
+var className = function className(opts) {
+  return new _className.default(opts);
+};
+
+exports.className = className;
+
+var combinator = function combinator(opts) {
+  return new _combinator.default(opts);
+};
+
+exports.combinator = combinator;
+
+var comment = function comment(opts) {
+  return new _comment.default(opts);
+};
+
+exports.comment = comment;
+
+var id = function id(opts) {
+  return new _id.default(opts);
+};
+
+exports.id = id;
+
+var nesting = function nesting(opts) {
+  return new _nesting.default(opts);
+};
+
+exports.nesting = nesting;
+
+var pseudo = function pseudo(opts) {
+  return new _pseudo.default(opts);
+};
+
+exports.pseudo = pseudo;
+
+var root = function root(opts) {
+  return new _root.default(opts);
+};
+
+exports.root = root;
+
+var selector = function selector(opts) {
+  return new _selector.default(opts);
+};
+
+exports.selector = selector;
+
+var string = function string(opts) {
+  return new _string.default(opts);
+};
+
+exports.string = string;
+
+var tag = function tag(opts) {
+  return new _tag.default(opts);
+};
+
+exports.tag = tag;
+
+var universal = function universal(opts) {
+  return new _universal.default(opts);
+};
+
+exports.universal = universal;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/container.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/container.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var types = _interopRequireWildcard(__webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Container =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(Container, _Node);
+
+  function Container(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+
+    if (!_this.nodes) {
+      _this.nodes = [];
+    }
+
+    return _this;
+  }
+
+  var _proto = Container.prototype;
+
+  _proto.append = function append(selector) {
+    selector.parent = this;
+    this.nodes.push(selector);
+    return this;
+  };
+
+  _proto.prepend = function prepend(selector) {
+    selector.parent = this;
+    this.nodes.unshift(selector);
+    return this;
+  };
+
+  _proto.at = function at(index) {
+    return this.nodes[index];
+  };
+
+  _proto.index = function index(child) {
+    if (typeof child === 'number') {
+      return child;
+    }
+
+    return this.nodes.indexOf(child);
+  };
+
+  _proto.removeChild = function removeChild(child) {
+    child = this.index(child);
+    this.at(child).parent = undefined;
+    this.nodes.splice(child, 1);
+    var index;
+
+    for (var id in this.indexes) {
+      index = this.indexes[id];
+
+      if (index >= child) {
+        this.indexes[id] = index - 1;
+      }
+    }
+
+    return this;
+  };
+
+  _proto.removeAll = function removeAll() {
+    for (var _iterator = this.nodes, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+      var _ref;
+
+      if (_isArray) {
+        if (_i >= _iterator.length) break;
+        _ref = _iterator[_i++];
+      } else {
+        _i = _iterator.next();
+        if (_i.done) break;
+        _ref = _i.value;
+      }
+
+      var node = _ref;
+      node.parent = undefined;
+    }
+
+    this.nodes = [];
+    return this;
+  };
+
+  _proto.empty = function empty() {
+    return this.removeAll();
+  };
+
+  _proto.insertAfter = function insertAfter(oldNode, newNode) {
+    newNode.parent = this;
+    var oldIndex = this.index(oldNode);
+    this.nodes.splice(oldIndex + 1, 0, newNode);
+    newNode.parent = this;
+    var index;
+
+    for (var id in this.indexes) {
+      index = this.indexes[id];
+
+      if (oldIndex <= index) {
+        this.indexes[id] = index + 1;
+      }
+    }
+
+    return this;
+  };
+
+  _proto.insertBefore = function insertBefore(oldNode, newNode) {
+    newNode.parent = this;
+    var oldIndex = this.index(oldNode);
+    this.nodes.splice(oldIndex, 0, newNode);
+    newNode.parent = this;
+    var index;
+
+    for (var id in this.indexes) {
+      index = this.indexes[id];
+
+      if (index <= oldIndex) {
+        this.indexes[id] = index + 1;
+      }
+    }
+
+    return this;
+  };
+
+  _proto._findChildAtPosition = function _findChildAtPosition(line, col) {
+    var found = undefined;
+    this.each(function (node) {
+      if (node.atPosition) {
+        var foundChild = node.atPosition(line, col);
+
+        if (foundChild) {
+          found = foundChild;
+          return false;
+        }
+      } else if (node.isAtPosition(line, col)) {
+        found = node;
+        return false;
+      }
+    });
+    return found;
+  }
+  /**
+   * Return the most specific node at the line and column number given.
+   * The source location is based on the original parsed location, locations aren't
+   * updated as selector nodes are mutated.
+   * 
+   * Note that this location is relative to the location of the first character
+   * of the selector, and not the location of the selector in the overall document
+   * when used in conjunction with postcss.
+   *
+   * If not found, returns undefined.
+   * @param {number} line The line number of the node to find. (1-based index)
+   * @param {number} col  The column number of the node to find. (1-based index)
+   */
+  ;
+
+  _proto.atPosition = function atPosition(line, col) {
+    if (this.isAtPosition(line, col)) {
+      return this._findChildAtPosition(line, col) || this;
+    } else {
+      return undefined;
+    }
+  };
+
+  _proto._inferEndPosition = function _inferEndPosition() {
+    if (this.last && this.last.source && this.last.source.end) {
+      this.source = this.source || {};
+      this.source.end = this.source.end || {};
+      Object.assign(this.source.end, this.last.source.end);
+    }
+  };
+
+  _proto.each = function each(callback) {
+    if (!this.lastEach) {
+      this.lastEach = 0;
+    }
+
+    if (!this.indexes) {
+      this.indexes = {};
+    }
+
+    this.lastEach++;
+    var id = this.lastEach;
+    this.indexes[id] = 0;
+
+    if (!this.length) {
+      return undefined;
+    }
+
+    var index, result;
+
+    while (this.indexes[id] < this.length) {
+      index = this.indexes[id];
+      result = callback(this.at(index), index);
+
+      if (result === false) {
+        break;
+      }
+
+      this.indexes[id] += 1;
+    }
+
+    delete this.indexes[id];
+
+    if (result === false) {
+      return false;
+    }
+  };
+
+  _proto.walk = function walk(callback) {
+    return this.each(function (node, i) {
+      var result = callback(node, i);
+
+      if (result !== false && node.length) {
+        result = node.walk(callback);
+      }
+
+      if (result === false) {
+        return false;
+      }
+    });
+  };
+
+  _proto.walkAttributes = function walkAttributes(callback) {
+    var _this2 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.ATTRIBUTE) {
+        return callback.call(_this2, selector);
+      }
+    });
+  };
+
+  _proto.walkClasses = function walkClasses(callback) {
+    var _this3 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.CLASS) {
+        return callback.call(_this3, selector);
+      }
+    });
+  };
+
+  _proto.walkCombinators = function walkCombinators(callback) {
+    var _this4 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.COMBINATOR) {
+        return callback.call(_this4, selector);
+      }
+    });
+  };
+
+  _proto.walkComments = function walkComments(callback) {
+    var _this5 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.COMMENT) {
+        return callback.call(_this5, selector);
+      }
+    });
+  };
+
+  _proto.walkIds = function walkIds(callback) {
+    var _this6 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.ID) {
+        return callback.call(_this6, selector);
+      }
+    });
+  };
+
+  _proto.walkNesting = function walkNesting(callback) {
+    var _this7 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.NESTING) {
+        return callback.call(_this7, selector);
+      }
+    });
+  };
+
+  _proto.walkPseudos = function walkPseudos(callback) {
+    var _this8 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.PSEUDO) {
+        return callback.call(_this8, selector);
+      }
+    });
+  };
+
+  _proto.walkTags = function walkTags(callback) {
+    var _this9 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.TAG) {
+        return callback.call(_this9, selector);
+      }
+    });
+  };
+
+  _proto.walkUniversals = function walkUniversals(callback) {
+    var _this10 = this;
+
+    return this.walk(function (selector) {
+      if (selector.type === types.UNIVERSAL) {
+        return callback.call(_this10, selector);
+      }
+    });
+  };
+
+  _proto.split = function split(callback) {
+    var _this11 = this;
+
+    var current = [];
+    return this.reduce(function (memo, node, index) {
+      var split = callback.call(_this11, node);
+      current.push(node);
+
+      if (split) {
+        memo.push(current);
+        current = [];
+      } else if (index === _this11.length - 1) {
+        memo.push(current);
+      }
+
+      return memo;
+    }, []);
+  };
+
+  _proto.map = function map(callback) {
+    return this.nodes.map(callback);
+  };
+
+  _proto.reduce = function reduce(callback, memo) {
+    return this.nodes.reduce(callback, memo);
+  };
+
+  _proto.every = function every(callback) {
+    return this.nodes.every(callback);
+  };
+
+  _proto.some = function some(callback) {
+    return this.nodes.some(callback);
+  };
+
+  _proto.filter = function filter(callback) {
+    return this.nodes.filter(callback);
+  };
+
+  _proto.sort = function sort(callback) {
+    return this.nodes.sort(callback);
+  };
+
+  _proto.toString = function toString() {
+    return this.map(String).join('');
+  };
+
+  _createClass(Container, [{
+    key: "first",
+    get: function get() {
+      return this.at(0);
+    }
+  }, {
+    key: "last",
+    get: function get() {
+      return this.at(this.length - 1);
+    }
+  }, {
+    key: "length",
+    get: function get() {
+      return this.nodes.length;
+    }
+  }]);
+
+  return Container;
+}(_node.default);
+
+exports.default = Container;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/guards.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/guards.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.isNode = isNode;
+exports.isPseudoElement = isPseudoElement;
+exports.isPseudoClass = isPseudoClass;
+exports.isContainer = isContainer;
+exports.isNamespace = isNamespace;
+exports.isUniversal = exports.isTag = exports.isString = exports.isSelector = exports.isRoot = exports.isPseudo = exports.isNesting = exports.isIdentifier = exports.isComment = exports.isCombinator = exports.isClassName = exports.isAttribute = void 0;
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+var _IS_TYPE;
+
+var IS_TYPE = (_IS_TYPE = {}, _IS_TYPE[_types.ATTRIBUTE] = true, _IS_TYPE[_types.CLASS] = true, _IS_TYPE[_types.COMBINATOR] = true, _IS_TYPE[_types.COMMENT] = true, _IS_TYPE[_types.ID] = true, _IS_TYPE[_types.NESTING] = true, _IS_TYPE[_types.PSEUDO] = true, _IS_TYPE[_types.ROOT] = true, _IS_TYPE[_types.SELECTOR] = true, _IS_TYPE[_types.STRING] = true, _IS_TYPE[_types.TAG] = true, _IS_TYPE[_types.UNIVERSAL] = true, _IS_TYPE);
+
+function isNode(node) {
+  return typeof node === "object" && IS_TYPE[node.type];
+}
+
+function isNodeType(type, node) {
+  return isNode(node) && node.type === type;
+}
+
+var isAttribute = isNodeType.bind(null, _types.ATTRIBUTE);
+exports.isAttribute = isAttribute;
+var isClassName = isNodeType.bind(null, _types.CLASS);
+exports.isClassName = isClassName;
+var isCombinator = isNodeType.bind(null, _types.COMBINATOR);
+exports.isCombinator = isCombinator;
+var isComment = isNodeType.bind(null, _types.COMMENT);
+exports.isComment = isComment;
+var isIdentifier = isNodeType.bind(null, _types.ID);
+exports.isIdentifier = isIdentifier;
+var isNesting = isNodeType.bind(null, _types.NESTING);
+exports.isNesting = isNesting;
+var isPseudo = isNodeType.bind(null, _types.PSEUDO);
+exports.isPseudo = isPseudo;
+var isRoot = isNodeType.bind(null, _types.ROOT);
+exports.isRoot = isRoot;
+var isSelector = isNodeType.bind(null, _types.SELECTOR);
+exports.isSelector = isSelector;
+var isString = isNodeType.bind(null, _types.STRING);
+exports.isString = isString;
+var isTag = isNodeType.bind(null, _types.TAG);
+exports.isTag = isTag;
+var isUniversal = isNodeType.bind(null, _types.UNIVERSAL);
+exports.isUniversal = isUniversal;
+
+function isPseudoElement(node) {
+  return isPseudo(node) && node.value && (node.value.startsWith("::") || node.value === ":before" || node.value === ":after");
+}
+
+function isPseudoClass(node) {
+  return isPseudo(node) && !isPseudoElement(node);
+}
+
+function isContainer(node) {
+  return !!(isNode(node) && node.walk);
+}
+
+function isNamespace(node) {
+  return isAttribute(node) || isTag(node);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/id.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/id.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var ID =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(ID, _Node);
+
+  function ID(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.ID;
+    return _this;
+  }
+
+  var _proto = ID.prototype;
+
+  _proto.toString = function toString() {
+    return [this.rawSpaceBefore, String('#' + this.stringifyProperty("value")), this.rawSpaceAfter].join('');
+  };
+
+  return ID;
+}(_node.default);
+
+exports.default = ID;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/index.js":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/index.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _types[key];
+});
+
+var _constructors = __webpack_require__(/*! ./constructors */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/constructors.js");
+
+Object.keys(_constructors).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _constructors[key];
+});
+
+var _guards = __webpack_require__(/*! ./guards */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/guards.js");
+
+Object.keys(_guards).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _guards[key];
+});
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/namespace.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/namespace.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _cssesc = _interopRequireDefault(__webpack_require__(/*! cssesc */ "./node_modules/@tailwindcss/ui/node_modules/cssesc/cssesc.js"));
+
+var _util = __webpack_require__(/*! ../util */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js");
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Namespace =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(Namespace, _Node);
+
+  function Namespace() {
+    return _Node.apply(this, arguments) || this;
+  }
+
+  var _proto = Namespace.prototype;
+
+  _proto.qualifiedName = function qualifiedName(value) {
+    if (this.namespace) {
+      return this.namespaceString + "|" + value;
+    } else {
+      return value;
+    }
+  };
+
+  _proto.toString = function toString() {
+    return [this.rawSpaceBefore, this.qualifiedName(this.stringifyProperty("value")), this.rawSpaceAfter].join('');
+  };
+
+  _createClass(Namespace, [{
+    key: "namespace",
+    get: function get() {
+      return this._namespace;
+    },
+    set: function set(namespace) {
+      if (namespace === true || namespace === "*" || namespace === "&") {
+        this._namespace = namespace;
+
+        if (this.raws) {
+          delete this.raws.namespace;
+        }
+
+        return;
+      }
+
+      var escaped = (0, _cssesc.default)(namespace, {
+        isIdentifier: true
+      });
+      this._namespace = namespace;
+
+      if (escaped !== namespace) {
+        (0, _util.ensureObject)(this, "raws");
+        this.raws.namespace = escaped;
+      } else if (this.raws) {
+        delete this.raws.namespace;
+      }
+    }
+  }, {
+    key: "ns",
+    get: function get() {
+      return this._namespace;
+    },
+    set: function set(namespace) {
+      this.namespace = namespace;
+    }
+  }, {
+    key: "namespaceString",
+    get: function get() {
+      if (this.namespace) {
+        var ns = this.stringifyProperty("namespace");
+
+        if (ns === true) {
+          return '';
+        } else {
+          return ns;
+        }
+      } else {
+        return '';
+      }
+    }
+  }]);
+
+  return Namespace;
+}(_node.default);
+
+exports.default = Namespace;
+;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/nesting.js":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/nesting.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Nesting =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(Nesting, _Node);
+
+  function Nesting(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.NESTING;
+    _this.value = '&';
+    return _this;
+  }
+
+  return Nesting;
+}(_node.default);
+
+exports.default = Nesting;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _util = __webpack_require__(/*! ../util */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js");
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var cloneNode = function cloneNode(obj, parent) {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
+  }
+
+  var cloned = new obj.constructor();
+
+  for (var i in obj) {
+    if (!obj.hasOwnProperty(i)) {
+      continue;
+    }
+
+    var value = obj[i];
+    var type = typeof value;
+
+    if (i === 'parent' && type === 'object') {
+      if (parent) {
+        cloned[i] = parent;
+      }
+    } else if (value instanceof Array) {
+      cloned[i] = value.map(function (j) {
+        return cloneNode(j, cloned);
+      });
+    } else {
+      cloned[i] = cloneNode(value, cloned);
+    }
+  }
+
+  return cloned;
+};
+
+var Node =
+/*#__PURE__*/
+function () {
+  function Node(opts) {
+    if (opts === void 0) {
+      opts = {};
+    }
+
+    Object.assign(this, opts);
+    this.spaces = this.spaces || {};
+    this.spaces.before = this.spaces.before || '';
+    this.spaces.after = this.spaces.after || '';
+  }
+
+  var _proto = Node.prototype;
+
+  _proto.remove = function remove() {
+    if (this.parent) {
+      this.parent.removeChild(this);
+    }
+
+    this.parent = undefined;
+    return this;
+  };
+
+  _proto.replaceWith = function replaceWith() {
+    if (this.parent) {
+      for (var index in arguments) {
+        this.parent.insertBefore(this, arguments[index]);
+      }
+
+      this.remove();
+    }
+
+    return this;
+  };
+
+  _proto.next = function next() {
+    return this.parent.at(this.parent.index(this) + 1);
+  };
+
+  _proto.prev = function prev() {
+    return this.parent.at(this.parent.index(this) - 1);
+  };
+
+  _proto.clone = function clone(overrides) {
+    if (overrides === void 0) {
+      overrides = {};
+    }
+
+    var cloned = cloneNode(this);
+
+    for (var name in overrides) {
+      cloned[name] = overrides[name];
+    }
+
+    return cloned;
+  }
+  /**
+   * Some non-standard syntax doesn't follow normal escaping rules for css.
+   * This allows non standard syntax to be appended to an existing property
+   * by specifying the escaped value. By specifying the escaped value,
+   * illegal characters are allowed to be directly inserted into css output.
+   * @param {string} name the property to set
+   * @param {any} value the unescaped value of the property
+   * @param {string} valueEscaped optional. the escaped value of the property.
+   */
+  ;
+
+  _proto.appendToPropertyAndEscape = function appendToPropertyAndEscape(name, value, valueEscaped) {
+    if (!this.raws) {
+      this.raws = {};
+    }
+
+    var originalValue = this[name];
+    var originalEscaped = this.raws[name];
+    this[name] = originalValue + value; // this may trigger a setter that updates raws, so it has to be set first.
+
+    if (originalEscaped || valueEscaped !== value) {
+      this.raws[name] = (originalEscaped || originalValue) + valueEscaped;
+    } else {
+      delete this.raws[name]; // delete any escaped value that was created by the setter.
+    }
+  }
+  /**
+   * Some non-standard syntax doesn't follow normal escaping rules for css.
+   * This allows the escaped value to be specified directly, allowing illegal
+   * characters to be directly inserted into css output.
+   * @param {string} name the property to set
+   * @param {any} value the unescaped value of the property
+   * @param {string} valueEscaped the escaped value of the property.
+   */
+  ;
+
+  _proto.setPropertyAndEscape = function setPropertyAndEscape(name, value, valueEscaped) {
+    if (!this.raws) {
+      this.raws = {};
+    }
+
+    this[name] = value; // this may trigger a setter that updates raws, so it has to be set first.
+
+    this.raws[name] = valueEscaped;
+  }
+  /**
+   * When you want a value to passed through to CSS directly. This method
+   * deletes the corresponding raw value causing the stringifier to fallback
+   * to the unescaped value.
+   * @param {string} name the property to set.
+   * @param {any} value The value that is both escaped and unescaped.
+   */
+  ;
+
+  _proto.setPropertyWithoutEscape = function setPropertyWithoutEscape(name, value) {
+    this[name] = value; // this may trigger a setter that updates raws, so it has to be set first.
+
+    if (this.raws) {
+      delete this.raws[name];
+    }
+  }
+  /**
+   * 
+   * @param {number} line The number (starting with 1)
+   * @param {number} column The column number (starting with 1)
+   */
+  ;
+
+  _proto.isAtPosition = function isAtPosition(line, column) {
+    if (this.source && this.source.start && this.source.end) {
+      if (this.source.start.line > line) {
+        return false;
+      }
+
+      if (this.source.end.line < line) {
+        return false;
+      }
+
+      if (this.source.start.line === line && this.source.start.column > column) {
+        return false;
+      }
+
+      if (this.source.end.line === line && this.source.end.column < column) {
+        return false;
+      }
+
+      return true;
+    }
+
+    return undefined;
+  };
+
+  _proto.stringifyProperty = function stringifyProperty(name) {
+    return this.raws && this.raws[name] || this[name];
+  };
+
+  _proto.toString = function toString() {
+    return [this.rawSpaceBefore, String(this.stringifyProperty("value")), this.rawSpaceAfter].join('');
+  };
+
+  _createClass(Node, [{
+    key: "rawSpaceBefore",
+    get: function get() {
+      var rawSpace = this.raws && this.raws.spaces && this.raws.spaces.before;
+
+      if (rawSpace === undefined) {
+        rawSpace = this.spaces && this.spaces.before;
+      }
+
+      return rawSpace || "";
+    },
+    set: function set(raw) {
+      (0, _util.ensureObject)(this, "raws", "spaces");
+      this.raws.spaces.before = raw;
+    }
+  }, {
+    key: "rawSpaceAfter",
+    get: function get() {
+      var rawSpace = this.raws && this.raws.spaces && this.raws.spaces.after;
+
+      if (rawSpace === undefined) {
+        rawSpace = this.spaces.after;
+      }
+
+      return rawSpace || "";
+    },
+    set: function set(raw) {
+      (0, _util.ensureObject)(this, "raws", "spaces");
+      this.raws.spaces.after = raw;
+    }
+  }]);
+
+  return Node;
+}();
+
+exports.default = Node;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/pseudo.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/pseudo.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _container = _interopRequireDefault(__webpack_require__(/*! ./container */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/container.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Pseudo =
+/*#__PURE__*/
+function (_Container) {
+  _inheritsLoose(Pseudo, _Container);
+
+  function Pseudo(opts) {
+    var _this;
+
+    _this = _Container.call(this, opts) || this;
+    _this.type = _types.PSEUDO;
+    return _this;
+  }
+
+  var _proto = Pseudo.prototype;
+
+  _proto.toString = function toString() {
+    var params = this.length ? '(' + this.map(String).join(',') + ')' : '';
+    return [this.rawSpaceBefore, this.stringifyProperty("value"), params, this.rawSpaceAfter].join('');
+  };
+
+  return Pseudo;
+}(_container.default);
+
+exports.default = Pseudo;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/root.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/root.js ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _container = _interopRequireDefault(__webpack_require__(/*! ./container */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/container.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Root =
+/*#__PURE__*/
+function (_Container) {
+  _inheritsLoose(Root, _Container);
+
+  function Root(opts) {
+    var _this;
+
+    _this = _Container.call(this, opts) || this;
+    _this.type = _types.ROOT;
+    return _this;
+  }
+
+  var _proto = Root.prototype;
+
+  _proto.toString = function toString() {
+    var str = this.reduce(function (memo, selector) {
+      memo.push(String(selector));
+      return memo;
+    }, []).join(',');
+    return this.trailingComma ? str + ',' : str;
+  };
+
+  _proto.error = function error(message, options) {
+    if (this._error) {
+      return this._error(message, options);
+    } else {
+      return new Error(message);
+    }
+  };
+
+  _createClass(Root, [{
+    key: "errorGenerator",
+    set: function set(handler) {
+      this._error = handler;
+    }
+  }]);
+
+  return Root;
+}(_container.default);
+
+exports.default = Root;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/selector.js":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/selector.js ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _container = _interopRequireDefault(__webpack_require__(/*! ./container */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/container.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Selector =
+/*#__PURE__*/
+function (_Container) {
+  _inheritsLoose(Selector, _Container);
+
+  function Selector(opts) {
+    var _this;
+
+    _this = _Container.call(this, opts) || this;
+    _this.type = _types.SELECTOR;
+    return _this;
+  }
+
+  return Selector;
+}(_container.default);
+
+exports.default = Selector;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/string.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/string.js ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _node = _interopRequireDefault(__webpack_require__(/*! ./node */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/node.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var String =
+/*#__PURE__*/
+function (_Node) {
+  _inheritsLoose(String, _Node);
+
+  function String(opts) {
+    var _this;
+
+    _this = _Node.call(this, opts) || this;
+    _this.type = _types.STRING;
+    return _this;
+  }
+
+  return String;
+}(_node.default);
+
+exports.default = String;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/tag.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/tag.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _namespace = _interopRequireDefault(__webpack_require__(/*! ./namespace */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/namespace.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Tag =
+/*#__PURE__*/
+function (_Namespace) {
+  _inheritsLoose(Tag, _Namespace);
+
+  function Tag(opts) {
+    var _this;
+
+    _this = _Namespace.call(this, opts) || this;
+    _this.type = _types.TAG;
+    return _this;
+  }
+
+  return Tag;
+}(_namespace.default);
+
+exports.default = Tag;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.UNIVERSAL = exports.ATTRIBUTE = exports.CLASS = exports.COMBINATOR = exports.COMMENT = exports.ID = exports.NESTING = exports.PSEUDO = exports.ROOT = exports.SELECTOR = exports.STRING = exports.TAG = void 0;
+var TAG = 'tag';
+exports.TAG = TAG;
+var STRING = 'string';
+exports.STRING = STRING;
+var SELECTOR = 'selector';
+exports.SELECTOR = SELECTOR;
+var ROOT = 'root';
+exports.ROOT = ROOT;
+var PSEUDO = 'pseudo';
+exports.PSEUDO = PSEUDO;
+var NESTING = 'nesting';
+exports.NESTING = NESTING;
+var ID = 'id';
+exports.ID = ID;
+var COMMENT = 'comment';
+exports.COMMENT = COMMENT;
+var COMBINATOR = 'combinator';
+exports.COMBINATOR = COMBINATOR;
+var CLASS = 'class';
+exports.CLASS = CLASS;
+var ATTRIBUTE = 'attribute';
+exports.ATTRIBUTE = ATTRIBUTE;
+var UNIVERSAL = 'universal';
+exports.UNIVERSAL = UNIVERSAL;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/universal.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/universal.js ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _namespace = _interopRequireDefault(__webpack_require__(/*! ./namespace */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/namespace.js"));
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/selectors/types.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var Universal =
+/*#__PURE__*/
+function (_Namespace) {
+  _inheritsLoose(Universal, _Namespace);
+
+  function Universal(opts) {
+    var _this;
+
+    _this = _Namespace.call(this, opts) || this;
+    _this.type = _types.UNIVERSAL;
+    _this.value = '*';
+    return _this;
+  }
+
+  return Universal;
+}(_namespace.default);
+
+exports.default = Universal;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/sortAscending.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/sortAscending.js ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = sortAscending;
+
+function sortAscending(list) {
+  return list.sort(function (a, b) {
+    return a - b;
+  });
+}
+
+;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenTypes.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenTypes.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.combinator = exports.word = exports.comment = exports.str = exports.tab = exports.newline = exports.feed = exports.cr = exports.backslash = exports.bang = exports.slash = exports.doubleQuote = exports.singleQuote = exports.space = exports.greaterThan = exports.pipe = exports.equals = exports.plus = exports.caret = exports.tilde = exports.dollar = exports.closeSquare = exports.openSquare = exports.closeParenthesis = exports.openParenthesis = exports.semicolon = exports.colon = exports.comma = exports.at = exports.asterisk = exports.ampersand = void 0;
+var ampersand = 38; // `&`.charCodeAt(0);
+
+exports.ampersand = ampersand;
+var asterisk = 42; // `*`.charCodeAt(0);
+
+exports.asterisk = asterisk;
+var at = 64; // `@`.charCodeAt(0);
+
+exports.at = at;
+var comma = 44; // `,`.charCodeAt(0);
+
+exports.comma = comma;
+var colon = 58; // `:`.charCodeAt(0);
+
+exports.colon = colon;
+var semicolon = 59; // `;`.charCodeAt(0);
+
+exports.semicolon = semicolon;
+var openParenthesis = 40; // `(`.charCodeAt(0);
+
+exports.openParenthesis = openParenthesis;
+var closeParenthesis = 41; // `)`.charCodeAt(0);
+
+exports.closeParenthesis = closeParenthesis;
+var openSquare = 91; // `[`.charCodeAt(0);
+
+exports.openSquare = openSquare;
+var closeSquare = 93; // `]`.charCodeAt(0);
+
+exports.closeSquare = closeSquare;
+var dollar = 36; // `$`.charCodeAt(0);
+
+exports.dollar = dollar;
+var tilde = 126; // `~`.charCodeAt(0);
+
+exports.tilde = tilde;
+var caret = 94; // `^`.charCodeAt(0);
+
+exports.caret = caret;
+var plus = 43; // `+`.charCodeAt(0);
+
+exports.plus = plus;
+var equals = 61; // `=`.charCodeAt(0);
+
+exports.equals = equals;
+var pipe = 124; // `|`.charCodeAt(0);
+
+exports.pipe = pipe;
+var greaterThan = 62; // `>`.charCodeAt(0);
+
+exports.greaterThan = greaterThan;
+var space = 32; // ` `.charCodeAt(0);
+
+exports.space = space;
+var singleQuote = 39; // `'`.charCodeAt(0);
+
+exports.singleQuote = singleQuote;
+var doubleQuote = 34; // `"`.charCodeAt(0);
+
+exports.doubleQuote = doubleQuote;
+var slash = 47; // `/`.charCodeAt(0);
+
+exports.slash = slash;
+var bang = 33; // `!`.charCodeAt(0);
+
+exports.bang = bang;
+var backslash = 92; // '\\'.charCodeAt(0);
+
+exports.backslash = backslash;
+var cr = 13; // '\r'.charCodeAt(0);
+
+exports.cr = cr;
+var feed = 12; // '\f'.charCodeAt(0);
+
+exports.feed = feed;
+var newline = 10; // '\n'.charCodeAt(0);
+
+exports.newline = newline;
+var tab = 9; // '\t'.charCodeAt(0);
+// Expose aliases primarily for readability.
+
+exports.tab = tab;
+var str = singleQuote; // No good single character representation!
+
+exports.str = str;
+var comment = -1;
+exports.comment = comment;
+var word = -2;
+exports.word = word;
+var combinator = -3;
+exports.combinator = combinator;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenize.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenize.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = tokenize;
+exports.FIELDS = void 0;
+
+var t = _interopRequireWildcard(__webpack_require__(/*! ./tokenTypes */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/tokenTypes.js"));
+
+var _unescapable, _wordDelimiters;
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var unescapable = (_unescapable = {}, _unescapable[t.tab] = true, _unescapable[t.newline] = true, _unescapable[t.cr] = true, _unescapable[t.feed] = true, _unescapable);
+var wordDelimiters = (_wordDelimiters = {}, _wordDelimiters[t.space] = true, _wordDelimiters[t.tab] = true, _wordDelimiters[t.newline] = true, _wordDelimiters[t.cr] = true, _wordDelimiters[t.feed] = true, _wordDelimiters[t.ampersand] = true, _wordDelimiters[t.asterisk] = true, _wordDelimiters[t.bang] = true, _wordDelimiters[t.comma] = true, _wordDelimiters[t.colon] = true, _wordDelimiters[t.semicolon] = true, _wordDelimiters[t.openParenthesis] = true, _wordDelimiters[t.closeParenthesis] = true, _wordDelimiters[t.openSquare] = true, _wordDelimiters[t.closeSquare] = true, _wordDelimiters[t.singleQuote] = true, _wordDelimiters[t.doubleQuote] = true, _wordDelimiters[t.plus] = true, _wordDelimiters[t.pipe] = true, _wordDelimiters[t.tilde] = true, _wordDelimiters[t.greaterThan] = true, _wordDelimiters[t.equals] = true, _wordDelimiters[t.dollar] = true, _wordDelimiters[t.caret] = true, _wordDelimiters[t.slash] = true, _wordDelimiters);
+var hex = {};
+var hexChars = "0123456789abcdefABCDEF";
+
+for (var i = 0; i < hexChars.length; i++) {
+  hex[hexChars.charCodeAt(i)] = true;
+}
+/**
+ *  Returns the last index of the bar css word
+ * @param {string} css The string in which the word begins
+ * @param {number} start The index into the string where word's first letter occurs
+ */
+
+
+function consumeWord(css, start) {
+  var next = start;
+  var code;
+
+  do {
+    code = css.charCodeAt(next);
+
+    if (wordDelimiters[code]) {
+      return next - 1;
+    } else if (code === t.backslash) {
+      next = consumeEscape(css, next) + 1;
+    } else {
+      // All other characters are part of the word
+      next++;
+    }
+  } while (next < css.length);
+
+  return next - 1;
+}
+/**
+ *  Returns the last index of the escape sequence
+ * @param {string} css The string in which the sequence begins
+ * @param {number} start The index into the string where escape character (`\`) occurs.
+ */
+
+
+function consumeEscape(css, start) {
+  var next = start;
+  var code = css.charCodeAt(next + 1);
+
+  if (unescapable[code]) {// just consume the escape char
+  } else if (hex[code]) {
+    var hexDigits = 0; // consume up to 6 hex chars
+
+    do {
+      next++;
+      hexDigits++;
+      code = css.charCodeAt(next + 1);
+    } while (hex[code] && hexDigits < 6); // if fewer than 6 hex chars, a trailing space ends the escape
+
+
+    if (hexDigits < 6 && code === t.space) {
+      next++;
+    }
+  } else {
+    // the next char is part of the current word
+    next++;
+  }
+
+  return next;
+}
+
+var FIELDS = {
+  TYPE: 0,
+  START_LINE: 1,
+  START_COL: 2,
+  END_LINE: 3,
+  END_COL: 4,
+  START_POS: 5,
+  END_POS: 6
+};
+exports.FIELDS = FIELDS;
+
+function tokenize(input) {
+  var tokens = [];
+  var css = input.css.valueOf();
+  var _css = css,
+      length = _css.length;
+  var offset = -1;
+  var line = 1;
+  var start = 0;
+  var end = 0;
+  var code, content, endColumn, endLine, escaped, escapePos, last, lines, next, nextLine, nextOffset, quote, tokenType;
+
+  function unclosed(what, fix) {
+    if (input.safe) {
+      // fyi: this is never set to true.
+      css += fix;
+      next = css.length - 1;
+    } else {
+      throw input.error('Unclosed ' + what, line, start - offset, start);
+    }
+  }
+
+  while (start < length) {
+    code = css.charCodeAt(start);
+
+    if (code === t.newline) {
+      offset = start;
+      line += 1;
+    }
+
+    switch (code) {
+      case t.space:
+      case t.tab:
+      case t.newline:
+      case t.cr:
+      case t.feed:
+        next = start;
+
+        do {
+          next += 1;
+          code = css.charCodeAt(next);
+
+          if (code === t.newline) {
+            offset = next;
+            line += 1;
+          }
+        } while (code === t.space || code === t.newline || code === t.tab || code === t.cr || code === t.feed);
+
+        tokenType = t.space;
+        endLine = line;
+        endColumn = next - offset - 1;
+        end = next;
+        break;
+
+      case t.plus:
+      case t.greaterThan:
+      case t.tilde:
+      case t.pipe:
+        next = start;
+
+        do {
+          next += 1;
+          code = css.charCodeAt(next);
+        } while (code === t.plus || code === t.greaterThan || code === t.tilde || code === t.pipe);
+
+        tokenType = t.combinator;
+        endLine = line;
+        endColumn = start - offset;
+        end = next;
+        break;
+      // Consume these characters as single tokens.
+
+      case t.asterisk:
+      case t.ampersand:
+      case t.bang:
+      case t.comma:
+      case t.equals:
+      case t.dollar:
+      case t.caret:
+      case t.openSquare:
+      case t.closeSquare:
+      case t.colon:
+      case t.semicolon:
+      case t.openParenthesis:
+      case t.closeParenthesis:
+        next = start;
+        tokenType = code;
+        endLine = line;
+        endColumn = start - offset;
+        end = next + 1;
+        break;
+
+      case t.singleQuote:
+      case t.doubleQuote:
+        quote = code === t.singleQuote ? "'" : '"';
+        next = start;
+
+        do {
+          escaped = false;
+          next = css.indexOf(quote, next + 1);
+
+          if (next === -1) {
+            unclosed('quote', quote);
+          }
+
+          escapePos = next;
+
+          while (css.charCodeAt(escapePos - 1) === t.backslash) {
+            escapePos -= 1;
+            escaped = !escaped;
+          }
+        } while (escaped);
+
+        tokenType = t.str;
+        endLine = line;
+        endColumn = start - offset;
+        end = next + 1;
+        break;
+
+      default:
+        if (code === t.slash && css.charCodeAt(start + 1) === t.asterisk) {
+          next = css.indexOf('*/', start + 2) + 1;
+
+          if (next === 0) {
+            unclosed('comment', '*/');
+          }
+
+          content = css.slice(start, next + 1);
+          lines = content.split('\n');
+          last = lines.length - 1;
+
+          if (last > 0) {
+            nextLine = line + last;
+            nextOffset = next - lines[last].length;
+          } else {
+            nextLine = line;
+            nextOffset = offset;
+          }
+
+          tokenType = t.comment;
+          line = nextLine;
+          endLine = nextLine;
+          endColumn = next - nextOffset;
+        } else if (code === t.slash) {
+          next = start;
+          tokenType = code;
+          endLine = line;
+          endColumn = start - offset;
+          end = next + 1;
+        } else {
+          next = consumeWord(css, start);
+          tokenType = t.word;
+          endLine = line;
+          endColumn = next - offset;
+        }
+
+        end = next + 1;
+        break;
+    } // Ensure that the token structure remains consistent
+
+
+    tokens.push([tokenType, // [0] Token type
+    line, // [1] Starting line
+    start - offset, // [2] Starting column
+    endLine, // [3] Ending line
+    endColumn, // [4] Ending column
+    start, // [5] Start position / Source index
+    end]); // Reset offset for the next token
+
+    if (nextOffset) {
+      offset = nextOffset;
+      nextOffset = null;
+    }
+
+    start = end;
+  }
+
+  return tokens;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/ensureObject.js":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/ensureObject.js ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = ensureObject;
+
+function ensureObject(obj) {
+  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    props[_key - 1] = arguments[_key];
+  }
+
+  while (props.length > 0) {
+    var prop = props.shift();
+
+    if (!obj[prop]) {
+      obj[prop] = {};
+    }
+
+    obj = obj[prop];
+  }
+}
+
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/getProp.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/getProp.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = getProp;
+
+function getProp(obj) {
+  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    props[_key - 1] = arguments[_key];
+  }
+
+  while (props.length > 0) {
+    var prop = props.shift();
+
+    if (!obj[prop]) {
+      return undefined;
+    }
+
+    obj = obj[prop];
+  }
+
+  return obj;
+}
+
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/index.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.stripComments = exports.ensureObject = exports.getProp = exports.unesc = void 0;
+
+var _unesc = _interopRequireDefault(__webpack_require__(/*! ./unesc */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/unesc.js"));
+
+exports.unesc = _unesc.default;
+
+var _getProp = _interopRequireDefault(__webpack_require__(/*! ./getProp */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/getProp.js"));
+
+exports.getProp = _getProp.default;
+
+var _ensureObject = _interopRequireDefault(__webpack_require__(/*! ./ensureObject */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/ensureObject.js"));
+
+exports.ensureObject = _ensureObject.default;
+
+var _stripComments = _interopRequireDefault(__webpack_require__(/*! ./stripComments */ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/stripComments.js"));
+
+exports.stripComments = _stripComments.default;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/stripComments.js":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/stripComments.js ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = stripComments;
+
+function stripComments(str) {
+  var s = "";
+  var commentStart = str.indexOf("/*");
+  var lastEnd = 0;
+
+  while (commentStart >= 0) {
+    s = s + str.slice(lastEnd, commentStart);
+    var commentEnd = str.indexOf("*/", commentStart + 2);
+
+    if (commentEnd < 0) {
+      return s;
+    }
+
+    lastEnd = commentEnd + 2;
+    commentStart = str.indexOf("/*", lastEnd);
+  }
+
+  s = s + str.slice(lastEnd);
+  return s;
+}
+
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/unesc.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@tailwindcss/ui/node_modules/postcss-selector-parser/dist/util/unesc.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = unesc;
+var whitespace = '[\\x20\\t\\r\\n\\f]';
+var unescapeRegExp = new RegExp('\\\\([\\da-f]{1,6}' + whitespace + '?|(' + whitespace + ')|.)', 'ig');
+
+function unesc(str) {
+  return str.replace(unescapeRegExp, function (_, escaped, escapedWhitespace) {
+    var high = '0x' + escaped - 0x10000; // NaN means non-codepoint
+    // Workaround erroneous numeric interpretation of +"0x"
+    // eslint-disable-next-line no-self-compare
+
+    return high !== high || escapedWhitespace ? escaped : high < 0 ? // BMP codepoint
+    String.fromCharCode(high + 0x10000) : // Supplemental Plane codepoint (surrogate pair)
+    String.fromCharCode(high >> 10 | 0xd800, high & 0x3ff | 0xdc00);
+  });
+}
+
+module.exports = exports.default;
 
 /***/ }),
 
@@ -4151,6 +9323,104 @@ module.exports = function (value, sourceUnit, targetUnit, precision) {
 
 /***/ }),
 
+/***/ "./node_modules/hex-to-rgba/build/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/hex-to-rgba/build/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var removeHash = function removeHash(hex) {
+  return hex.charAt(0) === '#' ? hex.slice(1) : hex;
+};
+
+var parseHex = function parseHex(nakedHex) {
+  var isShort = nakedHex.length === 3 || nakedHex.length === 4;
+  var twoDigitHexR = isShort ? "".concat(nakedHex.slice(0, 1)).concat(nakedHex.slice(0, 1)) : nakedHex.slice(0, 2);
+  var twoDigitHexG = isShort ? "".concat(nakedHex.slice(1, 2)).concat(nakedHex.slice(1, 2)) : nakedHex.slice(2, 4);
+  var twoDigitHexB = isShort ? "".concat(nakedHex.slice(2, 3)).concat(nakedHex.slice(2, 3)) : nakedHex.slice(4, 6);
+  var twoDigitHexA = (isShort ? "".concat(nakedHex.slice(3, 4)).concat(nakedHex.slice(3, 4)) : nakedHex.slice(6, 8)) || 'ff'; // const numericA = +((parseInt(a, 16) / 255).toFixed(2));
+
+  return {
+    r: twoDigitHexR,
+    g: twoDigitHexG,
+    b: twoDigitHexB,
+    a: twoDigitHexA
+  };
+};
+
+var hexToDecimal = function hexToDecimal(hex) {
+  return parseInt(hex, 16);
+};
+
+var hexesToDecimals = function hexesToDecimals(_ref) {
+  var r = _ref.r,
+      g = _ref.g,
+      b = _ref.b,
+      a = _ref.a;
+  return {
+    r: hexToDecimal(r),
+    g: hexToDecimal(g),
+    b: hexToDecimal(b),
+    a: +(hexToDecimal(a) / 255).toFixed(2)
+  };
+};
+
+var isNumeric = function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}; // eslint-disable-line no-restricted-globals, max-len
+
+
+var formatRgb = function formatRgb(decimalObject, parameterA) {
+  var r = decimalObject.r,
+      g = decimalObject.g,
+      b = decimalObject.b,
+      parsedA = decimalObject.a;
+  var a = isNumeric(parameterA) ? parameterA : parsedA;
+  return "rgba(".concat(r, ", ").concat(g, ", ").concat(b, ", ").concat(a, ")");
+};
+/**
+ * Turns an old-fashioned css hex color value into a rgb color value.
+ *
+ * If you specify an alpha value, you'll get a rgba() value instead.
+ *
+ * @param The hex value to convert. ('123456'. '#123456', ''123', '#123')
+ * @param An alpha value to apply. (optional) ('0.5', '0.25')
+ * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
+ */
+
+
+var hexToRgba = function hexToRgba(hex, a) {
+  var hashlessHex = removeHash(hex);
+  var hexObject = parseHex(hashlessHex);
+  var decimalObject = hexesToDecimals(hexObject);
+  return formatRgb(decimalObject, a);
+};
+
+module.exports = hexToRgba;
+
+/***/ }),
+
+/***/ "./node_modules/indexes-of/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/indexes-of/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (ary, item) {
+  var i = -1, indexes = []
+  while((i = ary.indexOf(item, i + 1)) !== -1)
+    indexes.push(i)
+  return indexes
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/_DataView.js":
 /*!******************************************!*\
   !*** ./node_modules/lodash/_DataView.js ***!
@@ -5170,6 +10440,55 @@ var baseForOwn = __webpack_require__(/*! ./_baseForOwn */ "./node_modules/lodash
 var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFlatten.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseFlatten.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayPush = __webpack_require__(/*! ./_arrayPush */ "./node_modules/lodash/_arrayPush.js"),
+    isFlattenable = __webpack_require__(/*! ./_isFlattenable */ "./node_modules/lodash/_isFlattenable.js");
+
+/**
+ * The base implementation of `_.flatten` with support for restricting flattening.
+ *
+ * @private
+ * @param {Array} array The array to flatten.
+ * @param {number} depth The maximum recursion depth.
+ * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
+ * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
+ * @param {Array} [result=[]] The initial result value.
+ * @returns {Array} Returns the new flattened array.
+ */
+function baseFlatten(array, depth, predicate, isStrict, result) {
+  var index = -1,
+      length = array.length;
+
+  predicate || (predicate = isFlattenable);
+  result || (result = []);
+
+  while (++index < length) {
+    var value = array[index];
+    if (depth > 0 && predicate(value)) {
+      if (depth > 1) {
+        // Recursively flatten arrays (susceptible to call stack limits).
+        baseFlatten(value, depth - 1, predicate, isStrict, result);
+      } else {
+        arrayPush(result, value);
+      }
+    } else if (!isStrict) {
+      result[result.length] = value;
+    }
+  }
+  return result;
+}
+
+module.exports = baseFlatten;
 
 
 /***/ }),
@@ -6351,6 +11670,35 @@ module.exports = baseTimes;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/_baseToPairs.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseToPairs.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayMap = __webpack_require__(/*! ./_arrayMap */ "./node_modules/lodash/_arrayMap.js");
+
+/**
+ * The base implementation of `_.toPairs` and `_.toPairsIn` which creates an array
+ * of key-value pairs for `object` corresponding to the property names of `props`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the key-value pairs.
+ */
+function baseToPairs(object, props) {
+  return arrayMap(props, function(key) {
+    return [key, object[key]];
+  });
+}
+
+module.exports = baseToPairs;
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/_baseToString.js":
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_baseToString.js ***!
@@ -6941,6 +12289,47 @@ function createBaseFor(fromRight) {
 }
 
 module.exports = createBaseFor;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createToPairs.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_createToPairs.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseToPairs = __webpack_require__(/*! ./_baseToPairs */ "./node_modules/lodash/_baseToPairs.js"),
+    getTag = __webpack_require__(/*! ./_getTag */ "./node_modules/lodash/_getTag.js"),
+    mapToArray = __webpack_require__(/*! ./_mapToArray */ "./node_modules/lodash/_mapToArray.js"),
+    setToPairs = __webpack_require__(/*! ./_setToPairs */ "./node_modules/lodash/_setToPairs.js");
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]',
+    setTag = '[object Set]';
+
+/**
+ * Creates a `_.toPairs` or `_.toPairsIn` function.
+ *
+ * @private
+ * @param {Function} keysFunc The function to get the keys of a given object.
+ * @returns {Function} Returns the new pairs function.
+ */
+function createToPairs(keysFunc) {
+  return function(object) {
+    var tag = getTag(object);
+    if (tag == mapTag) {
+      return mapToArray(object);
+    }
+    if (tag == setTag) {
+      return setToPairs(object);
+    }
+    return baseToPairs(object, keysFunc(object));
+  };
+}
+
+module.exports = createToPairs;
 
 
 /***/ }),
@@ -8058,6 +13447,37 @@ module.exports = initCloneObject;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/_isFlattenable.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_isFlattenable.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Symbol = __webpack_require__(/*! ./_Symbol */ "./node_modules/lodash/_Symbol.js"),
+    isArguments = __webpack_require__(/*! ./isArguments */ "./node_modules/lodash/isArguments.js"),
+    isArray = __webpack_require__(/*! ./isArray */ "./node_modules/lodash/isArray.js");
+
+/** Built-in value references. */
+var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
+
+/**
+ * Checks if `value` is a flattenable `arguments` object or array.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
+ */
+function isFlattenable(value) {
+  return isArray(value) || isArguments(value) ||
+    !!(spreadableSymbol && value && value[spreadableSymbol]);
+}
+
+module.exports = isFlattenable;
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/_isIndex.js":
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_isIndex.js ***!
@@ -9045,6 +14465,35 @@ module.exports = setToArray;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/_setToPairs.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_setToPairs.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Converts `set` to its value-value pairs.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the value-value pairs.
+ */
+function setToPairs(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = [value, value];
+  });
+  return result;
+}
+
+module.exports = setToPairs;
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/_setToString.js":
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_setToString.js ***!
@@ -9575,6 +15024,85 @@ module.exports = eq;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/flatMap.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/flatMap.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseFlatten = __webpack_require__(/*! ./_baseFlatten */ "./node_modules/lodash/_baseFlatten.js"),
+    map = __webpack_require__(/*! ./map */ "./node_modules/lodash/map.js");
+
+/**
+ * Creates a flattened array of values by running each element in `collection`
+ * thru `iteratee` and flattening the mapped results. The iteratee is invoked
+ * with three arguments: (value, index|key, collection).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new flattened array.
+ * @example
+ *
+ * function duplicate(n) {
+ *   return [n, n];
+ * }
+ *
+ * _.flatMap([1, 2], duplicate);
+ * // => [1, 1, 2, 2]
+ */
+function flatMap(collection, iteratee) {
+  return baseFlatten(map(collection, iteratee), 1);
+}
+
+module.exports = flatMap;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/fromPairs.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/fromPairs.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * The inverse of `_.toPairs`; this method returns an object composed
+ * from key-value `pairs`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Array
+ * @param {Array} pairs The key-value pairs.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * _.fromPairs([['a', 1], ['b', 2]]);
+ * // => { 'a': 1, 'b': 2 }
+ */
+function fromPairs(pairs) {
+  var index = -1,
+      length = pairs == null ? 0 : pairs.length,
+      result = {};
+
+  while (++index < length) {
+    var pair = pairs[index];
+    result[pair[0]] = pair[1];
+  }
+  return result;
+}
+
+module.exports = fromPairs;
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/get.js":
 /*!************************************!*\
   !*** ./node_modules/lodash/get.js ***!
@@ -9915,6 +15443,94 @@ var isBuffer = nativeIsBuffer || stubFalse;
 module.exports = isBuffer;
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isEmpty.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/isEmpty.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseKeys = __webpack_require__(/*! ./_baseKeys */ "./node_modules/lodash/_baseKeys.js"),
+    getTag = __webpack_require__(/*! ./_getTag */ "./node_modules/lodash/_getTag.js"),
+    isArguments = __webpack_require__(/*! ./isArguments */ "./node_modules/lodash/isArguments.js"),
+    isArray = __webpack_require__(/*! ./isArray */ "./node_modules/lodash/isArray.js"),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ "./node_modules/lodash/isArrayLike.js"),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ "./node_modules/lodash/isBuffer.js"),
+    isPrototype = __webpack_require__(/*! ./_isPrototype */ "./node_modules/lodash/_isPrototype.js"),
+    isTypedArray = __webpack_require__(/*! ./isTypedArray */ "./node_modules/lodash/isTypedArray.js");
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]',
+    setTag = '[object Set]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Checks if `value` is an empty object, collection, map, or set.
+ *
+ * Objects are considered empty if they have no own enumerable string keyed
+ * properties.
+ *
+ * Array-like values such as `arguments` objects, arrays, buffers, strings, or
+ * jQuery-like collections are considered empty if they have a `length` of `0`.
+ * Similarly, maps and sets are considered empty if they have a `size` of `0`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is empty, else `false`.
+ * @example
+ *
+ * _.isEmpty(null);
+ * // => true
+ *
+ * _.isEmpty(true);
+ * // => true
+ *
+ * _.isEmpty(1);
+ * // => true
+ *
+ * _.isEmpty([1, 2, 3]);
+ * // => false
+ *
+ * _.isEmpty({ 'a': 1 });
+ * // => false
+ */
+function isEmpty(value) {
+  if (value == null) {
+    return true;
+  }
+  if (isArrayLike(value) &&
+      (isArray(value) || typeof value == 'string' || typeof value.splice == 'function' ||
+        isBuffer(value) || isTypedArray(value) || isArguments(value))) {
+    return !value.length;
+  }
+  var tag = getTag(value);
+  if (tag == mapTag || tag == setTag) {
+    return !value.size;
+  }
+  if (isPrototype(value)) {
+    return !baseKeys(value).length;
+  }
+  for (var key in value) {
+    if (hasOwnProperty.call(value, key)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+module.exports = isEmpty;
+
 
 /***/ }),
 
@@ -27927,6 +33543,87 @@ module.exports = stubFalse;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/tap.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/tap.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * This method invokes `interceptor` and returns `value`. The interceptor
+ * is invoked with one argument; (value). The purpose of this method is to
+ * "tap into" a method chain sequence in order to modify intermediate results.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Seq
+ * @param {*} value The value to provide to `interceptor`.
+ * @param {Function} interceptor The function to invoke.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * _([1, 2, 3])
+ *  .tap(function(array) {
+ *    // Mutate input array.
+ *    array.pop();
+ *  })
+ *  .reverse()
+ *  .value();
+ * // => [2, 1]
+ */
+function tap(value, interceptor) {
+  interceptor(value);
+  return value;
+}
+
+module.exports = tap;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toPairs.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/toPairs.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var createToPairs = __webpack_require__(/*! ./_createToPairs */ "./node_modules/lodash/_createToPairs.js"),
+    keys = __webpack_require__(/*! ./keys */ "./node_modules/lodash/keys.js");
+
+/**
+ * Creates an array of own enumerable string keyed-value pairs for `object`
+ * which can be consumed by `_.fromPairs`. If `object` is a map or set, its
+ * entries are returned.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @alias entries
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the key-value pairs.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.toPairs(new Foo);
+ * // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
+ */
+var toPairs = createToPairs(keys);
+
+module.exports = toPairs;
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/toPath.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/toPath.js ***!
@@ -28049,6 +33746,139 @@ function toString(value) {
 }
 
 module.exports = toString;
+
+
+/***/ }),
+
+/***/ "./node_modules/mini-svg-data-uri/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/mini-svg-data-uri/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var shorterNames = __webpack_require__(/*! ./shorter-css-color-names */ "./node_modules/mini-svg-data-uri/shorter-css-color-names.js");
+var REGEX = {
+  whitespace: /\s+/g,
+  urlHexPairs: /%[\dA-F]{2}/g,
+  quotes: /"/g,
+}
+
+function collapseWhitespace(str) {
+  return str.trim().replace(REGEX.whitespace, ' ');
+}
+
+function dataURIPayload(string) {
+  return encodeURIComponent(string)
+    .replace(REGEX.urlHexPairs, specialHexEncode);
+}
+
+// `#` gets converted to `%23`, so quite a few CSS named colors are shorter than
+// their equivalent URL-encoded hex codes.
+function colorCodeToShorterNames(string) {
+  Object.keys(shorterNames).forEach(function(key) {
+    if (shorterNames[key].test(string)) {
+      string = string.replace(shorterNames[key], key);
+    }
+  });
+
+  return string;
+}
+
+function specialHexEncode(match) {
+  switch (match) { // Browsers tolerate these characters, and they're frequent
+    case '%20': return ' ';
+    case '%3D': return '=';
+    case '%3A': return ':';
+    case '%2F': return '/';
+    default: return match.toLowerCase(); // compresses better
+  }
+}
+
+function svgToTinyDataUri(svgString) {
+  if (typeof svgString !== 'string') {
+    throw new TypeError('Expected a string, but received ' + typeof svgString);
+  }
+  // Strip the Byte-Order Mark if the SVG has one
+  if (svgString.charCodeAt(0) === 0xfeff) { svgString = svgString.slice(1) }
+
+  var body = colorCodeToShorterNames(collapseWhitespace(svgString))
+    .replace(REGEX.quotes, "'");
+  return 'data:image/svg+xml,' + dataURIPayload(body);
+}
+
+svgToTinyDataUri.toSrcset = function toSrcset(svgString) {
+  return svgToTinyDataUri(svgString).replace(/ /g, '%20');
+}
+
+module.exports = svgToTinyDataUri;
+
+
+/***/ }),
+
+/***/ "./node_modules/mini-svg-data-uri/shorter-css-color-names.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/mini-svg-data-uri/shorter-css-color-names.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  aqua: /#00ffff(ff)?(?!\w)|#0ff(f)?(?!\w)/gi,
+  azure: /#f0ffff(ff)?(?!\w)/gi,
+  beige: /#f5f5dc(ff)?(?!\w)/gi,
+  bisque: /#ffe4c4(ff)?(?!\w)/gi,
+  black: /#000000(ff)?(?!\w)|#000(f)?(?!\w)/gi,
+  blue: /#0000ff(ff)?(?!\w)|#00f(f)?(?!\w)/gi,
+  brown: /#a52a2a(ff)?(?!\w)/gi,
+  coral: /#ff7f50(ff)?(?!\w)/gi,
+  cornsilk: /#fff8dc(ff)?(?!\w)/gi,
+  crimson: /#dc143c(ff)?(?!\w)/gi,
+  cyan: /#00ffff(ff)?(?!\w)|#0ff(f)?(?!\w)/gi,
+  darkblue: /#00008b(ff)?(?!\w)/gi,
+  darkcyan: /#008b8b(ff)?(?!\w)/gi,
+  darkgrey: /#a9a9a9(ff)?(?!\w)/gi,
+  darkred: /#8b0000(ff)?(?!\w)/gi,
+  deeppink: /#ff1493(ff)?(?!\w)/gi,
+  dimgrey: /#696969(ff)?(?!\w)/gi,
+  gold: /#ffd700(ff)?(?!\w)/gi,
+  green: /#008000(ff)?(?!\w)/gi,
+  grey: /#808080(ff)?(?!\w)/gi,
+  honeydew: /#f0fff0(ff)?(?!\w)/gi,
+  hotpink: /#ff69b4(ff)?(?!\w)/gi,
+  indigo: /#4b0082(ff)?(?!\w)/gi,
+  ivory: /#fffff0(ff)?(?!\w)/gi,
+  khaki: /#f0e68c(ff)?(?!\w)/gi,
+  lavender: /#e6e6fa(ff)?(?!\w)/gi,
+  lime: /#00ff00(ff)?(?!\w)|#0f0(f)?(?!\w)/gi,
+  linen: /#faf0e6(ff)?(?!\w)/gi,
+  maroon: /#800000(ff)?(?!\w)/gi,
+  moccasin: /#ffe4b5(ff)?(?!\w)/gi,
+  navy: /#000080(ff)?(?!\w)/gi,
+  oldlace: /#fdf5e6(ff)?(?!\w)/gi,
+  olive: /#808000(ff)?(?!\w)/gi,
+  orange: /#ffa500(ff)?(?!\w)/gi,
+  orchid: /#da70d6(ff)?(?!\w)/gi,
+  peru: /#cd853f(ff)?(?!\w)/gi,
+  pink: /#ffc0cb(ff)?(?!\w)/gi,
+  plum: /#dda0dd(ff)?(?!\w)/gi,
+  purple: /#800080(ff)?(?!\w)/gi,
+  red: /#ff0000(ff)?(?!\w)|#f00(f)?(?!\w)/gi,
+  salmon: /#fa8072(ff)?(?!\w)/gi,
+  seagreen: /#2e8b57(ff)?(?!\w)/gi,
+  seashell: /#fff5ee(ff)?(?!\w)/gi,
+  sienna: /#a0522d(ff)?(?!\w)/gi,
+  silver: /#c0c0c0(ff)?(?!\w)/gi,
+  skyblue: /#87ceeb(ff)?(?!\w)/gi,
+  snow: /#fffafa(ff)?(?!\w)/gi,
+  tan: /#d2b48c(ff)?(?!\w)/gi,
+  teal: /#008080(ff)?(?!\w)/gi,
+  thistle: /#d8bfd8(ff)?(?!\w)/gi,
+  tomato: /#ff6347(ff)?(?!\w)/gi,
+  violet: /#ee82ee(ff)?(?!\w)/gi,
+  wheat: /#f5deb3(ff)?(?!\w)/gi,
+  white: /#ffffff(ff)?(?!\w)|#fff(f)?(?!\w)/gi,
+};
 
 
 /***/ }),
@@ -34065,6 +39895,21 @@ module.exports = plugin.withOptions(function(options = {}) {
 
 /***/ }),
 
+/***/ "./node_modules/tailwindcss/defaultConfig.js":
+/*!***************************************************!*\
+  !*** ./node_modules/tailwindcss/defaultConfig.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const cloneDeep = __webpack_require__(/*! lodash/cloneDeep */ "./node_modules/lodash/cloneDeep.js")
+const defaultConfig = __webpack_require__(/*! ./stubs/defaultConfig.stub.js */ "./node_modules/tailwindcss/stubs/defaultConfig.stub.js")
+
+module.exports = cloneDeep(defaultConfig)
+
+
+/***/ }),
+
 /***/ "./node_modules/tailwindcss/defaultTheme.js":
 /*!**************************************************!*\
   !*** ./node_modules/tailwindcss/defaultTheme.js ***!
@@ -35111,6 +40956,1165 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (this && this.clearImmediate);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/traverse/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/traverse/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var traverse = module.exports = function (obj) {
+    return new Traverse(obj);
+};
+
+function Traverse (obj) {
+    this.value = obj;
+}
+
+Traverse.prototype.get = function (ps) {
+    var node = this.value;
+    for (var i = 0; i < ps.length; i ++) {
+        var key = ps[i];
+        if (!node || !hasOwnProperty.call(node, key)) {
+            node = undefined;
+            break;
+        }
+        node = node[key];
+    }
+    return node;
+};
+
+Traverse.prototype.has = function (ps) {
+    var node = this.value;
+    for (var i = 0; i < ps.length; i ++) {
+        var key = ps[i];
+        if (!node || !hasOwnProperty.call(node, key)) {
+            return false;
+        }
+        node = node[key];
+    }
+    return true;
+};
+
+Traverse.prototype.set = function (ps, value) {
+    var node = this.value;
+    for (var i = 0; i < ps.length - 1; i ++) {
+        var key = ps[i];
+        if (!hasOwnProperty.call(node, key)) node[key] = {};
+        node = node[key];
+    }
+    node[ps[i]] = value;
+    return value;
+};
+
+Traverse.prototype.map = function (cb) {
+    return walk(this.value, cb, true);
+};
+
+Traverse.prototype.forEach = function (cb) {
+    this.value = walk(this.value, cb, false);
+    return this.value;
+};
+
+Traverse.prototype.reduce = function (cb, init) {
+    var skip = arguments.length === 1;
+    var acc = skip ? this.value : init;
+    this.forEach(function (x) {
+        if (!this.isRoot || !skip) {
+            acc = cb.call(this, acc, x);
+        }
+    });
+    return acc;
+};
+
+Traverse.prototype.paths = function () {
+    var acc = [];
+    this.forEach(function (x) {
+        acc.push(this.path); 
+    });
+    return acc;
+};
+
+Traverse.prototype.nodes = function () {
+    var acc = [];
+    this.forEach(function (x) {
+        acc.push(this.node);
+    });
+    return acc;
+};
+
+Traverse.prototype.clone = function () {
+    var parents = [], nodes = [];
+    
+    return (function clone (src) {
+        for (var i = 0; i < parents.length; i++) {
+            if (parents[i] === src) {
+                return nodes[i];
+            }
+        }
+        
+        if (typeof src === 'object' && src !== null) {
+            var dst = copy(src);
+            
+            parents.push(src);
+            nodes.push(dst);
+            
+            forEach(objectKeys(src), function (key) {
+                dst[key] = clone(src[key]);
+            });
+            
+            parents.pop();
+            nodes.pop();
+            return dst;
+        }
+        else {
+            return src;
+        }
+    })(this.value);
+};
+
+function walk (root, cb, immutable) {
+    var path = [];
+    var parents = [];
+    var alive = true;
+    
+    return (function walker (node_) {
+        var node = immutable ? copy(node_) : node_;
+        var modifiers = {};
+        
+        var keepGoing = true;
+        
+        var state = {
+            node : node,
+            node_ : node_,
+            path : [].concat(path),
+            parent : parents[parents.length - 1],
+            parents : parents,
+            key : path.slice(-1)[0],
+            isRoot : path.length === 0,
+            level : path.length,
+            circular : null,
+            update : function (x, stopHere) {
+                if (!state.isRoot) {
+                    state.parent.node[state.key] = x;
+                }
+                state.node = x;
+                if (stopHere) keepGoing = false;
+            },
+            'delete' : function (stopHere) {
+                delete state.parent.node[state.key];
+                if (stopHere) keepGoing = false;
+            },
+            remove : function (stopHere) {
+                if (isArray(state.parent.node)) {
+                    state.parent.node.splice(state.key, 1);
+                }
+                else {
+                    delete state.parent.node[state.key];
+                }
+                if (stopHere) keepGoing = false;
+            },
+            keys : null,
+            before : function (f) { modifiers.before = f },
+            after : function (f) { modifiers.after = f },
+            pre : function (f) { modifiers.pre = f },
+            post : function (f) { modifiers.post = f },
+            stop : function () { alive = false },
+            block : function () { keepGoing = false }
+        };
+        
+        if (!alive) return state;
+        
+        function updateState() {
+            if (typeof state.node === 'object' && state.node !== null) {
+                if (!state.keys || state.node_ !== state.node) {
+                    state.keys = objectKeys(state.node)
+                }
+                
+                state.isLeaf = state.keys.length == 0;
+                
+                for (var i = 0; i < parents.length; i++) {
+                    if (parents[i].node_ === node_) {
+                        state.circular = parents[i];
+                        break;
+                    }
+                }
+            }
+            else {
+                state.isLeaf = true;
+                state.keys = null;
+            }
+            
+            state.notLeaf = !state.isLeaf;
+            state.notRoot = !state.isRoot;
+        }
+        
+        updateState();
+        
+        // use return values to update if defined
+        var ret = cb.call(state, state.node);
+        if (ret !== undefined && state.update) state.update(ret);
+        
+        if (modifiers.before) modifiers.before.call(state, state.node);
+        
+        if (!keepGoing) return state;
+        
+        if (typeof state.node == 'object'
+        && state.node !== null && !state.circular) {
+            parents.push(state);
+            
+            updateState();
+            
+            forEach(state.keys, function (key, i) {
+                path.push(key);
+                
+                if (modifiers.pre) modifiers.pre.call(state, state.node[key], key);
+                
+                var child = walker(state.node[key]);
+                if (immutable && hasOwnProperty.call(state.node, key)) {
+                    state.node[key] = child.node;
+                }
+                
+                child.isLast = i == state.keys.length - 1;
+                child.isFirst = i == 0;
+                
+                if (modifiers.post) modifiers.post.call(state, child);
+                
+                path.pop();
+            });
+            parents.pop();
+        }
+        
+        if (modifiers.after) modifiers.after.call(state, state.node);
+        
+        return state;
+    })(root).node;
+}
+
+function copy (src) {
+    if (typeof src === 'object' && src !== null) {
+        var dst;
+        
+        if (isArray(src)) {
+            dst = [];
+        }
+        else if (isDate(src)) {
+            dst = new Date(src.getTime ? src.getTime() : src);
+        }
+        else if (isRegExp(src)) {
+            dst = new RegExp(src);
+        }
+        else if (isError(src)) {
+            dst = { message: src.message };
+        }
+        else if (isBoolean(src)) {
+            dst = new Boolean(src);
+        }
+        else if (isNumber(src)) {
+            dst = new Number(src);
+        }
+        else if (isString(src)) {
+            dst = new String(src);
+        }
+        else if (Object.create && Object.getPrototypeOf) {
+            dst = Object.create(Object.getPrototypeOf(src));
+        }
+        else if (src.constructor === Object) {
+            dst = {};
+        }
+        else {
+            var proto =
+                (src.constructor && src.constructor.prototype)
+                || src.__proto__
+                || {}
+            ;
+            var T = function () {};
+            T.prototype = proto;
+            dst = new T;
+        }
+        
+        forEach(objectKeys(src), function (key) {
+            dst[key] = src[key];
+        });
+        return dst;
+    }
+    else return src;
+}
+
+var objectKeys = Object.keys || function keys (obj) {
+    var res = [];
+    for (var key in obj) res.push(key)
+    return res;
+};
+
+function toS (obj) { return Object.prototype.toString.call(obj) }
+function isDate (obj) { return toS(obj) === '[object Date]' }
+function isRegExp (obj) { return toS(obj) === '[object RegExp]' }
+function isError (obj) { return toS(obj) === '[object Error]' }
+function isBoolean (obj) { return toS(obj) === '[object Boolean]' }
+function isNumber (obj) { return toS(obj) === '[object Number]' }
+function isString (obj) { return toS(obj) === '[object String]' }
+
+var isArray = Array.isArray || function isArray (xs) {
+    return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+var forEach = function (xs, fn) {
+    if (xs.forEach) return xs.forEach(fn)
+    else for (var i = 0; i < xs.length; i++) {
+        fn(xs[i], i, xs);
+    }
+};
+
+forEach(objectKeys(Traverse.prototype), function (key) {
+    traverse[key] = function (obj) {
+        var args = [].slice.call(arguments, 1);
+        var t = new Traverse(obj);
+        return t[key].apply(t, args);
+    };
+});
+
+var hasOwnProperty = Object.hasOwnProperty || function (obj, key) {
+    return key in obj;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/uniq/uniq.js":
+/*!***********************************!*\
+  !*** ./node_modules/uniq/uniq.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function unique_pred(list, compare) {
+  var ptr = 1
+    , len = list.length
+    , a=list[0], b=list[0]
+  for(var i=1; i<len; ++i) {
+    b = a
+    a = list[i]
+    if(compare(a, b)) {
+      if(i === ptr) {
+        ptr++
+        continue
+      }
+      list[ptr++] = a
+    }
+  }
+  list.length = ptr
+  return list
+}
+
+function unique_eq(list) {
+  var ptr = 1
+    , len = list.length
+    , a=list[0], b = list[0]
+  for(var i=1; i<len; ++i, b=a) {
+    b = a
+    a = list[i]
+    if(a !== b) {
+      if(i === ptr) {
+        ptr++
+        continue
+      }
+      list[ptr++] = a
+    }
+  }
+  list.length = ptr
+  return list
+}
+
+function unique(list, compare, sorted) {
+  if(list.length === 0) {
+    return list
+  }
+  if(compare) {
+    if(!sorted) {
+      list.sort(compare)
+    }
+    return unique_pred(list, compare)
+  }
+  if(!sorted) {
+    list.sort()
+  }
+  return unique_eq(list)
+}
+
+module.exports = unique
+
+
+/***/ }),
+
+/***/ "./node_modules/util/node_modules/inherits/inherits_browser.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/util/node_modules/inherits/inherits_browser.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    var TempCtor = function () {}
+    TempCtor.prototype = superCtor.prototype
+    ctor.prototype = new TempCtor()
+    ctor.prototype.constructor = ctor
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/util/support/isBufferBrowser.js":
+/*!******************************************************!*\
+  !*** ./node_modules/util/support/isBufferBrowser.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function isBuffer(arg) {
+  return arg && typeof arg === 'object'
+    && typeof arg.copy === 'function'
+    && typeof arg.fill === 'function'
+    && typeof arg.readUInt8 === 'function';
+}
+
+/***/ }),
+
+/***/ "./node_modules/util/util.js":
+/*!***********************************!*\
+  !*** ./node_modules/util/util.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
+  function getOwnPropertyDescriptors(obj) {
+    var keys = Object.keys(obj);
+    var descriptors = {};
+    for (var i = 0; i < keys.length; i++) {
+      descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
+    }
+    return descriptors;
+  };
+
+var formatRegExp = /%[sdj%]/g;
+exports.format = function(f) {
+  if (!isString(f)) {
+    var objects = [];
+    for (var i = 0; i < arguments.length; i++) {
+      objects.push(inspect(arguments[i]));
+    }
+    return objects.join(' ');
+  }
+
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  var str = String(f).replace(formatRegExp, function(x) {
+    if (x === '%%') return '%';
+    if (i >= len) return x;
+    switch (x) {
+      case '%s': return String(args[i++]);
+      case '%d': return Number(args[i++]);
+      case '%j':
+        try {
+          return JSON.stringify(args[i++]);
+        } catch (_) {
+          return '[Circular]';
+        }
+      default:
+        return x;
+    }
+  });
+  for (var x = args[i]; i < len; x = args[++i]) {
+    if (isNull(x) || !isObject(x)) {
+      str += ' ' + x;
+    } else {
+      str += ' ' + inspect(x);
+    }
+  }
+  return str;
+};
+
+
+// Mark that a method should not be used.
+// Returns a modified function which warns once by default.
+// If --no-deprecation is set, then it is a no-op.
+exports.deprecate = function(fn, msg) {
+  if (typeof process !== 'undefined' && process.noDeprecation === true) {
+    return fn;
+  }
+
+  // Allow for deprecating things in the process of starting up.
+  if (typeof process === 'undefined') {
+    return function() {
+      return exports.deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  var warned = false;
+  function deprecated() {
+    if (!warned) {
+      if (process.throwDeprecation) {
+        throw new Error(msg);
+      } else if (process.traceDeprecation) {
+        console.trace(msg);
+      } else {
+        console.error(msg);
+      }
+      warned = true;
+    }
+    return fn.apply(this, arguments);
+  }
+
+  return deprecated;
+};
+
+
+var debugs = {};
+var debugEnviron;
+exports.debuglog = function(set) {
+  if (isUndefined(debugEnviron))
+    debugEnviron = process.env.NODE_DEBUG || '';
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+      var pid = process.pid;
+      debugs[set] = function() {
+        var msg = exports.format.apply(exports, arguments);
+        console.error('%s %d: %s', set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+};
+
+
+/**
+ * Echos the value of a value. Trys to print the value out
+ * in the best way possible given the different types.
+ *
+ * @param {Object} obj The object to print out.
+ * @param {Object} opts Optional options object that alters the output.
+ */
+/* legacy: obj, showHidden, depth, colors*/
+function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments.length >= 3) ctx.depth = arguments[2];
+  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (isBoolean(opts)) {
+    // legacy...
+    ctx.showHidden = opts;
+  } else if (opts) {
+    // got an "options" object
+    exports._extend(ctx, opts);
+  }
+  // set default options
+  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+  if (isUndefined(ctx.depth)) ctx.depth = 2;
+  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  return formatValue(ctx, obj, ctx.depth);
+}
+exports.inspect = inspect;
+
+
+// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+inspect.colors = {
+  'bold' : [1, 22],
+  'italic' : [3, 23],
+  'underline' : [4, 24],
+  'inverse' : [7, 27],
+  'white' : [37, 39],
+  'grey' : [90, 39],
+  'black' : [30, 39],
+  'blue' : [34, 39],
+  'cyan' : [36, 39],
+  'green' : [32, 39],
+  'magenta' : [35, 39],
+  'red' : [31, 39],
+  'yellow' : [33, 39]
+};
+
+// Don't use 'blue' not visible on cmd.exe
+inspect.styles = {
+  'special': 'cyan',
+  'number': 'yellow',
+  'boolean': 'yellow',
+  'undefined': 'grey',
+  'null': 'bold',
+  'string': 'green',
+  'date': 'magenta',
+  // "name": intentionally not styling
+  'regexp': 'red'
+};
+
+
+function stylizeWithColor(str, styleType) {
+  var style = inspect.styles[styleType];
+
+  if (style) {
+    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.colors[style][1] + 'm';
+  } else {
+    return str;
+  }
+}
+
+
+function stylizeNoColor(str, styleType) {
+  return str;
+}
+
+
+function arrayToHash(array) {
+  var hash = {};
+
+  array.forEach(function(val, idx) {
+    hash[val] = true;
+  });
+
+  return hash;
+}
+
+
+function formatValue(ctx, value, recurseTimes) {
+  // Provide a hook for user-specified inspect functions.
+  // Check that value is an object with an inspect function on it
+  if (ctx.customInspect &&
+      value &&
+      isFunction(value.inspect) &&
+      // Filter out the util module, it's inspect function is special
+      value.inspect !== exports.inspect &&
+      // Also filter out any prototype objects using the circular check.
+      !(value.constructor && value.constructor.prototype === value)) {
+    var ret = value.inspect(recurseTimes, ctx);
+    if (!isString(ret)) {
+      ret = formatValue(ctx, ret, recurseTimes);
+    }
+    return ret;
+  }
+
+  // Primitive types cannot have properties
+  var primitive = formatPrimitive(ctx, value);
+  if (primitive) {
+    return primitive;
+  }
+
+  // Look up the keys of the object.
+  var keys = Object.keys(value);
+  var visibleKeys = arrayToHash(keys);
+
+  if (ctx.showHidden) {
+    keys = Object.getOwnPropertyNames(value);
+  }
+
+  // IE doesn't make error fields non-enumerable
+  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  if (isError(value)
+      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+    return formatError(value);
+  }
+
+  // Some type of object without properties can be shortcutted.
+  if (keys.length === 0) {
+    if (isFunction(value)) {
+      var name = value.name ? ': ' + value.name : '';
+      return ctx.stylize('[Function' + name + ']', 'special');
+    }
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    }
+    if (isDate(value)) {
+      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+    }
+    if (isError(value)) {
+      return formatError(value);
+    }
+  }
+
+  var base = '', array = false, braces = ['{', '}'];
+
+  // Make Array say that they are Array
+  if (isArray(value)) {
+    array = true;
+    braces = ['[', ']'];
+  }
+
+  // Make functions say that they are functions
+  if (isFunction(value)) {
+    var n = value.name ? ': ' + value.name : '';
+    base = ' [Function' + n + ']';
+  }
+
+  // Make RegExps say that they are RegExps
+  if (isRegExp(value)) {
+    base = ' ' + RegExp.prototype.toString.call(value);
+  }
+
+  // Make dates with properties first say the date
+  if (isDate(value)) {
+    base = ' ' + Date.prototype.toUTCString.call(value);
+  }
+
+  // Make error with message first say the error
+  if (isError(value)) {
+    base = ' ' + formatError(value);
+  }
+
+  if (keys.length === 0 && (!array || value.length == 0)) {
+    return braces[0] + base + braces[1];
+  }
+
+  if (recurseTimes < 0) {
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    } else {
+      return ctx.stylize('[Object]', 'special');
+    }
+  }
+
+  ctx.seen.push(value);
+
+  var output;
+  if (array) {
+    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+  } else {
+    output = keys.map(function(key) {
+      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    });
+  }
+
+  ctx.seen.pop();
+
+  return reduceToSingleString(output, base, braces);
+}
+
+
+function formatPrimitive(ctx, value) {
+  if (isUndefined(value))
+    return ctx.stylize('undefined', 'undefined');
+  if (isString(value)) {
+    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+                                             .replace(/'/g, "\\'")
+                                             .replace(/\\"/g, '"') + '\'';
+    return ctx.stylize(simple, 'string');
+  }
+  if (isNumber(value))
+    return ctx.stylize('' + value, 'number');
+  if (isBoolean(value))
+    return ctx.stylize('' + value, 'boolean');
+  // For some reason typeof null is "object", so special case here.
+  if (isNull(value))
+    return ctx.stylize('null', 'null');
+}
+
+
+function formatError(value) {
+  return '[' + Error.prototype.toString.call(value) + ']';
+}
+
+
+function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+  var output = [];
+  for (var i = 0, l = value.length; i < l; ++i) {
+    if (hasOwnProperty(value, String(i))) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          String(i), true));
+    } else {
+      output.push('');
+    }
+  }
+  keys.forEach(function(key) {
+    if (!key.match(/^\d+$/)) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          key, true));
+    }
+  });
+  return output;
+}
+
+
+function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+  var name, str, desc;
+  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+  if (desc.get) {
+    if (desc.set) {
+      str = ctx.stylize('[Getter/Setter]', 'special');
+    } else {
+      str = ctx.stylize('[Getter]', 'special');
+    }
+  } else {
+    if (desc.set) {
+      str = ctx.stylize('[Setter]', 'special');
+    }
+  }
+  if (!hasOwnProperty(visibleKeys, key)) {
+    name = '[' + key + ']';
+  }
+  if (!str) {
+    if (ctx.seen.indexOf(desc.value) < 0) {
+      if (isNull(recurseTimes)) {
+        str = formatValue(ctx, desc.value, null);
+      } else {
+        str = formatValue(ctx, desc.value, recurseTimes - 1);
+      }
+      if (str.indexOf('\n') > -1) {
+        if (array) {
+          str = str.split('\n').map(function(line) {
+            return '  ' + line;
+          }).join('\n').substr(2);
+        } else {
+          str = '\n' + str.split('\n').map(function(line) {
+            return '   ' + line;
+          }).join('\n');
+        }
+      }
+    } else {
+      str = ctx.stylize('[Circular]', 'special');
+    }
+  }
+  if (isUndefined(name)) {
+    if (array && key.match(/^\d+$/)) {
+      return str;
+    }
+    name = JSON.stringify('' + key);
+    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+      name = name.substr(1, name.length - 2);
+      name = ctx.stylize(name, 'name');
+    } else {
+      name = name.replace(/'/g, "\\'")
+                 .replace(/\\"/g, '"')
+                 .replace(/(^"|"$)/g, "'");
+      name = ctx.stylize(name, 'string');
+    }
+  }
+
+  return name + ': ' + str;
+}
+
+
+function reduceToSingleString(output, base, braces) {
+  var numLinesEst = 0;
+  var length = output.reduce(function(prev, cur) {
+    numLinesEst++;
+    if (cur.indexOf('\n') >= 0) numLinesEst++;
+    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+  }, 0);
+
+  if (length > 60) {
+    return braces[0] +
+           (base === '' ? '' : base + '\n ') +
+           ' ' +
+           output.join(',\n  ') +
+           ' ' +
+           braces[1];
+  }
+
+  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+}
+
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+function isArray(ar) {
+  return Array.isArray(ar);
+}
+exports.isArray = isArray;
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+exports.isBoolean = isBoolean;
+
+function isNull(arg) {
+  return arg === null;
+}
+exports.isNull = isNull;
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+exports.isNumber = isNumber;
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+exports.isString = isString;
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+exports.isSymbol = isSymbol;
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+exports.isUndefined = isUndefined;
+
+function isRegExp(re) {
+  return isObject(re) && objectToString(re) === '[object RegExp]';
+}
+exports.isRegExp = isRegExp;
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+exports.isObject = isObject;
+
+function isDate(d) {
+  return isObject(d) && objectToString(d) === '[object Date]';
+}
+exports.isDate = isDate;
+
+function isError(e) {
+  return isObject(e) &&
+      (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+exports.isError = isError;
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+exports.isFunction = isFunction;
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+exports.isPrimitive = isPrimitive;
+
+exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ "./node_modules/util/support/isBufferBrowser.js");
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+
+function pad(n) {
+  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+}
+
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+              'Oct', 'Nov', 'Dec'];
+
+// 26 Feb 16:19:34
+function timestamp() {
+  var d = new Date();
+  var time = [pad(d.getHours()),
+              pad(d.getMinutes()),
+              pad(d.getSeconds())].join(':');
+  return [d.getDate(), months[d.getMonth()], time].join(' ');
+}
+
+
+// log is just a thin wrapper to console.log that prepends a timestamp
+exports.log = function() {
+  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+};
+
+
+/**
+ * Inherit the prototype methods from one constructor into another.
+ *
+ * The Function.prototype.inherits from lang.js rewritten as a standalone
+ * function (not on Function.prototype). NOTE: If this file is to be loaded
+ * during bootstrapping this function needs to be rewritten using some native
+ * functions as prototype setup using normal JavaScript does not work as
+ * expected during bootstrapping (see mirror.js in r114903).
+ *
+ * @param {function} ctor Constructor function which needs to inherit the
+ *     prototype.
+ * @param {function} superCtor Constructor function to inherit prototype from.
+ */
+exports.inherits = __webpack_require__(/*! inherits */ "./node_modules/util/node_modules/inherits/inherits_browser.js");
+
+exports._extend = function(origin, add) {
+  // Don't do anything if add isn't an object
+  if (!add || !isObject(add)) return origin;
+
+  var keys = Object.keys(add);
+  var i = keys.length;
+  while (i--) {
+    origin[keys[i]] = add[keys[i]];
+  }
+  return origin;
+};
+
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
+
+exports.promisify = function promisify(original) {
+  if (typeof original !== 'function')
+    throw new TypeError('The "original" argument must be of type Function');
+
+  if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
+    var fn = original[kCustomPromisifiedSymbol];
+    if (typeof fn !== 'function') {
+      throw new TypeError('The "util.promisify.custom" argument must be of type Function');
+    }
+    Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+      value: fn, enumerable: false, writable: false, configurable: true
+    });
+    return fn;
+  }
+
+  function fn() {
+    var promiseResolve, promiseReject;
+    var promise = new Promise(function (resolve, reject) {
+      promiseResolve = resolve;
+      promiseReject = reject;
+    });
+
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+    args.push(function (err, value) {
+      if (err) {
+        promiseReject(err);
+      } else {
+        promiseResolve(value);
+      }
+    });
+
+    try {
+      original.apply(this, args);
+    } catch (err) {
+      promiseReject(err);
+    }
+
+    return promise;
+  }
+
+  Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
+
+  if (kCustomPromisifiedSymbol) Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+    value: fn, enumerable: false, writable: false, configurable: true
+  });
+  return Object.defineProperties(
+    fn,
+    getOwnPropertyDescriptors(original)
+  );
+}
+
+exports.promisify.custom = kCustomPromisifiedSymbol
+
+function callbackifyOnRejected(reason, cb) {
+  // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
+  // Because `null` is a special error value in callbacks which means "no error
+  // occurred", we error-wrap so the callback consumer can distinguish between
+  // "the promise rejected with null" or "the promise fulfilled with undefined".
+  if (!reason) {
+    var newReason = new Error('Promise was rejected with a falsy value');
+    newReason.reason = reason;
+    reason = newReason;
+  }
+  return cb(reason);
+}
+
+function callbackify(original) {
+  if (typeof original !== 'function') {
+    throw new TypeError('The "original" argument must be of type Function');
+  }
+
+  // We DO NOT return the promise as it gives the user a false sense that
+  // the promise is actually somehow related to the callback's execution
+  // and that the callback throwing will reject the promise.
+  function callbackified() {
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      args.push(arguments[i]);
+    }
+
+    var maybeCb = args.pop();
+    if (typeof maybeCb !== 'function') {
+      throw new TypeError('The last argument must be of type Function');
+    }
+    var self = this;
+    var cb = function() {
+      return maybeCb.apply(self, arguments);
+    };
+    // In true node style we process the callback on `nextTick` with all the
+    // implications (stack, `uncaughtException`, `async_hooks`)
+    original.apply(this, args)
+      .then(function(ret) { process.nextTick(cb, null, ret) },
+            function(rej) { process.nextTick(callbackifyOnRejected, rej, cb) });
+  }
+
+  Object.setPrototypeOf(callbackified, Object.getPrototypeOf(original));
+  Object.defineProperties(callbackified,
+                          getOwnPropertyDescriptors(original));
+  return callbackified;
+}
+exports.callbackify = callbackify;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -45708,6 +52712,381 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/assets/js/ziggy.js":
+/*!**************************************!*\
+  !*** ./resources/assets/js/ziggy.js ***!
+  \**************************************/
+/*! exports provided: Ziggy */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ziggy", function() { return Ziggy; });
+var Ziggy = {
+  namedRoutes: {
+    "debugbar.openhandler": {
+      "uri": "_debugbar\/open",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "debugbar.clockwork": {
+      "uri": "_debugbar\/clockwork\/{id}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "debugbar.telescope": {
+      "uri": "_debugbar\/telescope\/{id}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "debugbar.assets.css": {
+      "uri": "_debugbar\/assets\/stylesheets",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "debugbar.assets.js": {
+      "uri": "_debugbar\/assets\/javascript",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "debugbar.cache.delete": {
+      "uri": "_debugbar\/cache\/{key}\/{tags?}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "telescope": {
+      "uri": "telescope\/{view?}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.autocomplete": {
+      "uri": "api\/campaigns\/{user}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.autocomplete": {
+      "uri": "api\/characters",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "factions.autocomplete": {
+      "uri": "api\/factions",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "locations.autocomplete": {
+      "uri": "api\/locations",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "tasks.autocomplete": {
+      "uri": "api\/tasks",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "login": {
+      "uri": "login",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "logout": {
+      "uri": "logout",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "register": {
+      "uri": "register",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "password.request": {
+      "uri": "password\/reset",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "password.email": {
+      "uri": "password\/email",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "password.reset": {
+      "uri": "password\/reset\/{token}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "password.update": {
+      "uri": "password\/reset",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "password.confirm": {
+      "uri": "password\/confirm",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "dashboard": {
+      "uri": "\/",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "page.welcome": {
+      "uri": "welcome",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "page.about": {
+      "uri": "about",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "page.contact": {
+      "uri": "contact",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.initial": {
+      "uri": "campaigns\/initial",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.index": {
+      "uri": "campaigns",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.create": {
+      "uri": "campaigns\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.store": {
+      "uri": "campaigns",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "campaigns.show": {
+      "uri": "campaigns\/{campaign}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.edit": {
+      "uri": "campaigns\/{campaign}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "campaigns.update": {
+      "uri": "campaigns\/{campaign}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "campaigns.destroy": {
+      "uri": "campaigns\/{campaign}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "characters.in_campaign": {
+      "uri": "campaign\/{campaign}\/characters",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.index": {
+      "uri": "characters",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.create": {
+      "uri": "characters\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.store": {
+      "uri": "characters",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "characters.show": {
+      "uri": "characters\/{character}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.edit": {
+      "uri": "characters\/{character}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "characters.update": {
+      "uri": "characters\/{character}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "characters.destroy": {
+      "uri": "characters\/{character}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "npcs.in_campaign": {
+      "uri": "campaign\/{campaign}\/npcs",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "npcs.index": {
+      "uri": "npcs",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "npcs.create": {
+      "uri": "npcs\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "npcs.store": {
+      "uri": "npcs",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "npcs.show": {
+      "uri": "npcs\/{npc}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "npcs.edit": {
+      "uri": "npcs\/{npc}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "npcs.update": {
+      "uri": "npcs\/{npc}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "npcs.destroy": {
+      "uri": "npcs\/{npc}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "factions.index": {
+      "uri": "factions",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "factions.create": {
+      "uri": "factions\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "factions.store": {
+      "uri": "factions",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "factions.show": {
+      "uri": "factions\/{faction}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "factions.edit": {
+      "uri": "factions\/{faction}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "factions.update": {
+      "uri": "factions\/{faction}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "factions.destroy": {
+      "uri": "factions\/{faction}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "locations.index": {
+      "uri": "locations",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "locations.create": {
+      "uri": "locations\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "locations.store": {
+      "uri": "locations",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "locations.show": {
+      "uri": "locations\/{location}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "locations.edit": {
+      "uri": "locations\/{location}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "locations.update": {
+      "uri": "locations\/{location}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "locations.destroy": {
+      "uri": "locations\/{location}",
+      "methods": ["DELETE"],
+      "domain": null
+    },
+    "tasks.index": {
+      "uri": "tasks",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "tasks.create": {
+      "uri": "tasks\/create",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "tasks.store": {
+      "uri": "tasks",
+      "methods": ["POST"],
+      "domain": null
+    },
+    "tasks.show": {
+      "uri": "tasks\/{task}",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "tasks.edit": {
+      "uri": "tasks\/{task}\/edit",
+      "methods": ["GET", "HEAD"],
+      "domain": null
+    },
+    "tasks.update": {
+      "uri": "tasks\/{task}",
+      "methods": ["PUT", "PATCH"],
+      "domain": null
+    },
+    "tasks.destroy": {
+      "uri": "tasks\/{task}",
+      "methods": ["DELETE"],
+      "domain": null
+    }
+  },
+  baseUrl: 'https://campaigner.test/',
+  baseProtocol: 'https',
+  baseDomain: 'campaigner.test',
+  basePort: false,
+  defaultParameters: []
+};
+
+if (typeof window.Ziggy !== 'undefined') {
+  for (var name in window.Ziggy.namedRoutes) {
+    Ziggy.namedRoutes[name] = window.Ziggy.namedRoutes[name];
+  }
+}
+
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -45731,23 +53110,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
 /* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue */ "./node_modules/@inertiajs/inertia-vue/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
+/* harmony import */ var _helpers_Ziggy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/Ziggy */ "./resources/js/helpers/Ziggy.js");
 /* harmony import */ var _helpers_Tailwind__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/Tailwind */ "./resources/js/helpers/Tailwind.js");
+/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
 // require('./bootstrap');
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.productionTip = false;
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.devtools = true;
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].mixin({
-  methods: {
-    route: window.route
-  }
-});
 
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_meta__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Ziggy__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Tailwind__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_meta__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
   metaInfo: {
@@ -45795,6 +53172,35 @@ var tailwindVue = {
 
 /***/ }),
 
+/***/ "./resources/js/helpers/Ziggy.js":
+/*!***************************************!*\
+  !*** ./resources/js/helpers/Ziggy.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ziggy */ "./vendor/tightenco/ziggy/dist/js/route.js");
+/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ziggy__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_js_ziggy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/js/ziggy */ "./resources/assets/js/ziggy.js");
+
+
+var tailwindVue = {
+  install: function install(Vue) {
+    Vue.mixin({
+      methods: {
+        route: function route(name, params, absolute) {
+          return ziggy__WEBPACK_IMPORTED_MODULE_0___default()(name, params, absolute, _assets_js_ziggy__WEBPACK_IMPORTED_MODULE_1__["Ziggy"]);
+        }
+      }
+    });
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (tailwindVue);
+
+/***/ }),
+
 /***/ "./resources/views/pages lazy recursive ^\\.\\/.*$":
 /*!**************************************************************!*\
   !*** ./resources/views/pages lazy ^\.\/.*$ namespace object ***!
@@ -45806,454 +53212,402 @@ var map = {
 	"./About": [
 		"./resources/views/pages/About.vue",
 		0,
-		2,
-		1,
-		24
+		22,
+		50
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
 		0,
-		2,
-		1,
-		24
+		22,
+		50
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
-		8
+		12
 	],
 	"./Auth/Login.vue": [
 		"./resources/views/pages/Auth/Login.vue",
-		8
+		12
 	],
 	"./Auth/Passwords/Email": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
 		0,
-		2,
-		1,
-		17
+		22,
+		43
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
 		0,
-		2,
-		1,
-		17
+		22,
+		43
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		0,
-		2,
-		1,
-		18
+		22,
+		44
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		0,
-		2,
-		1,
-		18
+		22,
+		44
 	],
 	"./Auth/Register": [
 		"./resources/views/pages/Auth/Register.vue",
-		15
+		16
 	],
 	"./Auth/Register.vue": [
 		"./resources/views/pages/Auth/Register.vue",
-		15
+		16
 	],
 	"./Auth/Verify": [
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
-		2,
-		1,
-		25
+		22,
+		51
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
-		2,
-		1,
-		25
+		22,
+		51
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		19
+		22,
+		17,
+		45
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		19
+		22,
+		17,
+		45
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		26
+		22,
+		25,
+		52
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		26
+		22,
+		25,
+		52
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		14
+		22,
+		17,
+		41
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		14
+		22,
+		17,
+		41
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
 		0,
-		3,
-		4,
-		16
+		2,
+		17,
+		42
 	],
 	"./Campaign/Initial.vue": [
 		"./resources/views/pages/Campaign/Initial.vue",
 		0,
-		3,
-		4,
-		16
+		2,
+		17,
+		42
 	],
 	"./Campaign/Read": [
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
-		2,
-		1,
-		9
+		22,
+		35
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
-		2,
-		1,
-		9
+		22,
+		35
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		20
+		22,
+		17,
+		46
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		20
+		22,
+		17,
+		46
 	],
 	"./Character/Browse": [
 		"./resources/views/pages/Character/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		27
+		22,
+		25,
+		53
 	],
 	"./Character/Browse.vue": [
 		"./resources/views/pages/Character/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		27
+		22,
+		25,
+		53
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		6
+		22,
+		17,
+		34
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		6
+		22,
+		17,
+		34
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
 		0,
-		2,
-		1,
-		10
+		22,
+		36
 	],
 	"./Character/Read.vue": [
 		"./resources/views/pages/Character/Read.vue",
 		0,
-		2,
-		1,
-		10
+		22,
+		36
 	],
 	"./Contact": [
 		"./resources/views/pages/Contact.vue",
 		0,
-		2,
-		1,
-		28
+		22,
+		54
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
 		0,
-		2,
-		1,
-		28
+		22,
+		54
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		29
+		22,
+		17,
+		55
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		29
+		22,
+		17,
+		55
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		30
+		22,
+		25,
+		56
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		30
+		22,
+		25,
+		56
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		21
+		22,
+		17,
+		47
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		21
+		22,
+		17,
+		47
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
 		0,
-		2,
-		1,
-		11
+		22,
+		37
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
 		0,
-		2,
-		1,
-		11
+		22,
+		37
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
 		0,
-		2,
-		1,
-		31
+		22,
+		38
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
 		0,
-		2,
-		1,
-		31
+		22,
+		38
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		32
+		22,
+		17,
+		57
 	],
 	"./Location/Add.vue": [
 		"./resources/views/pages/Location/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		32
+		22,
+		17,
+		57
 	],
 	"./Location/Browse": [
 		"./resources/views/pages/Location/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		33
+		22,
+		25,
+		58
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		33
+		22,
+		25,
+		58
 	],
 	"./Location/Edit": [
 		"./resources/views/pages/Location/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		22
+		22,
+		17,
+		48
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		22
+		22,
+		17,
+		48
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
-		2,
-		1,
-		12
+		22,
+		39
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
-		2,
-		1,
-		12
+		22,
+		39
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		34
+		22,
+		17,
+		59
 	],
 	"./Task/Add.vue": [
 		"./resources/views/pages/Task/Add.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		34
+		22,
+		17,
+		59
 	],
 	"./Task/Browse": [
 		"./resources/views/pages/Task/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		35
+		22,
+		25,
+		60
 	],
 	"./Task/Browse.vue": [
 		"./resources/views/pages/Task/Browse.vue",
 		0,
-		2,
-		1,
-		5,
-		35
+		22,
+		25,
+		60
 	],
 	"./Task/Edit": [
 		"./resources/views/pages/Task/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		23
+		22,
+		17,
+		49
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
 		0,
 		2,
-		3,
-		1,
-		4,
-		23
+		22,
+		17,
+		49
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
-		2,
-		1,
-		13
+		22,
+		40
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
-		2,
-		1,
-		13
+		22,
+		40
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",
-		7
+		11
 	],
 	"./Welcome.vue": [
 		"./resources/views/pages/Welcome.vue",
-		7
+		11
 	]
 };
 function webpackAsyncContext(req) {
@@ -46301,63 +53655,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var defaultTheme = __webpack_require__(/*! tailwindcss/defaultTheme */ "./node_modules/tailwindcss/defaultTheme.js");
 
-var baseColors = {
-  red: {
-    '100': '#FFCDD2',
-    '200': '#EF9A9A',
-    '300': '#E57373',
-    '400': '#EF5350',
-    '500': '#F44336',
-    '600': '#E53935',
-    '700': '#D32F2F',
-    '800': '#C62828',
-    '900': '#B71C1C'
-  },
-  yellow: {
-    '100': '#FFECB3',
-    '200': '#FFE082',
-    '300': '#FFD54F',
-    '400': '#FFCA28',
-    '500': '#FFC107',
-    '600': '#FFB300',
-    '700': '#FFA000',
-    '800': '#FF8F00',
-    '900': '#FF6F00'
-  },
-  purple: {
-    '100': '#D1C4E9',
-    '200': '#B39DDB',
-    '300': '#9575CD',
-    '400': '#7E57C2',
-    '500': '#673AB7',
-    '600': '#5E35B1',
-    '700': '#512DA8',
-    '800': '#4527A0',
-    '900': '#311B92'
-  },
-  grey: {
-    '100': '#F7FAFC',
-    '200': '#EDF2F7',
-    '300': '#E2E8F0',
-    '400': '#CBD5E0',
-    '500': '#A0AEC0',
-    '600': '#718096',
-    '700': '#4A5568',
-    '800': '#2D3748',
-    '900': '#1A202C'
-  },
-  indigo: {
-    '100': '#e6e8ff',
-    '200': '#C3DAFE',
-    '300': '#b2b7ff',
-    '400': '#7886d7',
-    '500': '#6574cd',
-    '600': '#5661b3',
-    '700': '#4C51BF',
-    '800': '#2f365f',
-    '900': '#191e38'
-  }
-};
 var w_h_sizes = {
   '0': '0',
   '1': '0.25rem',
@@ -46604,10 +53901,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        serif: ['Spectral'].concat(_toConsumableArray(defaultTheme.fontFamily.serif)),
-        sans: ['Karla'].concat(_toConsumableArray(defaultTheme.fontFamily.sans))
+        sans: ['Inter var'].concat(_toConsumableArray(defaultTheme.fontFamily.sans))
       },
-      colors: _objectSpread({}, baseColors),
       boxShadow: function boxShadow(theme) {
         return {
           outline: '0 0 0 2px ' + theme('colors.indigo.500')
@@ -46771,8 +54066,1558 @@ module.exports = {
     }
   }), __webpack_require__(/*! tailwindcss-typography */ "./node_modules/tailwindcss-typography/index.js")({
     componentPrefix: ''
+  }), __webpack_require__(/*! @tailwindcss/ui */ "./node_modules/@tailwindcss/ui/index.js")({
+    layout: 'sidebar'
   })]
 };
+
+/***/ }),
+
+/***/ "./vendor/tightenco/ziggy/dist/js/route.js":
+/*!*************************************************!*\
+  !*** ./vendor/tightenco/ziggy/dist/js/route.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+
+(function webpackUniversalModuleDefinition(root, factory) {
+  if (( false ? undefined : _typeof2(exports)) === 'object' && ( false ? undefined : _typeof2(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}
+})(this, function () {
+  return (
+    /******/
+    function (modules) {
+      // webpackBootstrap
+
+      /******/
+      // The module cache
+
+      /******/
+      var installedModules = {};
+      /******/
+
+      /******/
+      // The require function
+
+      /******/
+
+      function __webpack_require__(moduleId) {
+        /******/
+
+        /******/
+        // Check if module is in cache
+
+        /******/
+        if (installedModules[moduleId]) {
+          /******/
+          return installedModules[moduleId].exports;
+          /******/
+        }
+        /******/
+        // Create a new module (and put it into the cache)
+
+        /******/
+
+
+        var module = installedModules[moduleId] = {
+          /******/
+          i: moduleId,
+
+          /******/
+          l: false,
+
+          /******/
+          exports: {}
+          /******/
+
+        };
+        /******/
+
+        /******/
+        // Execute the module function
+
+        /******/
+
+        modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        /******/
+
+        /******/
+        // Flag the module as loaded
+
+        /******/
+
+        module.l = true;
+        /******/
+
+        /******/
+        // Return the exports of the module
+
+        /******/
+
+        return module.exports;
+        /******/
+      }
+      /******/
+
+      /******/
+
+      /******/
+      // expose the modules object (__webpack_modules__)
+
+      /******/
+
+
+      __webpack_require__.m = modules;
+      /******/
+
+      /******/
+      // expose the module cache
+
+      /******/
+
+      __webpack_require__.c = installedModules;
+      /******/
+
+      /******/
+      // define getter function for harmony exports
+
+      /******/
+
+      __webpack_require__.d = function (exports, name, getter) {
+        /******/
+        if (!__webpack_require__.o(exports, name)) {
+          /******/
+          Object.defineProperty(exports, name, {
+            enumerable: true,
+            get: getter
+          });
+          /******/
+        }
+        /******/
+
+      };
+      /******/
+
+      /******/
+      // define __esModule on exports
+
+      /******/
+
+
+      __webpack_require__.r = function (exports) {
+        /******/
+        if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+          /******/
+          Object.defineProperty(exports, Symbol.toStringTag, {
+            value: 'Module'
+          });
+          /******/
+        }
+        /******/
+
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true
+        });
+        /******/
+      };
+      /******/
+
+      /******/
+      // create a fake namespace object
+
+      /******/
+      // mode & 1: value is a module id, require it
+
+      /******/
+      // mode & 2: merge all properties of value into the ns
+
+      /******/
+      // mode & 4: return value when already ns object
+
+      /******/
+      // mode & 8|1: behave like require
+
+      /******/
+
+
+      __webpack_require__.t = function (value, mode) {
+        /******/
+        if (mode & 1) value = __webpack_require__(value);
+        /******/
+
+        if (mode & 8) return value;
+        /******/
+
+        if (mode & 4 && _typeof2(value) === 'object' && value && value.__esModule) return value;
+        /******/
+
+        var ns = Object.create(null);
+        /******/
+
+        __webpack_require__.r(ns);
+        /******/
+
+
+        Object.defineProperty(ns, 'default', {
+          enumerable: true,
+          value: value
+        });
+        /******/
+
+        if (mode & 2 && typeof value != 'string') for (var key in value) {
+          __webpack_require__.d(ns, key, function (key) {
+            return value[key];
+          }.bind(null, key));
+        }
+        /******/
+
+        return ns;
+        /******/
+      };
+      /******/
+
+      /******/
+      // getDefaultExport function for compatibility with non-harmony modules
+
+      /******/
+
+
+      __webpack_require__.n = function (module) {
+        /******/
+        var getter = module && module.__esModule ?
+        /******/
+        function getDefault() {
+          return module['default'];
+        } :
+        /******/
+        function getModuleExports() {
+          return module;
+        };
+        /******/
+
+        __webpack_require__.d(getter, 'a', getter);
+        /******/
+
+
+        return getter;
+        /******/
+      };
+      /******/
+
+      /******/
+      // Object.prototype.hasOwnProperty.call
+
+      /******/
+
+
+      __webpack_require__.o = function (object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property);
+      };
+      /******/
+
+      /******/
+      // __webpack_public_path__
+
+      /******/
+
+
+      __webpack_require__.p = "";
+      /******/
+
+      /******/
+
+      /******/
+      // Load entry module and return exports
+
+      /******/
+
+      return __webpack_require__(__webpack_require__.s = 5);
+      /******/
+    }(
+    /************************************************************************/
+
+    /******/
+    [
+    /* 0 */
+
+    /***/
+    function (module, exports, __webpack_require__) {
+      "use strict";
+
+      var has = Object.prototype.hasOwnProperty;
+      var isArray = Array.isArray;
+
+      var hexTable = function () {
+        var array = [];
+
+        for (var i = 0; i < 256; ++i) {
+          array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
+        }
+
+        return array;
+      }();
+
+      var compactQueue = function compactQueue(queue) {
+        while (queue.length > 1) {
+          var item = queue.pop();
+          var obj = item.obj[item.prop];
+
+          if (isArray(obj)) {
+            var compacted = [];
+
+            for (var j = 0; j < obj.length; ++j) {
+              if (typeof obj[j] !== 'undefined') {
+                compacted.push(obj[j]);
+              }
+            }
+
+            item.obj[item.prop] = compacted;
+          }
+        }
+      };
+
+      var arrayToObject = function arrayToObject(source, options) {
+        var obj = options && options.plainObjects ? Object.create(null) : {};
+
+        for (var i = 0; i < source.length; ++i) {
+          if (typeof source[i] !== 'undefined') {
+            obj[i] = source[i];
+          }
+        }
+
+        return obj;
+      };
+
+      var merge = function merge(target, source, options) {
+        if (!source) {
+          return target;
+        }
+
+        if (_typeof2(source) !== 'object') {
+          if (isArray(target)) {
+            target.push(source);
+          } else if (target && _typeof2(target) === 'object') {
+            if (options && (options.plainObjects || options.allowPrototypes) || !has.call(Object.prototype, source)) {
+              target[source] = true;
+            }
+          } else {
+            return [target, source];
+          }
+
+          return target;
+        }
+
+        if (!target || _typeof2(target) !== 'object') {
+          return [target].concat(source);
+        }
+
+        var mergeTarget = target;
+
+        if (isArray(target) && !isArray(source)) {
+          mergeTarget = arrayToObject(target, options);
+        }
+
+        if (isArray(target) && isArray(source)) {
+          source.forEach(function (item, i) {
+            if (has.call(target, i)) {
+              var targetItem = target[i];
+
+              if (targetItem && _typeof2(targetItem) === 'object' && item && _typeof2(item) === 'object') {
+                target[i] = merge(targetItem, item, options);
+              } else {
+                target.push(item);
+              }
+            } else {
+              target[i] = item;
+            }
+          });
+          return target;
+        }
+
+        return Object.keys(source).reduce(function (acc, key) {
+          var value = source[key];
+
+          if (has.call(acc, key)) {
+            acc[key] = merge(acc[key], value, options);
+          } else {
+            acc[key] = value;
+          }
+
+          return acc;
+        }, mergeTarget);
+      };
+
+      var assign = function assignSingleSource(target, source) {
+        return Object.keys(source).reduce(function (acc, key) {
+          acc[key] = source[key];
+          return acc;
+        }, target);
+      };
+
+      var decode = function decode(str, decoder, charset) {
+        var strWithoutPlus = str.replace(/\+/g, ' ');
+
+        if (charset === 'iso-8859-1') {
+          // unescape never throws, no try...catch needed:
+          return strWithoutPlus.replace(/%[0-9a-f]{2}/gi, unescape);
+        } // utf-8
+
+
+        try {
+          return decodeURIComponent(strWithoutPlus);
+        } catch (e) {
+          return strWithoutPlus;
+        }
+      };
+
+      var encode = function encode(str, defaultEncoder, charset) {
+        // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
+        // It has been adapted here for stricter adherence to RFC 3986
+        if (str.length === 0) {
+          return str;
+        }
+
+        var string = str;
+
+        if (_typeof2(str) === 'symbol') {
+          string = Symbol.prototype.toString.call(str);
+        } else if (typeof str !== 'string') {
+          string = String(str);
+        }
+
+        if (charset === 'iso-8859-1') {
+          return escape(string).replace(/%u[0-9a-f]{4}/gi, function ($0) {
+            return '%26%23' + parseInt($0.slice(2), 16) + '%3B';
+          });
+        }
+
+        var out = '';
+
+        for (var i = 0; i < string.length; ++i) {
+          var c = string.charCodeAt(i);
+
+          if (c === 0x2D // -
+          || c === 0x2E // .
+          || c === 0x5F // _
+          || c === 0x7E // ~
+          || c >= 0x30 && c <= 0x39 // 0-9
+          || c >= 0x41 && c <= 0x5A // a-z
+          || c >= 0x61 && c <= 0x7A // A-Z
+          ) {
+              out += string.charAt(i);
+              continue;
+            }
+
+          if (c < 0x80) {
+            out = out + hexTable[c];
+            continue;
+          }
+
+          if (c < 0x800) {
+            out = out + (hexTable[0xC0 | c >> 6] + hexTable[0x80 | c & 0x3F]);
+            continue;
+          }
+
+          if (c < 0xD800 || c >= 0xE000) {
+            out = out + (hexTable[0xE0 | c >> 12] + hexTable[0x80 | c >> 6 & 0x3F] + hexTable[0x80 | c & 0x3F]);
+            continue;
+          }
+
+          i += 1;
+          c = 0x10000 + ((c & 0x3FF) << 10 | string.charCodeAt(i) & 0x3FF);
+          out += hexTable[0xF0 | c >> 18] + hexTable[0x80 | c >> 12 & 0x3F] + hexTable[0x80 | c >> 6 & 0x3F] + hexTable[0x80 | c & 0x3F];
+        }
+
+        return out;
+      };
+
+      var compact = function compact(value) {
+        var queue = [{
+          obj: {
+            o: value
+          },
+          prop: 'o'
+        }];
+        var refs = [];
+
+        for (var i = 0; i < queue.length; ++i) {
+          var item = queue[i];
+          var obj = item.obj[item.prop];
+          var keys = Object.keys(obj);
+
+          for (var j = 0; j < keys.length; ++j) {
+            var key = keys[j];
+            var val = obj[key];
+
+            if (_typeof2(val) === 'object' && val !== null && refs.indexOf(val) === -1) {
+              queue.push({
+                obj: obj,
+                prop: key
+              });
+              refs.push(val);
+            }
+          }
+        }
+
+        compactQueue(queue);
+        return value;
+      };
+
+      var isRegExp = function isRegExp(obj) {
+        return Object.prototype.toString.call(obj) === '[object RegExp]';
+      };
+
+      var isBuffer = function isBuffer(obj) {
+        if (!obj || _typeof2(obj) !== 'object') {
+          return false;
+        }
+
+        return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
+      };
+
+      var combine = function combine(a, b) {
+        return [].concat(a, b);
+      };
+
+      module.exports = {
+        arrayToObject: arrayToObject,
+        assign: assign,
+        combine: combine,
+        compact: compact,
+        decode: decode,
+        encode: encode,
+        isBuffer: isBuffer,
+        isRegExp: isRegExp,
+        merge: merge
+      };
+      /***/
+    },
+    /* 1 */
+
+    /***/
+    function (module, exports, __webpack_require__) {
+      "use strict";
+
+      var replace = String.prototype.replace;
+      var percentTwenties = /%20/g;
+
+      var util = __webpack_require__(0);
+
+      var Format = {
+        RFC1738: 'RFC1738',
+        RFC3986: 'RFC3986'
+      };
+      module.exports = util.assign({
+        'default': Format.RFC3986,
+        formatters: {
+          RFC1738: function RFC1738(value) {
+            return replace.call(value, percentTwenties, '+');
+          },
+          RFC3986: function RFC3986(value) {
+            return String(value);
+          }
+        }
+      }, Format);
+      /***/
+    },
+    /* 2 */
+
+    /***/
+    function (module, exports, __webpack_require__) {
+      "use strict";
+
+      var stringify = __webpack_require__(3);
+
+      var parse = __webpack_require__(4);
+
+      var formats = __webpack_require__(1);
+
+      module.exports = {
+        formats: formats,
+        parse: parse,
+        stringify: stringify
+      };
+      /***/
+    },
+    /* 3 */
+
+    /***/
+    function (module, exports, __webpack_require__) {
+      "use strict";
+
+      var utils = __webpack_require__(0);
+
+      var formats = __webpack_require__(1);
+
+      var has = Object.prototype.hasOwnProperty;
+      var arrayPrefixGenerators = {
+        brackets: function brackets(prefix) {
+          // eslint-disable-line func-name-matching
+          return prefix + '[]';
+        },
+        comma: 'comma',
+        indices: function indices(prefix, key) {
+          // eslint-disable-line func-name-matching
+          return prefix + '[' + key + ']';
+        },
+        repeat: function repeat(prefix) {
+          // eslint-disable-line func-name-matching
+          return prefix;
+        }
+      };
+      var isArray = Array.isArray;
+      var push = Array.prototype.push;
+
+      var pushToArray = function pushToArray(arr, valueOrArray) {
+        push.apply(arr, isArray(valueOrArray) ? valueOrArray : [valueOrArray]);
+      };
+
+      var toISO = Date.prototype.toISOString;
+      var defaultFormat = formats['default'];
+      var defaults = {
+        addQueryPrefix: false,
+        allowDots: false,
+        charset: 'utf-8',
+        charsetSentinel: false,
+        delimiter: '&',
+        encode: true,
+        encoder: utils.encode,
+        encodeValuesOnly: false,
+        format: defaultFormat,
+        formatter: formats.formatters[defaultFormat],
+        // deprecated
+        indices: false,
+        serializeDate: function serializeDate(date) {
+          // eslint-disable-line func-name-matching
+          return toISO.call(date);
+        },
+        skipNulls: false,
+        strictNullHandling: false
+      };
+
+      var isNonNullishPrimitive = function isNonNullishPrimitive(v) {
+        // eslint-disable-line func-name-matching
+        return typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' || _typeof2(v) === 'symbol' || typeof v === 'bigint'; // eslint-disable-line valid-typeof
+      };
+
+      var stringify = function stringify( // eslint-disable-line func-name-matching
+      object, prefix, generateArrayPrefix, strictNullHandling, skipNulls, encoder, filter, sort, allowDots, serializeDate, formatter, encodeValuesOnly, charset) {
+        var obj = object;
+
+        if (typeof filter === 'function') {
+          obj = filter(prefix, obj);
+        } else if (obj instanceof Date) {
+          obj = serializeDate(obj);
+        } else if (generateArrayPrefix === 'comma' && isArray(obj)) {
+          obj = obj.join(',');
+        }
+
+        if (obj === null) {
+          if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder, charset) : prefix;
+          }
+
+          obj = '';
+        }
+
+        if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) {
+          if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder, charset);
+            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder, charset))];
+          }
+
+          return [formatter(prefix) + '=' + formatter(String(obj))];
+        }
+
+        var values = [];
+
+        if (typeof obj === 'undefined') {
+          return values;
+        }
+
+        var objKeys;
+
+        if (isArray(filter)) {
+          objKeys = filter;
+        } else {
+          var keys = Object.keys(obj);
+          objKeys = sort ? keys.sort(sort) : keys;
+        }
+
+        for (var i = 0; i < objKeys.length; ++i) {
+          var key = objKeys[i];
+
+          if (skipNulls && obj[key] === null) {
+            continue;
+          }
+
+          if (isArray(obj)) {
+            pushToArray(values, stringify(obj[key], typeof generateArrayPrefix === 'function' ? generateArrayPrefix(prefix, key) : prefix, generateArrayPrefix, strictNullHandling, skipNulls, encoder, filter, sort, allowDots, serializeDate, formatter, encodeValuesOnly, charset));
+          } else {
+            pushToArray(values, stringify(obj[key], prefix + (allowDots ? '.' + key : '[' + key + ']'), generateArrayPrefix, strictNullHandling, skipNulls, encoder, filter, sort, allowDots, serializeDate, formatter, encodeValuesOnly, charset));
+          }
+        }
+
+        return values;
+      };
+
+      var normalizeStringifyOptions = function normalizeStringifyOptions(opts) {
+        if (!opts) {
+          return defaults;
+        }
+
+        if (opts.encoder !== null && opts.encoder !== undefined && typeof opts.encoder !== 'function') {
+          throw new TypeError('Encoder has to be a function.');
+        }
+
+        var charset = opts.charset || defaults.charset;
+
+        if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+          throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+        }
+
+        var format = formats['default'];
+
+        if (typeof opts.format !== 'undefined') {
+          if (!has.call(formats.formatters, opts.format)) {
+            throw new TypeError('Unknown format option provided.');
+          }
+
+          format = opts.format;
+        }
+
+        var formatter = formats.formatters[format];
+        var filter = defaults.filter;
+
+        if (typeof opts.filter === 'function' || isArray(opts.filter)) {
+          filter = opts.filter;
+        }
+
+        return {
+          addQueryPrefix: typeof opts.addQueryPrefix === 'boolean' ? opts.addQueryPrefix : defaults.addQueryPrefix,
+          allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+          charset: charset,
+          charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+          delimiter: typeof opts.delimiter === 'undefined' ? defaults.delimiter : opts.delimiter,
+          encode: typeof opts.encode === 'boolean' ? opts.encode : defaults.encode,
+          encoder: typeof opts.encoder === 'function' ? opts.encoder : defaults.encoder,
+          encodeValuesOnly: typeof opts.encodeValuesOnly === 'boolean' ? opts.encodeValuesOnly : defaults.encodeValuesOnly,
+          filter: filter,
+          formatter: formatter,
+          serializeDate: typeof opts.serializeDate === 'function' ? opts.serializeDate : defaults.serializeDate,
+          skipNulls: typeof opts.skipNulls === 'boolean' ? opts.skipNulls : defaults.skipNulls,
+          sort: typeof opts.sort === 'function' ? opts.sort : null,
+          strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+        };
+      };
+
+      module.exports = function (object, opts) {
+        var obj = object;
+        var options = normalizeStringifyOptions(opts);
+        var objKeys;
+        var filter;
+
+        if (typeof options.filter === 'function') {
+          filter = options.filter;
+          obj = filter('', obj);
+        } else if (isArray(options.filter)) {
+          filter = options.filter;
+          objKeys = filter;
+        }
+
+        var keys = [];
+
+        if (_typeof2(obj) !== 'object' || obj === null) {
+          return '';
+        }
+
+        var arrayFormat;
+
+        if (opts && opts.arrayFormat in arrayPrefixGenerators) {
+          arrayFormat = opts.arrayFormat;
+        } else if (opts && 'indices' in opts) {
+          arrayFormat = opts.indices ? 'indices' : 'repeat';
+        } else {
+          arrayFormat = 'indices';
+        }
+
+        var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+        if (!objKeys) {
+          objKeys = Object.keys(obj);
+        }
+
+        if (options.sort) {
+          objKeys.sort(options.sort);
+        }
+
+        for (var i = 0; i < objKeys.length; ++i) {
+          var key = objKeys[i];
+
+          if (options.skipNulls && obj[key] === null) {
+            continue;
+          }
+
+          pushToArray(keys, stringify(obj[key], key, generateArrayPrefix, options.strictNullHandling, options.skipNulls, options.encode ? options.encoder : null, options.filter, options.sort, options.allowDots, options.serializeDate, options.formatter, options.encodeValuesOnly, options.charset));
+        }
+
+        var joined = keys.join(options.delimiter);
+        var prefix = options.addQueryPrefix === true ? '?' : '';
+
+        if (options.charsetSentinel) {
+          if (options.charset === 'iso-8859-1') {
+            // encodeURIComponent('&#10003;'), the "numeric entity" representation of a checkmark
+            prefix += 'utf8=%26%2310003%3B&';
+          } else {
+            // encodeURIComponent('✓')
+            prefix += 'utf8=%E2%9C%93&';
+          }
+        }
+
+        return joined.length > 0 ? prefix + joined : '';
+      };
+      /***/
+
+    },
+    /* 4 */
+
+    /***/
+    function (module, exports, __webpack_require__) {
+      "use strict";
+
+      var utils = __webpack_require__(0);
+
+      var has = Object.prototype.hasOwnProperty;
+      var defaults = {
+        allowDots: false,
+        allowPrototypes: false,
+        arrayLimit: 20,
+        charset: 'utf-8',
+        charsetSentinel: false,
+        comma: false,
+        decoder: utils.decode,
+        delimiter: '&',
+        depth: 5,
+        ignoreQueryPrefix: false,
+        interpretNumericEntities: false,
+        parameterLimit: 1000,
+        parseArrays: true,
+        plainObjects: false,
+        strictNullHandling: false
+      };
+
+      var interpretNumericEntities = function interpretNumericEntities(str) {
+        return str.replace(/&#(\d+);/g, function ($0, numberStr) {
+          return String.fromCharCode(parseInt(numberStr, 10));
+        });
+      }; // This is what browsers will submit when the ✓ character occurs in an
+      // application/x-www-form-urlencoded body and the encoding of the page containing
+      // the form is iso-8859-1, or when the submitted form has an accept-charset
+      // attribute of iso-8859-1. Presumably also with other charsets that do not contain
+      // the ✓ character, such as us-ascii.
+
+
+      var isoSentinel = 'utf8=%26%2310003%3B'; // encodeURIComponent('&#10003;')
+      // These are the percent-encoded utf-8 octets representing a checkmark, indicating that the request actually is utf-8 encoded.
+
+      var charsetSentinel = 'utf8=%E2%9C%93'; // encodeURIComponent('✓')
+
+      var parseValues = function parseQueryStringValues(str, options) {
+        var obj = {};
+        var cleanStr = options.ignoreQueryPrefix ? str.replace(/^\?/, '') : str;
+        var limit = options.parameterLimit === Infinity ? undefined : options.parameterLimit;
+        var parts = cleanStr.split(options.delimiter, limit);
+        var skipIndex = -1; // Keep track of where the utf8 sentinel was found
+
+        var i;
+        var charset = options.charset;
+
+        if (options.charsetSentinel) {
+          for (i = 0; i < parts.length; ++i) {
+            if (parts[i].indexOf('utf8=') === 0) {
+              if (parts[i] === charsetSentinel) {
+                charset = 'utf-8';
+              } else if (parts[i] === isoSentinel) {
+                charset = 'iso-8859-1';
+              }
+
+              skipIndex = i;
+              i = parts.length; // The eslint settings do not allow break;
+            }
+          }
+        }
+
+        for (i = 0; i < parts.length; ++i) {
+          if (i === skipIndex) {
+            continue;
+          }
+
+          var part = parts[i];
+          var bracketEqualsPos = part.indexOf(']=');
+          var pos = bracketEqualsPos === -1 ? part.indexOf('=') : bracketEqualsPos + 1;
+          var key, val;
+
+          if (pos === -1) {
+            key = options.decoder(part, defaults.decoder, charset);
+            val = options.strictNullHandling ? null : '';
+          } else {
+            key = options.decoder(part.slice(0, pos), defaults.decoder, charset);
+            val = options.decoder(part.slice(pos + 1), defaults.decoder, charset);
+          }
+
+          if (val && options.interpretNumericEntities && charset === 'iso-8859-1') {
+            val = interpretNumericEntities(val);
+          }
+
+          if (val && options.comma && val.indexOf(',') > -1) {
+            val = val.split(',');
+          }
+
+          if (has.call(obj, key)) {
+            obj[key] = utils.combine(obj[key], val);
+          } else {
+            obj[key] = val;
+          }
+        }
+
+        return obj;
+      };
+
+      var parseObject = function parseObject(chain, val, options) {
+        var leaf = val;
+
+        for (var i = chain.length - 1; i >= 0; --i) {
+          var obj;
+          var root = chain[i];
+
+          if (root === '[]' && options.parseArrays) {
+            obj = [].concat(leaf);
+          } else {
+            obj = options.plainObjects ? Object.create(null) : {};
+            var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+            var index = parseInt(cleanRoot, 10);
+
+            if (!options.parseArrays && cleanRoot === '') {
+              obj = {
+                0: leaf
+              };
+            } else if (!isNaN(index) && root !== cleanRoot && String(index) === cleanRoot && index >= 0 && options.parseArrays && index <= options.arrayLimit) {
+              obj = [];
+              obj[index] = leaf;
+            } else {
+              obj[cleanRoot] = leaf;
+            }
+          }
+
+          leaf = obj;
+        }
+
+        return leaf;
+      };
+
+      var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
+        if (!givenKey) {
+          return;
+        } // Transform dot notation to bracket notation
+
+
+        var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey; // The regex chunks
+
+        var brackets = /(\[[^[\]]*])/;
+        var child = /(\[[^[\]]*])/g; // Get the parent
+
+        var segment = options.depth > 0 && brackets.exec(key);
+        var parent = segment ? key.slice(0, segment.index) : key; // Stash the parent if it exists
+
+        var keys = [];
+
+        if (parent) {
+          // If we aren't using plain objects, optionally prefix keys that would overwrite object prototype properties
+          if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+              return;
+            }
+          }
+
+          keys.push(parent);
+        } // Loop through children appending to the array until we hit depth
+
+
+        var i = 0;
+
+        while (options.depth > 0 && (segment = child.exec(key)) !== null && i < options.depth) {
+          i += 1;
+
+          if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+              return;
+            }
+          }
+
+          keys.push(segment[1]);
+        } // If there's a remainder, just add whatever is left
+
+
+        if (segment) {
+          keys.push('[' + key.slice(segment.index) + ']');
+        }
+
+        return parseObject(keys, val, options);
+      };
+
+      var normalizeParseOptions = function normalizeParseOptions(opts) {
+        if (!opts) {
+          return defaults;
+        }
+
+        if (opts.decoder !== null && opts.decoder !== undefined && typeof opts.decoder !== 'function') {
+          throw new TypeError('Decoder has to be a function.');
+        }
+
+        if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+          throw new Error('The charset option must be either utf-8, iso-8859-1, or undefined');
+        }
+
+        var charset = typeof opts.charset === 'undefined' ? defaults.charset : opts.charset;
+        return {
+          allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+          allowPrototypes: typeof opts.allowPrototypes === 'boolean' ? opts.allowPrototypes : defaults.allowPrototypes,
+          arrayLimit: typeof opts.arrayLimit === 'number' ? opts.arrayLimit : defaults.arrayLimit,
+          charset: charset,
+          charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+          comma: typeof opts.comma === 'boolean' ? opts.comma : defaults.comma,
+          decoder: typeof opts.decoder === 'function' ? opts.decoder : defaults.decoder,
+          delimiter: typeof opts.delimiter === 'string' || utils.isRegExp(opts.delimiter) ? opts.delimiter : defaults.delimiter,
+          // eslint-disable-next-line no-implicit-coercion, no-extra-parens
+          depth: typeof opts.depth === 'number' || opts.depth === false ? +opts.depth : defaults.depth,
+          ignoreQueryPrefix: opts.ignoreQueryPrefix === true,
+          interpretNumericEntities: typeof opts.interpretNumericEntities === 'boolean' ? opts.interpretNumericEntities : defaults.interpretNumericEntities,
+          parameterLimit: typeof opts.parameterLimit === 'number' ? opts.parameterLimit : defaults.parameterLimit,
+          parseArrays: opts.parseArrays !== false,
+          plainObjects: typeof opts.plainObjects === 'boolean' ? opts.plainObjects : defaults.plainObjects,
+          strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+        };
+      };
+
+      module.exports = function (str, opts) {
+        var options = normalizeParseOptions(opts);
+
+        if (str === '' || str === null || typeof str === 'undefined') {
+          return options.plainObjects ? Object.create(null) : {};
+        }
+
+        var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+        var obj = options.plainObjects ? Object.create(null) : {}; // Iterate over the keys and setup the new object
+
+        var keys = Object.keys(tempObj);
+
+        for (var i = 0; i < keys.length; ++i) {
+          var key = keys[i];
+          var newObj = parseKeys(key, tempObj[key], options);
+          obj = utils.merge(obj, newObj, options);
+        }
+
+        return utils.compact(obj);
+      };
+      /***/
+
+    },
+    /* 5 */
+
+    /***/
+    function (module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__); // CONCATENATED MODULE: ./src/js/UrlBuilder.js
+
+
+      function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+
+      function _defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+          var descriptor = props[i];
+          descriptor.enumerable = descriptor.enumerable || false;
+          descriptor.configurable = true;
+          if ("value" in descriptor) descriptor.writable = true;
+          Object.defineProperty(target, descriptor.key, descriptor);
+        }
+      }
+
+      function _createClass(Constructor, protoProps, staticProps) {
+        if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) _defineProperties(Constructor, staticProps);
+        return Constructor;
+      }
+
+      var UrlBuilder =
+      /*#__PURE__*/
+      function () {
+        function UrlBuilder(name, absolute, ziggyObject) {
+          _classCallCheck(this, UrlBuilder);
+
+          this.name = name;
+          this.ziggy = ziggyObject;
+          this.route = this.ziggy.namedRoutes[this.name];
+
+          if (typeof this.name === 'undefined') {
+            throw new Error('Ziggy Error: You must provide a route name');
+          } else if (typeof this.route === 'undefined') {
+            throw new Error("Ziggy Error: route '".concat(this.name, "' is not found in the route list"));
+          }
+
+          this.absolute = typeof absolute === 'undefined' ? true : absolute;
+          this.domain = this.setDomain();
+          this.path = this.route.uri.replace(/^\//, '');
+        }
+
+        _createClass(UrlBuilder, [{
+          key: "setDomain",
+          value: function setDomain() {
+            if (!this.absolute) return '/';
+            if (!this.route.domain) return this.ziggy.baseUrl.replace(/\/?$/, '/');
+            var host = (this.route.domain || this.ziggy.baseDomain).replace(/\/+$/, '');
+            if (this.ziggy.basePort && host.replace(/\/+$/, '') === this.ziggy.baseDomain.replace(/\/+$/, '')) host = this.ziggy.baseDomain + ':' + this.ziggy.basePort;
+            return this.ziggy.baseProtocol + '://' + host + '/';
+          }
+        }, {
+          key: "construct",
+          value: function construct() {
+            return this.domain + this.path;
+          }
+        }]);
+
+        return UrlBuilder;
+      }();
+      /* harmony default export */
+
+
+      var js_UrlBuilder = UrlBuilder; // EXTERNAL MODULE: ./node_modules/qs/lib/index.js
+
+      var lib = __webpack_require__(2); // CONCATENATED MODULE: ./src/js/route.js
+
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "default", function () {
+        return route;
+      });
+
+      function _defineProperty(obj, key, value) {
+        if (key in obj) {
+          Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+          });
+        } else {
+          obj[key] = value;
+        }
+
+        return obj;
+      }
+
+      function _extends() {
+        _extends = Object.assign || function (target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+
+          return target;
+        };
+
+        return _extends.apply(this, arguments);
+      }
+
+      function _typeof(obj) {
+        if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+          _typeof = function _typeof(obj) {
+            return _typeof2(obj);
+          };
+        } else {
+          _typeof = function _typeof(obj) {
+            return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+          };
+        }
+
+        return _typeof(obj);
+      }
+
+      function route_classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+
+      function route_defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+          var descriptor = props[i];
+          descriptor.enumerable = descriptor.enumerable || false;
+          descriptor.configurable = true;
+          if ("value" in descriptor) descriptor.writable = true;
+          Object.defineProperty(target, descriptor.key, descriptor);
+        }
+      }
+
+      function route_createClass(Constructor, protoProps, staticProps) {
+        if (protoProps) route_defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) route_defineProperties(Constructor, staticProps);
+        return Constructor;
+      }
+
+      function _possibleConstructorReturn(self, call) {
+        if (call && (_typeof(call) === "object" || typeof call === "function")) {
+          return call;
+        }
+
+        return _assertThisInitialized(self);
+      }
+
+      function _assertThisInitialized(self) {
+        if (self === void 0) {
+          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        }
+
+        return self;
+      }
+
+      function _inherits(subClass, superClass) {
+        if (typeof superClass !== "function" && superClass !== null) {
+          throw new TypeError("Super expression must either be null or a function");
+        }
+
+        subClass.prototype = Object.create(superClass && superClass.prototype, {
+          constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+          }
+        });
+        if (superClass) _setPrototypeOf(subClass, superClass);
+      }
+
+      function _wrapNativeSuper(Class) {
+        var _cache = typeof Map === "function" ? new Map() : undefined;
+
+        _wrapNativeSuper = function _wrapNativeSuper(Class) {
+          if (Class === null || !_isNativeFunction(Class)) return Class;
+
+          if (typeof Class !== "function") {
+            throw new TypeError("Super expression must either be null or a function");
+          }
+
+          if (typeof _cache !== "undefined") {
+            if (_cache.has(Class)) return _cache.get(Class);
+
+            _cache.set(Class, Wrapper);
+          }
+
+          function Wrapper() {
+            return _construct(Class, arguments, _getPrototypeOf(this).constructor);
+          }
+
+          Wrapper.prototype = Object.create(Class.prototype, {
+            constructor: {
+              value: Wrapper,
+              enumerable: false,
+              writable: true,
+              configurable: true
+            }
+          });
+          return _setPrototypeOf(Wrapper, Class);
+        };
+
+        return _wrapNativeSuper(Class);
+      }
+
+      function isNativeReflectConstruct() {
+        if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+        if (Reflect.construct.sham) return false;
+        if (typeof Proxy === "function") return true;
+
+        try {
+          Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      function _construct(Parent, args, Class) {
+        if (isNativeReflectConstruct()) {
+          _construct = Reflect.construct;
+        } else {
+          _construct = function _construct(Parent, args, Class) {
+            var a = [null];
+            a.push.apply(a, args);
+            var Constructor = Function.bind.apply(Parent, a);
+            var instance = new Constructor();
+            if (Class) _setPrototypeOf(instance, Class.prototype);
+            return instance;
+          };
+        }
+
+        return _construct.apply(null, arguments);
+      }
+
+      function _isNativeFunction(fn) {
+        return Function.toString.call(fn).indexOf("[native code]") !== -1;
+      }
+
+      function _setPrototypeOf(o, p) {
+        _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+          o.__proto__ = p;
+          return o;
+        };
+
+        return _setPrototypeOf(o, p);
+      }
+
+      function _getPrototypeOf(o) {
+        _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+          return o.__proto__ || Object.getPrototypeOf(o);
+        };
+        return _getPrototypeOf(o);
+      }
+
+      var route_Router =
+      /*#__PURE__*/
+      function (_String) {
+        _inherits(Router, _String);
+
+        function Router(name, params, absolute) {
+          var _this;
+
+          var customZiggy = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+          route_classCallCheck(this, Router);
+          _this = _possibleConstructorReturn(this, _getPrototypeOf(Router).call(this));
+          _this.name = name;
+          _this.absolute = absolute;
+          _this.ziggy = customZiggy ? customZiggy : Ziggy;
+          _this.urlBuilder = _this.name ? new js_UrlBuilder(name, absolute, _this.ziggy) : null;
+          _this.template = _this.urlBuilder ? _this.urlBuilder.construct() : '';
+          _this.urlParams = _this.normalizeParams(params);
+          _this.queryParams = {};
+          _this.hydrated = '';
+          return _this;
+        }
+
+        route_createClass(Router, [{
+          key: "normalizeParams",
+          value: function normalizeParams(params) {
+            if (typeof params === 'undefined') return {}; // If you passed in a string or integer, wrap it in an array
+
+            params = _typeof(params) !== 'object' ? [params] : params; // If the tags object contains an ID and there isn't an ID param in the
+            // url template, they probably passed in a single model object and we should
+            // wrap this in an array. This could be slightly dangerous and I want to find
+            // a better solution for this rare case.
+
+            if (params.hasOwnProperty('id') && this.template.indexOf('{id}') == -1) {
+              params = [params.id];
+            }
+
+            this.numericParamIndices = Array.isArray(params);
+            return _extends({}, params);
+          }
+        }, {
+          key: "with",
+          value: function _with(params) {
+            this.urlParams = this.normalizeParams(params);
+            return this;
+          }
+        }, {
+          key: "withQuery",
+          value: function withQuery(params) {
+            _extends(this.queryParams, params);
+
+            return this;
+          }
+        }, {
+          key: "hydrateUrl",
+          value: function hydrateUrl() {
+            var _this2 = this;
+
+            if (this.hydrated) return this.hydrated;
+            var hydrated = this.template.replace(/{([^}]+)}/gi, function (tag, i) {
+              var keyName = _this2.trimParam(tag),
+                  defaultParameter,
+                  tagValue;
+
+              if (_this2.ziggy.defaultParameters.hasOwnProperty(keyName)) {
+                defaultParameter = _this2.ziggy.defaultParameters[keyName];
+              } // If a default parameter exists, and a value wasn't
+              // provided for it manually, use the default value
+
+
+              if (defaultParameter && !_this2.urlParams[keyName]) {
+                delete _this2.urlParams[keyName];
+                return defaultParameter;
+              } // We were passed an array, shift the value off the
+              // object and return that value to the route
+
+
+              if (_this2.numericParamIndices) {
+                _this2.urlParams = Object.values(_this2.urlParams);
+                tagValue = _this2.urlParams.shift();
+              } else {
+                tagValue = _this2.urlParams[keyName];
+                delete _this2.urlParams[keyName];
+              } // The type of the value is undefined; is this param
+              // optional or not
+
+
+              if (typeof tagValue === 'undefined') {
+                if (tag.indexOf('?') === -1) {
+                  throw new Error("Ziggy Error: '" + keyName + "' key is required for route '" + _this2.name + "'");
+                } else {
+                  return '';
+                }
+              } // If an object was passed and has an id, return it
+
+
+              if (tagValue.id) {
+                return encodeURIComponent(tagValue.id);
+              }
+
+              return encodeURIComponent(tagValue);
+            });
+
+            if (this.urlBuilder != null && this.urlBuilder.path !== '') {
+              hydrated = hydrated.replace(/\/+$/, '');
+            }
+
+            this.hydrated = hydrated;
+            return this.hydrated;
+          }
+        }, {
+          key: "matchUrl",
+          value: function matchUrl() {
+            var windowUrl = window.location.hostname + (window.location.port ? ':' + window.location.port : '') + window.location.pathname; // Strip out optional parameters
+
+            var optionalTemplate = this.template.replace(/(\/\{[^\}]*\?\})/g, '/').replace(/(\{[^\}]*\})/gi, '[^/?]+').replace(/\/?$/, '').split('://')[1];
+            var searchTemplate = this.template.replace(/(\{[^\}]*\})/gi, '[^/?]+').split('://')[1];
+            var urlWithTrailingSlash = windowUrl.replace(/\/?$/, '/');
+            var regularSearch = new RegExp('^' + searchTemplate + '/$').test(urlWithTrailingSlash);
+            var optionalSearch = new RegExp('^' + optionalTemplate + '/$').test(urlWithTrailingSlash);
+            return regularSearch || optionalSearch;
+          }
+        }, {
+          key: "constructQuery",
+          value: function constructQuery() {
+            if (Object.keys(this.queryParams).length === 0 && Object.keys(this.urlParams).length === 0) {
+              return '';
+            }
+
+            var remainingParams = _extends(this.urlParams, this.queryParams);
+
+            return Object(lib["stringify"])(remainingParams, {
+              encodeValuesOnly: true,
+              skipNulls: true,
+              addQueryPrefix: true,
+              arrayFormat: 'indices'
+            });
+          }
+        }, {
+          key: "current",
+          value: function current() {
+            var _this3 = this;
+
+            var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+            var routeNames = Object.keys(this.ziggy.namedRoutes);
+            var currentRoute = routeNames.filter(function (name) {
+              if (_this3.ziggy.namedRoutes[name].methods.indexOf('GET') === -1) {
+                return false;
+              }
+
+              return new Router(name, undefined, undefined, _this3.ziggy).matchUrl();
+            })[0];
+
+            if (name) {
+              var pattern = new RegExp('^' + name.replace('*', '.*').replace('.', '.') + '$', 'i');
+              return pattern.test(currentRoute);
+            }
+
+            return currentRoute;
+          }
+        }, {
+          key: "check",
+          value: function check(name) {
+            var routeNames = Object.keys(this.ziggy.namedRoutes);
+            return routeNames.includes(name);
+          }
+        }, {
+          key: "extractParams",
+          value: function extractParams(uri, template, delimiter) {
+            var _this4 = this;
+
+            var uriParts = uri.split(delimiter);
+            var templateParts = template.split(delimiter);
+            return templateParts.reduce(function (params, param, i) {
+              return param.indexOf('{') === 0 && param.indexOf('}') !== -1 && uriParts[i] ? _extends(params, _defineProperty({}, _this4.trimParam(param), uriParts[i])) : params;
+            }, {});
+          }
+        }, {
+          key: "parse",
+          value: function parse() {
+            this["return"] = this.hydrateUrl() + this.constructQuery();
+          }
+        }, {
+          key: "url",
+          value: function url() {
+            this.parse();
+            return this["return"];
+          }
+        }, {
+          key: "toString",
+          value: function toString() {
+            return this.url();
+          }
+        }, {
+          key: "trimParam",
+          value: function trimParam(param) {
+            return param.replace(/{|}|\?/g, '');
+          }
+        }, {
+          key: "valueOf",
+          value: function valueOf() {
+            return this.url();
+          }
+        }, {
+          key: "params",
+          get: function get() {
+            var namedRoute = this.ziggy.namedRoutes[this.current()];
+            return _extends(this.extractParams(window.location.hostname, namedRoute.domain || '', '.'), this.extractParams(window.location.pathname.slice(1), namedRoute.uri, '/'));
+          }
+        }]);
+        return Router;
+      }(_wrapNativeSuper(String));
+
+      function route(name, params, absolute, customZiggy) {
+        return new route_Router(name, params, absolute, customZiggy);
+      }
+      /***/
+
+    }
+    /******/
+    ])["default"]
+  );
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../node_modules/webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 

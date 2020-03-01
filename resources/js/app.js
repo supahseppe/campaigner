@@ -7,13 +7,14 @@ Vue.config.devtools = true;
 import { InertiaApp } from '@inertiajs/inertia-vue';
 Vue.use(InertiaApp);
 
-Vue.mixin({ methods: { route: window.route } });
-
-import VueMeta from 'vue-meta';
-Vue.use(VueMeta);
+import ZiggyVue from './helpers/Ziggy';
+Vue.use(ZiggyVue);
 
 import VueTailwind from './helpers/Tailwind';
 Vue.use(VueTailwind);
+
+import VueMeta from 'vue-meta';
+Vue.use(VueMeta);
 
 const app = document.getElementById('app');
 

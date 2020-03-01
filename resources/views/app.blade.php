@@ -6,9 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Spectral:400,400i&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 
         <script src="{{ mix('js/app.js') }}" defer></script>

@@ -27,6 +27,7 @@
     import GuyFawkesMask from '_Icons/GuyFawkesMask';
     import AccountMultipleOutline from '_Icons/AccountMultipleOutline';
     import ImageFilterHdr from '_Icons/ImageFilterHdr';
+    import Home from '_Icons/Home';
     import HomeGroup from '_Icons/HomeGroup';
     import AccountGroup from '_Icons/AccountGroup';
     import Tools from '_Icons/Tools';
@@ -47,11 +48,12 @@
             Undo,
             Redo,
             Delete,
-            GlobeModel,
-            DramaMasks,
-            GuyFawkesMask,
-            AccountMultipleOutline,
+            globe: GlobeModel,
+            masks: DramaMasks,
+            fawkes: GuyFawkesMask,
+            people: AccountMultipleOutline,
             mountains: ImageFilterHdr,
+            Home,
             houses: HomeGroup,
             group: AccountGroup,
             Tools,

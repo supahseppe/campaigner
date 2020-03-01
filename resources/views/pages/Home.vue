@@ -20,18 +20,11 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    import SectionHeader from '_Components/SectionHeader';
-    import Btn from '_Components/Btn';
-    import axios from 'axios';
 
     export default {
         name: 'Dashboard',
-        metaInfo: { title: 'Dashboard' },
         layout: MainLayout,
-        components: {
-            SectionHeader,
-            Btn,
-        },
+        components: {},
         props: ['campaigns', 'characters'],
         data() {
             return {
@@ -42,24 +35,8 @@
         computed: {},
         watch: {},
         created() {},
-        mounted() {
-            axios
-                .get(
-                    route('campaigns.autocomplete', {
-                        user: this.$page.auth.user.slug,
-                    }),
-                    {
-                        headers: {
-                            Accept: 'application/json',
-                        },
-                    }
-                )
-                .then(response => {
-                    console.log(response);
-                });
-        },
+        mounted() {},
         methods: {},
-        layout: MainLayout,
         metaInfo() {
             return {
                 title: this.pageTitle,
