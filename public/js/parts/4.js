@@ -84,6 +84,84 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Pagination',
   components: {},
@@ -345,42 +423,210 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "flex flex-wrap" },
-    [
-      _vm._l(_vm.links, function(link, key) {
-        return [
-          link.url === null
-            ? _c(
-                "div",
-                {
-                  key: key,
-                  staticClass:
-                    "mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-800",
-                  class: { "ml-auto": link.label === "Next" }
-                },
-                [_vm._v("\n            " + _vm._s(link.label) + "\n        ")]
-              )
-            : _c(
-                "inertia-link",
-                {
-                  key: key,
-                  staticClass:
-                    "mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white hover:text-black focus:border-indigo-500 focus:text-indigo-500",
-                  class: {
-                    "bg-gray-700 text-white": link.active,
-                    "ml-auto": link.label === "Next"
-                  },
-                  attrs: { href: link.url }
-                },
-                [_vm._v("\n            " + _vm._s(link.label) + "\n        ")]
-              )
-        ]
-      })
-    ],
-    2
-  )
+  return _c("div", { staticClass: "w-full max-w-percent-90 mx-auto" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "w-full border-t border-gray-200 px-4 flex items-center justify-between sm:px-0"
+      },
+      [
+        _vm._l(_vm.links, function(link, key) {
+          return [
+            link.label === "Previous"
+              ? _c(
+                  "div",
+                  { key: key, staticClass: "w-0 flex-1 flex" },
+                  [
+                    link.url
+                      ? _c(
+                          "inertia-link",
+                          {
+                            staticClass:
+                              "-mt-px border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150",
+                            attrs: { href: link.url }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "mr-3 h-5 w-5 text-gray-400",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(link.label) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      : _c(
+                          "div",
+                          {
+                            staticClass:
+                              "-mt-px border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150"
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "mr-3 h-5 w-5 text-gray-400",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(link.label) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            link.label !== "Previous" && link.label !== "Next"
+              ? _c(
+                  "div",
+                  { key: key, staticClass: "hidden md:flex" },
+                  [
+                    _c(
+                      "inertia-link",
+                      {
+                        staticClass:
+                          "-mt-px border-t-2 border-transparent pt-4 px-4 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150",
+                        class: {
+                          "border-indigo-500 text-indigo-600 focus:outline-none focus:text-indigo-800 focus:border-indigo-700 transition ease-in-out duration-150":
+                            link.active
+                        },
+                        attrs: { href: link.url }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(link.label) +
+                            "\n                "
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            link.label === "Next"
+              ? _c(
+                  "div",
+                  { key: key, staticClass: "w-0 flex-1 flex justify-end" },
+                  [
+                    link.url
+                      ? _c(
+                          "inertia-link",
+                          {
+                            staticClass:
+                              "-mt-px border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150",
+                            attrs: { href: link.url }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(link.label) +
+                                "\n                    "
+                            ),
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "ml-3 h-5 w-5 text-gray-400",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      : _c(
+                          "div",
+                          {
+                            staticClass:
+                              "-mt-px border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm leading-5 font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-400 transition ease-in-out duration-150"
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(link.label) +
+                                "\n                    "
+                            ),
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "ml-3 h-5 w-5 text-gray-400",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                  ],
+                  1
+                )
+              : _vm._e()
+          ]
+        })
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

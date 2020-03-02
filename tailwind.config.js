@@ -84,6 +84,17 @@ const w_h_sizes = {
     '21/24': '87.36%',
     '22/24': '91.52%',
     '23/24': '95.68%',
+    'percent-10': '10%',
+    'percent-20': '20%',
+    'percent-25': '25%',
+    'percent-30': '30%',
+    'percent-40': '40%',
+    'percent-50': '50%',
+    'percent-60': '60%',
+    'percent-70': '70%',
+    'percent-75': '75%',
+    'percent-80': '80%',
+    'percent-90': '90%',
 };
 
 module.exports = {
