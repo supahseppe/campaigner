@@ -103,7 +103,7 @@ class DatabaseSeeder extends Seeder
 
             $npcs->each(function($npc) use($factions, $locations) {
                 $npc->locations()->saveMany($locations->random(2));
-                $npc->factions()->saveMany($factions->random(2));
+                $npc->factions()->saveMany($factions->random(3));
             });
 
             $party->each(function($pc) use($factions) {
@@ -115,10 +115,13 @@ class DatabaseSeeder extends Seeder
             $campaign->tasks()->saveMany($tasks);
             $faction_chunks = $tasks->chunk(5);
             $faction_chunks->each(function($chunk, $key) use($factions) {
-                echo $key;
-                die();
-//                $faction = $factions->get($key);
-//                $faction->tasks()->saveMany($chunk);
+                $faction = $factions->get($key);
+                $faction->tasks()->saveMany($chunk);
+                $npcs = $faction->npcs;
+                $chunk->each(function($task) use($npcs) {
+                    $npc = $npcs->random();
+                    $npc->tasks()->save($task);
+                });
             });
         });
     }
