@@ -4,26 +4,58 @@
             <h1>Dashboard</h1>
         </section-header>
         <div class="p-4">
-            <h2 class="h2">Campaigns</h2>
-            <template v-if="campaigns.data.length">
-                <div v-for="(campaign, i) in campaigns.data" :key="i">
-                    <p>{{ campaign.title }}</p>
+            <panel class="mb-6">
+                <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        Campaigns
+                    </h3>
                 </div>
-            </template>
-            <p v-else>
-                You have no campaigns.
-                <inertia-link :href="route('campaigns.create')">Make one now!</inertia-link>
-            </p>
-            <h2 class="h2">Characters</h2>
-            <template v-if="characters.data.length">
-                <div v-for="(character, i) in characters.data" :key="i">
-                    <p>{{ character.name }}</p>
+                <div class="px-4 py-5 sm:px-6">
+                    <template v-if="campaigns.data.length">
+                        <ul class="list-disc">
+                            <li
+                                v-for="(campaign, i) in campaigns.data"
+                                :key="i"
+                                class="ml-4"
+                            >
+                                <p>{{ campaign.title }}</p>
+                            </li>
+                        </ul>
+                    </template>
+                    <p v-else>
+                        You have no campaigns.
+                        <inertia-link :href="route('campaigns.create')">
+                            Make one now!
+                        </inertia-link>
+                    </p>
                 </div>
-            </template>
-            <p v-else>
-                You have no characters.
-                <inertia-link :href="route('characters.create')">Make one now!</inertia-link>
-            </p>
+            </panel>
+            <panel class="mb-6">
+                <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        Characters
+                    </h3>
+                </div>
+                <div class="px-4 py-5 sm:px-6">
+                    <template v-if="characters.data.length">
+                        <ul class="list-disc">
+                            <li
+                                v-for="(character, i) in characters.data"
+                                :key="i"
+                                class="ml-4"
+                            >
+                                <p>{{ character.name }}</p>
+                            </li>
+                        </ul>
+                    </template>
+                    <p v-else>
+                        You have no characters.
+                        <inertia-link :href="route('characters.create')">
+                            Make one now!
+                        </inertia-link>
+                    </p>
+                </div>
+            </panel>
         </div>
     </div>
 </template>
@@ -31,11 +63,13 @@
 <script>
     import MainLayout from '_Layouts/MainLayout';
     import SectionHeader from '_Components/SectionHeader';
+    import Panel from '_Components/cards/Panel';
 
     export default {
         name: 'Dashboard',
         layout: MainLayout,
         components: {
+            Panel,
             SectionHeader,
         },
         props: ['campaigns', 'characters'],

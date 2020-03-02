@@ -23,8 +23,9 @@ class LocationController extends Controller
      */
     public function index()
     {
+        $locations = Auth::user()->campaign->locations();
         return Inertia::render('Location/Browse', [
-            'pager' => Location::paginate(15)
+            'pager' => $locations->paginate(15)
         ]);
     }
 

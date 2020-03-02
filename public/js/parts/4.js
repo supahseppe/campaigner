@@ -456,10 +456,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass:
-        "mt-3 px-6 pt-4 pb-6 xl:px-10 xl:pt-6 xl:pb-8 bg-white rounded-lg shadow"
-    },
+    { staticClass: "bg-white overflow-hidden sm:rounded-lg sm:shadow" },
     [_vm._t("default")],
     2
   )

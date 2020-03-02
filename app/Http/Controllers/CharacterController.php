@@ -38,7 +38,7 @@ class CharacterController extends Controller
      */
     public function campaign_characters(Campaign $campaign)
     {
-        return Inertia::render('Character/Browse', [
+        return Inertia::render('Character/BrowseCharacter', [
             'pager' => $campaign->characters()
                 ->with('player:username,slug')
                 ->paginate(15)
@@ -54,10 +54,10 @@ class CharacterController extends Controller
      */
     public function campaign_npcs(Campaign $campaign)
     {
-        return Inertia::render('Character/Browse', [
+        return Inertia::render('Character/BrowseNpc', [
             'pager' => $campaign->npcs()
                 ->paginate(15)
-                ->only('name', 'alias', 'high_concept', 'slug'),
+                ->only('active', 'name', 'alias', 'high_concept', 'slug'),
         ]);
     }
 

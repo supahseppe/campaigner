@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","1":"fb3770fb7f025021bfe2","2":"709dfeaae33f742cde78","3":"c853881fa750a8edbad6","4":"f16c1ddd35c1716cd425","5":"46ce77282e26fc0e75c7","6":"10ce3a18710f5b0f6d9f","7":"eba9dc858d118858c88e","8":"e5a35ff74863bf220b8c","9":"7623fca1969dd28a0ee8","10":"79f04cd1130ea753c97d","11":"b5fe02b61dd2df4963ed","12":"1afad03e9fe6e5fc1d4b","13":"705ae997478d4e47010f","14":"d8db1c2773c39b655495","15":"c598eb094c96f03828e2","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"f891b29ea7c555c79bc5","21":"143d63e832ee62f1307a","22":"6903e475f5c1b920445a","23":"e6624e2769bef88a6cbc","24":"834ab0091636c7fa3530","25":"fa153ac603492ca549d7","26":"da2ddd17f9031820db6b","27":"e9589d8eaf88463847ef","28":"e43ce3adcf30f8ea47c7","29":"f910eaa318307ec8cbdd","30":"cbfc0dea8847c76357d3","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"e7a1bf0528bf77bd7437"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","1":"fb3770fb7f025021bfe2","2":"709dfeaae33f742cde78","3":"c853881fa750a8edbad6","4":"851c7aea36bdfd89ffa0","5":"46ce77282e26fc0e75c7","6":"10ce3a18710f5b0f6d9f","7":"3bf2e21a6fc8fbc45f36","8":"c3d47db314c45f42fd0c","9":"4667a8d3d4b4d23e567c","10":"6c18f06439c3e3e2ed30","11":"e9120fc54ee2cd3919e0","12":"9cf5ca73fa6221213b9b","13":"c34784a41f124a7d3e6a","14":"d8db1c2773c39b655495","15":"c598eb094c96f03828e2","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"6419da02452ecec531ce","21":"9cea769841b9e3e0ee20","22":"7f7cb862f658be3dffaf","23":"63c1681b3041cef61196","24":"74b35e1c200f1abaa45d","25":"68522f6e4465f64c2863","26":"89da7dee2221ab295f55","27":"9579b928eb7ac94c7911","28":"7f5d19c6a2e8cd63e272","29":"41ed8e7097317f8b3b4a","30":"579d4442294eb7fe6b69","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"e7a1bf0528bf77bd7437","36":"bccf4785f67476949e78"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -53248,21 +53248,21 @@ var map = {
 		"./resources/views/pages/About.vue",
 		0,
 		1,
-		23
+		24
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
 		0,
 		1,
-		23
+		24
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
-		8
+		7
 	],
 	"./Auth/Login.vue": [
 		"./resources/views/pages/Auth/Login.vue",
-		8
+		7
 	],
 	"./Auth/Passwords/Email": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
@@ -53300,13 +53300,13 @@ var map = {
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
 		1,
-		24
+		25
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
 		0,
 		1,
-		24
+		25
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
@@ -53329,14 +53329,14 @@ var map = {
 		0,
 		1,
 		4,
-		25
+		26
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
 		0,
 		1,
 		4,
-		25
+		26
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -53344,7 +53344,7 @@ var map = {
 		2,
 		1,
 		3,
-		13
+		12
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -53352,7 +53352,7 @@ var map = {
 		2,
 		1,
 		3,
-		13
+		12
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
@@ -53372,13 +53372,13 @@ var map = {
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
 		1,
-		9
+		8
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
 		1,
-		9
+		8
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
@@ -53396,19 +53396,33 @@ var map = {
 		3,
 		19
 	],
-	"./Character/Browse": [
-		"./resources/views/pages/Character/Browse.vue",
+	"./Character/BrowseCharacter": [
+		"./resources/views/pages/Character/BrowseCharacter.vue",
 		0,
 		1,
 		4,
-		26
+		36
 	],
-	"./Character/Browse.vue": [
-		"./resources/views/pages/Character/Browse.vue",
+	"./Character/BrowseCharacter.vue": [
+		"./resources/views/pages/Character/BrowseCharacter.vue",
 		0,
 		1,
 		4,
-		26
+		36
+	],
+	"./Character/BrowseNpc": [
+		"./resources/views/pages/Character/BrowseNpc.vue",
+		0,
+		1,
+		4,
+		27
+	],
+	"./Character/BrowseNpc.vue": [
+		"./resources/views/pages/Character/BrowseNpc.vue",
+		0,
+		1,
+		4,
+		27
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -53442,13 +53456,13 @@ var map = {
 		"./resources/views/pages/Contact.vue",
 		0,
 		1,
-		27
+		28
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
 		0,
 		1,
-		27
+		28
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -53456,7 +53470,7 @@ var map = {
 		2,
 		1,
 		3,
-		28
+		29
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -53464,21 +53478,21 @@ var map = {
 		2,
 		1,
 		3,
-		28
+		29
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
 		0,
 		1,
 		4,
-		29
+		30
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
 		0,
 		1,
 		4,
-		29
+		30
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -53487,7 +53501,7 @@ var map = {
 		35,
 		1,
 		3,
-		7
+		13
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -53496,31 +53510,31 @@ var map = {
 		35,
 		1,
 		3,
-		7
+		13
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
 		0,
 		1,
-		10
+		9
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
 		0,
 		1,
-		10
+		9
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
 		0,
 		1,
-		30
+		20
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
 		0,
 		1,
-		30
+		20
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
@@ -53558,7 +53572,7 @@ var map = {
 		2,
 		1,
 		3,
-		20
+		21
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
@@ -53566,19 +53580,19 @@ var map = {
 		2,
 		1,
 		3,
-		20
+		21
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
 		1,
-		11
+		10
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
 		0,
 		1,
-		11
+		10
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
@@ -53616,7 +53630,7 @@ var map = {
 		2,
 		1,
 		3,
-		21
+		22
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
@@ -53624,27 +53638,27 @@ var map = {
 		2,
 		1,
 		3,
-		21
+		22
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
 		1,
-		12
+		11
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
 		0,
 		1,
-		12
+		11
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",
-		22
+		23
 	],
 	"./Welcome.vue": [
 		"./resources/views/pages/Welcome.vue",
-		22
+		23
 	]
 };
 function webpackAsyncContext(req) {
