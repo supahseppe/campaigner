@@ -109,6 +109,17 @@ class DatabaseSeeder extends Seeder
             $party->each(function($pc) use($factions) {
                 $pc->factions()->saveMany($factions->random(3));
             });
+
+            // Tasks
+            $tasks = factory('App\Task', 25)->create();
+            $campaign->tasks()->saveMany($tasks);
+            $faction_chunks = $tasks->chunk(5);
+            $faction_chunks->each(function($chunk, $key) use($factions) {
+                echo $key;
+                die();
+//                $faction = $factions->get($key);
+//                $faction->tasks()->saveMany($chunk);
+            });
         });
     }
 }
