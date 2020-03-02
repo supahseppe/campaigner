@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
             $campaign->characters()->saveMany($party);
 
             // Create NPCs
-            $npcs = factory('App\Character', 10, ['npc' => true])->create();
+            $npcs = factory('App\Character', 10)->create(['npc' => true]);
             $user->characters()->saveMany($npcs);
             $campaign->npcs()->saveMany($npcs);
 

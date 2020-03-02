@@ -36,14 +36,28 @@ class CharacterController extends Controller
      * @param \App\Campaign $campaign
      * @return \Inertia\Response
      */
-    public function in_campaign(Campaign $campaign)
+    public function campaign_characters(Campaign $campaign)
     {
         return Inertia::render('Character/Browse', [
             'pager' => $campaign->characters()
-                ->where('npc', false)
+                ->with('player:username,slug')
                 ->paginate(15)
-                ->only('name', 'high_concept', 'slug'),
-            'npcs' => false,
+                ->only('active', 'name', 'alias', 'high_concept', 'slug', 'player'),
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @param \App\Campaign $campaign
+     * @return \Inertia\Response
+     */
+    public function campaign_npcs(Campaign $campaign)
+    {
+        return Inertia::render('Character/Browse', [
+            'pager' => $campaign->npcs()
+                ->paginate(15)
+                ->only('name', 'alias', 'high_concept', 'slug'),
         ]);
     }
 

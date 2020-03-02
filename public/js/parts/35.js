@@ -70,6 +70,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'PageHeader',
   components: {},
@@ -222,12 +224,27 @@ var render = function() {
     "div",
     {
       staticClass:
-        "bg-indigo-800 p-2 shadow text-xl text-white flex items-center justify-between w-full"
+        "py-6 px-4 bg-gray-700 md:flex md:items-center md:justify-between"
     },
     [
-      _c("span", { staticClass: "font-bold pl-2" }, [_vm._t("default")], 2),
+      _c("div", { staticClass: "flex-1 min-w-0" }, [
+        _c(
+          "h2",
+          {
+            staticClass:
+              "text-2xl font-bold leading-7 text-white sm:text-3xl sm:leading-9 sm:truncate"
+          },
+          [_vm._t("default")],
+          2
+        )
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex" }, [_vm._t("aside")], 2)
+      _c(
+        "div",
+        { staticClass: "mt-4 flex md:mt-0 md:ml-4" },
+        [_vm._t("aside")],
+        2
+      )
     ]
   )
 }

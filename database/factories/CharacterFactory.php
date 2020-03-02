@@ -12,5 +12,6 @@ $factory->define(Character::class, function (Faker $faker) {
         'bio' => $faker->paragraph,
         'high_concept' => $faker->sentence,
         'active' => true,
+        'npc' => false,
     ];
 });

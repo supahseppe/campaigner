@@ -48,6 +48,11 @@ class Character extends Model
         return $this->belongsToMany('App\User')->withPivot('role');
     }
 
+    public function player()
+    {
+        return $this->belongsToMany('App\User')->wherePivot('role', '=', 'owner');
+    }
+
     public function tasks() {
         return $this->belongsToMany('App\Task');
     }

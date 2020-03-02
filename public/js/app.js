@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","2":"709dfeaae33f742cde78","11":"5b4e94f9b38b0e61a689","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","22":"df1410afe7b6b7e6a2b4","25":"ff730408530e21b28106","34":"cddb4d317ad8267377d7","35":"9ae2f541c09840e02c56","36":"9d4a0b1a77fad4a5b00f","37":"8b94e318ca428eb7497b","38":"f8875cd4f1b06526285c","39":"d794d23dc655bc8ed5aa","40":"9027a8d2399f28af5b2d","41":"d6f229c9c67b4bde12b3","42":"00c6c6cf0dafee07d4c0","43":"9e88914433c3ccc3e29c","44":"591b6123fb08f887c612","45":"8088b8f321c7ef522608","46":"3b7e62725a9ab7b7c11e","47":"c21da8678d2ceab4826a","48":"bc69a5ca7e22989a1554","49":"9b30d7bccfbb48a1cdb4","50":"b93e14de6b6cbc6cf3e5","51":"562876eabe3e88b2b73c","52":"0e4a63e73d8ebd72d922","53":"af1fd86242c476ce4323","54":"cf9dcc12bce8574c92e5","55":"d3eeacaf90445a5facac","56":"4077ad0c99ed00b77524","57":"f5ebd3e8314402e60b18","58":"4dc708bbf9dd35b6dc0a","59":"1fadf1c7f6c6945f8188","60":"b10cc3bbd01483b7d980"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"2":"709dfeaae33f742cde78","11":"5b4e94f9b38b0e61a689","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","20":"2686e881f6682254398b","22":"31e68130a7a3d70e18e7","25":"abe1f54a73c0357f2b97","34":"e6dd4cbf2175a8e65824","35":"139a76a7134ee8d32159","36":"1c02c5ee45152e29d883","37":"5644d8003e85d14ae547","38":"f8875cd4f1b06526285c","39":"beec2a8fbdd654a2a84c","40":"3c0176a6b4bd7880f64d","41":"56f51de959a6fd9dabbc","42":"00c6c6cf0dafee07d4c0","43":"9e88914433c3ccc3e29c","44":"591b6123fb08f887c612","45":"e059f8f7fde54c7f30f7","46":"3cd4ae499b9fb0a43bee","47":"c21da8678d2ceab4826a","48":"bc69a5ca7e22989a1554","49":"9b30d7bccfbb48a1cdb4","50":"b93e14de6b6cbc6cf3e5","51":"562876eabe3e88b2b73c","52":"0e4a63e73d8ebd72d922","53":"c7252a20eb0ded5e0ada","54":"cf9dcc12bce8574c92e5","55":"d3eeacaf90445a5facac","56":"4077ad0c99ed00b77524","57":"f5ebd3e8314402e60b18","58":"4dc708bbf9dd35b6dc0a","59":"1fadf1c7f6c6945f8188","60":"b10cc3bbd01483b7d980"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -53211,13 +53211,13 @@ var tailwindVue = {
 var map = {
 	"./About": [
 		"./resources/views/pages/About.vue",
-		0,
+		20,
 		22,
 		50
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
-		0,
+		20,
 		22,
 		50
 	],
@@ -53231,25 +53231,25 @@ var map = {
 	],
 	"./Auth/Passwords/Email": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		0,
+		20,
 		22,
 		43
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		0,
+		20,
 		22,
 		43
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		0,
+		20,
 		22,
 		44
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		0,
+		20,
 		22,
 		44
 	],
@@ -53263,19 +53263,19 @@ var map = {
 	],
 	"./Auth/Verify": [
 		"./resources/views/pages/Auth/Verify.vue",
-		0,
+		20,
 		22,
 		51
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
-		0,
+		20,
 		22,
 		51
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53283,7 +53283,7 @@ var map = {
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53291,21 +53291,21 @@ var map = {
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		52
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		52
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53313,7 +53313,7 @@ var map = {
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53321,33 +53321,33 @@ var map = {
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		0,
+		20,
 		2,
 		17,
 		42
 	],
 	"./Campaign/Initial.vue": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		0,
+		20,
 		2,
 		17,
 		42
 	],
 	"./Campaign/Read": [
 		"./resources/views/pages/Campaign/Read.vue",
-		0,
+		20,
 		22,
 		35
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
-		0,
+		20,
 		22,
 		35
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53355,7 +53355,7 @@ var map = {
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53363,21 +53363,21 @@ var map = {
 	],
 	"./Character/Browse": [
 		"./resources/views/pages/Character/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		53
 	],
 	"./Character/Browse.vue": [
 		"./resources/views/pages/Character/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		53
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53385,7 +53385,7 @@ var map = {
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53393,31 +53393,31 @@ var map = {
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
-		0,
+		20,
 		22,
 		36
 	],
 	"./Character/Read.vue": [
 		"./resources/views/pages/Character/Read.vue",
-		0,
+		20,
 		22,
 		36
 	],
 	"./Contact": [
 		"./resources/views/pages/Contact.vue",
-		0,
+		20,
 		22,
 		54
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
-		0,
+		20,
 		22,
 		54
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53425,7 +53425,7 @@ var map = {
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53433,21 +53433,21 @@ var map = {
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		56
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		56
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53455,7 +53455,7 @@ var map = {
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53463,31 +53463,31 @@ var map = {
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
-		0,
+		20,
 		22,
 		37
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
-		0,
+		20,
 		22,
 		37
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
-		0,
+		20,
 		22,
 		38
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
-		0,
+		20,
 		22,
 		38
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53495,7 +53495,7 @@ var map = {
 	],
 	"./Location/Add.vue": [
 		"./resources/views/pages/Location/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53503,21 +53503,21 @@ var map = {
 	],
 	"./Location/Browse": [
 		"./resources/views/pages/Location/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		58
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		58
 	],
 	"./Location/Edit": [
 		"./resources/views/pages/Location/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53525,7 +53525,7 @@ var map = {
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53533,19 +53533,19 @@ var map = {
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
-		0,
+		20,
 		22,
 		39
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
-		0,
+		20,
 		22,
 		39
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53553,7 +53553,7 @@ var map = {
 	],
 	"./Task/Add.vue": [
 		"./resources/views/pages/Task/Add.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53561,21 +53561,21 @@ var map = {
 	],
 	"./Task/Browse": [
 		"./resources/views/pages/Task/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		60
 	],
 	"./Task/Browse.vue": [
 		"./resources/views/pages/Task/Browse.vue",
-		0,
+		20,
 		22,
 		25,
 		60
 	],
 	"./Task/Edit": [
 		"./resources/views/pages/Task/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53583,7 +53583,7 @@ var map = {
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
-		0,
+		20,
 		2,
 		22,
 		17,
@@ -53591,13 +53591,13 @@ var map = {
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
-		0,
+		20,
 		22,
 		40
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
-		0,
+		20,
 		22,
 		40
 	],

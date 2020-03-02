@@ -1,30 +1,28 @@
 <template>
-    <section class="h-screen container">
-        <section class="flex items-start justify-between">
-            <section-header>
-                <div>
-                    <h1>{{ character.name }}</h1>
-                    <p
-                        v-if="character.alias"
-                        class="text-base font-normal italic opacity-75"
-                    >
-                        ( {{ character.alias }} )
-                    </p>
-                </div>
-                <template #aside>
-                    <btn :href="route('characters.edit', character.slug)">
-                        Edit
-                    </btn>
-                </template>
-            </section-header>
-        </section>
-        <section class="p-4">
+    <section class="">
+        <section-header>
+            <div>
+                <h1>{{ character.name }}</h1>
+                <p
+                    v-if="character.alias"
+                    class="text-base font-normal italic opacity-75"
+                >
+                    ( {{ character.alias }} )
+                </p>
+            </div>
+            <template #aside>
+                <btn :href="route('characters.edit', character.slug)">
+                    Edit
+                </btn>
+            </template>
+        </section-header>
+        <container>
             <p>
                 High Concept: {{ character.high_concept }}
                 <span v-if="character.npc" class="p-2 bg-indigo-300">NPC</span>
             </p>
             <div v-html="character.bio" />
-        </section>
+        </container>
     </section>
 </template>
 
@@ -32,10 +30,12 @@
     import MainLayout from '_Layouts/MainLayout';
     import SectionHeader from '_Components/SectionHeader';
     import Btn from '_Components/Btn';
+    import Container from '_Layouts/Container';
 
     export default {
         name: 'Character',
         components: {
+            Container,
             SectionHeader,
             Btn,
         },

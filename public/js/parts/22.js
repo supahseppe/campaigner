@@ -475,8 +475,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1304,17 +1302,11 @@ var render = function() {
           "main",
           {
             staticClass:
-              "flex-1 relative z-0 overflow-y-auto pt-2 pb-6 focus:outline-none md:py-6",
+              "flex-1 relative z-0 overflow-y-auto focus:outline-none",
             attrs: { tabindex: "0" }
           },
-          [
-            _c(
-              "div",
-              { staticClass: "max-w-7xl mx-auto px-4 sm:px-6 md:px-8" },
-              [_c("flash-messages"), _vm._v(" "), _vm._t("default")],
-              2
-            )
-          ]
+          [_c("flash-messages"), _vm._v(" "), _vm._t("default")],
+          2
         )
       ])
     ],
