@@ -580,6 +580,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1403,7 +1419,26 @@ var render = function() {
         "div",
         { staticClass: "h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto" },
         [
-          _vm._m(0),
+          _c(
+            "div",
+            { staticClass: "flex items-center flex-shrink-0 px-4" },
+            [
+              _c(
+                "inertia-link",
+                { attrs: { href: _vm.route("page.welcome") } },
+                [
+                  _c("img", {
+                    staticClass: "h-8 w-auto",
+                    attrs: {
+                      src: "/img/workflow-logo-on-dark.svg",
+                      alt: "Workflow"
+                    }
+                  })
+                ]
+              )
+            ],
+            1
+          ),
           _vm._v(" "),
           _c("sidebar-menu-provider", {
             scopedSlots: _vm._u([
@@ -1415,49 +1450,67 @@ var render = function() {
                     _c(
                       "nav",
                       { staticClass: "mt-5 flex-1 px-2 bg-gray-800" },
-                      [
-                        _c("div", { staticClass: "mb-4 px-2" }, [
-                          _c("p", { staticClass: "text-xs text-gray-400" }, [
-                            _vm._v("Selected Campaign:")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "text-sm text-gray-300" }, [
-                            _vm._v(
-                              "\n                                " +
-                                _vm._s(_vm.$page.auth.user.campaign.title) +
-                                "\n                            "
-                            )
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _vm._l(links, function(link, i) {
-                          return _c(
-                            "inertia-link",
-                            {
-                              key: i,
-                              staticClass:
-                                "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150",
-                              class: {
-                                "bg-gray-900": _vm.isRoute(link.route)
+                      _vm._l(links, function(link, i) {
+                        return _c(
+                          "div",
+                          { key: i },
+                          [
+                            _c(
+                              "inertia-link",
+                              {
+                                staticClass:
+                                  "group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150",
+                                class: {
+                                  "bg-gray-900": _vm.isRoute(link.route)
+                                },
+                                attrs: { href: link.url }
                               },
-                              attrs: { href: link.url }
-                            },
-                            [
-                              _c("icon", {
-                                staticClass: "mr-4",
-                                attrs: { icon: link.icon, color: "white" }
-                              }),
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(link.label) +
-                                  "\n                        "
-                              )
-                            ],
-                            1
-                          )
-                        })
-                      ],
-                      2
+                              [
+                                _c("icon", {
+                                  staticClass: "mr-4",
+                                  attrs: { icon: link.icon, color: "white" }
+                                }),
+                                _vm._v(
+                                  "\n                                " +
+                                    _vm._s(link.label) +
+                                    "\n                            "
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            i === 0
+                              ? _c("div", { staticClass: "my-3 px-2" }, [
+                                  _c(
+                                    "p",
+                                    { staticClass: "text-xs text-gray-400" },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Selected Campaign:\n                                "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "p",
+                                    { staticClass: "text-sm text-gray-300" },
+                                    [
+                                      _vm._v(
+                                        "\n                                    " +
+                                          _vm._s(
+                                            _vm.$page.auth.user.campaign.title
+                                          ) +
+                                          "\n                                "
+                                      )
+                                    ]
+                                  )
+                                ])
+                              : _vm._e()
+                          ],
+                          1
+                        )
+                      }),
+                      0
                     )
                   ]
                 }
@@ -1468,76 +1521,87 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(1)
+      _c("div", { staticClass: "flex-shrink-0 flex bg-gray-700 p-4" }, [
+        _c(
+          "a",
+          {
+            staticClass: "flex-shrink-0 group block focus:outline-none",
+            attrs: { href: "#" }
+          },
+          [
+            _c("div", { staticClass: "flex items-center" }, [
+              _c("div", [
+                _c(
+                  "span",
+                  {
+                    staticClass:
+                      "inline-block h-9 w-9 rounded-full overflow-hidden bg-gray-100"
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-full w-full text-gray-300",
+                        attrs: { fill: "currentColor", viewBox: "0 0 24 24" }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "ml-3" },
+                [
+                  _c(
+                    "p",
+                    { staticClass: "text-sm leading-5 font-medium text-white" },
+                    [
+                      _vm.$page.auth.user.username
+                        ? [
+                            _vm._v(
+                              "\n                                " +
+                                _vm._s(_vm.$page.auth.user.username) +
+                                "\n                            "
+                            )
+                          ]
+                        : [_vm._v(_vm._s(_vm.$page.auth.user.email))]
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "text-xs leading-4 font-medium text-gray-400 group-hover:text-gray-300 group-focus:underline transition ease-in-out duration-150",
+                      attrs: { href: "/" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            View profile\n                        "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ])
+          ]
+        )
+      ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex items-center flex-shrink-0 px-4" }, [
-      _c("img", {
-        staticClass: "h-8 w-auto",
-        attrs: { src: "/img/workflow-logo-on-dark.svg", alt: "Workflow" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex-shrink-0 flex bg-gray-700 p-4" }, [
-      _c(
-        "a",
-        {
-          staticClass: "flex-shrink-0 group block focus:outline-none",
-          attrs: { href: "#" }
-        },
-        [
-          _c("div", { staticClass: "flex items-center" }, [
-            _c("div", [
-              _c("img", {
-                staticClass: "inline-block h-9 w-9 rounded-full",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-                  alt: ""
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "ml-3" }, [
-              _c(
-                "p",
-                { staticClass: "text-sm leading-5 font-medium text-white" },
-                [
-                  _vm._v(
-                    "\n                            Tom Cook\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "text-xs leading-4 font-medium text-gray-400 group-hover:text-gray-300 group-focus:underline transition ease-in-out duration-150"
-                },
-                [
-                  _vm._v(
-                    "\n                            View profile\n                        "
-                  )
-                ]
-              )
-            ])
-          ])
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
