@@ -1,15 +1,22 @@
 <template>
-    <section class="h-full container">
+    <section>
         <browse-layout model="dummy" :pagination="pager.links">
-            <panel
-                v-for="dummy in dummies"
-                class="w-full h-full"
-                :key="dummy.id"
-            >
-                <inertia-link :href="route('dummies.show', dummy.slug)">
-                    {{ dummy.name }}
-                </inertia-link>
-            </panel>
+            <div class="bg-white shadow overflow-hidden sm:rounded-md">
+                <ul>
+                    <li
+                        v-for="dummy in dummies"
+                        :key="dummy.id"
+                        class="border-t border-200 first:border-0"
+                    >
+                        <inertia-link
+                            :href="route('dummies.show', dummy.slug)"
+                            class="block hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out"
+                        >
+                            {{ dummy.name }}
+                        </inertia-link>
+                    </li>
+                </ul>
+            </div>
         </browse-layout>
     </section>
 </template>

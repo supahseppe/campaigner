@@ -28,6 +28,75 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -89,32 +158,193 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "h-full container" },
     [
       _c(
         "browse-layout",
         { attrs: { model: "faction", pagination: _vm.pager.links } },
-        _vm._l(_vm.factions, function(faction) {
-          return _c(
-            "panel",
-            { key: faction.id, staticClass: "w-full h-full" },
+        [
+          _c(
+            "div",
+            { staticClass: "bg-white shadow overflow-hidden sm:rounded-md" },
             [
               _c(
-                "inertia-link",
-                { attrs: { href: _vm.route("factions.show", faction.slug) } },
-                [
-                  _vm._v(
-                    "\n                " +
-                      _vm._s(faction.name) +
-                      "\n            "
+                "ul",
+                _vm._l(_vm.factions, function(faction) {
+                  return _c(
+                    "li",
+                    {
+                      key: faction.id,
+                      staticClass: "border-t border-gray-200 first:border-0"
+                    },
+                    [
+                      _c(
+                        "inertia-link",
+                        {
+                          staticClass:
+                            "flex items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-150 ease-in-out",
+                          attrs: {
+                            href: _vm.route("factions.show", [faction.slug])
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "px-4 py-4 sm:px-6 flex-grow" },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex items-center justify-between"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text-sm leading-5 font-medium text-indigo-600 truncate"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    " +
+                                          _vm._s(faction.name) +
+                                          "\n                                "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "ml-2 flex-shrink-0 flex" },
+                                    [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                        Useful Taxonomy\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "mt-2 sm:flex sm:justify-between"
+                                },
+                                [
+                                  _c("div", { staticClass: "sm:flex" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "mr-6 flex items-center text-sm leading-5 text-gray-500"
+                                      },
+                                      [
+                                        _c(
+                                          "svg",
+                                          {
+                                            staticClass:
+                                              "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
+                                            attrs: {
+                                              fill: "currentColor",
+                                              viewBox: "0 0 20 20"
+                                            }
+                                          },
+                                          [
+                                            _c("path", {
+                                              attrs: {
+                                                d:
+                                                  "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(
+                                          "\n                                        More Taxonomy Terms\n                                    "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "mt-2 flex items-center text-sm leading-5 text-gray-500 sm:mt-0"
+                                      },
+                                      [
+                                        _c(
+                                          "svg",
+                                          {
+                                            staticClass:
+                                              "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
+                                            attrs: {
+                                              fill: "currentColor",
+                                              viewBox: "0 0 20 20"
+                                            }
+                                          },
+                                          [
+                                            _c("path", {
+                                              attrs: {
+                                                "fill-rule": "evenodd",
+                                                d:
+                                                  "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z",
+                                                "clip-rule": "evenodd"
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(
+                                          "\n                                        Primary Location\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "mx-4" }, [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "h-5 w-5 text-gray-400",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ],
+                    1
                   )
-                ]
+                }),
+                0
               )
-            ],
-            1
+            ]
           )
-        }),
-        1
+        ]
       )
     ],
     1

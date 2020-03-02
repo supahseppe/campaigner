@@ -1,5 +1,5 @@
 <template>
-    <section class="h-full container">
+    <section>
         <browse-layout model="task" :pagination="pager.links">
             <panel
                 v-for="task in tasks"

@@ -1,5 +1,5 @@
 <template>
-    <section class="h-full container">
+    <section>
         <browse-layout model="campaign" :pagination="pager.links">
             <panel
                 v-for="campaign in campaigns"

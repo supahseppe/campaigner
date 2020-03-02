@@ -89,7 +89,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "h-full container" },
     [
       _c(
         "browse-layout",

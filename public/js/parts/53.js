@@ -168,7 +168,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    {},
     [
       _c(
         "browse-layout",
