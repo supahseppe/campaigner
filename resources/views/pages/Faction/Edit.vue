@@ -9,18 +9,22 @@
         >
             <div class="flex flex-wrap mb-6">
                 <text-input
+                    v-model="form.name"
                     label="Name"
                     type="text"
                     :errors="$page.errors.name"
-                    v-model="form.name"
                     class="w-full mb-6"
                     required
                     autofocus
                 />
                 <div class="w-full mb-6">
-                    <wysiwyg label="Description" v-model="form.description" />
+                    <wysiwyg v-model="form.description" label="Description" />
                 </div>
-                <auto-complete label="Location" model="location" v-model="form.location" />
+                <auto-complete
+                    v-model="form.location"
+                    label="Location"
+                    model="location"
+                />
             </div>
 
             <div class="flex flex-wrap items-center justify-between">

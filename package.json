@@ -71,6 +71,7 @@
         "@tailwindcss/ui": "^0.1.3",
         "axios": "^0.19.2",
         "tributejs": "^4.1.3",
+        "vue-autosuggest": "^2.0.4",
         "vue-tribute": "^1.0.4",
         "vue2-autocomplete-js": "^0.2.2"
     }

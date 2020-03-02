@@ -68,7 +68,11 @@ class User extends Authenticatable
     }
 
     public function characters () {
-        return $this->belongsToMany('App\Character')->withPivot('role');
+        return $this->belongsToMany('App\Character')->where('npc', false)->withPivot('role');
+    }
+
+    public function npcs () {
+        return $this->belongsToMany('App\Character')->where('npc', true)->withPivot('role');
     }
 
     /**

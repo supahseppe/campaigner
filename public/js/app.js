@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","1":"fb3770fb7f025021bfe2","2":"709dfeaae33f742cde78","3":"c853881fa750a8edbad6","4":"f16c1ddd35c1716cd425","5":"46ce77282e26fc0e75c7","6":"10ce3a18710f5b0f6d9f","7":"4cd9644bfab5cabe2d9b","8":"e5a35ff74863bf220b8c","9":"7623fca1969dd28a0ee8","10":"79f04cd1130ea753c97d","11":"b5fe02b61dd2df4963ed","12":"1afad03e9fe6e5fc1d4b","13":"705ae997478d4e47010f","14":"d8db1c2773c39b655495","15":"c598eb094c96f03828e2","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"f891b29ea7c555c79bc5","21":"143d63e832ee62f1307a","22":"6903e475f5c1b920445a","23":"e6624e2769bef88a6cbc","24":"834ab0091636c7fa3530","25":"fa153ac603492ca549d7","26":"da2ddd17f9031820db6b","27":"e9589d8eaf88463847ef","28":"e43ce3adcf30f8ea47c7","29":"f910eaa318307ec8cbdd","30":"78219cbe063e3bd4c54f","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"4428bbe89ea5ef4419af"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","1":"fb3770fb7f025021bfe2","2":"709dfeaae33f742cde78","3":"c853881fa750a8edbad6","4":"f16c1ddd35c1716cd425","5":"46ce77282e26fc0e75c7","6":"10ce3a18710f5b0f6d9f","7":"eba9dc858d118858c88e","8":"e5a35ff74863bf220b8c","9":"7623fca1969dd28a0ee8","10":"79f04cd1130ea753c97d","11":"b5fe02b61dd2df4963ed","12":"1afad03e9fe6e5fc1d4b","13":"705ae997478d4e47010f","14":"d8db1c2773c39b655495","15":"c598eb094c96f03828e2","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"f891b29ea7c555c79bc5","21":"143d63e832ee62f1307a","22":"6903e475f5c1b920445a","23":"e6624e2769bef88a6cbc","24":"834ab0091636c7fa3530","25":"fa153ac603492ca549d7","26":"da2ddd17f9031820db6b","27":"e9589d8eaf88463847ef","28":"e43ce3adcf30f8ea47c7","29":"f910eaa318307ec8cbdd","30":"cbfc0dea8847c76357d3","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"e7a1bf0528bf77bd7437"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -53113,7 +53113,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers_Ziggy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/Ziggy */ "./resources/js/helpers/Ziggy.js");
 /* harmony import */ var _helpers_Tailwind__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/Tailwind */ "./resources/js/helpers/Tailwind.js");
 /* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
-// require('./bootstrap');
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.productionTip = false;
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.devtools = true;
@@ -53144,6 +53145,40 @@ new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
     });
   }
 }).$mount(app);
+
+/***/ }),
+
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot__) {__webpack_provided_window_dot__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"); // window.Popper = require('popper.js').default;
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+// import Echo from 'laravel-echo';
+// window.Pusher = require('pusher-js');
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js")))
 
 /***/ }),
 
