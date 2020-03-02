@@ -19,6 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
             alias: {
                 vue$: 'vue/dist/vue.runtime.esm.js',
                 ziggy: path.resolve('vendor/tightenco/ziggy/dist/js/route.js'),
+                '~': path.resolve(__dirname, 'node_modules/'),
                 '@': path.resolve(__dirname, 'resources/'),
                 _Components: path.resolve(__dirname, 'resources/js/components'),
                 _Layouts: path.resolve(__dirname, 'resources/views/layouts'),

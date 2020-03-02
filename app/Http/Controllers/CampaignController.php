@@ -155,4 +155,12 @@ class CampaignController extends Controller
         $campaign->restore();
         return Redirect::back()->with('success', 'Campaign restored.');
     }
+
+    public function autocomplete(Request $request)
+    {
+        $input = $request->get('q');
+        $result = Campaign::where('title', 'LIKE', '%' . $input . '%')->get();
+
+        return response()->json($result);
+    }
 }

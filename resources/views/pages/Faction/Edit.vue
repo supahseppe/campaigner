@@ -20,6 +20,7 @@
                 <div class="w-full mb-6">
                     <wysiwyg label="Description" v-model="form.description" />
                 </div>
+                <auto-complete label="Location" model="location" v-model="form.location" />
             </div>
 
             <div class="flex flex-wrap items-center justify-between">
@@ -50,10 +51,12 @@
     import LoadingButton from '_Components/LoadingButton';
     import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
+    import AutoComplete from '_Inputs/AutoComplete';
 
     export default {
         name: 'Edit',
         components: {
+            AutoComplete,
             TextInput,
             LoadingButton,
             TrashedMessage,
@@ -73,6 +76,7 @@
                 form: {
                     name: this.faction.name,
                     description: this.faction.description,
+                    location: this.faction.location,
                 },
             };
         },

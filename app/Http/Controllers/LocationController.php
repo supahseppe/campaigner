@@ -13,7 +13,7 @@ class LocationController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('autocomplete');
     }
 
     /**
@@ -125,5 +125,13 @@ class LocationController extends Controller
     {
         $location->restore();
         return Redirect::back()->with('success', 'Location restored.');
+    }
+
+    public function autocomplete(Request $request)
+    {
+        $input = $request->get('q');
+        $result = Location::where('name', 'LIKE', '%' . $input . '%')->get();
+
+        return response()->json($result);
     }
 }

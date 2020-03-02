@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"2":"709dfeaae33f742cde78","11":"294d17d1415719fd4a33","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","20":"2686e881f6682254398b","22":"31e68130a7a3d70e18e7","25":"c126aaf75450f5fbcad1","34":"3c456b398c1a301c6e33","35":"33054bdcfd421364427d","36":"a71cafce319811ae1344","37":"b6fef04f155abcf52bd1","38":"b53a9246789e03cc2220","39":"9d016391d246b3c1f896","40":"c2a92b21c78e3d719303","41":"5622bfe698d7bfd2e52c","42":"00c6c6cf0dafee07d4c0","43":"c5ff1f9e406029e87c1f","44":"a23c0ec40c43db176df3","45":"c17b874e75aa4542e254","46":"d145c71269129f62ccb0","47":"2935b1c1c73f5f461948","48":"7d4756a3b5376516d76a","49":"cf583020c2060c4f4946","50":"009c43d5847f2b28c39c","51":"c90206834c95dce7b473","52":"11057921b32cd19f85d9","53":"f4d6cc868758087828bc","54":"5ef295dbb3a2af26815f","55":"ed031a84f09ad07e8361","56":"503d61bd0a6fb840861b","57":"f5ebd3e8314402e60b18","58":"6771fb3d730d04ff6d23","59":"1fadf1c7f6c6945f8188","60":"f719ee13b977688b673f"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"8e02812f4ad075215068","1":"fb3770fb7f025021bfe2","2":"709dfeaae33f742cde78","3":"c853881fa750a8edbad6","4":"f16c1ddd35c1716cd425","5":"46ce77282e26fc0e75c7","6":"10ce3a18710f5b0f6d9f","7":"4cd9644bfab5cabe2d9b","8":"e5a35ff74863bf220b8c","9":"7623fca1969dd28a0ee8","10":"79f04cd1130ea753c97d","11":"b5fe02b61dd2df4963ed","12":"1afad03e9fe6e5fc1d4b","13":"705ae997478d4e47010f","14":"d8db1c2773c39b655495","15":"c598eb094c96f03828e2","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"f891b29ea7c555c79bc5","21":"143d63e832ee62f1307a","22":"6903e475f5c1b920445a","23":"e6624e2769bef88a6cbc","24":"834ab0091636c7fa3530","25":"fa153ac603492ca549d7","26":"da2ddd17f9031820db6b","27":"e9589d8eaf88463847ef","28":"e43ce3adcf30f8ea47c7","29":"f910eaa318307ec8cbdd","30":"78219cbe063e3bd4c54f","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"4428bbe89ea5ef4419af"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -53211,403 +53211,405 @@ var tailwindVue = {
 var map = {
 	"./About": [
 		"./resources/views/pages/About.vue",
-		20,
-		22,
-		48
+		0,
+		1,
+		23
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
-		20,
-		22,
-		48
+		0,
+		1,
+		23
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
-		12
+		8
 	],
 	"./Auth/Login.vue": [
 		"./resources/views/pages/Auth/Login.vue",
-		12
+		8
 	],
 	"./Auth/Passwords/Email": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		20,
-		22,
-		39
+		0,
+		1,
+		16
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		20,
-		22,
-		39
+		0,
+		1,
+		16
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		20,
-		22,
-		40
+		0,
+		1,
+		17
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		20,
-		22,
-		40
+		0,
+		1,
+		17
 	],
 	"./Auth/Register": [
 		"./resources/views/pages/Auth/Register.vue",
-		16
+		14
 	],
 	"./Auth/Register.vue": [
 		"./resources/views/pages/Auth/Register.vue",
-		16
+		14
 	],
 	"./Auth/Verify": [
 		"./resources/views/pages/Auth/Verify.vue",
-		20,
-		22,
-		49
+		0,
+		1,
+		24
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
-		20,
-		22,
-		49
+		0,
+		1,
+		24
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		41
+		1,
+		3,
+		18
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		41
+		1,
+		3,
+		18
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		20,
-		22,
-		50,
-		52
+		0,
+		1,
+		4,
+		25
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		20,
-		22,
-		50,
-		52
+		0,
+		1,
+		4,
+		25
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		38
+		1,
+		3,
+		13
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		38
+		1,
+		3,
+		13
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		20,
+		0,
 		2,
-		17,
-		42
+		3,
+		15
 	],
 	"./Campaign/Initial.vue": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		20,
+		0,
 		2,
-		17,
-		42
+		3,
+		15
 	],
 	"./Campaign/Read": [
 		"./resources/views/pages/Campaign/Read.vue",
-		20,
-		22,
-		34
+		0,
+		1,
+		9
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
-		20,
-		22,
-		34
+		0,
+		1,
+		9
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		43
+		1,
+		3,
+		19
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		43
+		1,
+		3,
+		19
 	],
 	"./Character/Browse": [
 		"./resources/views/pages/Character/Browse.vue",
-		20,
-		22,
-		50,
-		51
+		0,
+		1,
+		4,
+		26
 	],
 	"./Character/Browse.vue": [
 		"./resources/views/pages/Character/Browse.vue",
-		20,
-		22,
-		50,
-		51
+		0,
+		1,
+		4,
+		26
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		45
+		1,
+		3,
+		5
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		45
+		1,
+		3,
+		5
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
-		20,
-		22,
-		25
+		0,
+		1,
+		6
 	],
 	"./Character/Read.vue": [
 		"./resources/views/pages/Character/Read.vue",
-		20,
-		22,
-		25
+		0,
+		1,
+		6
 	],
 	"./Contact": [
 		"./resources/views/pages/Contact.vue",
-		20,
-		22,
-		53
+		0,
+		1,
+		27
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
-		20,
-		22,
-		53
+		0,
+		1,
+		27
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		54
+		1,
+		3,
+		28
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		54
+		1,
+		3,
+		28
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
-		20,
-		22,
-		50,
-		55
+		0,
+		1,
+		4,
+		29
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
-		20,
-		22,
-		50,
-		55
+		0,
+		1,
+		4,
+		29
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		44
+		35,
+		1,
+		3,
+		7
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		44
+		35,
+		1,
+		3,
+		7
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
-		20,
-		22,
-		35
+		0,
+		1,
+		10
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
-		20,
-		22,
-		35
+		0,
+		1,
+		10
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
-		20,
-		22,
-		56
+		0,
+		1,
+		30
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
-		20,
-		22,
-		56
+		0,
+		1,
+		30
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		57
+		1,
+		3,
+		31
 	],
 	"./Location/Add.vue": [
 		"./resources/views/pages/Location/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		57
+		1,
+		3,
+		31
 	],
 	"./Location/Browse": [
 		"./resources/views/pages/Location/Browse.vue",
-		20,
-		22,
-		50,
-		58
+		0,
+		1,
+		4,
+		32
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
-		20,
-		22,
-		50,
-		58
+		0,
+		1,
+		4,
+		32
 	],
 	"./Location/Edit": [
 		"./resources/views/pages/Location/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		46
+		1,
+		3,
+		20
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		46
+		1,
+		3,
+		20
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
-		20,
-		22,
-		36
+		0,
+		1,
+		11
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
-		20,
-		22,
-		36
+		0,
+		1,
+		11
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		59
+		1,
+		3,
+		33
 	],
 	"./Task/Add.vue": [
 		"./resources/views/pages/Task/Add.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		59
+		1,
+		3,
+		33
 	],
 	"./Task/Browse": [
 		"./resources/views/pages/Task/Browse.vue",
-		20,
-		22,
-		50,
-		60
+		0,
+		1,
+		4,
+		34
 	],
 	"./Task/Browse.vue": [
 		"./resources/views/pages/Task/Browse.vue",
-		20,
-		22,
-		50,
-		60
+		0,
+		1,
+		4,
+		34
 	],
 	"./Task/Edit": [
 		"./resources/views/pages/Task/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		47
+		1,
+		3,
+		21
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
-		20,
+		0,
 		2,
-		22,
-		17,
-		47
+		1,
+		3,
+		21
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
-		20,
-		22,
-		37
+		0,
+		1,
+		12
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
-		20,
-		22,
-		37
+		0,
+		1,
+		12
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",
-		11
+		22
 	],
 	"./Welcome.vue": [
 		"./resources/views/pages/Welcome.vue",
-		11
+		22
 	]
 };
 function webpackAsyncContext(req) {
