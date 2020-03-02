@@ -17,8 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/campaigns/{user}', 'CampaignController@autocomplete')->name('campaigns.autocomplete');
-Route::get('/characters', 'CharacterController@autocomplete')->name('characters.autocomplete');
-Route::get('/factions', 'FactionController@autocomplete')->name('factions.autocomplete');
-Route::get('/locations', 'LocationController@autocomplete')->name('locations.autocomplete');
-Route::get('/tasks', 'TaskController@autocomplete')->name('tasks.autocomplete');
+/*
+|--------------------------------------------------------------------------
+| Campaign endpoints
+|--------------------------------------------------------------------------
+ */
+
+Route::name('campaigns.')->prefix('campaigns')->group(function () {
+    Route::get('/autocomplete', 'CampaignController@autocomplete')->name('autocomplete');
+});
+

@@ -12,6 +12,9 @@ class RolesAndPermissionsSeeder extends Seeder
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         // create permissions
+        Permission::create(['name' => 'view_any']);
+        Permission::create(['name' => 'view_own']);
+        Permission::create(['name' => 'view_public']);
         Permission::create(['name' => 'create']);
         Permission::create(['name' => 'delete_any']);
         Permission::create(['name' => 'delete_own']);
@@ -26,6 +29,8 @@ class RolesAndPermissionsSeeder extends Seeder
         // this can be done as separate statements
         $role = Role::create(['name' => 'authenticated']);
         $role->givePermissionTo([
+            'view_own',
+            'view_public',
             'create',
             'delete_own',
             'delete_revisions',
