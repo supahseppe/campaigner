@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"2":"709dfeaae33f742cde78","11":"5b4e94f9b38b0e61a689","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","20":"2686e881f6682254398b","22":"31e68130a7a3d70e18e7","25":"abe1f54a73c0357f2b97","34":"e6dd4cbf2175a8e65824","35":"139a76a7134ee8d32159","36":"1c02c5ee45152e29d883","37":"5644d8003e85d14ae547","38":"f8875cd4f1b06526285c","39":"beec2a8fbdd654a2a84c","40":"3c0176a6b4bd7880f64d","41":"56f51de959a6fd9dabbc","42":"00c6c6cf0dafee07d4c0","43":"9e88914433c3ccc3e29c","44":"591b6123fb08f887c612","45":"e059f8f7fde54c7f30f7","46":"3cd4ae499b9fb0a43bee","47":"c21da8678d2ceab4826a","48":"bc69a5ca7e22989a1554","49":"9b30d7bccfbb48a1cdb4","50":"b93e14de6b6cbc6cf3e5","51":"562876eabe3e88b2b73c","52":"11057921b32cd19f85d9","53":"1c487eaa0d840d496698","54":"cf9dcc12bce8574c92e5","55":"d3eeacaf90445a5facac","56":"23f4ed18d90e0983a1ab","57":"f5ebd3e8314402e60b18","58":"6771fb3d730d04ff6d23","59":"1fadf1c7f6c6945f8188","60":"f719ee13b977688b673f"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"2":"709dfeaae33f742cde78","11":"294d17d1415719fd4a33","12":"9e7e030b2b6a5516d666","16":"632bf2e76f946af7e5ea","17":"3aeb3276a96bc8bdfe3f","20":"2686e881f6682254398b","22":"31e68130a7a3d70e18e7","25":"c126aaf75450f5fbcad1","34":"3c456b398c1a301c6e33","35":"33054bdcfd421364427d","36":"a71cafce319811ae1344","37":"b6fef04f155abcf52bd1","38":"b53a9246789e03cc2220","39":"9d016391d246b3c1f896","40":"c2a92b21c78e3d719303","41":"5622bfe698d7bfd2e52c","42":"00c6c6cf0dafee07d4c0","43":"c5ff1f9e406029e87c1f","44":"a23c0ec40c43db176df3","45":"c17b874e75aa4542e254","46":"d145c71269129f62ccb0","47":"2935b1c1c73f5f461948","48":"7d4756a3b5376516d76a","49":"cf583020c2060c4f4946","50":"009c43d5847f2b28c39c","51":"c90206834c95dce7b473","52":"11057921b32cd19f85d9","53":"f4d6cc868758087828bc","54":"5ef295dbb3a2af26815f","55":"ed031a84f09ad07e8361","56":"503d61bd0a6fb840861b","57":"f5ebd3e8314402e60b18","58":"6771fb3d730d04ff6d23","59":"1fadf1c7f6c6945f8188","60":"f719ee13b977688b673f"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -53213,13 +53213,13 @@ var map = {
 		"./resources/views/pages/About.vue",
 		20,
 		22,
-		50
+		48
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
 		20,
 		22,
-		50
+		48
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
@@ -53233,25 +53233,25 @@ var map = {
 		"./resources/views/pages/Auth/Passwords/Email.vue",
 		20,
 		22,
-		43
+		39
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
 		20,
 		22,
-		43
+		39
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		20,
 		22,
-		44
+		40
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
 		20,
 		22,
-		44
+		40
 	],
 	"./Auth/Register": [
 		"./resources/views/pages/Auth/Register.vue",
@@ -53265,13 +53265,13 @@ var map = {
 		"./resources/views/pages/Auth/Verify.vue",
 		20,
 		22,
-		51
+		49
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
 		20,
 		22,
-		51
+		49
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
@@ -53279,7 +53279,7 @@ var map = {
 		2,
 		22,
 		17,
-		45
+		41
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
@@ -53287,20 +53287,20 @@ var map = {
 		2,
 		22,
 		17,
-		45
+		41
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		52
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		52
 	],
 	"./Campaign/Edit": [
@@ -53309,7 +53309,7 @@ var map = {
 		2,
 		22,
 		17,
-		41
+		38
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -53317,7 +53317,7 @@ var map = {
 		2,
 		22,
 		17,
-		41
+		38
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
@@ -53337,13 +53337,13 @@ var map = {
 		"./resources/views/pages/Campaign/Read.vue",
 		20,
 		22,
-		35
+		34
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
 		20,
 		22,
-		35
+		34
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
@@ -53351,7 +53351,7 @@ var map = {
 		2,
 		22,
 		17,
-		46
+		43
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
@@ -53359,21 +53359,21 @@ var map = {
 		2,
 		22,
 		17,
-		46
+		43
 	],
 	"./Character/Browse": [
 		"./resources/views/pages/Character/Browse.vue",
 		20,
 		22,
-		25,
-		53
+		50,
+		51
 	],
 	"./Character/Browse.vue": [
 		"./resources/views/pages/Character/Browse.vue",
 		20,
 		22,
-		25,
-		53
+		50,
+		51
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -53381,7 +53381,7 @@ var map = {
 		2,
 		22,
 		17,
-		34
+		45
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -53389,31 +53389,31 @@ var map = {
 		2,
 		22,
 		17,
-		34
+		45
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
 		20,
 		22,
-		36
+		25
 	],
 	"./Character/Read.vue": [
 		"./resources/views/pages/Character/Read.vue",
 		20,
 		22,
-		36
+		25
 	],
 	"./Contact": [
 		"./resources/views/pages/Contact.vue",
 		20,
 		22,
-		54
+		53
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
 		20,
 		22,
-		54
+		53
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -53421,7 +53421,7 @@ var map = {
 		2,
 		22,
 		17,
-		55
+		54
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
@@ -53429,21 +53429,21 @@ var map = {
 		2,
 		22,
 		17,
-		55
+		54
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
 		20,
 		22,
-		25,
-		56
+		50,
+		55
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
 		20,
 		22,
-		25,
-		56
+		50,
+		55
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -53451,7 +53451,7 @@ var map = {
 		2,
 		22,
 		17,
-		47
+		44
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -53459,31 +53459,31 @@ var map = {
 		2,
 		22,
 		17,
-		47
+		44
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
 		20,
 		22,
-		37
+		35
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
 		20,
 		22,
-		37
+		35
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
 		20,
 		22,
-		38
+		56
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
 		20,
 		22,
-		38
+		56
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
@@ -53505,14 +53505,14 @@ var map = {
 		"./resources/views/pages/Location/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		58
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		58
 	],
 	"./Location/Edit": [
@@ -53521,7 +53521,7 @@ var map = {
 		2,
 		22,
 		17,
-		48
+		46
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
@@ -53529,19 +53529,19 @@ var map = {
 		2,
 		22,
 		17,
-		48
+		46
 	],
 	"./Location/Read": [
 		"./resources/views/pages/Location/Read.vue",
 		20,
 		22,
-		39
+		36
 	],
 	"./Location/Read.vue": [
 		"./resources/views/pages/Location/Read.vue",
 		20,
 		22,
-		39
+		36
 	],
 	"./Task/Add": [
 		"./resources/views/pages/Task/Add.vue",
@@ -53563,14 +53563,14 @@ var map = {
 		"./resources/views/pages/Task/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		60
 	],
 	"./Task/Browse.vue": [
 		"./resources/views/pages/Task/Browse.vue",
 		20,
 		22,
-		25,
+		50,
 		60
 	],
 	"./Task/Edit": [
@@ -53579,7 +53579,7 @@ var map = {
 		2,
 		22,
 		17,
-		49
+		47
 	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
@@ -53587,19 +53587,19 @@ var map = {
 		2,
 		22,
 		17,
-		49
+		47
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
 		20,
 		22,
-		40
+		37
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
 		20,
 		22,
-		40
+		37
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",

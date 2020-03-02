@@ -42,13 +42,6 @@ class CampaignController extends Controller
          ]);
     }
 
-    public function autocomplete(Request $request, User $user)
-    {
-        if ($request->wantsJson()) {
-            return CampaignResource::collection($user->campaigns);
-        }
-    }
-
     /**
      * Show the form for creating a new resource.
      *
