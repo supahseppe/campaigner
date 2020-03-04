@@ -22,11 +22,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Btn',
   components: {},
@@ -34,12 +29,20 @@ __webpack_require__.r(__webpack_exports__);
     href: {
       type: String,
       "default": ''
+    },
+    color: {
+      type: String,
+      "default": 'indigo'
     }
   },
   data: function data() {
     return {};
   },
-  computed: {},
+  computed: {
+    classes: function classes() {
+      return ['inline-flex', 'items-center', 'px-4', 'py-2', 'border', 'border-transparent', 'text-base', 'leading-6', 'font-medium', 'rounded-md', 'text-white', "bg-".concat(this.color, "-600"), "hover:bg-".concat(this.color, "-500"), 'focus:outline-none', "focus:border-".concat(this.color, "-700"), "focus:shadow-outline-".concat(this.color), "active:bg-".concat(this.color, "-700"), 'transition', 'ease-in-out', 'duration-150'];
+    }
+  },
   watch: {},
   created: function created() {},
   mounted: function mounted() {},
@@ -311,30 +314,32 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.href
     ? _c(
-        "inertia-link",
-        _vm._g(
-          {
-            staticClass:
-              "text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded",
-            attrs: { href: _vm.href }
-          },
-          _vm.$listeners
-        ),
-        [_vm._t("default")],
-        2
+        "span",
+        { staticClass: "inline-flex rounded-md shadow-sm" },
+        [
+          _c(
+            "inertia-link",
+            _vm._g(
+              { class: _vm.classes, attrs: { href: _vm.href } },
+              _vm.$listeners
+            ),
+            [_vm._t("default")],
+            2
+          )
+        ],
+        1
       )
-    : _c(
-        "button",
-        _vm._g(
-          {
-            staticClass:
-              "text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
-          },
-          _vm.$listeners
-        ),
-        [_vm._t("default")],
-        2
-      )
+    : _c("span", { staticClass: "inline-flex rounded-md shadow-sm" }, [
+        _c(
+          "button",
+          _vm._g(
+            { class: _vm.classes, attrs: { type: "button" } },
+            _vm.$listeners
+          ),
+          [_vm._t("default")],
+          2
+        )
+      ])
 }
 var staticRenderFns = []
 render._withStripped = true

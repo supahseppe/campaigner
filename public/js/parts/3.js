@@ -53,6 +53,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'TextInput',
   components: {},
@@ -360,10 +367,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.label
-      ? _c("label", { staticClass: "form-label", attrs: { for: _vm.id } }, [
-          _vm._v(_vm._s(_vm.label) + ":")
-        ])
+      ? _c(
+          "label",
+          {
+            staticClass: "block text-sm font-medium leading-5 text-gray-700",
+            attrs: { for: _vm.id }
+          },
+          [_vm._v(_vm._s(_vm.label))]
+        )
       : _vm._e(),
+    _vm._v(" "),
+    _vm._m(0),
     _vm._v(" "),
     _c(
       "input",
@@ -393,7 +407,19 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-1 relative rounded-md shadow-sm" }, [
+      _c("input", {
+        staticClass: "form-input block w-full sm:text-sm sm:leading-5",
+        attrs: { id: "email", placeholder: "you@example.com" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 

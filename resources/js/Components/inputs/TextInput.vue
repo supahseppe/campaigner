@@ -1,6 +1,13 @@
 <template>
     <div>
-        <label v-if="label" class="form-label" :for="id">{{ label }}:</label>
+        <label v-if="label" :for="id" class="block text-sm font-medium leading-5 text-gray-700">{{ label }}</label>
+        <div class="mt-1 relative rounded-md shadow-sm">
+            <input
+                id="email"
+                class="form-input block w-full sm:text-sm sm:leading-5"
+                placeholder="you@example.com"
+            />
+        </div>
         <input
             :id="id"
             ref="input"

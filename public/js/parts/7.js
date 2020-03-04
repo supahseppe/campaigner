@@ -225,6 +225,189 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -368,255 +551,335 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mx-auto h-screen" }, [
-    _c("div", { staticClass: "flex items-center justify-center h-full" }, [
-      _c("div", { staticClass: "w-full max-w-sm" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex flex-col break-words bg-white border border-2 rounded shadow-md"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "px-6 py-3 mb-0 font-bold font-lg text-white bg-indigo-500"
-              },
-              [_vm._v("\n                    Login\n                ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                staticClass: "w-full p-6",
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.submit($event)
-                  }
-                }
-              },
-              [
+  return _c("div", { staticClass: "min-h-screen bg-white flex" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24"
+      },
+      [
+        _c("div", { staticClass: "mx-auto w-full max-w-sm" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-8" }, [
+            _c("div", [
+              _c("div", [
                 _c(
-                  "div",
-                  { staticClass: "flex flex-wrap mb-6" },
+                  "p",
+                  {
+                    staticClass: "text-sm leading-5 font-medium text-gray-700"
+                  },
                   [
-                    _c("text-input", {
-                      staticClass: "w-full",
-                      attrs: {
-                        label: "Email Address",
-                        type: "email",
-                        errors: _vm.$page.errors.email,
-                        required: "",
-                        autofocus: ""
-                      },
-                      model: {
-                        value: _vm.form.email,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "email", $$v)
-                        },
-                        expression: "form.email"
-                      }
-                    })
-                  ],
-                  1
+                    _vm._v(
+                      "\n                            Sign in with\n                        "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "flex flex-wrap mb-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "block mb-2 text-sm font-bold text-gray-700",
-                      attrs: { for: "password" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Password\n                        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.password,
-                        expression: "form.password"
-                      }
-                    ],
-                    staticClass:
-                      "w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline",
-                    class: { "border-red-500": _vm.$page.errors.password },
-                    attrs: {
-                      id: "password",
-                      type: "password",
-                      name: "password",
-                      required: ""
-                    },
-                    domProps: { value: _vm.form.password },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "password", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.$page.errors.password
-                    ? _c(
-                        "p",
-                        { staticClass: "mt-4 text-xs italic text-red-500" },
-                        [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(_vm.$page.errors.password[0]) +
-                              "\n                        "
-                          )
-                        ]
-                      )
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "flex mb-6" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.remember,
-                        expression: "form.remember"
-                      }
-                    ],
-                    attrs: {
-                      id: "remember",
-                      type: "checkbox",
-                      name: "remember"
-                    },
-                    domProps: {
-                      checked: Array.isArray(_vm.form.remember)
-                        ? _vm._i(_vm.form.remember, null) > -1
-                        : _vm.form.remember
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$a = _vm.form.remember,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = null,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 &&
-                              _vm.$set(_vm.form, "remember", $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              _vm.$set(
-                                _vm.form,
-                                "remember",
-                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                              )
-                          }
-                        } else {
-                          _vm.$set(_vm.form, "remember", $$c)
-                        }
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "label",
-                    {
-                      staticClass: "ml-3 text-sm text-gray-700",
-                      attrs: { for: "remember" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                            Remember Me\n                        "
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "flex flex-wrap items-center" },
-                  [
+                _c("div", { staticClass: "mt-1 grid grid-cols-3 gap-3" }, [
+                  _c("div", [
                     _c(
-                      "loading-button",
+                      "span",
                       {
-                        staticClass:
-                          "px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline",
-                        attrs: { loading: _vm.sending, type: "submit" }
+                        staticClass: "w-full inline-flex rounded-md shadow-sm"
                       },
                       [
-                        _vm._v(
-                          "\n                            Login\n                        "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    !_vm.$page.auth.user &&
-                    _vm.$page.auth_routes.password_request
-                      ? _c(
-                          "inertia-link",
+                        _c(
+                          "button",
                           {
                             staticClass:
-                              "ml-auto text-sm text-blue-500 no-underline whitespace-no-wrap hover:text-blue-700",
-                            attrs: { href: "/password/reset" }
+                              "w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out",
+                            attrs: { type: "button" }
                           },
                           [
-                            _vm._v(
-                              "\n                            Forgot Your Password?\n                        "
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "h-5 h-5",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
                             )
                           ]
                         )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    !_vm.$page.auth.user && _vm.$page.auth_routes.register
-                      ? _c(
-                          "p",
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "w-full inline-flex rounded-md shadow-sm"
+                      },
+                      [
+                        _c(
+                          "button",
                           {
                             staticClass:
-                              "w-full mt-8 -mb-4 text-xs text-center text-gray-700"
+                              "w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out",
+                            attrs: { type: "button" }
                           },
                           [
-                            _vm._v(
-                              "\n                            Don't have an account?\n                            "
-                            ),
                             _c(
-                              "inertia-link",
+                              "svg",
                               {
-                                staticClass:
-                                  "text-blue-500 no-underline hover:text-blue-700",
-                                attrs: { href: "/register" }
+                                staticClass: "h-5 h-5",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
                               },
                               [
-                                _vm._v(
-                                  "\n                                Register\n                            "
-                                )
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
+                                  }
+                                })
                               ]
                             )
-                          ],
-                          1
+                          ]
                         )
-                      : _vm._e()
-                  ],
-                  1
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "w-full inline-flex rounded-md shadow-sm"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out",
+                            attrs: { type: "button" }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "h-5 h-5",
+                                attrs: {
+                                  fill: "currentColor",
+                                  viewBox: "0 0 20 20"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("img", {
+        staticClass: "h-12 w-auto",
+        attrs: { src: "/img/workflow-mark-on-white.svg", alt: "Workflow" }
+      }),
+      _vm._v(" "),
+      _c(
+        "h2",
+        { staticClass: "mt-6 text-3xl leading-9 font-extrabold text-gray-900" },
+        [
+          _vm._v(
+            "\n                    Sign in to your account\n                "
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-6 relative" }, [
+      _c("div", { staticClass: "absolute inset-0 flex items-center" }, [
+        _c("div", { staticClass: "w-full border-t border-gray-300" })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "relative flex justify-center text-sm leading-5" },
+        [
+          _c("span", { staticClass: "px-2 bg-white text-gray-500" }, [
+            _vm._v(
+              "\n                                Or continue with\n                            "
+            )
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-6" }, [
+      _c("form", { attrs: { action: "#", method: "POST" } }, [
+        _c("div", [
+          _c(
+            "label",
+            {
+              staticClass: "block text-sm font-medium leading-5 text-gray-700",
+              attrs: { for: "email" }
+            },
+            [
+              _vm._v(
+                "\n                                Email address\n                            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-1 rounded-md shadow-sm" }, [
+            _c("input", {
+              staticClass:
+                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+              attrs: { id: "email", type: "email", required: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-6" }, [
+          _c(
+            "label",
+            {
+              staticClass: "block text-sm font-medium leading-5 text-gray-700",
+              attrs: { for: "password" }
+            },
+            [
+              _vm._v(
+                "\n                                Password\n                            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-1 rounded-md shadow-sm" }, [
+            _c("input", {
+              staticClass:
+                "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5",
+              attrs: { id: "password", type: "password", required: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-6 flex items-center justify-between" }, [
+          _c("div", { staticClass: "flex items-center" }, [
+            _c("input", {
+              staticClass:
+                "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
+              attrs: { id: "remember_me", type: "checkbox" }
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "ml-2 block text-sm leading-5 text-gray-900",
+                attrs: { for: "remember_me" }
+              },
+              [
+                _vm._v(
+                  "\n                                    Remember me\n                                "
                 )
               ]
             )
-          ]
-        )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-sm leading-5" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150",
+                attrs: { href: "#" }
+              },
+              [
+                _vm._v(
+                  "\n                                    Forgot your password?\n                                "
+                )
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-6" }, [
+          _c("span", { staticClass: "block w-full rounded-md shadow-sm" }, [
+            _c(
+              "button",
+              {
+                staticClass:
+                  "w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out",
+                attrs: { type: "submit" }
+              },
+              [
+                _vm._v(
+                  "\n                                    Sign in\n                                "
+                )
+              ]
+            )
+          ])
+        ])
       ])
     ])
-  ])
-}
-var staticRenderFns = []
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hidden lg:block relative w-0 flex-1" }, [
+      _c("img", {
+        staticClass: "absolute inset-0 h-full w-full object-cover",
+        attrs: { src: "/img/dice.jpg", alt: "" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 

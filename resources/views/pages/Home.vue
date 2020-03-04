@@ -5,10 +5,16 @@
         </section-header>
         <div class="p-4">
             <panel class="mb-6">
-                <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                <div
+                    class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 flex items-center justify-between"
+                >
                     <h3 class="text-lg leading-6 font-medium text-gray-900">
                         Campaigns
                     </h3>
+                    <btn :href="route('campaigns.create')">
+                        <p>Create</p>
+                        <icon icon="plus" color="white" class="ml-1" />
+                    </btn>
                 </div>
                 <div class="px-4 py-5 sm:px-6">
                     <template v-if="campaigns.data.length">
@@ -31,10 +37,16 @@
                 </div>
             </panel>
             <panel class="mb-6">
-                <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                <div
+                    class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6 flex items-center justify-between"
+                >
                     <h3 class="text-lg leading-6 font-medium text-gray-900">
                         Characters
                     </h3>
+                    <btn :href="route('campaigns.create')">
+                        <p>Create</p>
+                        <icon icon="plus" color="white" class="ml-1" />
+                    </btn>
                 </div>
                 <div class="px-4 py-5 sm:px-6">
                     <template v-if="characters.data.length">
@@ -64,11 +76,15 @@
     import MainLayout from '_Layouts/MainLayout';
     import SectionHeader from '_Components/SectionHeader';
     import Panel from '_Components/cards/Panel';
+    import Btn from '_Components/Btn';
+    import Icon from '_Components/Icon';
 
     export default {
         name: 'Dashboard',
         layout: MainLayout,
         components: {
+            Icon,
+            Btn,
             Panel,
             SectionHeader,
         },

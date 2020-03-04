@@ -1,103 +1,160 @@
 <template>
-    <div class="container mx-auto h-screen">
-        <div class="flex items-center justify-center h-full">
-            <div class="w-full max-w-sm">
-                <div
-                    class="flex flex-col break-words bg-white border border-2 rounded shadow-md"
-                >
-                    <div
-                        class="px-6 py-3 mb-0 font-bold font-lg text-white bg-indigo-500"
-                    >
-                        Login
+    <div class="min-h-screen bg-white flex">
+        <div
+            class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24"
+        >
+            <div class="mx-auto w-full max-w-sm">
+                <div>
+                    <img
+                        class="h-12 w-auto"
+                        src="/img/workflow-mark-on-white.svg"
+                        alt="Workflow"
+                    />
+                    <h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
+                        Sign in to your account
+                    </h2>
+                </div>
+
+                <div class="mt-8">
+                    <div>
+                        <div>
+                            <p class="text-sm leading-5 font-medium text-gray-700">
+                                Sign in with
+                            </p>
+
+                            <div class="mt-1 grid grid-cols-3 gap-3">
+                                <div>
+                                    <span class="w-full inline-flex rounded-md shadow-sm">
+                                        <button
+                                            type="button"
+                                            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
+                                        >
+                                            <icon icon="google" color="gray-500" />
+                                        </button>
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span class="w-full inline-flex rounded-md shadow-sm">
+                                        <button
+                                            type="button"
+                                            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
+                                        >
+                                            <icon icon="twitter" color="gray-500" />
+                                        </button>
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span class="w-full inline-flex rounded-md shadow-sm">
+                                        <button
+                                            type="button"
+                                            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
+                                        >
+                                            <icon icon="facebook" color="gray-500" />
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 relative">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm leading-5">
+                                <span class="px-2 bg-white text-gray-500">
+                                    Or continue with
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
-                    <form class="w-full p-6" @submit.prevent="submit">
-                        <div class="flex flex-wrap mb-6">
-                            <text-input
-                                label="Email Address"
-                                type="email"
-                                :errors="$page.errors.email"
-                                v-model="form.email"
-                                class="w-full"
-                                required
-                                autofocus
-                            />
-                        </div>
-
-                        <div class="flex flex-wrap mb-6">
-                            <label
-                                for="password"
-                                class="block mb-2 text-sm font-bold text-gray-700"
-                            >
-                                Password
-                            </label>
-
-                            <input
-                                id="password"
-                                v-model="form.password"
-                                type="password"
-                                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                :class="{ 'border-red-500': $page.errors.password }"
-                                name="password"
-                                required
-                            />
-
-                            <p
-                                v-if="$page.errors.password"
-                                class="mt-4 text-xs italic text-red-500"
-                            >
-                                {{ $page.errors.password[0] }}
-                            </p>
-                        </div>
-
-                        <div class="flex mb-6">
-                            <input
-                                id="remember"
-                                v-model="form.remember"
-                                type="checkbox"
-                                name="remember"
-                            />
-
-                            <label class="ml-3 text-sm text-gray-700" for="remember">
-                                Remember Me
-                            </label>
-                        </div>
-
-                        <div class="flex flex-wrap items-center">
-                            <loading-button
-                                :loading="sending"
-                                type="submit"
-                                class="px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                            >
-                                Login
-                            </loading-button>
-
-                            <inertia-link
-                                v-if="
-                                    !$page.auth.user && $page.auth_routes.password_request
-                                "
-                                class="ml-auto text-sm text-blue-500 no-underline whitespace-no-wrap hover:text-blue-700"
-                                href="/password/reset"
-                            >
-                                Forgot Your Password?
-                            </inertia-link>
-
-                            <p
-                                v-if="!$page.auth.user && $page.auth_routes.register"
-                                class="w-full mt-8 -mb-4 text-xs text-center text-gray-700"
-                            >
-                                Don't have an account?
-                                <inertia-link
-                                    class="text-blue-500 no-underline hover:text-blue-700"
-                                    href="/register"
+                    <div class="mt-6">
+                        <form @submit.prevent="submit">
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block text-sm font-medium leading-5 text-gray-700"
                                 >
-                                    Register
-                                </inertia-link>
-                            </p>
-                        </div>
-                    </form>
+                                    Email address
+                                </label>
+                                <div class="mt-1 rounded-md shadow-sm">
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        :errors="$page.errors.email"
+                                        v-model="form.email"
+                                        required
+                                        autofocus
+                                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <label
+                                    for="password"
+                                    class="block text-sm font-medium leading-5 text-gray-700"
+                                >
+                                    Password
+                                </label>
+                                <div class="mt-1 rounded-md shadow-sm">
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        required
+                                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="mt-6 flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <input
+                                        id="remember_me"
+                                        type="checkbox"
+                                        class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                                    />
+                                    <label
+                                        for="remember_me"
+                                        class="ml-2 block text-sm leading-5 text-gray-900"
+                                    >
+                                        Remember me
+                                    </label>
+                                </div>
+
+                                <div class="text-sm leading-5">
+                                    <a
+                                        href="#"
+                                        class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                                    >
+                                        Forgot your password?
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <span class="block w-full rounded-md shadow-sm">
+                                    <button
+                                        type="submit"
+                                        class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                                    >
+                                        Sign in
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="hidden lg:block relative w-0 flex-1">
+            <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="/img/dice.jpg"
+                alt=""
+            />
         </div>
     </div>
 </template>
@@ -105,10 +162,12 @@
 <script>
     import LoadingButton from '_Components/LoadingButton';
     import TextInput from '_Inputs/TextInput';
+    import Icon from '_Components/Icon';
 
     export default {
         metaInfo: { title: 'Login' },
         components: {
+            Icon,
             'text-input': TextInput,
             LoadingButton,
         },

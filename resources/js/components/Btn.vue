@@ -1,19 +1,14 @@
 <template>
-    <inertia-link
-        v-if="href"
-        :href="href"
-        v-on="$listeners"
-        class="text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
-    >
-        <slot />
-    </inertia-link>
-    <button
-        v-else
-        v-on="$listeners"
-        class="text-sm font-normal font-sans bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
-    >
-        <slot />
-    </button>
+    <span v-if="href" class="inline-flex rounded-md shadow-sm">
+        <inertia-link :href="href" :class="classes" v-on="$listeners">
+            <slot />
+        </inertia-link>
+    </span>
+    <span v-else class="inline-flex rounded-md shadow-sm">
+        <button type="button" :class="classes" v-on="$listeners">
+            <slot />
+        </button>
+    </span>
 </template>
 
 <script>
@@ -25,11 +20,40 @@
                 type: String,
                 default: '',
             },
+            color: {
+                type: String,
+                default: 'indigo',
+            },
         },
         data() {
             return {};
         },
-        computed: {},
+        computed: {
+            classes() {
+                return [
+                    'inline-flex',
+                    'items-center',
+                    'px-4',
+                    'py-2',
+                    'border',
+                    'border-transparent',
+                    'text-base',
+                    'leading-6',
+                    'font-medium',
+                    'rounded-md',
+                    'text-white',
+                    `bg-${this.color}-600`,
+                    `hover:bg-${this.color}-500`,
+                    'focus:outline-none',
+                    `focus:border-${this.color}-700`,
+                    `focus:shadow-outline-${this.color}`,
+                    `active:bg-${this.color}-700`,
+                    'transition',
+                    'ease-in-out',
+                    'duration-150',
+                ];
+            },
+        },
         watch: {},
         created() {},
         mounted() {},

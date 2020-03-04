@@ -9,6 +9,7 @@
 </template>
 
 <script>
+    import Plus from '_Icons/Plus';
     import Minus from '_Icons/Minus';
     import FormatBold from '_Icons/FormatBold';
     import FormatItalic from '_Icons/FormatItalic';
@@ -31,11 +32,15 @@
     import HomeGroup from '_Icons/HomeGroup';
     import AccountGroup from '_Icons/AccountGroup';
     import Tools from '_Icons/Tools';
+    import Google from '_Icons/Google';
+    import Facebook from '_Icons/Facebook';
+    import Twitter from '_Icons/Twitter';
 
     export default {
         name: 'Icon',
         components: {
-            minus: Minus,
+            Plus,
+            Minus,
             bold: FormatBold,
             italic: FormatItalic,
             bullets: FormatListBulleted,
@@ -57,6 +62,9 @@
             houses: HomeGroup,
             group: AccountGroup,
             Tools,
+            Google,
+            Facebook,
+            Twitter,
         },
         props: {
             icon: {
