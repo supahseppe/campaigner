@@ -2,7 +2,7 @@
     <component
         :is="icon"
         :title="title"
-        :fillColor="hex"
+        :fill-color="hex"
         :size="size"
         :decorative="decorative"
     />

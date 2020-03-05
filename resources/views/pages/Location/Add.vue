@@ -6,16 +6,16 @@
         >
             <div class="flex flex-wrap mb-6">
                 <text-input
+                    v-model="form.name"
                     label="Title"
                     type="text"
                     :errors="$page.errors.name"
-                    v-model="form.name"
                     class="w-full mb-6"
                     required
                     autofocus
                 />
                 <div class="w-full">
-                    <wysiwyg label="Description" v-model="form.description" />
+                    <wysiwyg v-model="form.description" label="Description" />
                 </div>
             </div>
 
@@ -37,6 +37,7 @@
     import TextInput from '_Components/inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Create',
@@ -57,10 +58,14 @@
                 },
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {
             submit() {
                 const url = this.route('locations.store');

@@ -12,38 +12,38 @@
         >
             <div class="flex flex-wrap mb-6">
                 <text-input
+                    v-model="form.name"
                     label="Name"
                     type="text"
                     :errors="$page.errors.name"
-                    v-model="form.name"
                     class="w-full mb-6"
                     required
                     autofocus
                 />
                 <text-input
+                    v-model="form.alias"
                     label="Alias"
                     type="text"
                     :errors="$page.errors.alias"
-                    v-model="form.alias"
                     class="w-full mb-6"
                     required
                     autofocus
                 />
                 <text-input
+                    v-model="form.high_concept"
                     label="High Concept"
                     type="text"
                     :errors="$page.errors.high_concept"
-                    v-model="form.high_concept"
                     class="w-full mb-6"
                     required
                     autofocus
                 />
                 <div class="w-full mb-6">
-                    <wysiwyg label="Description" v-model="form.bio" />
+                    <wysiwyg v-model="form.bio" label="Description" />
                 </div>
                 <label for="active-field" class="w-full mb-6">
                     Active: {{ !!form.active }}
-                    <input type="checkbox" id="active-field" v-model="form.active" />
+                    <input id="active-field" v-model="form.active" type="checkbox" />
                 </label>
                 <btn @click.stop.prevent="form.npc = !form.npc">
                     <p v-if="form.npc">Convert to Character</p>
@@ -81,6 +81,7 @@
     import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
     import Btn from '_Components/Btn';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Edit',
@@ -113,10 +114,12 @@
                 },
             };
         },
-        computed: {},
+        computed: { syncedPageTitle: sync('pageTitle') },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {
             submit() {
                 this.sending = true;

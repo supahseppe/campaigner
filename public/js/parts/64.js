@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[36],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[64],{
 
 /***/ "./node_modules/vue-autosuggest/dist/vue-autosuggest.esm.js":
 /*!******************************************************************!*\

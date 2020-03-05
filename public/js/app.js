@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"174c5615bdf17001786f","1":"81b8c2017b891936458b","2":"709dfeaae33f742cde78","3":"00ba7660be8baebf942a","4":"f206e1b1f30b0c25ce5d","5":"666cd3e170c2027f545a","6":"1b02d1eff484b6d3b6ae","8":"22df718a225e07aaa21a","9":"e3b9ab3312dd2217fbdb","10":"961709d57a6e9c72da3d","11":"d32323fc34cafec504a1","12":"9cf5ca73fa6221213b9b","13":"c34784a41f124a7d3e6a","14":"d8db1c2773c39b655495","15":"8eb667e37161db7408bc","16":"3e6b1825ad31678050e5","17":"eac090757369facdaae5","18":"fd8b6d5e5197c878ca36","19":"eeda0e6ac10cbfdb47a6","20":"5df0c586a99476a603ed","21":"9cea769841b9e3e0ee20","22":"7f7cb862f658be3dffaf","23":"63c1681b3041cef61196","24":"74b35e1c200f1abaa45d","25":"68522f6e4465f64c2863","26":"89da7dee2221ab295f55","27":"9579b928eb7ac94c7911","28":"7f5d19c6a2e8cd63e272","29":"41ed8e7097317f8b3b4a","30":"579d4442294eb7fe6b69","31":"3b4e1b4c16c820ac30aa","32":"9779b302cdf10b19f5f5","33":"4d2e619181ab705cc788","34":"f84e6f2be8310f8a39a5","35":"e7a1bf0528bf77bd7437","36":"bccf4785f67476949e78","37":"bc58e2334949c17fad8e"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"0c348dc4f73affffeb06","1":"de2b1e530a5cb6f604d6","2":"709dfeaae33f742cde78","3":"bf4d0b90761ac0dafd40","4":"be6a4e3411b57d3f5c6d","5":"a96ae2a542017325b164","6":"7a0078bef7b8975f808d","7":"49b5f49df9abb03a76af","8":"0474939989a6734b95a9","9":"3a842eba4b522b24aefa","10":"a11714bf81cc394919b8","11":"a10005d78a3c5e3a8ea4","12":"78f01b85865770e3812e","13":"92051c7f1bc5f9aca046","14":"d8db1c2773c39b655495","15":"05fe55320af37d698208","16":"7542026c5981eece7b85","17":"50ac85c18c2ac066d054","18":"971b90a32c19fce10a18","19":"2e802db8f6e833c07109","20":"025e97bb3ba913a92288","21":"5186c4be5cbf484d3c6b","22":"c44c1bebcc227a7d32b1","23":"fe9cec684236f43db06a","24":"a8a5ee8423062be97ffb","25":"68522f6e4465f64c2863","26":"85523fa8eb234168b728","27":"5fed2f6a2646ea3e8337","28":"dddd3b34b3ea96351ec4","29":"7640056b7faf4f10d3cd","30":"6ebf76cecf0f3be12bf3","31":"89b99aef7c51b184c529","32":"f84dc7e53311978ea2be","33":"e6e63c710fc38f289fbc","34":"3a1cfdc1db59ccae0505","36":"b8e471a9df3669915698","37":"386b09334b8bd9616802"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -42118,6 +42118,344 @@ exports.callbackify = callbackify;
 
 /***/ }),
 
+/***/ "./node_modules/vue-class-component/dist/vue-class-component.esm.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/vue-class-component/dist/vue-class-component.esm.js ***!
+  \**************************************************************************/
+/*! exports provided: default, createDecorator, mixins */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDecorator", function() { return createDecorator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mixins", function() { return mixins; });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
+/**
+  * vue-class-component v7.2.3
+  * (c) 2015-present Evan You
+  * @license MIT
+  */
+
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
+}
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+// The rational behind the verbose Reflect-feature check below is the fact that there are polyfills
+// which add an implementation for Reflect.defineMetadata but not for Reflect.getOwnMetadataKeys.
+// Without this check consumers will encounter hard to track down runtime errors.
+function reflectionIsSupported() {
+  return typeof Reflect !== 'undefined' && Reflect.defineMetadata && Reflect.getOwnMetadataKeys;
+}
+function copyReflectionMetadata(to, from) {
+  forwardMetadata(to, from);
+  Object.getOwnPropertyNames(from.prototype).forEach(function (key) {
+    forwardMetadata(to.prototype, from.prototype, key);
+  });
+  Object.getOwnPropertyNames(from).forEach(function (key) {
+    forwardMetadata(to, from, key);
+  });
+}
+
+function forwardMetadata(to, from, propertyKey) {
+  var metaKeys = propertyKey ? Reflect.getOwnMetadataKeys(from, propertyKey) : Reflect.getOwnMetadataKeys(from);
+  metaKeys.forEach(function (metaKey) {
+    var metadata = propertyKey ? Reflect.getOwnMetadata(metaKey, from, propertyKey) : Reflect.getOwnMetadata(metaKey, from);
+
+    if (propertyKey) {
+      Reflect.defineMetadata(metaKey, metadata, to, propertyKey);
+    } else {
+      Reflect.defineMetadata(metaKey, metadata, to);
+    }
+  });
+}
+
+var fakeArray = {
+  __proto__: []
+};
+var hasProto = fakeArray instanceof Array;
+function createDecorator(factory) {
+  return function (target, key, index) {
+    var Ctor = typeof target === 'function' ? target : target.constructor;
+
+    if (!Ctor.__decorators__) {
+      Ctor.__decorators__ = [];
+    }
+
+    if (typeof index !== 'number') {
+      index = undefined;
+    }
+
+    Ctor.__decorators__.push(function (options) {
+      return factory(options, key, index);
+    });
+  };
+}
+function mixins() {
+  for (var _len = arguments.length, Ctors = new Array(_len), _key = 0; _key < _len; _key++) {
+    Ctors[_key] = arguments[_key];
+  }
+
+  return vue__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
+    mixins: Ctors
+  });
+}
+function isPrimitive(value) {
+  var type = _typeof(value);
+
+  return value == null || type !== 'object' && type !== 'function';
+}
+function warn(message) {
+  if (typeof console !== 'undefined') {
+    console.warn('[vue-class-component] ' + message);
+  }
+}
+
+function collectDataFromConstructor(vm, Component) {
+  // override _init to prevent to init as Vue instance
+  var originalInit = Component.prototype._init;
+
+  Component.prototype._init = function () {
+    var _this = this;
+
+    // proxy to actual vm
+    var keys = Object.getOwnPropertyNames(vm); // 2.2.0 compat (props are no longer exposed as self properties)
+
+    if (vm.$options.props) {
+      for (var key in vm.$options.props) {
+        if (!vm.hasOwnProperty(key)) {
+          keys.push(key);
+        }
+      }
+    }
+
+    keys.forEach(function (key) {
+      if (key.charAt(0) !== '_') {
+        Object.defineProperty(_this, key, {
+          get: function get() {
+            return vm[key];
+          },
+          set: function set(value) {
+            vm[key] = value;
+          },
+          configurable: true
+        });
+      }
+    });
+  }; // should be acquired class property values
+
+
+  var data = new Component(); // restore original _init to avoid memory leak (#209)
+
+  Component.prototype._init = originalInit; // create plain data object
+
+  var plainData = {};
+  Object.keys(data).forEach(function (key) {
+    if (data[key] !== undefined) {
+      plainData[key] = data[key];
+    }
+  });
+
+  if (true) {
+    if (!(Component.prototype instanceof vue__WEBPACK_IMPORTED_MODULE_0__["default"]) && Object.keys(plainData).length > 0) {
+      warn('Component class must inherit Vue or its descendant class ' + 'when class property is used.');
+    }
+  }
+
+  return plainData;
+}
+
+var $internalHooks = ['data', 'beforeCreate', 'created', 'beforeMount', 'mounted', 'beforeDestroy', 'destroyed', 'beforeUpdate', 'updated', 'activated', 'deactivated', 'render', 'errorCaptured', 'serverPrefetch' // 2.6
+];
+function componentFactory(Component) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  options.name = options.name || Component._componentTag || Component.name; // prototype props.
+
+  var proto = Component.prototype;
+  Object.getOwnPropertyNames(proto).forEach(function (key) {
+    if (key === 'constructor') {
+      return;
+    } // hooks
+
+
+    if ($internalHooks.indexOf(key) > -1) {
+      options[key] = proto[key];
+      return;
+    }
+
+    var descriptor = Object.getOwnPropertyDescriptor(proto, key);
+
+    if (descriptor.value !== void 0) {
+      // methods
+      if (typeof descriptor.value === 'function') {
+        (options.methods || (options.methods = {}))[key] = descriptor.value;
+      } else {
+        // typescript decorated data
+        (options.mixins || (options.mixins = [])).push({
+          data: function data() {
+            return _defineProperty({}, key, descriptor.value);
+          }
+        });
+      }
+    } else if (descriptor.get || descriptor.set) {
+      // computed properties
+      (options.computed || (options.computed = {}))[key] = {
+        get: descriptor.get,
+        set: descriptor.set
+      };
+    }
+  });
+  (options.mixins || (options.mixins = [])).push({
+    data: function data() {
+      return collectDataFromConstructor(this, Component);
+    }
+  }); // decorate options
+
+  var decorators = Component.__decorators__;
+
+  if (decorators) {
+    decorators.forEach(function (fn) {
+      return fn(options);
+    });
+    delete Component.__decorators__;
+  } // find super
+
+
+  var superProto = Object.getPrototypeOf(Component.prototype);
+  var Super = superProto instanceof vue__WEBPACK_IMPORTED_MODULE_0__["default"] ? superProto.constructor : vue__WEBPACK_IMPORTED_MODULE_0__["default"];
+  var Extended = Super.extend(options);
+  forwardStaticMembers(Extended, Component, Super);
+
+  if (reflectionIsSupported()) {
+    copyReflectionMetadata(Extended, Component);
+  }
+
+  return Extended;
+}
+var reservedPropertyNames = [// Unique id
+'cid', // Super Vue constructor
+'super', // Component options that will be used by the component
+'options', 'superOptions', 'extendOptions', 'sealedOptions', // Private assets
+'component', 'directive', 'filter'];
+var shouldIgnore = {
+  prototype: true,
+  arguments: true,
+  callee: true,
+  caller: true
+};
+
+function forwardStaticMembers(Extended, Original, Super) {
+  // We have to use getOwnPropertyNames since Babel registers methods as non-enumerable
+  Object.getOwnPropertyNames(Original).forEach(function (key) {
+    // Skip the properties that should not be overwritten
+    if (shouldIgnore[key]) {
+      return;
+    } // Some browsers does not allow reconfigure built-in properties
+
+
+    var extendedDescriptor = Object.getOwnPropertyDescriptor(Extended, key);
+
+    if (extendedDescriptor && !extendedDescriptor.configurable) {
+      return;
+    }
+
+    var descriptor = Object.getOwnPropertyDescriptor(Original, key); // If the user agent does not support `__proto__` or its family (IE <= 10),
+    // the sub class properties may be inherited properties from the super class in TypeScript.
+    // We need to exclude such properties to prevent to overwrite
+    // the component options object which stored on the extended constructor (See #192).
+    // If the value is a referenced value (object or function),
+    // we can check equality of them and exclude it if they have the same reference.
+    // If it is a primitive value, it will be forwarded for safety.
+
+    if (!hasProto) {
+      // Only `cid` is explicitly exluded from property forwarding
+      // because we cannot detect whether it is a inherited property or not
+      // on the no `__proto__` environment even though the property is reserved.
+      if (key === 'cid') {
+        return;
+      }
+
+      var superDescriptor = Object.getOwnPropertyDescriptor(Super, key);
+
+      if (!isPrimitive(descriptor.value) && superDescriptor && superDescriptor.value === descriptor.value) {
+        return;
+      }
+    } // Warn if the users manually declare reserved properties
+
+
+    if ( true && reservedPropertyNames.indexOf(key) >= 0) {
+      warn("Static property name '".concat(key, "' declared on class '").concat(Original.name, "' ") + 'conflicts with reserved property name of Vue internal. ' + 'It may cause unexpected behavior of the component. Consider renaming the property.');
+    }
+
+    Object.defineProperty(Extended, key, descriptor);
+  });
+}
+
+function Component(options) {
+  if (typeof options === 'function') {
+    return componentFactory(options);
+  }
+
+  return function (Component) {
+    return componentFactory(Component, options);
+  };
+}
+
+Component.registerHooks = function registerHooks(keys) {
+  $internalHooks.push.apply($internalHooks, _toConsumableArray(keys));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Component);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-meta/dist/vue-meta.esm.js":
 /*!****************************************************!*\
   !*** ./node_modules/vue-meta/dist/vue-meta.esm.js ***!
@@ -52648,6 +52986,5075 @@ if (inBrowser) {
 
 /***/ }),
 
+/***/ "./node_modules/vuetensils/dist/vuetensils.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuetensils/dist/vuetensils.esm.js ***!
+  \********************************************************/
+/*! exports provided: VAlert, VAsync, VDialog, VDrawer, VDropdown, VFile, VImg, VInput, VIntersect, VModal, VResize, VTable, VTabs, VToggle, autofocus, clickout, copy, intersect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VAlert", function() { return __vue_component__; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VAsync", function() { return __vue_component__$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VDialog", function() { return __vue_component__$2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VDrawer", function() { return __vue_component__$3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VDropdown", function() { return __vue_component__$4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VFile", function() { return __vue_component__$5; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VImg", function() { return __vue_component__$6; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VInput", function() { return __vue_component__$7; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VIntersect", function() { return __vue_component__$8; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VModal", function() { return __vue_component__$9; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VResize", function() { return __vue_component__$a; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VTable", function() { return __vue_component__$c; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VTabs", function() { return __vue_component__$b; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VToggle", function() { return __vue_component__$d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autofocus", function() { return autofocus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clickout", function() { return clickout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "copy", function() { return copy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "intersect", function() { return intersect; });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/**
+ * A simple component for notifiying users of specific information. Good for informative snippets, error messages, and more. It can be shown or hidden dynamically, and even supports auto-hiding after a given time.
+ */
+var script = {
+  model: {
+    prop: "visible",
+    event: "update",
+  },
+
+  props: {
+    /**
+     * HTML tag used to wrap the component.
+     */
+    tag: {
+      type: String,
+      default: "div",
+    },
+    /**
+     * Determines whether the alert is visible. Also binds with `v-model`.
+     */
+    visible: {
+      type: [Boolean, Number],
+      default: true,
+    },
+    /**
+     * Allows a user to dismiss this alert.
+     */
+    dismissible: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * Aria-label that is not visibly, but screen readers will read for the dismiss button.
+     */
+    dismissLabel: {
+      type: [String, Boolean],
+      default: "Dismiss this alert",
+    },
+    /**
+     * The transition name if you want to add one.
+     */
+    transition: String,
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    dismissed: false,
+    timerId: null,
+  }); },
+
+  watch: {
+    visible: {
+      handler: function handler(visible) {
+        if (!!visible) {
+          this.dismissed = false;
+        }
+        if (typeof visible === "number") {
+          this.clearTimer(); // Clear timers in case this.visible watcher adds multiples
+          this.countdown();
+        }
+      },
+      immediate: true,
+    },
+  },
+
+  methods: {
+    dismiss: function dismiss() {
+      /**
+       * Fired when a user manually dismissed an alert
+       * @event dismiss
+       * @type { undefined }
+       */
+      this.$emit("dismiss");
+      this.dismissed = true;
+      if (typeof this.visible === "number") {
+        this.$emit("update", 0);
+        this.clearTimer();
+      } else {
+        this.$emit("update", false);
+      }
+    },
+
+    countdown: function countdown() {
+      var this$1 = this;
+
+      var ref = this;
+      var visible = ref.visible;
+      if (visible <= 0) { return }
+
+      this.timerId = setTimeout(function () {
+        /**
+         * Fired whenever the visibility changes. Either through user interaction, or a countdown timer
+         * @event update
+         * @type { boolean/number }
+         */
+        this$1.$emit("update", visible - 1);
+      }, 1000);
+    },
+
+    clearTimer: function clearTimer() {
+      var ref = this;
+      var timerId = ref.timerId;
+      if (timerId) {
+        clearInterval(timerId);
+        this.timerId = null;
+      }
+    },
+  },
+
+  beforeDestroy: function beforeDestroy() {
+    this.clearTimer();
+  },
+};
+
+function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+    if (typeof shadowMode !== 'boolean') {
+        createInjectorSSR = createInjector;
+        createInjector = shadowMode;
+        shadowMode = false;
+    }
+    // Vue.extend constructor export interop.
+    var options = typeof script === 'function' ? script.options : script;
+    // render functions
+    if (template && template.render) {
+        options.render = template.render;
+        options.staticRenderFns = template.staticRenderFns;
+        options._compiled = true;
+        // functional template
+        if (isFunctionalTemplate) {
+            options.functional = true;
+        }
+    }
+    // scopedId
+    if (scopeId) {
+        options._scopeId = scopeId;
+    }
+    var hook;
+    if (moduleIdentifier) {
+        // server build
+        hook = function (context) {
+            // 2.3 injection
+            context =
+                context || // cached call
+                    (this.$vnode && this.$vnode.ssrContext) || // stateful
+                    (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
+            // 2.2 with runInNewContext: true
+            if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+                context = __VUE_SSR_CONTEXT__;
+            }
+            // inject component styles
+            if (style) {
+                style.call(this, createInjectorSSR(context));
+            }
+            // register component module identifier for async chunk inference
+            if (context && context._registeredComponents) {
+                context._registeredComponents.add(moduleIdentifier);
+            }
+        };
+        // used by ssr in case component is cached and beforeCreate
+        // never gets called
+        options._ssrRegister = hook;
+    }
+    else if (style) {
+        hook = shadowMode
+            ? function (context) {
+                style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
+            }
+            : function (context) {
+                style.call(this, createInjector(context));
+            };
+    }
+    if (hook) {
+        if (options.functional) {
+            // register for functional component in vue file
+            var originalRender = options.render;
+            options.render = function renderWithStyleInjection(h, context) {
+                hook.call(context);
+                return originalRender(h, context);
+            };
+        }
+        else {
+            // inject component registration as beforeCreate hook
+            var existing = options.beforeCreate;
+            options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+    }
+    return script;
+}
+
+/* script */
+var __vue_script__ = script;
+
+/* template */
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":_vm.transition}},[(!_vm.dismissed && !!_vm.visible)?_c(_vm.tag,{tag:"component",class:['vts-alert', _vm.classes.root],attrs:{"role":"alert"}},[_vm._t("default"),_vm._v(" "),(_vm.dismissible)?_c('button',{class:['vts-alert__dismiss', _vm.classes.dismiss],attrs:{"aria-label":_vm.dismissLabel},on:{"click":_vm.dismiss}},[_vm._t("dismiss",[_vm._v("×")])],2):_vm._e()],2):_vm._e()],1)};
+var __vue_staticRenderFns__ = [];
+
+  /* style */
+  var __vue_inject_styles__ = undefined;
+  /* scoped */
+  var __vue_scope_id__ = undefined;
+  /* module identifier */
+  var __vue_module_identifier__ = undefined;
+  /* functional template */
+  var __vue_is_functional_template__ = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__ = normalizeComponent(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+function randomString(
+  length,
+  allowed
+) {
+  if ( length === void 0 ) length = 10;
+  if ( allowed === void 0 ) allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  var result = "";
+  for (var i = 0; i < length; i++) {
+    result += allowed.charAt(Math.floor(Math.random() * allowed.length));
+  }
+  return result
+}
+
+function safeSlot(h, slot) {
+  return slot.length > 1 ? h("div", slot) : slot
+}
+
+//
+/**
+ * A renderless component for awaiting promises to resolve; great for making HTTP requests. Supports showing pending, resolved, or rejected promises.
+ */
+var script$1 = {
+  props: {
+    /**
+     * A promise or function that returns a promise.
+     */
+    await: {
+      type: [Promise, Function],
+      default: function () { return Promise.resolve(); },
+    },
+    /**
+     * The default value to provide for the `results`. Useful if the promise resolve value is undefined.
+     */
+    default: {
+      type: undefined,
+      default: undefined,
+    },
+  },
+
+  data: function data() {
+    return {
+      pending: false,
+      results: this.default,
+      error: null,
+    }
+  },
+
+  watch: {
+    await: {
+      handler: "awaitOn",
+      immediate: true,
+    },
+
+    pending: {
+      handler: function handler(pending) {
+        /**
+         * Fired whenever the pending status changes.
+         * @event pending
+         * @type { boolean }
+         */
+        this.$emit("pending", pending);
+      },
+      immediate: true,
+    },
+  },
+
+  methods: {
+    awaitOn: function awaitOn(promise) {
+      var this$1 = this;
+
+      if (!promise) { return }
+
+      promise = typeof promise === "function" ? promise() : promise;
+
+      if (!promise.then) { return }
+
+      this.pending = true;
+      this.results = this.default;
+      this.error = null;
+
+      return promise
+        .then(function (results) {
+          this$1.results = results;
+          /**
+           * Fired after promise has resolved with the resolved value.
+           * @event resolve
+           * @type { unknown }
+           */
+          this$1.$emit("resolve", results);
+        })
+        .catch(function (error) {
+          this$1.error = error;
+          /**
+           * Fired after promise has rejected with the rejected error.
+           * @event reject
+           * @type { error }
+           */
+          this$1.$emit("reject", error);
+        })
+        .finally(function () {
+          this$1.pending = false;
+          /**
+           * Fired after promise has fulfilled, regardless of success or failure.
+           * @event finally
+           * @type { undefined }
+           */
+          this$1.$emit("finally");
+        })
+    },
+  },
+
+  render: function render(h) {
+    var ref = this;
+    var pending = ref.pending;
+    var error = ref.error;
+    var data = ref.results;
+    var defaultData = ref.default;
+
+    /** @slot Rendered while the promise is in a pending state */
+    var pendingSlot = this.$scopedSlots.pending;
+    /** @slot Rendered when the promise has rejected. Provides the caught error. */
+    var rejectedSlot = this.$scopedSlots.rejected;
+    /** @slot Rendered when the promise has resolved. Provides the results. */
+    var resolvedSlot = this.$scopedSlots.resolved;
+    /** @slot Provides the status of the component for pending state, error, or results. */
+    var defaultSlot = this.$scopedSlots.default;
+
+    if (pending && pendingSlot) {
+      return safeSlot(h, pendingSlot())
+    }
+
+    if (!pending && error) {
+      if (!rejectedSlot) { return }
+
+      return safeSlot(h, rejectedSlot(error))
+    }
+
+    var results = data === undefined ? defaultData : data;
+
+    if (!pending && resolvedSlot) {
+      return safeSlot(h, resolvedSlot(results))
+    }
+
+    if (!defaultSlot) { return }
+
+    return safeSlot(
+      h,
+      defaultSlot({
+        pending: pending,
+        results: results,
+        error: error,
+      })
+    )
+  },
+};
+
+/* script */
+var __vue_script__$1 = script$1;
+
+/* template */
+
+  /* style */
+  var __vue_inject_styles__$1 = undefined;
+  /* scoped */
+  var __vue_scope_id__$1 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$1 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$1 = undefined;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$1 = normalizeComponent(
+    {},
+    __vue_inject_styles__$1,
+    __vue_script__$1,
+    __vue_scope_id__$1,
+    __vue_is_functional_template__$1,
+    __vue_module_identifier__$1,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+var keycodes = {
+  ENTER: 13,
+  SPACE: 32,
+  TAB: 9,
+  ESC: 27,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40
+};
+
+var FOCUSABLE = [
+  "a[href]",
+  "area[href]",
+  'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
+  "select:not([disabled]):not([aria-hidden])",
+  "textarea:not([disabled]):not([aria-hidden])",
+  "button:not([disabled]):not([aria-hidden])",
+  "iframe",
+  "object",
+  "embed",
+  "[contenteditable]",
+  '[tabindex]:not([tabindex^="-"])'
+];
+
+//
+
+/**
+ * A dialog component for showing users content which overlays the rest of the applications. When opened, it traps the user's focus so that keyboard navigation will remain within the dialog until it is closed. It supports being closed by clicking outside the dialog content or pressing the ESC key.
+ */
+var script$2 = {
+  model: {
+    prop: "showing",
+    event: "change",
+  },
+
+  props: {
+    /**
+     * @model
+     */
+    showing: Boolean,
+    /**
+     * HTML component for the dialog content.
+     */
+    tag: {
+      type: String,
+      default: "div",
+    },
+    /**
+     * Flag to enable/prevent the dialog from being closed.
+     */
+    dismissible: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * CSS width to set the dialog to.
+     */
+    width: {
+      type: String,
+      default: "",
+    },
+    /**
+     * CSS max-width to set the dialog to.
+     */
+    maxWidth: {
+      type: String,
+      default: "",
+    },
+    /**
+     * Prevents the page from being scrolled while the dialog is open.
+     */
+    noScroll: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * Transition name to apply to the dialog.
+     */
+    transition: {
+      type: String,
+      default: "",
+    },
+    /**
+     * Transition name to apply to the background.
+     */
+    bgTransition: {
+      type: String,
+      default: "",
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  watch: {
+    showing: {
+      handler: function handler(next, prev) {
+        var this$1 = this;
+
+        if (typeof window === "undefined") { return }
+
+        if (next && next != prev) {
+          this.noScroll && document.body.style.setProperty("overflow", "hidden");
+          this.$nextTick(function () {
+            this$1.$refs.content.focus();
+          });
+        } else {
+          this.noScroll && document.body.style.removeProperty("overflow");
+        }
+      },
+    },
+  },
+
+  methods: {
+    show: function show() {
+      /**
+       * Fired when the dialog opens.
+       * @event show
+       * @type { boolean }
+       */
+      this.$emit("show");
+      this.$emit("change", true);
+    },
+    hide: function hide() {
+      /**
+       * Fired when the dialog closes.
+       * @event hide
+       * @type { boolean }
+       */
+      this.$emit("hide");
+      this.$emit("change", false);
+    },
+    toggle: function toggle() {
+      var ref = this;
+      var showing = ref.showing;
+      var event = showing ? "hide" : "show";
+      this.$emit(event, !showing);
+      /**
+       * Fired whenever the dialog opens or closes.
+       * @event change
+       * @type { boolean }
+       */
+      this.$emit("change", !showing);
+    },
+    onClick: function onClick(event) {
+      if (event.target.classList.contains("vts-dialog") && this.dismissible) {
+        this.hide();
+      }
+    },
+
+    onKeydown: function onKeydown(event) {
+      if (event.keyCode === keycodes.ESC) {
+        this.hide();
+      }
+      if (event.keyCode === keycodes.TAB) {
+        var content = this.$refs.content;
+        if (!content) { return }
+
+        var focusable = Array.from(content.querySelectorAll(FOCUSABLE));
+
+        if (!focusable.length) {
+          event.preventDefault();
+          return
+        }
+
+        if (!content.contains(document.activeElement)) {
+          event.preventDefault();
+          focusable[0].focus();
+        } else {
+          var focusedItemIndex = focusable.indexOf(document.activeElement);
+
+          if (event.shiftKey && focusedItemIndex === 0) {
+            focusable[focusable.length - 1].focus();
+            event.preventDefault();
+          }
+
+          if (!event.shiftKey && focusedItemIndex === focusable.length - 1) {
+            focusable[0].focus();
+            event.preventDefault();
+          }
+        }
+      }
+    },
+  },
+};
+
+var isOldIE = typeof navigator !== 'undefined' &&
+    /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+function createInjector(context) {
+    return function (id, style) { return addStyle(id, style); };
+}
+var HEAD;
+var styles = {};
+function addStyle(id, css) {
+    var group = isOldIE ? css.media || 'default' : id;
+    var style = styles[group] || (styles[group] = { ids: new Set(), styles: [] });
+    if (!style.ids.has(id)) {
+        style.ids.add(id);
+        var code = css.source;
+        if (css.map) {
+            // https://developer.chrome.com/devtools/docs/javascript-debugging
+            // this makes source maps inside style tags work properly in Chrome
+            code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
+            // http://stackoverflow.com/a/26603875
+            code +=
+                '\n/*# sourceMappingURL=data:application/json;base64,' +
+                    btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
+                    ' */';
+        }
+        if (!style.element) {
+            style.element = document.createElement('style');
+            style.element.type = 'text/css';
+            if (css.media)
+                { style.element.setAttribute('media', css.media); }
+            if (HEAD === undefined) {
+                HEAD = document.head || document.getElementsByTagName('head')[0];
+            }
+            HEAD.appendChild(style.element);
+        }
+        if ('styleSheet' in style.element) {
+            style.styles.push(code);
+            style.element.styleSheet.cssText = style.styles
+                .filter(Boolean)
+                .join('\n');
+        }
+        else {
+            var index = style.ids.size - 1;
+            var textNode = document.createTextNode(code);
+            var nodes = style.element.childNodes;
+            if (nodes[index])
+                { style.element.removeChild(nodes[index]); }
+            if (nodes.length)
+                { style.element.insertBefore(textNode, nodes[index]); }
+            else
+                { style.element.appendChild(textNode); }
+        }
+    }
+}
+
+/* script */
+var __vue_script__$2 = script$2;
+
+/* template */
+var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":_vm.bgTransition}},[(_vm.showing)?_c('div',{class:['vts-dialog', _vm.classes.root],on:{"click":_vm.onClick,"keydown":_vm.onKeydown}},[_c('transition',{attrs:{"name":_vm.transition,"appear":""}},[_c(_vm.tag,{ref:"content",tag:"component",class:['vts-dialog__content', _vm.classes.content],style:({ width: _vm.width, maxWidth: _vm.maxWidth }),attrs:{"tabindex":"-1","role":"dialog"}},[_vm._t("default")],2)],1)],1):_vm._e()])};
+var __vue_staticRenderFns__$1 = [];
+
+  /* style */
+  var __vue_inject_styles__$2 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-c744e71a_0", { source: ".vts-dialog{display:flex;align-items:center;justify-content:center;position:fixed;z-index:100;top:0;right:0;bottom:0;left:0}.vts-dialog__content:focus{outline:0}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$2 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$2 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$2 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$2 = normalizeComponent(
+    { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
+    __vue_inject_styles__$2,
+    __vue_script__$2,
+    __vue_scope_id__$2,
+    __vue_is_functional_template__$2,
+    __vue_module_identifier__$2,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+
+var NAME = "vts-drawer";
+
+/**
+ * A convenient sidebar that can be toggled on or off. When opened, it traps the user's focus so that keyboard navigation will remain within the sidebar until it is closed. It also supports being closed by pressing the ESC key.
+ */
+var script$3 = {
+  model: {
+    prop: "showing",
+    event: "update",
+  },
+
+  props: {
+    /**
+     * @model
+     */
+    showing: Boolean,
+    tag: {
+      type: String,
+      default: "aside",
+    },
+    /**
+     * Flag to place the drawer on the right side.
+     */
+    right: Boolean,
+    /**
+     * CSS width value.
+     */
+    width: {
+      type: String,
+      default: "",
+    },
+    /**
+     * CSS max-width value.
+     */
+    maxWidth: {
+      type: String,
+      default: "",
+    },
+    /**
+     * Disable page scrolling when drawer is open.
+     */
+    noScroll: Boolean,
+    /**
+     * Vue transition name.
+     */
+    transition: {
+      type: String,
+      default: "",
+    },
+    /**
+     * Vue transition name for the background.
+     */
+    bgTransition: {
+      type: String,
+      default: "",
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  watch: {
+    showing: {
+      handler: function handler(next, prev) {
+        var this$1 = this;
+
+        if (typeof window === "undefined") { return }
+
+        if (next && next != prev) {
+          this.noScroll && document.body.style.setProperty("overflow", "hidden");
+          this.$nextTick(function () {
+            this$1.$refs.content.focus();
+          });
+        } else {
+          this.noScroll && document.body.style.removeProperty("overflow");
+        }
+      },
+    },
+  },
+
+  methods: {
+    onBgClick: function onBgClick(e) {
+      if (event.target.classList.contains(("" + NAME))) {
+        this.hide();
+      }
+    },
+
+    show: function show() {
+      /**
+       * @event open
+       * @type { undefined }
+       */
+      this.$emit("open");
+      this.$emit("update", true);
+    },
+
+    hide: function hide() {
+      /**
+       * @event close
+       * @type { undefined }
+       */
+      this.$emit("close");
+      this.$emit("update", false);
+    },
+
+    toggle: function toggle() {
+      var ref = this;
+      var showing = ref.showing;
+      var event = showing ? "close" : "open";
+      this.$emit(event, !showing);
+      /**
+       * @event update
+       * @type { boolean }
+       */
+      this.$emit("update", !showing);
+    },
+
+    onKeydown: function onKeydown(event) {
+      if (event.keyCode === keycodes.ESC) {
+        this.hide();
+      }
+      if (event.keyCode === keycodes.TAB) {
+        var content = this.$refs.content;
+        if (!content) { return }
+
+        var focusable = Array.from(content.querySelectorAll(FOCUSABLE));
+
+        if (!focusable.length) {
+          event.preventDefault();
+          return
+        }
+
+        if (!content.contains(document.activeElement)) {
+          event.preventDefault();
+          focusable[0].focus();
+        } else {
+          var focusedItemIndex = focusable.indexOf(document.activeElement);
+
+          if (event.shiftKey && focusedItemIndex === 0) {
+            focusable[focusable.length - 1].focus();
+            event.preventDefault();
+          }
+
+          if (!event.shiftKey && focusedItemIndex === focusable.length - 1) {
+            focusable[0].focus();
+            event.preventDefault();
+          }
+        }
+      }
+    },
+  },
+};
+
+/* script */
+var __vue_script__$3 = script$3;
+
+/* template */
+var __vue_render__$2 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":_vm.bgTransition,"appear":""}},[(_vm.showing)?_c(_vm.tag,{tag:"component",class:['vts-drawer', _vm.classes.root],on:{"click":_vm.onBgClick,"keydown":_vm.onKeydown}},[_c('transition',{attrs:{"name":_vm.transition,"appear":""}},[_c('div',{ref:"content",class:[
+          'vts-drawer__content',
+          { 'vts-drawer__content--right': !!_vm.right },
+          _vm.classes.content ],style:({ width: _vm.width, maxWidth: _vm.maxWidth }),attrs:{"tabindex":"-1"}},[_vm._t("default")],2)])],1):_vm._e()],1)};
+var __vue_staticRenderFns__$2 = [];
+
+  /* style */
+  var __vue_inject_styles__$3 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-2bfba34e_0", { source: ".vts-drawer{position:fixed;z-index:100;top:0;right:0;bottom:0;left:0}.vts-drawer__content{overflow:auto;max-width:300px;height:100%}.vts-drawer__content:focus{outline:0}.vts-drawer__content--right{margin-left:auto}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$3 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$3 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$3 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$3 = normalizeComponent(
+    { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
+    __vue_inject_styles__$3,
+    __vue_script__$3,
+    __vue_scope_id__$3,
+    __vue_is_functional_template__$3,
+    __vue_module_identifier__$3,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/**
+ * Adds a button that can show/hide dropdown content when it is hovered over, or clicked. When it is clicked, the content will persist until the user clicks out or focuses out. Includes relevant ARIA attributes for the hidden content.
+ */
+var script$4 = {
+  props: {
+    /**
+     * The toggle button text.
+     */
+    text: {
+      type: String,
+      default: "",
+    },
+    /**
+     * Where the content should be placed in relation to the button.
+     *
+     * Options: 'bottom', 'top'
+     */
+    position: {
+      type: String,
+      default: "bottom",
+      validator: function validator(value) {
+        return ["top", "bottom"].includes(value)
+      },
+    },
+    /**
+     * The transition name.
+     */
+    transition: {
+      type: String,
+      default: "",
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    isHovered: false,
+    isFocused: false,
+  }); },
+
+  mounted: function mounted() {
+    var ref = this;
+    var onClickout = ref.onClickout;
+    document.addEventListener("click", onClickout);
+    this.$once("hook:beforeDestroy", function () {
+      document.removeEventListener("click", onClickout);
+    });
+  },
+
+  methods: {
+    onClickout: function onClickout(e) {
+      if (!this.$el.contains(e.target)) {
+        this.isFocused = false;
+      }
+    },
+
+    onFocusout: function onFocusout(event) {
+      if (!this.$el.contains(event.relatedTarget)) {
+        this.isFocused = false;
+      }
+    },
+  },
+};
+
+/* script */
+var __vue_script__$4 = script$4;
+
+/* template */
+var __vue_render__$3 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['vts-dropdown', _vm.classes.root],on:{"mouseenter":function($event){_vm.isHovered = true;},"mouseleave":function($event){_vm.isHovered = false;},"focusout":_vm.onFocusout}},[_c('button',{class:['vts-dropdown__trigger', _vm.classes.trigger],attrs:{"aria-expanded":!!_vm.isHovered || !!_vm.isFocused,"aria-haspopup":"true"},on:{"click":function($event){_vm.isFocused = !_vm.isFocused;}}},[_vm._t("trigger",[_vm._v("\n      "+_vm._s(_vm.text)+"\n    ")])],2),_vm._v(" "),_c('transition',{attrs:{"name":_vm.transition}},[(!!_vm.isHovered || !!_vm.isFocused)?_c('div',{staticClass:"vts-dropdown__content",class:[("vts-dropdown__content--" + _vm.position), _vm.classes.content]},[_vm._t("default")],2):_vm._e()])],1)};
+var __vue_staticRenderFns__$3 = [];
+
+  /* style */
+  var __vue_inject_styles__$4 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-1e03e90e_0", { source: ".vts-dropdown{display:inline-block;position:relative}.vts-dropdown__content{position:absolute;z-index:5;min-width:100%}.vts-dropdown__content--top{top:0;transform:translateY(-100%)}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$4 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$4 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$4 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$4 = normalizeComponent(
+    { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
+    __vue_inject_styles__$4,
+    __vue_script__$4,
+    __vue_scope_id__$4,
+    __vue_is_functional_template__$4,
+    __vue_module_identifier__$4,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$5 = {
+  model: {
+    prop: "files",
+    event: "update",
+  },
+
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+
+    files: {
+      type: Array,
+      default: function () { return []; },
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    localFiles: [],
+    droppable: false,
+  }); },
+
+  watch: {
+    files: function files(files$1) {
+      this.localFiles = files$1;
+    },
+    localFiles: function localFiles(files) {
+      this.droppable = false;
+    },
+  },
+
+  methods: {
+    onChange: function onChange(event) {
+      var files = Array.from(event.target.files);
+      this.localFiles = files;
+      this.$emit("update", files);
+    },
+
+    onDrop: function onDrop(event) {
+      var files = Array.from(event.dataTransfer.files);
+      var isMulti = this.$attrs.multiple != null;
+      if (!isMulti && files.length > 1) {
+        files.length = 1;
+      }
+      this.localFiles = files;
+      this.$emit("update", files);
+    },
+
+    // clear() {
+    //   this.localFiles = []
+    //   this.$refs.input.value = null
+    //   this.$emit("update", [])
+    // },
+  },
+};
+
+/* script */
+var __vue_script__$5 = script$5;
+
+/* template */
+var __vue_render__$4 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('label',{class:[
+    'vts-file',
+    {
+      'vts-file--droppable': _vm.droppable,
+      'vts-file--selected': !!_vm.localFiles.length,
+    },
+    _vm.classes.label ]},[_c('input',_vm._g(_vm._b({ref:"input",class:['vts-file__input', _vm.classes.input],attrs:{"type":"file"},on:{"change":_vm.onChange}},'input',_vm.$attrs,false),_vm.$listeners)),_vm._v(" "),_c('span',{class:['vts-file__text', _vm.classes.text]},[_vm._t("label",[_vm._v(_vm._s(_vm.label))])],2),_vm._v(" "),_c('div',{staticClass:"vts-file__dropzone",on:{"dragenter":function($event){$event.preventDefault();_vm.droppable = true;}}},[_vm._t("default",[(_vm.localFiles.length)?_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("\n        "+_vm._s(_vm.localFiles.length > 1
+            ? ((_vm.localFiles.length) + " files selected")
+            : _vm.localFiles[0].name)+"\n      ")]):_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("\n        Choose files or drop here\n      ")])],null,{ files: _vm.localFiles, droppable: _vm.droppable }),_vm._v(" "),(_vm.droppable)?_c('span',{staticClass:"vts-file__overlay",on:{"drop":function($event){$event.preventDefault();return _vm.onDrop($event)},"dragenter":function($event){$event.stopPropagation();_vm.droppable = true;},"dragleave":function($event){$event.stopPropagation();_vm.droppable = false;},"dragover":function($event){$event.preventDefault();}}},[_vm._t("overlay")],2):_vm._e()],2)])};
+var __vue_staticRenderFns__$4 = [];
+
+  /* style */
+  var __vue_inject_styles__$5 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-172a88c9_0", { source: ".vts-file__input{position:absolute;overflow:hidden;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;border:0;padding:0}.vts-file__dropzone{position:relative}.vts-file__overlay{position:absolute;top:0;right:0;bottom:0;left:0}input:focus~.vts-file__dropzone{outline-width:1px;outline-style:auto;outline-color:Highlight;outline-color:-webkit-focus-ring-color}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$5 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$5 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$5 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$5 = normalizeComponent(
+    { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
+    __vue_inject_styles__$5,
+    __vue_script__$5,
+    __vue_scope_id__$5,
+    __vue_is_functional_template__$5,
+    __vue_module_identifier__$5,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var NAME$1 = "vts-img";
+
+/**
+ * Drop in replacement for the HTML `<img>` tag which supports lazy-loading. Improves load times by waiting for the image to scroll into view before actually downloading it.
+ *
+ Note: This component uses [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) which is not supported by Internet Explorer.
+ */
+var script$6 = {
+  inheritAttrs: false,
+  // functional: true, // TODO
+
+  props: {
+    /**
+     * Same as the HTML attribute
+     */
+    src: {
+      type: String,
+      required: true,
+    },
+    /**
+     * Same as the HTML attribute
+     */
+    srcset: {
+      type: String,
+      default: "",
+    },
+    /**
+     * URL of the blurred placeholder image to use if you need one (ideally a very small image).
+     */
+    placeholder: {
+      type: String,
+      default: "",
+    },
+    /**
+     * CSS background styles for the placeholder in case you just want colors.
+     */
+    background: {
+      type: String,
+      default: "",
+    },
+
+    transitionDuration: {
+      type: [Number, String],
+      default: 3000,
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  computed: {
+    dataUrl: function dataUrl() {
+      var ref = this.$attrs;
+      var width = ref.width;
+      var height = ref.height;
+      if (!width || !height) { return "" }
+
+      var w = 100;
+      var canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = (height / width) * w;
+
+      return canvas.toDataURL()
+    },
+  },
+
+  watch: {
+    src: {
+      handler: "init",
+    },
+    srcset: {
+      handler: "init",
+    },
+  },
+
+  mounted: function mounted() {
+    this.init();
+  },
+
+  methods: {
+    init: function init() {
+      var this$1 = this;
+
+      this.observer = new IntersectionObserver(this.handler);
+      this.observer.observe(this.$el);
+
+      this.$once("hook:beforeDestroy", function () {
+        this$1.observer.disconnect();
+      });
+    },
+
+    handler: function handler(ref) {
+      var entry = ref[0];
+
+      var ref$1 = this;
+      var src = ref$1.src;
+      var $el = ref$1.$el;
+      var ref$2 = this.$refs;
+      var img = ref$2.img;
+      var placeholder = ref$2.placeholder;
+
+      if (entry.isIntersecting) {
+        // Element is in viewport
+        $el.classList.add((NAME$1 + "--loading"));
+        this.loadImg();
+        this.observer.disconnect();
+      }
+    },
+
+    loadImg: function loadImg() {
+      var ref = this;
+      var src = ref.src;
+      var srcset = ref.srcset;
+      var ref$1 = this.$refs;
+      var img = ref$1.img;
+
+      img.addEventListener("load", this.onLoad);
+
+      if (!!srcset) {
+        img.srcset = srcset;
+      }
+      img.src = src;
+    },
+
+    onLoad: function onLoad() {
+      var ref = this;
+      var src = ref.src;
+      var $el = ref.$el;
+      var ref$1 = this.$refs;
+      var img = ref$1.img;
+      var placeholder = ref$1.placeholder;
+
+      $el.classList.remove((NAME$1 + "--loading"));
+      $el.classList.add((NAME$1 + "--loaded"));
+
+      if (placeholder) {
+        img.addEventListener("transitionend", function onTransitionEnd() {
+          placeholder.remove();
+          img.removeEventListener("transitionend", onTransitionEnd);
+        });
+      }
+
+      img.removeEventListener("load", this.onLoad);
+    },
+  },
+};
+
+/* script */
+var __vue_script__$6 = script$6;
+
+/* template */
+var __vue_render__$5 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['vts-img', _vm.classes.root]},[(_vm.dataUrl)?_c('div',{ref:"placeholder",class:['vts-img__placeholder', _vm.classes.placeholder],style:({ background: _vm.background })},[_c('img',_vm._b({attrs:{"src":_vm.placeholder || _vm.dataUrl,"alt":""}},'img',_vm.$attrs,false))]):_vm._e(),_vm._v(" "),_c('img',_vm._g(_vm._b({ref:"img",class:['vts-img__img', _vm.classes.img],style:({
+      transitionDuration: (_vm.transitionDuration + "ms"),
+    }),attrs:{"src":_vm.dataUrl,"alt":_vm.$attrs.alt || ''}},'img',_vm.$attrs,false),_vm.$listeners))])};
+var __vue_staticRenderFns__$5 = [];
+
+  /* style */
+  var __vue_inject_styles__$6 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-06cd1f9f_0", { source: ".vts-img{display:inline-block;position:relative}.vts-img img{vertical-align:top}.vts-img__placeholder{position:absolute;overflow:hidden}.vts-img__placeholder img{transform:scale(1.05);filter:blur(10px)}.vts-img__img{opacity:0;transition-property:opacity;transition-timing-function:ease}.vts-img--loaded .vts-img__img{opacity:1}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$6 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$6 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$6 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$6 = normalizeComponent(
+    { render: __vue_render__$5, staticRenderFns: __vue_staticRenderFns__$5 },
+    __vue_inject_styles__$6,
+    __vue_script__$6,
+    __vue_scope_id__$6,
+    __vue_is_functional_template__$6,
+    __vue_module_identifier__$6,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+
+/**
+ * Input component that automatically includes labels, validation, and aria descriptions for any errors.
+ */
+var script$7 = {
+  inheritAttrs: false,
+
+  model: {
+    event: "update",
+  },
+
+  props: {
+    /**
+     * Every input should have a label with the exception of `radio` which supports labels for the `options` prop.
+     */
+    label: {
+      type: String,
+      default: "",
+    },
+
+    /**
+     * The input value. Works for all inputs except type `radio`. See `options` prop.
+     */
+    value: {
+      type: [String, Number, Boolean, Array],
+      default: "",
+    },
+
+    /**
+     * An array of options used for inputs of type `radio` or type `select`
+     */
+    options: {
+      type: Array,
+      default: function () { return []; },
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    dirty: false,
+    anyInvalid: false,
+    invalid: {},
+  }); },
+
+  computed: {
+    tag: function tag() {
+      var type = this.$attrs.type || "text";
+      if (type === "textarea") {
+        return "textarea"
+      }
+      if (type === "select") {
+        return "select"
+      }
+      return "input"
+    },
+
+    id: function id() {
+      return this.$attrs.id || "vts-" + randomString(6)
+    },
+
+    computedOptions: function computedOptions() {
+      var this$1 = this;
+
+      return this.options.map(function (item) {
+        // Each item should be an object with at least value and label which we can bind to later
+        item = typeof item === "object" ? item : { value: item };
+        Object.assign(item, this$1.$attrs);
+        item.label = item.label || item.value;
+        item.name = item.name || this$1.id;
+        item.required = true;
+        return item
+      })
+    },
+
+    isMultiple: function isMultiple() {
+      var ref = this.$attrs;
+      var multiple = ref.multiple;
+      return multiple != null && multiple != "false"
+    },
+  },
+
+  watch: {
+    value: {
+      handler: "validate",
+    },
+  },
+
+  mounted: function mounted() {
+    this.validate();
+  },
+
+  methods: {
+    onInput: function onInput(ref) {
+      var target = ref.target;
+
+      var ref$1 = this.$attrs;
+      var type = ref$1.type;
+      var isMultiple = this.isMultiple;
+
+      var value;
+
+      if (type === "checkbox") {
+        value = target.checked;
+      } else if (type === "select" && isMultiple) {
+        value = [];
+        target.options.forEach(function (option) {
+          // for of not supported
+          if (option.selected) {
+            value.push(option.value);
+          }
+        });
+      } else {
+        value = target.value;
+      }
+
+      /**
+       * @event update
+       * @type { any }
+       */
+      this.$emit("update", value);
+    },
+
+    validate: function validate() {
+      var input = this.$refs.input;
+      if (Array.isArray(input)) { return }
+
+      var validity = input.validity;
+
+      this.anyInvalid = !validity.valid;
+      this.invalid = {
+        required: validity.valueMissing,
+        minLength: validity.tooShort,
+        maxLength: validity.tooLong,
+        min: validity.rangeOverflow,
+        max: validity.rangeUnderflow,
+        type: validity.typeMismatch,
+        pattern: validity.patternMismatch,
+      };
+    },
+  },
+};
+
+/* script */
+var __vue_script__$7 = script$7;
+
+/* template */
+var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:[
+    'vts-input',
+    ("vts-input--" + (_vm.$attrs.type || 'text')),
+    {
+      'vts-input--invalid': _vm.invalid.anyInvalid,
+      'vts-input--required': _vm.$attrs.hasOwnProperty('required'),
+    },
+    _vm.classes.root ]},[(_vm.$attrs.type === 'radio')?_c('fieldset',{class:['vts-input__fieldset', _vm.classes.fieldset]},[(_vm.label)?_c('legend',{class:['vts-input__text', _vm.classes.text]},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_vm._v(" "),_vm._l((_vm.computedOptions),function(option){return _c('label',{key:option.value,class:['vts-input__label', _vm.classes.label]},[_c('input',_vm._g({ref:"input",refInFor:true,staticClass:"vts-input__input",attrs:{"type":_vm.$attrs.type,"name":option.name,"aria-describedby":_vm.invalid.anyInvalid && (_vm.id + "__description")},domProps:{"checked":_vm.value === option.value,"value":option.value},on:{"input":function($event){return _vm.$emit('update', option.value)},"blur":function($event){_vm.dirty = true;}}},_vm.$listeners)),_vm._v(" "),_c('span',{class:['vts-input__text', _vm.classes.text]},[_vm._v("\n        "+_vm._s(option.label)+"\n      ")])])})],2):_c('label',{class:['vts-input__label', _vm.classes.label]},[(_vm.$attrs.type !== 'checkbox')?_c('span',{class:['vts-input__text', _vm.classes.text]},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e(),_vm._v(" "),(_vm.$attrs.type === 'select')?_c('select',_vm._g(_vm._b({ref:"input",class:['vts-input__input', _vm.classes.input],attrs:{"id":(_vm.id + "__input"),"aria-describedby":_vm.invalid.anyInvalid && (_vm.id + "__description")},on:{"input":_vm.onInput,"blur":function($event){_vm.dirty = true;}}},'select',_vm.$attrs,false),_vm.$listeners),_vm._l((_vm.computedOptions),function(option,i){return _c('option',_vm._b({key:i,domProps:{"selected":_vm.value.includes(option.value)}},'option',option,false),[_vm._v("\n        "+_vm._s(option.label)+"\n      ")])}),0):_c(_vm.tag,_vm._g(_vm._b({ref:"input",tag:"component",class:['vts-input__input', _vm.classes.input],attrs:{"id":(_vm.id + "__input"),"aria-describedby":_vm.invalid.anyInvalid && (_vm.id + "__description"),"checked":_vm.$attrs.type === 'checkbox' && _vm.value === true},domProps:{"value":_vm.value},on:{"input":_vm.onInput,"blur":function($event){_vm.dirty = true;}}},'component',_vm.$attrs,false),_vm.$listeners),[(_vm.tag === 'textarea')?[_vm._v("\n        "+_vm._s(_vm.value)+"\n      ")]:_vm._e()],2),_vm._v(" "),(_vm.$attrs.type === 'checkbox')?_c('span',{class:['vts-input__text', _vm.classes.text]},[_vm._v("\n      "+_vm._s(_vm.label)+"\n    ")]):_vm._e()],1),_vm._v(" "),(_vm.$scopedSlots.description)?_c('div',{class:['vts-input__description', _vm.classes.description],attrs:{"id":(_vm.id + "__description"),"role":"alert"}},[_vm._t("description",null,null,{ dirty: _vm.dirty, anyInvalid: _vm.anyInvalid, invalid: _vm.invalid })],2):_vm._e()])};
+var __vue_staticRenderFns__$6 = [];
+
+  /* style */
+  var __vue_inject_styles__$7 = undefined;
+  /* scoped */
+  var __vue_scope_id__$7 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$7 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$7 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$7 = normalizeComponent(
+    { render: __vue_render__$6, staticRenderFns: __vue_staticRenderFns__$6 },
+    __vue_inject_styles__$7,
+    __vue_script__$7,
+    __vue_scope_id__$7,
+    __vue_is_functional_template__$7,
+    __vue_module_identifier__$7,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+/**
+ * Uses [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) to fire events when content enters or exits the screen.
+ */
+var script$8 = {
+  props: {
+    /**
+     * The IntersectionObserver threshold value.
+     */
+    threshold: {
+      type: [Number, Array],
+      default: function () { return null; },
+    },
+    /**
+     * The IntersectionObserver root value.
+     */
+    root: {
+      type: String,
+      default: undefined,
+    },
+    /**
+     * The IntersectionObserver rootMargin value.
+     */
+    rootMargin: {
+      type: String,
+      default: undefined,
+    },
+
+    options: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    entry: {},
+  }); },
+
+  mounted: function mounted() {
+    var this$1 = this;
+
+    var ref = this;
+    var root = ref.root;
+    var threshold = ref.threshold;
+    var rootMargin = ref.rootMargin;
+    var options = ref.options;
+    var handler = ref.handler;
+    var observerOptions = Object.assign({}, options,
+      {root: root,
+      threshold: threshold,
+      rootMargin: rootMargin});
+
+    this.observer = new IntersectionObserver(handler, observerOptions);
+    this.observer.observe(this.$el);
+
+    this.$once("hook:beforeDestroy", function () {
+      this$1.observer.disconnect();
+    });
+  },
+
+  methods: {
+    handler: function handler(ref) {
+      var entry = ref[0];
+
+      this.entry = entry;
+      // console.log(entry)
+      if (entry.isIntersecting) {
+        /**
+         * Fired when the observed element enters the screen.
+         * @event enter
+         * @type { IntersectionObserverEntry }
+         */
+        this.$emit("enter", entry);
+      } else {
+        /**
+         * Fired when the observed element exits the screen.
+         * @event exit
+         * @type { IntersectionObserverEntry }
+         */
+        this.$emit("exit", entry);
+      }
+      /**
+       * Fired when the observed element enters or exits the screen.
+       * @event change
+       * @type { IntersectionObserverEntry }
+       */
+      this.$emit("change", entry);
+    },
+  },
+
+  render: function render(h) {
+    // @slot Content to be tracked with IntersectionObserver
+    var ref = this;
+    var entry = ref.entry;
+
+    /** @slot Slot content providing isIntersecting */
+    var defaultSlot = this.$slots.default;
+    var scopedSlot = this.$scopedSlots.default;
+
+    if (defaultSlot) {
+      return safeSlot(h, defaultSlot)
+    }
+
+    return safeSlot(h, scopedSlot(entry))
+  },
+};
+
+/* script */
+var __vue_script__$8 = script$8;
+
+/* template */
+
+  /* style */
+  var __vue_inject_styles__$8 = undefined;
+  /* scoped */
+  var __vue_scope_id__$8 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$8 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$8 = undefined;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$8 = normalizeComponent(
+    {},
+    __vue_inject_styles__$8,
+    __vue_script__$8,
+    __vue_scope_id__$8,
+    __vue_is_functional_template__$8,
+    __vue_module_identifier__$8,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+
+/**
+ * A modal/dialogue component for showing users content which overlays the rest of the applications. When opened, it traps the user's focus so that keyboard navigation will remain within the modal until it is closed. It supports being closed by clicking outside the modal content or pressing the ESC key.
+ */
+var script$9 = {
+  model: {
+    prop: "showing",
+    event: "change",
+  },
+
+  props: {
+    /**
+     * @model
+     */
+    showing: Boolean,
+    /**
+     * HTML component for the modal content.
+     */
+    tag: {
+      type: String,
+      default: "div",
+    },
+    /**
+     * Flag to enable/prevent the modal from being closed.
+     */
+    dismissible: {
+      type: Boolean,
+      default: true,
+    },
+    /**
+     * CSS width to set the modal to.
+     */
+    width: String,
+    /**
+     * CSS max-width to set the modal to.
+     */
+    maxWidth: String,
+    /**
+     * Prevents the page from being scrolled while the modal is open.
+     */
+    noScroll: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * Transition name to apply to the modal.
+     */
+    transition: String,
+    /**
+     * Transition name to apply to the background.
+     */
+    bgTransition: String,
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  watch: {
+    showing: {
+      handler: function handler(next, prev) {
+        var this$1 = this;
+
+        if (typeof window !== "undefined") {
+          if (next && next != prev) {
+            this.noScroll &&
+              document.body.style.setProperty("overflow", "hidden");
+            this.$nextTick(function () {
+              this$1.$refs.content.focus();
+            });
+          } else {
+            this.noScroll && document.body.style.removeProperty("overflow");
+          }
+        }
+      },
+    },
+  },
+
+  mounted: function mounted() {
+    console.warn(
+      "Vuetensil's VModal is deprecated. Please use VDialog instead."
+    );
+  },
+
+  methods: {
+    show: function show() {
+      /**
+       * Fired when the modal opens.
+       * @event show
+       * @type { boolean }
+       */
+      this.$emit("show");
+      this.$emit("change", true);
+    },
+    hide: function hide() {
+      /**
+       * Fired when the modal closes.
+       * @event hide
+       * @type { boolean }
+       */
+      this.$emit("hide");
+      this.$emit("change", false);
+    },
+    toggle: function toggle() {
+      var ref = this;
+      var showing = ref.showing;
+      var event = showing ? "hide" : "show";
+      this.$emit(event, !showing);
+      /**
+       * Fired whenever the modal opens or closes.
+       * @event change
+       * @type { boolean }
+       */
+      this.$emit("change", !showing);
+    },
+    onClick: function onClick(event) {
+      if (event.target.classList.contains("vts-modal") && this.dismissible) {
+        this.hide();
+      }
+    },
+
+    onKeydown: function onKeydown(event) {
+      if (event.keyCode === keycodes.ESC) {
+        this.hide();
+      }
+      if (event.keyCode === keycodes.TAB) {
+        var content = this.$refs.content;
+        if (!content) { return }
+
+        var focusable = Array.from(content.querySelectorAll(FOCUSABLE));
+
+        if (!focusable.length) {
+          event.preventDefault();
+          return
+        }
+
+        if (!content.contains(document.activeElement)) {
+          event.preventDefault();
+          focusable[0].focus();
+        } else {
+          var focusedItemIndex = focusable.indexOf(document.activeElement);
+
+          if (event.shiftKey && focusedItemIndex === 0) {
+            focusable[focusable.length - 1].focus();
+            event.preventDefault();
+          }
+
+          if (!event.shiftKey && focusedItemIndex === focusable.length - 1) {
+            focusable[0].focus();
+            event.preventDefault();
+          }
+        }
+      }
+    },
+  },
+};
+
+/* script */
+var __vue_script__$9 = script$9;
+
+/* template */
+var __vue_render__$7 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":_vm.bgTransition}},[(_vm.showing)?_c('div',{class:['vts-modal', _vm.classes.root],on:{"click":_vm.onClick,"keydown":_vm.onKeydown}},[_c('transition',{attrs:{"name":_vm.transition,"appear":""}},[_c(_vm.tag,{ref:"content",tag:"component",class:['vts-modal__content', _vm.classes.content],style:({ width: _vm.width, maxWidth: _vm.maxWidth }),attrs:{"tabindex":"-1","role":"dialog"}},[_vm._t("default")],2)],1)],1):_vm._e()])};
+var __vue_staticRenderFns__$7 = [];
+
+  /* style */
+  var __vue_inject_styles__$9 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-771b5c26_0", { source: ".vts-modal{display:flex;align-items:center;justify-content:center;position:fixed;z-index:100;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.2)}.vts-modal [tabindex=\"-1\"]:focus{outline:0}.vts-modal__content{overflow:auto;max-width:70vw;max-height:80vh;background:#fff}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$9 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$9 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$9 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$9 = normalizeComponent(
+    { render: __vue_render__$7, staticRenderFns: __vue_staticRenderFns__$7 },
+    __vue_inject_styles__$9,
+    __vue_script__$9,
+    __vue_scope_id__$9,
+    __vue_is_functional_template__$9,
+    __vue_module_identifier__$9,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+
+var script$a = {
+  props: {
+    tag: {
+      type: String,
+      default: "div",
+    },
+  },
+
+  data: function () { return ({
+    width: undefined,
+    height: undefined,
+  }); },
+
+  mounted: function mounted() {
+    var fn = this.updateDimensions;
+    fn();
+    window.addEventListener("resize", fn);
+    this.$once("hook:beforeDestroy", function () {
+      window.removeEventListener("resize", fn);
+    });
+  },
+
+  methods: {
+    updateDimensions: function updateDimensions() {
+      var el = this.$el;
+      this.width = el.offsetWidth;
+      this.height = el.offsetHeight;
+    },
+  },
+};
+
+/* script */
+var __vue_script__$a = script$a;
+
+/* template */
+var __vue_render__$8 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.tag,{tag:"component",staticClass:"vts-resize"},[_vm._t("default",null,null,{ width: _vm.width, height: _vm.height })],2)};
+var __vue_staticRenderFns__$8 = [];
+
+  /* style */
+  var __vue_inject_styles__$a = undefined;
+  /* scoped */
+  var __vue_scope_id__$a = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$a = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$a = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$a = normalizeComponent(
+    { render: __vue_render__$8, staticRenderFns: __vue_staticRenderFns__$8 },
+    __vue_inject_styles__$a,
+    __vue_script__$a,
+    __vue_scope_id__$a,
+    __vue_is_functional_template__$a,
+    __vue_module_identifier__$a,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+
+/**
+ * Show and hide content based on which tabs are selected.
+ *
+ * Implements best practices for accessible tab components based on W3C. Includes HTML5 role attributes (tablist, tab, tabpanel), aria attributes (aria-label, aria-selected, aria-controls, aria-labelledby), and ideal keyboard navigation.
+ *
+ * Keyboard navigation to the tabs only targets active tab. `right` key activates next tab (horizontal orientation) or loops around to start. `left` key activates previous tab (horizontal orientation) or loops around to end. `down` key activates next tab (vertical orientation) or loops around to start. `down` key activates previous tab (vertical orientation) or loops around to end. (in horizontal orientation), `home` key activates first tab. `end` key activates last tab.
+ */
+var script$b = {
+  // name: NAME,
+
+  props: {
+    /**
+     * Support for aria-label attribute
+     */
+    label: String,
+    /**
+     * Support for aria-orientation attribute
+     */
+    orientation: {
+      type: String,
+      default: "horizontal",
+    },
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function () { return ({
+    activeIndex: 0,
+  }); },
+
+  computed: {
+    tablist: function tablist() {
+      return Object.keys(this.$slots)
+    },
+
+    id: function id() {
+      var ref = this.$attrs;
+      var id = ref.id;
+      if (id) { return id }
+      return Array(6)
+        .fill()
+        .map(function () { return Math.floor(36 * Math.random()).toString(36); })
+        .join("")
+    },
+  },
+
+  methods: {
+    onKeydown: function onKeydown(event) {
+      var keyCode = event.keyCode;
+      switch (keyCode) {
+        case keycodes.END:
+          event.preventDefault();
+          this.activeIndex = this.tablist.length - 1;
+          this.setFocus();
+          break
+        case keycodes.HOME:
+          event.preventDefault();
+          this.activeIndex = 0;
+          this.setFocus();
+          break
+        // Up and down are in keydown because we need to prevent page scroll >:)
+        case keycodes.LEFT:
+        case keycodes.RIGHT:
+        case keycodes.UP:
+        case keycodes.DOWN:
+          this.determineOrientation(event);
+          break
+      }
+    },
+
+    // When a tablist's aria-orientation is set to vertical, only up and down arrow should function. In all other cases only left and right arrow function.
+    determineOrientation: function determineOrientation(event) {
+      var keyCode = event.keyCode;
+      var proceed = false;
+      if (this.orientation === "vertical") {
+        if (keyCode === keycodes.UP || keyCode === keycodes.DOWN) {
+          event.preventDefault();
+          proceed = true;
+        }
+      } else {
+        if (keyCode === keycodes.LEFT || keyCode === keycodes.RIGHT) {
+          proceed = true;
+        }
+      }
+      if (proceed) {
+        this.switchTabOnArrowPress(event);
+        this.setFocus();
+      }
+    },
+
+    // Either focus the next, previous, first, or last tab depening on key pressed
+    switchTabOnArrowPress: function switchTabOnArrowPress(event) {
+      var keyCode = event.keyCode;
+      var directions = {};
+      directions[keycodes.LEFT] = -1;
+      directions[keycodes.UP] = -1;
+      directions[keycodes.RIGHT] = 1;
+      directions[keycodes.DOWN] = 1;
+
+      /* istanbul ignore next */
+      if (!directions[keyCode]) { return }
+
+      var activeIndex = this.activeIndex;
+      var tabLength = this.$refs.tab.length;
+      var nextIndex = activeIndex + directions[keyCode];
+
+      if (nextIndex < 0) {
+        this.activeIndex = tabLength - 1;
+      } else if (nextIndex >= tabLength) {
+        this.activeIndex = 0;
+      } else {
+        this.activeIndex = nextIndex;
+      }
+    },
+
+    setFocus: function setFocus() {
+      this.$refs.tab[this.activeIndex].focus();
+    },
+  },
+};
+
+/* script */
+var __vue_script__$b = script$b;
+
+/* template */
+var __vue_render__$9 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.tablist.length)?_c('div',{class:['vts-tabs', _vm.classes.root]},[_c('div',{class:['vts-tabs__tablist', _vm.classes.tablist],attrs:{"role":"tablist","aria-label":_vm.label,"aria-orientation":_vm.orientation}},_vm._l((_vm.tablist),function(tab,index){return _c('button',{key:tab,ref:"tab",refInFor:true,class:[("vts-tabs__tab vts-tabs__tab--" + index), _vm.classes.tab],attrs:{"id":(_vm.id + "-tab-" + index),"aria-selected":index === _vm.activeIndex,"tabindex":index === _vm.activeIndex ? false : -1,"aria-controls":(_vm.id + "-panel-" + index),"role":"tab"},on:{"keydown":_vm.onKeydown,"click":function($event){_vm.activeIndex = index;}}},[_vm._v("\n      "+_vm._s(tab)+"\n    ")])}),0),_vm._v(" "),_vm._l((_vm.tablist),function(tab,index){return _c('div',{key:tab,class:[("vts-tabs__panel vts-tabs__panel--" + index), _vm.classes.panel],attrs:{"id":(_vm.id + "-panel-" + index),"aria-labelledby":(_vm.id + "-tab-" + index),"hidden":index !== _vm.activeIndex,"tabindex":"0","role":"tabpanel"}},[_vm._t(tab)],2)})],2):_vm._e()};
+var __vue_staticRenderFns__$9 = [];
+
+  /* style */
+  var __vue_inject_styles__$b = undefined;
+  /* scoped */
+  var __vue_scope_id__$b = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$b = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$b = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$b = normalizeComponent(
+    { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$9 },
+    __vue_inject_styles__$b,
+    __vue_script__$b,
+    __vue_scope_id__$b,
+    __vue_is_functional_template__$b,
+    __vue_module_identifier__$b,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$c = {
+  props: {
+    headers: {
+      type: Array,
+      default: function () { return []; },
+    },
+    items: {
+      type: Array,
+      default: function () { return []; },
+    },
+    page: {
+      type: Number,
+      default: 1,
+    },
+    perPage: {
+      type: Number,
+      default: 100,
+    },
+    orderBy: {
+      type: String,
+      default: null,
+    },
+    order: {
+      type: String,
+      default: null,
+    },
+    caption: {
+      type: String,
+      default: "",
+    },
+    // TODO: sortable prop
+  },
+
+  data: function data() {
+    return {
+      sortBy: this.orderBy,
+      sortOrder: this.order && this.order.toUpperCase(),
+      currentPage: this.page,
+      tabindex: null,
+    }
+  },
+
+  computed: {
+    cHeaders: function cHeaders() {
+      return this.headers.reduce(function (headers, item) {
+        /* eslint-disable-next-line no-param-reassign */
+        headers[item.key] = Object.assign({}, {sortable: true},
+          item);
+        return headers
+      }, {})
+    },
+
+    cItems: function cItems() {
+      var ref = this;
+      var items = ref.items;
+      var sortBy = ref.sortBy;
+      var sortOrder = ref.sortOrder;
+      var currentPage = ref.currentPage;
+      var perPage = ref.perPage;
+      var cHeaders = ref.cHeaders;
+
+      var cItems = items.map(function (original) {
+        var data = {};
+        Object.keys(cHeaders).forEach(function (key) {
+          data[key] = original[key];
+        });
+        return {
+          original: original,
+          data: data,
+        }
+      });
+
+      if (sortBy && sortOrder) {
+        var multiplier = sortOrder === "ASC" ? 1 : -1;
+        var isNum = Number.isFinite(cItems[0].data[sortBy]);
+
+        cItems = cItems.sort(function (a, b) {
+          var aVal = a.data[sortBy];
+          var bVal = b.data[sortBy];
+
+          if (isNum) {
+            return (aVal - bVal) * multiplier
+          }
+
+          if (aVal < bVal) { return -1 * multiplier }
+          if (aVal > bVal) { return 1 * multiplier }
+          return 0
+        });
+      }
+
+      if (perPage > -1) {
+        var offset = (Math.max(currentPage, 1) - 1) * perPage;
+        cItems = cItems.slice(offset, offset + perPage);
+      }
+
+      return cItems
+    },
+
+    lastPage: function lastPage() {
+      return Math.ceil(this.items.length / this.perPage)
+    },
+  },
+
+  mounted: function mounted() {
+    var ref = this.$refs.container;
+    var scrollWidth = ref.scrollWidth;
+    var clientWidth = ref.clientWidth;
+    var scrollable = scrollWidth > clientWidth;
+    this.tabindex = scrollable ? "0" : null;
+  },
+
+  methods: {
+    onSort: function onSort(key) {
+      var ref = this;
+      var sortBy = ref.sortBy;
+      var sortOrder = ref.sortOrder;
+      this.currentPage = 1;
+
+      if (key !== sortBy) {
+        this.sortBy = key;
+        this.sortOrder = "ASC";
+        return
+      }
+
+      switch (sortOrder) {
+        case "ASC":
+          this.sortOrder = "DESC";
+          break
+        case "DESC":
+          this.sortOrder = null;
+          break
+        default:
+          this.sortOrder = "ASC";
+      }
+    },
+
+    goToPage: function goToPage(page) {
+      var ref = this;
+      var lastPage = ref.lastPage;
+      this.currentPage = Math.min(Math.max(1, page), lastPage);
+    },
+  },
+};
+
+/* script */
+var __vue_script__$c = script$c;
+
+/* template */
+var __vue_render__$a = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{ref:"container",staticClass:"table-container",attrs:{"tabindex":"0","role":"group","aria-labelledby":"caption"}},[_c('table',[(_vm.caption)?_c('caption',{attrs:{"id":"caption"}},[_vm._v("\n        "+_vm._s(_vm.caption)+"\n      ")]):_vm._e(),_vm._v(" "),(_vm.headers.length)?_c('thead',[_c('tr',_vm._l((_vm.cHeaders),function(header,key){return _c('th',{key:key,attrs:{"role":"columnheader","aria-sort":_vm.sortBy !== header.key
+                ? null
+                : _vm.sortOrder === 'ASC'
+                ? 'ascending'
+                : 'descending'}},[_vm._v("\n            "+_vm._s(header.text || header.key)+"\n\n            "),(header.sortable)?_c('button',{attrs:{"aria-label":("sort by " + (header.text || header.key) + " in " + (!_vm.sortOrder
+                    ? 'ascending'
+                    : _vm.sortOrder === 'ASC'
+                    ? 'descending'
+                    : 'default') + " order")},on:{"click":function($event){header.sortable && _vm.onSort(header.key);}}},[(header.key === _vm.sortBy && _vm.sortOrder === 'ASC')?[_vm._v("\n                ↑\n              ")]:(header.key === _vm.sortBy && _vm.sortOrder === 'DESC')?[_vm._v("\n                ↓\n              ")]:[_vm._v("\n                ↕\n              ")]],2):_vm._e()])}),0)]):_vm._e(),_vm._v(" "),_c('tbody',[_vm._t("default",_vm._l((_vm.cItems),function(item,index){return _c('tr',{key:item.id},[_vm._l((item.data),function(value,key){return _vm._t(_vm.items[index].id ? ("row." + (_vm.items[index].id)) : null,[_c('td',{key:key},[_vm._t(("column." + key),[_vm._v("\n                  "+_vm._s(value)+"\n                ")],null,{ cell: value, item: item, column: key, row: index + 1 })],2)],null,{ item: item, column: key, row: index + 1 })})],2)}),null,Object.assign({}, {items: _vm.cItems}, _vm.$data, {perPage: _vm.perPage}))],2)]),_vm._v(" "),_vm._t("pagination",[(_vm.lastPage > 1)?_c('div',[_c('button',{attrs:{"disabled":_vm.currentPage === 1,"aria-label":"go to previous page"},on:{"click":function($event){return _vm.goToPage(_vm.currentPage - 1)}}},[_vm._v("\n          Prev\n        ")]),_vm._v(" "),_c('ul',_vm._l((_vm.lastPage),function(pageNum){return _c('li',{key:pageNum},[_c('button',{attrs:{"disabled":pageNum === _vm.currentPage,"aria-label":("go to page " + pageNum)},on:{"click":function($event){return _vm.goToPage(pageNum)}}},[_vm._v("\n              "+_vm._s(pageNum)+"\n            ")])])}),0),_vm._v(" "),_c('button',{attrs:{"disabled":_vm.currentPage === _vm.lastPage,"aria-label":"go to next page"},on:{"click":function($event){return _vm.goToPage(_vm.currentPage + 1)}}},[_vm._v("\n          Next\n        ")])]):_vm._e()],null,{ currentPage: _vm.currentPage, lastPage: _vm.lastPage, goToPage: _vm.goToPage })],2)])};
+var __vue_staticRenderFns__$a = [];
+
+  /* style */
+  var __vue_inject_styles__$c = function (inject) {
+    if (!inject) { return }
+    inject("data-v-c71e460a_0", { source: ".table-container{overflow-x:auto}@media (min-width:400px){.table-container{display:block}.lists-container{display:none}}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$c = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$c = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$c = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$c = normalizeComponent(
+    { render: __vue_render__$a, staticRenderFns: __vue_staticRenderFns__$a },
+    __vue_inject_styles__$c,
+    __vue_script__$c,
+    __vue_scope_id__$c,
+    __vue_is_functional_template__$c,
+    __vue_module_identifier__$c,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/**
+ * Toggle the visibility of content. Useful for something like an FAQ page, for example. Includes ARIA attributes for expandable content and is keyboard friendly.
+ */
+var script$d = {
+  props: {
+    /**
+     * The content inside the toggle button
+     */
+    label: {
+      type: String,
+      required: true,
+    },
+
+    disabled: Boolean,
+
+    classes: {
+      type: Object,
+      default: function () { return ({}); },
+    },
+  },
+
+  data: function data() {
+    return {
+      isOpen: !!this.isOpen,
+    }
+  },
+
+  computed: {
+    id: function id() {
+      var ref = this.$attrs;
+      var id = ref.id;
+      if (id) { return id }
+
+      return (
+        "vts-toggle-" +
+        Array(6)
+          .fill()
+          .map(function () { return Math.floor(36 * Math.random()).toString(36); })
+          .join("")
+      )
+    },
+  },
+
+  methods: {
+    collapse: function collapse(el) {
+      el.style.height = 0;
+    },
+
+    expand: function expand(el) {
+      el.style.overflow = "hidden";
+      el.style.height = (el.scrollHeight) + "px";
+      // Force repaint to make sure the animation is triggered correctly.
+      el.scrollHeight;
+    },
+
+    resetHeight: function resetHeight(el) {
+      el.style.overflow = "visible";
+      el.style.height = "";
+    },
+  },
+};
+
+/* script */
+var __vue_script__$d = script$d;
+
+/* template */
+var __vue_render__$b = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['vts-toggle', { 'vts-toggle--open': _vm.isOpen }, _vm.classes.root]},[_c('button',{ref:"label",class:['vts-toggle__label', _vm.classes.label],attrs:{"id":(_vm.id + "-label"),"disabled":_vm.disabled,"aria-controls":(_vm.id + "-content"),"aria-expanded":_vm.isOpen},on:{"click":function($event){_vm.isOpen = !_vm.isOpen;}}},[_vm._t("label")],2),_vm._v(" "),_c('transition',{on:{"before-enter":_vm.collapse,"enter":_vm.expand,"after-enter":_vm.resetHeight,"before-leave":_vm.expand,"leave":_vm.collapse}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isOpen && !_vm.disabled),expression:"isOpen && !disabled"}],class:['vts-toggle__content', _vm.classes.content],attrs:{"id":(_vm.id + "-content"),"aria-labelledby":(_vm.id + "-label"),"aria-hidden":!_vm.isOpen,"role":"region"}},[_vm._t("default")],2)])],1)};
+var __vue_staticRenderFns__$b = [];
+
+  /* style */
+  var __vue_inject_styles__$d = function (inject) {
+    if (!inject) { return }
+    inject("data-v-39580eff_0", { source: ".vts-toggle__content{transition:height .3s ease}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$d = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$d = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$d = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$d = normalizeComponent(
+    { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$b },
+    __vue_inject_styles__$d,
+    __vue_script__$d,
+    __vue_scope_id__$d,
+    __vue_is_functional_template__$d,
+    __vue_module_identifier__$d,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+var autofocus = {
+  inserted: function (el) { return el.focus(); },
+};
+
+var clickout = {
+  bind: function bind(el, binding) {
+    binding.stop = function (e) { return e.stopPropagation(); };
+
+    document.body.addEventListener("click", binding.value);
+    el.addEventListener("click", binding.stop);
+  },
+  unbind: function unbind(el, binding) {
+    document.body.removeEventListener("click", binding.value);
+    el.removeEventListener("click", binding.stop);
+  },
+};
+
+/**
+ * Copies a string of text to the user's clipboard
+ * @param {String} content The content within the downloaded file
+ */
+function copyToClipboard(content) {
+  var activeEl = document.activeElement;
+
+  var textarea = document.createElement("textarea");
+  textarea.value = content;
+
+  textarea.setAttribute("readonly", ""); // Prevent keyboard from showing on mobile
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+  textarea.style.fontSize = "12pt"; // Prevent zooming on iOS
+
+  document.body.append(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+
+  activeEl && activeEl.focus();
+}
+
+var copy = {
+  bind: function bind(el, binding, vnode) {
+    binding.handler = function () { return copyToClipboard(binding.value); };
+
+    el.addEventListener("click", binding.handler);
+  },
+  unbind: function unbind(el, binding) {
+    el.removeEventListener("click", binding.handler);
+  },
+};
+
+function unbind(el) {
+  if (!el._vobserver) { return }
+  el._vobserver.unobserve(el);
+  delete el._vobserver;
+}
+
+var intersect = {
+  inserted: function (el, ref) {
+    var value = ref.value;
+    var modifiers = ref.modifiers;
+
+    var options = Object.assign({}, value);
+    var enter = modifiers.enter;
+    var exit = modifiers.exit;
+    var once = modifiers.once;
+
+    if (options.root) {
+      options.root =
+        typeof options.root === "string"
+          ? document.querySelector(options.root)
+          : options.root;
+    }
+
+    var listeners = Object.assign({}, value);
+
+    // Support passing direct function
+    if (value instanceof Function) {
+      if (enter) { listeners.onEnter = value; }
+      if (exit) { listeners.onExit = value; }
+      if (!enter && !exit) { listeners.onChange = value; }
+    }
+
+    var observer = new IntersectionObserver(function (ref) {
+      var entry = ref[0];
+
+      // Firefox doesn't properly handle the isIntersecting prop
+      var isThresholdArray = Array.isArray(options.threshold);
+      var clone = {};
+      for (var key in entry) {
+        clone[key] = entry[key];
+      }
+      clone.isIntersecting = isThresholdArray
+        ? options.threshold.includes(entry.intersectionRatio)
+        : entry.intersectionRatio === options.threshold;
+
+      if (clone.isIntersecting) {
+        listeners.onEnter && listeners.onEnter(clone, el);
+      } else {
+        listeners.onExit && listeners.onExit(clone, el);
+      }
+      listeners.onChange && listeners.onChange(clone, el);
+
+      if (once) {
+        unbind(el);
+      }
+    }, options);
+    observer.observe(el);
+    el._vobserver = observer;
+  },
+
+  unbind: unbind,
+};
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuex-pathify/dist/vuex-pathify.esm.js ***!
+  \************************************************************/
+/*! exports provided: default, make, Payload, get, sync, call, Get, Sync, Call, commit, dispatch, registerModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "make", function() { return store; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Payload", function() { return Payload; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sync", function() { return sync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "call", function() { return call; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Get", function() { return Get; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sync", function() { return Sync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Call", function() { return Call; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "commit", function() { return commit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dispatch", function() { return dispatch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerModule", function() { return registerModule; });
+/**
+ * Bundle of: vuex-pathify
+ * Generated: 2019-12-16
+ * Version: 1.4.1
+ */
+
+var vuex = {
+  /**
+   * THIS OBJECT IS REPLACED AT RUNTIME WITH THE ACTUAL VUEX STORE
+   */
+  store: {
+    state: null,
+
+    commit: function commit () {
+      if (true) {
+        console.error('[Vuex Pathify] Plugin not initialized!');
+      }
+    },
+
+    dispatch: function dispatch () {
+      if (true) {
+        console.error('[Vuex Pathify] Plugin not initialized!');
+      }
+    }
+  }
+};
+
+function commit() {
+  var ref;
+
+  var args = [], len = arguments.length;
+  while ( len-- ) args[ len ] = arguments[ len ];
+  (ref = vuex.store).commit.apply(ref, args);
+}
+
+function dispatch() {
+  var ref;
+
+  var args = [], len = arguments.length;
+  while ( len-- ) args[ len ] = arguments[ len ];
+  return (ref = vuex.store).dispatch.apply(ref, args)
+}
+
+/**
+ * Tests whether a passed value is an Object
+ *
+ * @param   {*}       value   The value to be assessed
+ * @returns {boolean}         Whether the value is a true Object
+ */
+
+/**
+ * Tests whether a passed value is an Object or Array
+ *
+ * @param   {*}       value   The value to be assessed
+ * @returns {boolean}         Whether the value is an Object or Array
+ */
+function isObject (value) {
+  return !!value && typeof value === 'object'
+}
+
+/**
+ * Tests whether a passed value is an Object and has the specified key
+ *
+ * @param   {Object}   obj    The source object
+ * @param   {string}   key    The key to check that exists
+ * @returns {boolean}         Whether the predicate is satisfied
+ */
+function hasKey(obj, key) {
+  return isObject(obj) && key in obj
+}
+
+/**
+ * Gets an array of keys from a value
+ *
+ * The function handles various types:
+ *
+ * - string - match all words
+ * - object - return keys
+ * - array  - return a string array of its values
+ *
+ * @param   {*}       value   The value to get keys from
+ * @returns {Array}
+ */
+function getKeys (value) {
+  return !value
+    ? []
+    : Array.isArray(value)
+      ? value.map(function (key) { return String(key); })
+      : typeof value === 'object'
+        ? Object.keys(value)
+        : typeof value === 'string'
+          ? value.match(/[-$\w]+/g) || []
+          : []
+}
+
+/**
+ * Gets a value from an object, based on a path to the property
+ *
+ * @param   {Object}                obj     The Object to get the value from
+ * @param   {string|Array|Object}  [path]   The optional path to a sub-property
+ * @returns {*}
+ */
+function getValue (obj, path) {
+  var value = obj;
+  var keys = getKeys(path);
+
+  keys.every(function (key) {
+    var valid = isObject(value) && value.hasOwnProperty(key);
+    value = valid ? value[key] : void 0;
+    return valid
+  });
+  return value
+}
+
+/**
+ * Sets a value on an object, based on a path to the property
+ *
+ * @param   {Object}                obj       The Object to set the value on
+ * @param   {string|Array|Object}   path      The path to a sub-property
+ * @param   {*}                     value     The value to set
+ * @param   {boolean}              [create]   Optional flag to create sub-properties; defaults to false
+ * @returns {Boolean}                         True or false, depending if value was set
+ */
+function setValue (obj, path, value, create) {
+  if ( create === void 0 ) create = false;
+
+  var keys = getKeys(path);
+  return keys.reduce(function (obj, key, index)  {
+    var isIndex = /^\d+$/.test(key);
+    if (isIndex) {
+      key = parseInt(key);
+    }
+    if (!obj) {
+      return false
+    }
+    else if (index === keys.length - 1) {
+      obj[key] = value;
+      return true
+    }
+    else if (!isObject(obj[key]) || !(key in obj)) {
+      if (create) {
+        obj[key] = isIndex ? [] : {};
+      } else {
+        return false
+      }
+    }
+    return obj[key]
+  }, obj)
+}
+
+/**
+ * Checks an object has a property, based on a path to the property
+ *
+ * @param   {Object}                obj     The Object to check the value on
+ * @param   {string|Array|Object}   path    The path to a sub-property
+ * @returns {boolean}                       Boolean true or false
+ */
+function hasValue(obj, path) {
+  var keys = getKeys(path);
+  if (isObject(obj)) {
+    while (keys.length) {
+      var key = keys.shift();
+      if (hasKey(obj, key)) {
+        obj = obj[key];
+      } else {
+        return false
+      }
+    }
+    return true
+  }
+  return false
+}
+
+function clone (obj) {
+  return JSON.parse(JSON.stringify(obj))
+}
+
+var options = {
+  mapping: 'standard',  // map states to store members using the "standard" scheme
+  strict: true,         // throw an error if the store member cannot be found
+  cache: true,          // cache generated functions for faster re-use
+  deep: 1,              // allow sub-property access, but not creation
+};
+
+var formatters = {
+  camel: function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    return args.shift() + args
+      .map(function (text) { return text.replace(/\w/, function (c) { return c.toUpperCase(); }); })
+      .join('')
+  },
+
+  snake: function () {
+    var ref;
+
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+    return (ref = this)
+      .camel.apply(ref, args)
+      .replace(/([a-z])([A-Z])/g, function (match, a, b) { return a + '_' + b; })
+      .toLowerCase()
+  },
+
+  const: function () {
+    var ref;
+
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+    return (ref = this)
+      .snake.apply(ref, args)
+      .toUpperCase()
+  }
+};
+
+/**
+ * Map of store members
+ */
+var members = {
+  state: 'state',
+  getters: 'getters',
+  actions: '_actions',
+  mutations: '_mutations',
+};
+
+/**
+ * Map of default resolver functions
+ */
+var resolvers = {
+
+  /**
+   * Standard name mapping function
+   *
+   * Adheres to seemingly the most common Vuex naming pattern
+   *
+   * @param   {string}  type          The member type, i.e state, getters, mutations, or actions
+   * @param   {string}  name          The name of the property being targeted, i.e. value
+   * @param   {object}  formatters    A formatters object with common format functions, camel, snake, const
+   * @returns {string}
+   */
+  standard: function standard (type, name, formatters$$1) {
+    switch(type) {
+      case 'mutations':
+        return formatters$$1.const('set', name) // SET_BAR
+      case 'actions':
+        return formatters$$1.camel('set', name) // setBar
+    }
+    return name // bar
+  },
+
+  /**
+   * Simple name mapping function
+   */
+  simple: function simple (type, name, formatters$$1) {
+    if (type === 'actions') {
+      return formatters$$1.camel('set', name) // setBar
+    }
+    return name // bar
+  },
+
+};
+
+/**
+ * Configured resolver
+ */
+var resolver;
+
+/**
+ * Internal function to resolve member name using configured mapping function
+ *
+ * @param   {string}  type  The member type, i.e. actions
+ * @param   {string}  name  The supplied path member id, i.e. value
+ * @returns {string}        The resolved member name, i.e. SET_VALUE
+ */
+function resolveName (type, name) {
+  // bypass resolver
+  if (name.match(/!$/)) {
+    return name.substr(0, name.length - 1)
+  }
+
+  // configured resolver
+  var fn = resolver;
+
+  // unconfigured resolver! (runs once)
+  if (!fn) {
+    if (typeof options.mapping === 'function') {
+      fn = options.mapping;
+    }
+    else {
+      fn = resolvers[options.mapping];
+      if (!fn) {
+        throw new Error(("[Vuex Pathify] Unknown mapping '" + (options.mapping) + "' in options\n    - Choose one of '" + (Object.keys(resolvers).join("', '")) + "'\n    - Or, supply a custom function\n"))
+      }
+    }
+
+    resolver = fn;
+  }
+
+  // resolve!
+  return resolver(type, name, formatters)
+}
+
+/**
+ * Creates a resolver object that caches properties and can resolve store member properties
+ *
+ * @param   {object}  store     The Vuex store instance
+ * @param   {string}  path      A pathify path to the store target, i.e. 'foo/bar@a.b.c'
+ * @returns {object}
+ */
+function resolve (store, path) {
+  // state
+  var absPath = path.replace(/[/@!]+/g, '.');
+
+  // paths
+  var ref = path.split('@');
+  var statePath = ref[0];
+  var objPath = ref[1];
+
+  // parent
+  var modPath, trgName;
+  if (statePath.indexOf('/') > -1) {
+    var keys = statePath.split('/');
+    trgName = keys.pop();
+    modPath = keys.join('/');
+  }
+  else {
+    trgName = statePath;
+  }
+
+  // throw error if module does not exist
+  if (modPath && !store._modulesNamespaceMap[modPath + '/']) {
+    throw new Error(("[Vuex Pathify] Unknown module '" + modPath + "' via path '" + path + "'"))
+  }
+
+  // resolve targets
+  return {
+    absPath: absPath,
+    module: modPath,
+    target: statePath,
+    name: trgName.replace('!', ''),
+    isDynamic: path.indexOf(':') > -1,
+
+    /**
+     * Returns properties about the targeted member
+     *
+     * @param   {string}  type  The member type, i.e state, getters, mutations, or actions
+     * @returns {{exists: boolean, member: object, type: string, path: string}}
+     */
+    get: function (type) {
+      // targeted member, i.e. store._getters
+      var member = store[members[type]];
+
+      // resolved target name, i.e. SET_VALUE
+      var resName = resolveName(type, trgName);
+
+      // target path, i.e. store._getters['module/SET_VALUE']
+      var trgPath = modPath
+        ? modPath + '/' + resName
+        : resName;
+
+      // return values
+      return {
+        exists: type === 'state'
+          ? hasValue(member, trgPath)
+          : trgPath in member,
+        member: member,
+        trgPath: trgPath,
+        trgName: resName,
+        objPath: objPath,
+      }
+    }
+  }
+}
+
+/**
+ * Error generation function for accessors
+ */
+function getError(path, resolver, aName, a, bName, b) {
+  var error = "[Vuex Pathify] Unable to map path '" + path + "':";
+  if (path.indexOf('!') > -1) {
+    error += "\n    - Did not find " + aName + " or " + bName + " named '" + (resolver.name) + "' on " + (resolver.module ? ("module '" + (resolver.module) + "'"): 'root store');
+  }
+  else {
+    var aText = a
+      ? (aName + " '" + (a.trgName) + "' or ")
+      : '';
+    var bText = bName + " '" + (b.trgName) + "'";
+    error += "\n    - Did not find " + aText + bText + " on " + (resolver.module ? ("module '" + (resolver.module) + "'"): 'store') + "\n    - Use direct syntax '" + (resolver.target.replace(/(@|$)/, '!$1')) + "' (if member exists) to target directly";
+  }
+  return error
+}
+
+/**
+ * Handles passing and setting of sub-property values
+ */
+var Payload = function Payload (expr, path, value) {
+  this.expr = expr;
+  this.path = path;
+  this.value = value;
+};
+
+/**
+ * Set sub-property on target
+ * @param target
+ */
+Payload.prototype.update = function update (target) {
+  if (!options.deep) {
+    console.error(("[Vuex Pathify] Unable to access sub-property for path '" + (this.expr) + "':\n    - Set option 'deep' to 1 to allow it"));
+    return target
+  }
+
+  var success = setValue(target, this.path, this.value, options.deep > 1);
+
+  // unable to set sub-property
+  if (!success && "development" !== 'production') {
+    console.error(("[Vuex Pathify] Unable to create sub-property for path '" + (this.expr) + "':\n    - Set option 'deep' to 2 to allow it"));
+    return target
+  }
+
+  // set sub-property
+  return Array.isArray(target)
+    ? [].concat(target)
+    : Object.assign({}, target)
+};
+
+/**
+ * Creates a setter function for the store, automatically targeting actions or mutations
+ *
+ * Also supports setting of sub-properties as part of the path
+ *
+ * @see documentation for more detail
+ *
+ * @param   {Object}  store   The store object
+ * @param   {string}  path    The path to the target node
+ * @returns {*|Promise}       The return value from the commit() or dispatch()
+ */
+function makeSetter (store, path) {
+  var resolver = resolve(store, path);
+
+  var action = resolver.get('actions');
+  if (action.exists) {
+    return function (value) {
+      var payload = action.objPath
+        ? new Payload(path, action.objPath, value)
+        : value;
+      return store.dispatch(action.trgPath, payload)
+    }
+  }
+
+  var mutation = resolver.get('mutations');
+  if (mutation.exists || resolver.isDynamic) {
+    return function (value) {
+      // rebuild mutation if using dynamic path
+      if (resolver.isDynamic) {
+        var interpolated = interpolate(path, this);
+        mutation = resolve(store, interpolated).get('mutations');
+      }
+      var payload = mutation.objPath
+        ? new Payload(path, mutation.objPath, value)
+        : value;
+      return store.commit(mutation.trgPath, payload)
+    }
+  }
+
+  if (true) {
+    console.error(getError(path, resolver, 'action', action, 'mutation', mutation));
+  }
+
+  return function (value) {}
+}
+
+/**
+ * Creates a getter function for the store, automatically targeting getters or state
+ *
+ * Also supports returning of sub-properties as part of the path
+ *
+ * @see documentation for more detail
+ *
+ * @param   {Object}    store       The store object
+ * @param   {string}    path        The path to the target node
+ * @param   {boolean}  [stateOnly]  An optional flag to get from state only (used when syncing)
+ * @returns {*|Function}            The state value or getter function
+ */
+function makeGetter (store, path, stateOnly) {
+  var resolver = resolve(store, path);
+
+  // for sync, we don't want to read only from state
+  var getter;
+  if (!stateOnly) {
+    getter = resolver.get('getters');
+    if (getter.exists) {
+      return function () {
+        var value = getter.member[getter.trgPath];
+        return getter.objPath
+          ? getValueIfEnabled(path, value, getter.objPath)
+          : value
+      }
+    }
+  }
+
+  var state = resolver.get('state');
+  if (state.exists || resolver.isDynamic) {
+    return function () {
+      var absPath = resolver.isDynamic
+        ? interpolate(resolver.absPath, this)
+        : resolver.absPath;
+      return getValueIfEnabled(path, store.state, absPath)
+    }
+  }
+
+  if (true) {
+    console.error(getError(path, resolver, 'getter', getter, 'state', state));
+  }
+
+  return function () {}
+}
+
+/**
+ * Utility function to get value from store, but only if options allow
+ *
+ * @param   {string}  expr    The full path expression
+ * @param   {object}  source  The source object to get property from
+ * @param   {string}  path    The full dot-path on the source object
+ * @returns {*}
+ */
+function getValueIfEnabled(expr, source, path) {
+  if (!options.deep && expr.indexOf('@') > -1) {
+    console.error(("[Vuex Pathify] Unable to access sub-property for path '" + expr + "':\n    - Set option 'deep' to 1 to allow it"));
+    return
+  }
+  return getValue(source, path)
+}
+
+/**
+ * Utility function to interpolate a string with properties
+ * @param   {string}  path    The path containing interpolation :tokens
+ * @param   {object}  scope   The scope containing properties to be used
+ * @return  {string}
+ */
+function interpolate (path, scope) {
+  return path.replace(/:(\w+)/g, function replace (all, token) {
+    if (!(token in scope)) {
+      console.error(("Error resolving dynamic store path: The property \"" + token + "\" does not exist on the scope"), scope);
+    }
+    return scope[token]
+  })
+}
+
+function accessorize (store) {
+
+  /**
+   * Set a property on the store, automatically using actions or mutations
+   *
+   * @param   {string}        path    The path to the store member
+   * @param   {*}             value   The value to set
+   * @returns {Promise|*}             Any return value from the action / commit
+   */
+  store.set = function (path, value) {
+    var setter = makeSetter(store, path);
+    if (typeof setter !== 'undefined') {
+      return setter(value)
+    }
+  };
+
+  /**
+   * Get a property from the store, automatically using getters or state
+   *
+   * @param   {string}        path    The path to the store member
+   * @param   {*}             args    Optional getter function parameters
+   * @returns {*|undefined}           The state value / getter value / getter function / or undefined
+   */
+  store.get = function (path) {
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+
+    var getter = makeGetter(store, path);
+    if (typeof getter !== 'undefined') {
+      var value = getter();
+      return typeof value === 'function'
+        ? value.apply(void 0, args)
+        : value
+    }
+  };
+
+  /**
+   * Get a copy of a property from the store, automatically using actions or mutations
+   *
+   * @param   {string}        path    The path to the store member
+   * @param   {*}             args    Optional getter function parameters
+   * @returns {*|undefined}           The value, or undefined
+   */
+  store.copy = function (path) {
+    var args = [], len = arguments.length - 1;
+    while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+
+    var value = store.get.apply(store, [ path ].concat( args ));
+    return isObject(value)
+      ? clone(value)
+      : value
+  };
+}
+
+function resolve$1 (type) {
+  return resolveName(type, 'value')
+}
+
+function debug () {
+  console.log(("\n  [Vuex Pathify] Options:\n\n  Mapping (" + (typeof options.mapping === 'function' ? 'custom' : options.mapping) + ")\n-------------------------------\n  path       : value\n  state      : " + (resolve$1('state')) + "\n  getters    : " + (resolve$1('getters')) + "\n  actions    : " + (resolve$1('actions')) + "\n  mutations  : " + (resolve$1('mutations')) + "\n\n  Settings\n-------------------------------\n  strict     : " + (options.strict) + "\n  cache      : " + (options.cache) + "\n  deep       : " + (options.deep) + "\n\n"));
+}
+
+// plugin
+
+/**
+ * Store plugin which updates the store object with set() and get() methods
+ *
+ * @param {Object} store  The store object
+ */
+function plugin (store) {
+
+  // cache store instance
+  vuex.store = store;
+
+  // add pathify accessors
+  accessorize(store);
+}
+
+var pathify = {
+  options: options,
+  plugin: plugin,
+  debug: debug,
+};
+
+/**
+ * Utility function to grab keys for state
+ *
+ * @param   {Object|Function|Array|String}   state   State object, state function, array or string of key names
+ * @returns {Array}
+ */
+function getStateKeys (state) {
+  return getKeys(typeof state === 'function' ? state() : state)
+}
+
+/**
+ * Helper function to mass-create default getter functions for an existing state object
+ *
+ * Note that you don't need to create top-level getter functions if using $store.get(...)
+ *
+ * @param   {Object|Function|Array|String}   state   State object, state function, array or string of key names
+ */
+function makeGetters (state) {
+  return getStateKeys(state)
+    .reduce(function (obj, key) {
+      var getter = resolveName('getters', key);
+      obj[getter] = function (state) {
+        return state[key]
+      };
+      return obj
+    }, {})
+}
+
+/**
+ * Helper function to mass-create default mutation functions for an existing state object
+ *
+ * @param   {Object|Function|Array|String}   state   State object, state function, array or string of key names
+ */
+function makeMutations (state) {
+  return getStateKeys(state)
+    .reduce(function (obj, key) {
+      var mutation = resolveName('mutations', key);
+      obj[mutation] = function (state, value) {
+        state[key] = value instanceof Payload
+          ? value.update(state[key])
+          : value;
+      };
+      return obj
+    }, {})
+}
+
+/**
+ * Helper function to mass-create default actions functions for an existing state object
+ *
+ * @param   {Object|Function|Array|String}   state   State object, state function, array or string of key names
+ */
+function makeActions (state) {
+  return getStateKeys(state)
+    .reduce(function (obj, key) {
+      var action = resolveName('actions', key);
+      var mutation = resolveName('mutations', key);
+      obj[action] = function (ref, value) {
+        var commit = ref.commit;
+
+        commit(mutation, value);
+      };
+      return obj
+    }, {})
+}
+
+var store = {
+  getters: makeGetters,
+  mutations: makeMutations,
+  actions: makeActions,
+};
+
+// -------------------------------------------------------------------------------------------------------------------
+// external
+// -------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Utility function to expand wildcard path for get()
+ *
+ * @param   {string}        path        wildcard path
+ * @param   {object}        state       state hash
+ * @param   {object}        getters     getters hash
+ * @returns {array|string}
+ */
+function expandGet (path, state, getters) {
+  if (!init(path, state)) {
+    return ''
+  }
+  return resolveStates(path, state).concat( resolveHandlers(path, getters) )
+}
+
+/**
+ * Utility function to expand wildcard path for sync()
+ *
+ * @param   {string}        path        wildcard path
+ * @param   {object}        state       state hash
+ * @returns {array|string}
+ */
+function expandSync (path, state) {
+  if (!init(path, state)) {
+    return ''
+  }
+  return resolveStates(path, state)
+}
+
+/**
+ * Utility function to expand wildcard path for actions()
+ *
+ * @param   {string}        path        wildcard path
+ * @param   {object}        actions     actions hash
+ * @returns {array|string}
+ */
+function expandCall (path, actions) {
+  if (!init(path, actions)) {
+    return ''
+  }
+  return resolveHandlers(path, actions)
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------
+// internal
+// -------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Helper function to resolve state properties from a wildcard path
+ *
+ * Note: this function traverses into the state object and any properties / sub-properties
+ *
+ * @param   {string}    path    A path with a wildcard at the end
+ * @param   {object}    state   A state object on which to look up the sub-properties
+ * @returns {string[]}          An array of paths
+ */
+function resolveStates (path, state) {
+  // grab segments
+  var last = path.match(/([^/@\.]+)$/)[1];
+  var main = path.substring(0, path.length - last.length);
+  var keys = main.replace(/\W+$/, '').split(/[/@.]/);
+
+  // find state parent
+  var obj = main
+    ? getValue(state, keys)
+    : state;
+  if (!obj) {
+    console.error(("[Vuex Pathify] Unable to expand wildcard path '" + path + "':\n    - It looks like '" + (main.replace(/\W+$/, '')) + "' does not resolve to an existing state property"));
+    return []
+  }
+
+  // filter children
+  var rx = new RegExp('^' + last.replace(/\*/g, '\\w+') + '$');
+  return Object
+    .keys(obj)
+    .filter(function (key) { return rx.test(key); })
+    .map(function (key) { return main + key; })
+}
+
+/**
+ * Helper function to resolve getters, actions or mutations from a wildcard path
+ *
+ * Note: this function filters the top-level flat hash of members
+ *
+ * @param   {string}    path      A path with a wildcard at the end
+ * @param   {object}    hash      A hash on which to filter by key => wildcard
+ * @returns {string[]}            An array of paths
+ */
+function resolveHandlers (path, hash) {
+  var rx = new RegExp('^' + path.replace(/\*/g, '\\w+') + '$');
+  return Object.keys(hash).filter(function (key) { return rx.test(key); })
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------
+// utility
+// -------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Pre-flight check for wildcard paths
+ *
+ * @param   {string}  path
+ * @param   {object}  state
+ * @returns {boolean}
+ */
+function init (path, state) {
+  // only wildcards in final path segment are supported
+  if (path.indexOf('*') > -1 && /\*.*[/@.]/.test(path)) {
+    console.error(("[Vuex Pathify] Invalid wildcard placement for path '" + path + "':\n    - Wildcards may only be used in the last segment of a path"));
+    return false
+  }
+
+  // edge case where store sometimes doesn't exist
+  if (!state) {
+    console.error(("[Vuex Pathify] Unable to expand wildcard path '" + path + "':\n    - The usual reason for this is that the router was set up before the store\n    - Make sure the store is imported before the router, then reload"));
+    return false
+  }
+
+  return true
+}
+
+/**
+ * Helper function to convert Pathify path syntax paths to objects
+ *
+ * Handles:
+ *
+ * - string path
+ * - object and array formats
+ * - path + object/array format
+ * - wildcards in path
+ *
+ * Returns a single string, or hash of key => paths
+ *
+ * @param   {string|object|array}  [path]       An optional path prefix
+ * @param   {object}                props       An optional hash or array of paths / segments
+ * @param   {function}              fnResolver  A function to resolve wildcards
+ * @returns {object|string}
+ */
+function makePaths (path, props, fnResolver) {
+  // handle wildcards
+  if (typeof path === 'string' && path.indexOf('*') > -1) {
+    return makePathsHash(fnResolver(path))
+  }
+
+  // handle array as path
+  if (Array.isArray(path)) {
+    return makePathsHash(path)
+  }
+
+  // handle object as path
+  if (isObject(path)) {
+    props = path;
+    path = '';
+  }
+
+  // if props is an array
+  if (Array.isArray(props)) {
+    var paths = props
+      .map(function (prop) {
+        return makePath(path, prop)
+      });
+    return makePathsHash(paths)
+  }
+
+  // if props is an object
+  if (isObject(props)) {
+    return Object
+      .keys(props)
+      .reduce(function (paths, key) {
+        paths[key] = makePath(path, props[key]);
+        return paths
+      }, {})
+  }
+
+  // if path is a single string without wildcards
+  return path
+}
+
+/**
+ * Helper function to concatenate two path components into a valid path
+ *
+ * Handles one or no "/" "@" or '.' characters in either string
+ *
+ * @param   {string}  path
+ * @param   {string}  target
+ * @returns {string}
+ */
+function makePath (path, target) {
+  if ( target === void 0 ) target = '';
+
+  path = path.replace(/\/+$/, '');
+  var value = path.indexOf('@') > -1
+    ? path + '.' + target
+    : path + '/' + target;
+  return value
+    .replace(/^\/|[.@/]+$/, '')
+    .replace(/\/@/, '@')
+    .replace(/@\./, '@')
+}
+
+/**
+ * Helper function to convert an array of paths to a hash
+ *
+ * Uses the last path segment as the key
+ *
+ * @param   {string[]}  paths   An array of paths to convert to a hash
+ * @returns {object}            A hash of paths
+ */
+function makePathsHash (paths) {
+  return paths.reduce(function (paths, path) {
+    var key = path.match(/\w+$/);
+    paths[key] = path;
+    return paths
+  }, {})
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// entry
+// -------------------------------------------------------------------------------------------------------------------
+
+function get (path, props) {
+  return make(path, props, getOne, function (path) {
+    return expandGet(path, vuex.store.state, vuex.store.getters)
+  })
+}
+
+function sync (path, props) {
+  return make(path, props, syncOne, function (path) {
+    return expandSync(path, vuex.store.state)
+  })
+}
+
+function call (path, props) {
+  return make(path, props, callOne, function (path) {
+    return expandCall(path, vuex.store._actions)
+  })
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------
+// utility
+// -------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Creates multiple 2-way vue:vuex computed properties
+ *
+ * The function has multiple usages:
+ *
+ *  1. multiple properties from multiple modules
+ *
+ *     - @usage                                 ...sync({foo: 'module1/foo', bar: 'module2/bar'})
+ *
+ *     - @param   {Object}          props       a hash of key:path state/getter or commit/action references
+ *
+ *  2. multiple properties from a single module (object shorthand)
+ *
+ *     - @usage                                 ...sync('module', {foo: 'foo', bar: 'bar'})
+ *
+ *     - @param   {string}          path        a path to a module
+ *     - @param   {Object}          props       a hash of key:prop state/getter or commit/action references
+ *
+ *  3. multiple properties from a single module (array shorthand)
+ *
+ *     - @usage                                 ...sync('module', ['foo', 'bar'])
+ *
+ *     - @param   {string}          path        a path to a module
+ *     - @param   {Array}           props       an Array of state/getter or commit/action references
+ *
+ * Where different getter / setters need to be specified, pass getter and setter in
+ * the same string, separating with a | character:
+ *
+ *     - @usage                                 ...sync('module', ['foo|updateFoo'])
+ *
+ * @param   {string|Object}         path        a path to a module, or a hash of state/getter or commit/action references
+ * @param   {Object|Array}          props       a hash of state/getter or commit/action references
+ * @param   {Function}              fnHandler   a callback function to create the handler
+ * @param   {Function}              fnResolver
+ * @returns {{set, get}}                        a hash of Objects
+ */
+function make (path, props, fnHandler, fnResolver) {
+  // expand path / props
+  var data = makePaths(path, props, fnResolver);
+
+  // handle single paths
+  if (typeof data === 'string') {
+    return fnHandler(data)
+  }
+
+  // handle multiple properties
+  Object
+    .keys(data)
+    .forEach(function (key) {
+      data[key] = fnHandler(data[key]);
+    });
+  return data
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// one
+// -------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Creates a single 2-way vue:vuex computed property
+ *
+ * @param   {string}      path      a path to a state/getter reference. Path can contain an optional commit / action reference, separated by a |, i.e. foo/bar|updateBar
+ * @returns {Object}                a single get/set Object
+ */
+function syncOne (path) {
+  var ref = path.split('|');
+  var getter = ref[0];
+  var setter = ref[1];
+  if (setter) {
+    setter = getter.replace(/\w+!?$/, setter.replace('!', '') + '!');
+  }
+  return getter && setter
+    ? { get: getOne(getter, true), set: setOne(setter) }
+    : { get: getOne(getter, true), set: setOne(getter) }
+}
+
+/**
+ * Creates a single 1-way vue:vuex computed getter
+ *
+ * @param   {string}      path          A path to a state/getter reference
+ * @param   {boolean}    [stateOnly]    An optional flag to get from state only (used when syncing)
+ * @returns {Object}                    A single getter function
+ */
+function getOne (path, stateOnly) {
+  var getter, store;
+  return function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    if (!this.$store) {
+      throw new Error('[Vuex Pathify] Unexpected condition: this.$store is undefined.\n\nThis is a known edge case with some setups and will cause future lookups to fail')
+    }
+    if (!getter || store !== this.$store) {
+      store = this.$store;
+      getter = makeGetter(store, path, stateOnly);
+    }
+    return getter.call.apply(getter, [ this ].concat( args ))
+  }
+}
+
+/**
+ * Creates a single 1-way vue:vuex setter
+ *
+ * @param   {string}      path      a path to an action/commit reference
+ * @returns {Function}              a single setter function
+ */
+function setOne (path) {
+  var setter, store;
+  return function (value) {
+    var this$1 = this;
+
+    if (!setter || store !== this.$store) {
+      store = this.$store;
+      setter = makeSetter(store, path);
+    }
+    this.$nextTick(function () { return this$1.$emit('sync', path, value); });
+    return setter.call(this, value)
+  }
+}
+
+/**
+ * Creates a single action dispatcher
+ *
+ * @param   {string}      path      a path to an action/commit reference
+ * @returns {Function}              a single setter function
+ */
+function callOne (path) {
+  return function (value) {
+    return this.$store.dispatch(path, value)
+  }
+}
+
+/**
+ * @module
+ * @description Decorators for Vuex Pathify component helpers
+ *
+ * For example:
+ * ```js
+ * @Component
+ * class MyComponent extends Vue {
+ *   @Get('name')
+ *   @Set('name')
+ *   @Call('setName')
+ * }
+ * ```
+ */
+
+var createDecorator = __webpack_require__(/*! vue-class-component */ "./node_modules/vue-class-component/dist/vue-class-component.esm.js").createDecorator;
+
+/**
+ * Decorator for `get` component helper.
+ * @param   {string}          path    The path to store property
+ * @returns {VueDecorator}            Vue decorator to be used in Vue class component.
+ */
+function Get (path) {
+  if (typeof path !== 'string' || arguments.length > 1) { throw new Error('Property decorators can only be used for single property access') }
+  return createDecorator(function (options, key) {
+    if (!options.computed) { options.computed = {}; }
+    options.computed[key] = get(path);
+  })
+}
+
+/**
+ * Decorator for `sync` component helper.
+ * @param   {string}          path    The path to store property
+ * @returns {VueDecorator}            Vue decorator to be used in Vue class component.
+ */
+function Sync (path) {
+  if (typeof path !== 'string' || arguments.length > 1) { throw new Error('Property decorators can only be used for single property access') }
+  return createDecorator(function (options, key) {
+    if (!options.computed) { options.computed = {}; }
+    options.computed[key] = sync(path);
+  })
+}
+
+/**
+ * Decorator for `call` component helper.
+ * @param   {string}          path    The path to store property
+ * @returns {VueDecorator}            Vue decorator to be used in Vue class component.
+ */
+function Call (path) {
+  if (typeof path !== 'string' || arguments.length > 1) { throw new Error('Property decorators can only be used for single property access') }
+  return createDecorator(function (options, key) {
+    if (!options.methods) { options.methods = {}; }
+    options.methods[key] = call(path);
+  })
+}
+
+/**
+ * Helper function to generate a mixin that registers module and computed properties on component creation
+ *
+ * @param   {string|Array}  path        The path to register the Vuex module on
+ * @param   {object}        module      The module definition to register when the
+ * @param   {function}      callback    A callback returning store members to be added to the component definition
+ * @param   {object}       [options]    Optional Vuex module registration options
+ * @returns {object}                    The mixin
+ */
+function registerModule(path, module, callback, options) {
+  return {
+    beforeCreate: function beforeCreate () {
+      this.$store.registerModule(path, module, options);
+      var members = callback();
+      this.$options.computed = Object.assign(this.$options.computed || {}, members.computed || {});
+      this.$options.methods = Object.assign(this.$options.methods || {}, members.methods || {});
+    },
+
+    destoyed: function destoyed () {
+      this.$store.unregisterModule(path);
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (pathify);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vuex/dist/vuex.esm.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
+  \********************************************/
+/*! exports provided: default, Store, install, mapState, mapMutations, mapGetters, mapActions, createNamespacedHelpers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
+/**
+ * vuex v3.1.2
+ * (c) 2019 Evan You
+ * @license MIT
+ */
+function applyMixin (Vue) {
+  var version = Number(Vue.version.split('.')[0]);
+
+  if (version >= 2) {
+    Vue.mixin({ beforeCreate: vuexInit });
+  } else {
+    // override init and inject vuex init procedure
+    // for 1.x backwards compatibility.
+    var _init = Vue.prototype._init;
+    Vue.prototype._init = function (options) {
+      if ( options === void 0 ) options = {};
+
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit;
+      _init.call(this, options);
+    };
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+  function vuexInit () {
+    var options = this.$options;
+    // store injection
+    if (options.store) {
+      this.$store = typeof options.store === 'function'
+        ? options.store()
+        : options.store;
+    } else if (options.parent && options.parent.$store) {
+      this.$store = options.parent.$store;
+    }
+  }
+}
+
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+    ? global
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+function devtoolPlugin (store) {
+  if (!devtoolHook) { return }
+
+  store._devtoolHook = devtoolHook;
+
+  devtoolHook.emit('vuex:init', store);
+
+  devtoolHook.on('vuex:travel-to-state', function (targetState) {
+    store.replaceState(targetState);
+  });
+
+  store.subscribe(function (mutation, state) {
+    devtoolHook.emit('vuex:mutation', mutation, state);
+  });
+}
+
+/**
+ * Get the first item that pass the test
+ * by second argument function
+ *
+ * @param {Array} list
+ * @param {Function} f
+ * @return {*}
+ */
+
+/**
+ * forEach for object
+ */
+function forEachValue (obj, fn) {
+  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isPromise (val) {
+  return val && typeof val.then === 'function'
+}
+
+function assert (condition, msg) {
+  if (!condition) { throw new Error(("[vuex] " + msg)) }
+}
+
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
+var Module = function Module (rawModule, runtime) {
+  this.runtime = runtime;
+  // Store some children item
+  this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
+  this._rawModule = rawModule;
+  var rawState = rawModule.state;
+
+  // Store the origin module's state
+  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
+};
+
+var prototypeAccessors = { namespaced: { configurable: true } };
+
+prototypeAccessors.namespaced.get = function () {
+  return !!this._rawModule.namespaced
+};
+
+Module.prototype.addChild = function addChild (key, module) {
+  this._children[key] = module;
+};
+
+Module.prototype.removeChild = function removeChild (key) {
+  delete this._children[key];
+};
+
+Module.prototype.getChild = function getChild (key) {
+  return this._children[key]
+};
+
+Module.prototype.update = function update (rawModule) {
+  this._rawModule.namespaced = rawModule.namespaced;
+  if (rawModule.actions) {
+    this._rawModule.actions = rawModule.actions;
+  }
+  if (rawModule.mutations) {
+    this._rawModule.mutations = rawModule.mutations;
+  }
+  if (rawModule.getters) {
+    this._rawModule.getters = rawModule.getters;
+  }
+};
+
+Module.prototype.forEachChild = function forEachChild (fn) {
+  forEachValue(this._children, fn);
+};
+
+Module.prototype.forEachGetter = function forEachGetter (fn) {
+  if (this._rawModule.getters) {
+    forEachValue(this._rawModule.getters, fn);
+  }
+};
+
+Module.prototype.forEachAction = function forEachAction (fn) {
+  if (this._rawModule.actions) {
+    forEachValue(this._rawModule.actions, fn);
+  }
+};
+
+Module.prototype.forEachMutation = function forEachMutation (fn) {
+  if (this._rawModule.mutations) {
+    forEachValue(this._rawModule.mutations, fn);
+  }
+};
+
+Object.defineProperties( Module.prototype, prototypeAccessors );
+
+var ModuleCollection = function ModuleCollection (rawRootModule) {
+  // register root module (Vuex.Store options)
+  this.register([], rawRootModule, false);
+};
+
+ModuleCollection.prototype.get = function get (path) {
+  return path.reduce(function (module, key) {
+    return module.getChild(key)
+  }, this.root)
+};
+
+ModuleCollection.prototype.getNamespace = function getNamespace (path) {
+  var module = this.root;
+  return path.reduce(function (namespace, key) {
+    module = module.getChild(key);
+    return namespace + (module.namespaced ? key + '/' : '')
+  }, '')
+};
+
+ModuleCollection.prototype.update = function update$1 (rawRootModule) {
+  update([], this.root, rawRootModule);
+};
+
+ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
+    var this$1 = this;
+    if ( runtime === void 0 ) runtime = true;
+
+  if (true) {
+    assertRawModule(path, rawModule);
+  }
+
+  var newModule = new Module(rawModule, runtime);
+  if (path.length === 0) {
+    this.root = newModule;
+  } else {
+    var parent = this.get(path.slice(0, -1));
+    parent.addChild(path[path.length - 1], newModule);
+  }
+
+  // register nested modules
+  if (rawModule.modules) {
+    forEachValue(rawModule.modules, function (rawChildModule, key) {
+      this$1.register(path.concat(key), rawChildModule, runtime);
+    });
+  }
+};
+
+ModuleCollection.prototype.unregister = function unregister (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+  if (!parent.getChild(key).runtime) { return }
+
+  parent.removeChild(key);
+};
+
+function update (path, targetModule, newModule) {
+  if (true) {
+    assertRawModule(path, newModule);
+  }
+
+  // update target module
+  targetModule.update(newModule);
+
+  // update nested modules
+  if (newModule.modules) {
+    for (var key in newModule.modules) {
+      if (!targetModule.getChild(key)) {
+        if (true) {
+          console.warn(
+            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
+            'manual reload is needed'
+          );
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      );
+    }
+  }
+}
+
+var functionAssert = {
+  assert: function (value) { return typeof value === 'function'; },
+  expected: 'function'
+};
+
+var objectAssert = {
+  assert: function (value) { return typeof value === 'function' ||
+    (typeof value === 'object' && typeof value.handler === 'function'); },
+  expected: 'function or object with "handler" function'
+};
+
+var assertTypes = {
+  getters: functionAssert,
+  mutations: functionAssert,
+  actions: objectAssert
+};
+
+function assertRawModule (path, rawModule) {
+  Object.keys(assertTypes).forEach(function (key) {
+    if (!rawModule[key]) { return }
+
+    var assertOptions = assertTypes[key];
+
+    forEachValue(rawModule[key], function (value, type) {
+      assert(
+        assertOptions.assert(value),
+        makeAssertionMessage(path, key, type, value, assertOptions.expected)
+      );
+    });
+  });
+}
+
+function makeAssertionMessage (path, key, type, value, expected) {
+  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  if (path.length > 0) {
+    buf += " in module \"" + (path.join('.')) + "\"";
+  }
+  buf += " is " + (JSON.stringify(value)) + ".";
+  return buf
+}
+
+var Vue; // bind on install
+
+var Store = function Store (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #731
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  if (true) {
+    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
+    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
+    assert(this instanceof Store, "store must be called with the new operator.");
+  }
+
+  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  var strict = options.strict; if ( strict === void 0 ) strict = false;
+
+  // store internal state
+  this._committing = false;
+  this._actions = Object.create(null);
+  this._actionSubscribers = [];
+  this._mutations = Object.create(null);
+  this._wrappedGetters = Object.create(null);
+  this._modules = new ModuleCollection(options);
+  this._modulesNamespaceMap = Object.create(null);
+  this._subscribers = [];
+  this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
+
+  // bind commit and dispatch to self
+  var store = this;
+  var ref = this;
+  var dispatch = ref.dispatch;
+  var commit = ref.commit;
+  this.dispatch = function boundDispatch (type, payload) {
+    return dispatch.call(store, type, payload)
+  };
+  this.commit = function boundCommit (type, payload, options) {
+    return commit.call(store, type, payload, options)
+  };
+
+  // strict mode
+  this.strict = strict;
+
+  var state = this._modules.root.state;
+
+  // init root module.
+  // this also recursively registers all sub-modules
+  // and collects all module getters inside this._wrappedGetters
+  installModule(this, state, [], this._modules.root);
+
+  // initialize the store vm, which is responsible for the reactivity
+  // (also registers _wrappedGetters as computed properties)
+  resetStoreVM(this, state);
+
+  // apply plugins
+  plugins.forEach(function (plugin) { return plugin(this$1); });
+
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
+    devtoolPlugin(this);
+  }
+};
+
+var prototypeAccessors$1 = { state: { configurable: true } };
+
+prototypeAccessors$1.state.get = function () {
+  return this._vm._data.$$state
+};
+
+prototypeAccessors$1.state.set = function (v) {
+  if (true) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
+  }
+};
+
+Store.prototype.commit = function commit (_type, _payload, _options) {
+    var this$1 = this;
+
+  // check object-style commit
+  var ref = unifyObjectStyle(_type, _payload, _options);
+    var type = ref.type;
+    var payload = ref.payload;
+    var options = ref.options;
+
+  var mutation = { type: type, payload: payload };
+  var entry = this._mutations[type];
+  if (!entry) {
+    if (true) {
+      console.error(("[vuex] unknown mutation type: " + type));
+    }
+    return
+  }
+  this._withCommit(function () {
+    entry.forEach(function commitIterator (handler) {
+      handler(payload);
+    });
+  });
+  this._subscribers.forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  if (
+     true &&
+    options && options.silent
+  ) {
+    console.warn(
+      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
+      'Use the filter functionality in the vue-devtools'
+    );
+  }
+};
+
+Store.prototype.dispatch = function dispatch (_type, _payload) {
+    var this$1 = this;
+
+  // check object-style dispatch
+  var ref = unifyObjectStyle(_type, _payload);
+    var type = ref.type;
+    var payload = ref.payload;
+
+  var action = { type: type, payload: payload };
+  var entry = this._actions[type];
+  if (!entry) {
+    if (true) {
+      console.error(("[vuex] unknown action type: " + type));
+    }
+    return
+  }
+
+  try {
+    this._actionSubscribers
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if (true) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
+
+  var result = entry.length > 1
+    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
+    : entry[0](payload);
+
+  return result.then(function (res) {
+    try {
+      this$1._actionSubscribers
+        .filter(function (sub) { return sub.after; })
+        .forEach(function (sub) { return sub.after(action, this$1.state); });
+    } catch (e) {
+      if (true) {
+        console.warn("[vuex] error in after action subscribers: ");
+        console.error(e);
+      }
+    }
+    return res
+  })
+};
+
+Store.prototype.subscribe = function subscribe (fn) {
+  return genericSubscribe(fn, this._subscribers)
+};
+
+Store.prototype.subscribeAction = function subscribeAction (fn) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers)
+};
+
+Store.prototype.watch = function watch (getter, cb, options) {
+    var this$1 = this;
+
+  if (true) {
+    assert(typeof getter === 'function', "store.watch only accepts a function.");
+  }
+  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
+};
+
+Store.prototype.replaceState = function replaceState (state) {
+    var this$1 = this;
+
+  this._withCommit(function () {
+    this$1._vm._data.$$state = state;
+  });
+};
+
+Store.prototype.registerModule = function registerModule (path, rawModule, options) {
+    if ( options === void 0 ) options = {};
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if (true) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+    assert(path.length > 0, 'cannot register the root module by using registerModule.');
+  }
+
+  this._modules.register(path, rawModule);
+  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
+  // reset store to update getters...
+  resetStoreVM(this, this.state);
+};
+
+Store.prototype.unregisterModule = function unregisterModule (path) {
+    var this$1 = this;
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if (true) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  this._modules.unregister(path);
+  this._withCommit(function () {
+    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    Vue.delete(parentState, path[path.length - 1]);
+  });
+  resetStore(this);
+};
+
+Store.prototype.hotUpdate = function hotUpdate (newOptions) {
+  this._modules.update(newOptions);
+  resetStore(this, true);
+};
+
+Store.prototype._withCommit = function _withCommit (fn) {
+  var committing = this._committing;
+  this._committing = true;
+  fn();
+  this._committing = committing;
+};
+
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
+
+function genericSubscribe (fn, subs) {
+  if (subs.indexOf(fn) < 0) {
+    subs.push(fn);
+  }
+  return function () {
+    var i = subs.indexOf(fn);
+    if (i > -1) {
+      subs.splice(i, 1);
+    }
+  }
+}
+
+function resetStore (store, hot) {
+  store._actions = Object.create(null);
+  store._mutations = Object.create(null);
+  store._wrappedGetters = Object.create(null);
+  store._modulesNamespaceMap = Object.create(null);
+  var state = store.state;
+  // init all modules
+  installModule(store, state, [], store._modules.root, true);
+  // reset vm
+  resetStoreVM(store, state, hot);
+}
+
+function resetStoreVM (store, state, hot) {
+  var oldVm = store._vm;
+
+  // bind store public getters
+  store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
+  var wrappedGetters = store._wrappedGetters;
+  var computed = {};
+  forEachValue(wrappedGetters, function (fn, key) {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
+    Object.defineProperty(store.getters, key, {
+      get: function () { return store._vm[key]; },
+      enumerable: true // for local getters
+    });
+  });
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed: computed
+  });
+  Vue.config.silent = silent;
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store);
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(function () {
+        oldVm._data.$$state = null;
+      });
+    }
+    Vue.nextTick(function () { return oldVm.$destroy(); });
+  }
+}
+
+function installModule (store, rootState, path, module, hot) {
+  var isRoot = !path.length;
+  var namespace = store._modules.getNamespace(path);
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && "development" !== 'production') {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+  // set state
+  if (!isRoot && !hot) {
+    var parentState = getNestedState(rootState, path.slice(0, -1));
+    var moduleName = path[path.length - 1];
+    store._withCommit(function () {
+      if (true) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
+      Vue.set(parentState, moduleName, module.state);
+    });
+  }
+
+  var local = module.context = makeLocalContext(store, namespace, path);
+
+  module.forEachMutation(function (mutation, key) {
+    var namespacedType = namespace + key;
+    registerMutation(store, namespacedType, mutation, local);
+  });
+
+  module.forEachAction(function (action, key) {
+    var type = action.root ? key : namespace + key;
+    var handler = action.handler || action;
+    registerAction(store, type, handler, local);
+  });
+
+  module.forEachGetter(function (getter, key) {
+    var namespacedType = namespace + key;
+    registerGetter(store, namespacedType, getter, local);
+  });
+
+  module.forEachChild(function (child, key) {
+    installModule(store, rootState, path.concat(key), child, hot);
+  });
+}
+
+/**
+ * make localized dispatch, commit, getters and state
+ * if there is no namespace, just use root ones
+ */
+function makeLocalContext (store, namespace, path) {
+  var noNamespace = namespace === '';
+
+  var local = {
+    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if ( true && !store._actions[type]) {
+          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if ( true && !store._mutations[type]) {
+          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      store.commit(type, payload, options);
+    }
+  };
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? function () { return store.getters; }
+        : function () { return makeLocalGetters(store, namespace); }
+    },
+    state: {
+      get: function () { return getNestedState(store.state, path); }
+    }
+  });
+
+  return local
+}
+
+function makeLocalGetters (store, namespace) {
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
+
+      // extract local getter type
+      var localType = type.slice(splitPos);
+
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
+    });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
+
+  return store._makeLocalGettersCache[namespace]
+}
+
+function registerMutation (store, type, handler, local) {
+  var entry = store._mutations[type] || (store._mutations[type] = []);
+  entry.push(function wrappedMutationHandler (payload) {
+    handler.call(store, local.state, payload);
+  });
+}
+
+function registerAction (store, type, handler, local) {
+  var entry = store._actions[type] || (store._actions[type] = []);
+  entry.push(function wrappedActionHandler (payload) {
+    var res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload);
+    if (!isPromise(res)) {
+      res = Promise.resolve(res);
+    }
+    if (store._devtoolHook) {
+      return res.catch(function (err) {
+        store._devtoolHook.emit('vuex:error', err);
+        throw err
+      })
+    } else {
+      return res
+    }
+  });
+}
+
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if (true) {
+      console.error(("[vuex] duplicate getter key: " + type));
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  };
+}
+
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, function () {
+    if (true) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
+    }
+  }, { deep: true, sync: true });
+}
+
+function getNestedState (state, path) {
+  return path.length
+    ? path.reduce(function (state, key) { return state[key]; }, state)
+    : state
+}
+
+function unifyObjectStyle (type, payload, options) {
+  if (isObject(type) && type.type) {
+    options = payload;
+    payload = type;
+    type = type.type;
+  }
+
+  if (true) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
+  }
+
+  return { type: type, payload: payload, options: options }
+}
+
+function install (_Vue) {
+  if (Vue && _Vue === Vue) {
+    if (true) {
+      console.error(
+        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
+      );
+    }
+    return
+  }
+  Vue = _Vue;
+  applyMixin(Vue);
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+var mapState = normalizeNamespace(function (namespace, states) {
+  var res = {};
+  if ( true && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(states).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedState () {
+      var state = this.$store.state;
+      var getters = this.$store.getters;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        if (!module) {
+          return
+        }
+        state = module.context.state;
+        getters = module.context.getters;
+      }
+      return typeof val === 'function'
+        ? val.call(this, state, getters)
+        : state[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapMutations = normalizeNamespace(function (namespace, mutations) {
+  var res = {};
+  if ( true && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(mutations).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedMutation () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // Get the commit method from store
+      var commit = this.$store.commit;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        if (!module) {
+          return
+        }
+        commit = module.context.commit;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+var mapGetters = normalizeNamespace(function (namespace, getters) {
+  var res = {};
+  if ( true && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(getters).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val;
+    res[key] = function mappedGetter () {
+      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
+        return
+      }
+      if ( true && !(val in this.$store.getters)) {
+        console.error(("[vuex] unknown getter: " + val));
+        return
+      }
+      return this.$store.getters[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapActions = normalizeNamespace(function (namespace, actions) {
+  var res = {};
+  if ( true && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(actions).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedAction () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // get dispatch function from store
+      var dispatch = this.$store.dispatch;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
+var createNamespacedHelpers = function (namespace) { return ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+}); };
+
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}
+
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn) {
+  return function (namespace, map) {
+    if (typeof namespace !== 'string') {
+      map = namespace;
+      namespace = '';
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/';
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store, helper, namespace) {
+  var module = store._modulesNamespaceMap[namespace];
+  if ( true && !module) {
+    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
+  }
+  return module
+}
+
+var index_esm = {
+  Store: Store,
+  install: install,
+  version: '3.1.2',
+  mapState: mapState,
+  mapMutations: mapMutations,
+  mapGetters: mapGetters,
+  mapActions: mapActions,
+  createNamespacedHelpers: createNamespacedHelpers
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index_esm);
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -52724,350 +58131,330 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ziggy", function() { return Ziggy; });
 var Ziggy = {
   namedRoutes: {
-    "debugbar.openhandler": {
-      "uri": "_debugbar\/open",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "debugbar.clockwork": {
-      "uri": "_debugbar\/clockwork\/{id}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "debugbar.telescope": {
-      "uri": "_debugbar\/telescope\/{id}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "debugbar.assets.css": {
-      "uri": "_debugbar\/assets\/stylesheets",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "debugbar.assets.js": {
-      "uri": "_debugbar\/assets\/javascript",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "debugbar.cache.delete": {
-      "uri": "_debugbar\/cache\/{key}\/{tags?}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "telescope": {
-      "uri": "telescope\/{view?}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.autocomplete": {
-      "uri": "api\/campaigns\/{user}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.autocomplete": {
-      "uri": "api\/characters",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "factions.autocomplete": {
-      "uri": "api\/factions",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "locations.autocomplete": {
-      "uri": "api\/locations",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "tasks.autocomplete": {
-      "uri": "api\/tasks",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "login": {
-      "uri": "login",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "logout": {
-      "uri": "logout",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "register": {
-      "uri": "register",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "password.request": {
-      "uri": "password\/reset",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "password.email": {
-      "uri": "password\/email",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "password.reset": {
-      "uri": "password\/reset\/{token}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "password.update": {
-      "uri": "password\/reset",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "password.confirm": {
-      "uri": "password\/confirm",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "dashboard": {
-      "uri": "\/",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "page.welcome": {
-      "uri": "welcome",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "page.about": {
-      "uri": "about",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "page.contact": {
-      "uri": "contact",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.initial": {
-      "uri": "campaigns\/initial",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.index": {
-      "uri": "campaigns",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.create": {
-      "uri": "campaigns\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.store": {
-      "uri": "campaigns",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "campaigns.show": {
-      "uri": "campaigns\/{campaign}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.edit": {
-      "uri": "campaigns\/{campaign}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "campaigns.update": {
-      "uri": "campaigns\/{campaign}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "campaigns.destroy": {
-      "uri": "campaigns\/{campaign}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "characters.in_campaign": {
-      "uri": "campaign\/{campaign}\/characters",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.index": {
-      "uri": "characters",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.create": {
-      "uri": "characters\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.store": {
-      "uri": "characters",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "characters.show": {
-      "uri": "characters\/{character}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.edit": {
-      "uri": "characters\/{character}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "characters.update": {
-      "uri": "characters\/{character}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "characters.destroy": {
-      "uri": "characters\/{character}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "npcs.in_campaign": {
-      "uri": "campaign\/{campaign}\/npcs",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "npcs.index": {
-      "uri": "npcs",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "npcs.create": {
-      "uri": "npcs\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "npcs.store": {
-      "uri": "npcs",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "npcs.show": {
-      "uri": "npcs\/{npc}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "npcs.edit": {
-      "uri": "npcs\/{npc}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "npcs.update": {
-      "uri": "npcs\/{npc}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "npcs.destroy": {
-      "uri": "npcs\/{npc}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "factions.index": {
-      "uri": "factions",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "factions.create": {
-      "uri": "factions\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "factions.store": {
-      "uri": "factions",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "factions.show": {
-      "uri": "factions\/{faction}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "factions.edit": {
-      "uri": "factions\/{faction}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "factions.update": {
-      "uri": "factions\/{faction}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "factions.destroy": {
-      "uri": "factions\/{faction}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "locations.index": {
-      "uri": "locations",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "locations.create": {
-      "uri": "locations\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "locations.store": {
-      "uri": "locations",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "locations.show": {
-      "uri": "locations\/{location}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "locations.edit": {
-      "uri": "locations\/{location}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "locations.update": {
-      "uri": "locations\/{location}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "locations.destroy": {
-      "uri": "locations\/{location}",
-      "methods": ["DELETE"],
-      "domain": null
-    },
-    "tasks.index": {
-      "uri": "tasks",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "tasks.create": {
-      "uri": "tasks\/create",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "tasks.store": {
-      "uri": "tasks",
-      "methods": ["POST"],
-      "domain": null
-    },
-    "tasks.show": {
-      "uri": "tasks\/{task}",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "tasks.edit": {
-      "uri": "tasks\/{task}\/edit",
-      "methods": ["GET", "HEAD"],
-      "domain": null
-    },
-    "tasks.update": {
-      "uri": "tasks\/{task}",
-      "methods": ["PUT", "PATCH"],
-      "domain": null
-    },
-    "tasks.destroy": {
-      "uri": "tasks\/{task}",
-      "methods": ["DELETE"],
-      "domain": null
+    'debugbar.openhandler': {
+      uri: '_debugbar/open',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'debugbar.clockwork': {
+      uri: '_debugbar/clockwork/{id}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'debugbar.telescope': {
+      uri: '_debugbar/telescope/{id}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'debugbar.assets.css': {
+      uri: '_debugbar/assets/stylesheets',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'debugbar.assets.js': {
+      uri: '_debugbar/assets/javascript',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'debugbar.cache.delete': {
+      uri: '_debugbar/cache/{key}/{tags?}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    telescope: {
+      uri: 'telescope/{view?}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'autocomplete.autocomplete': {
+      uri: 'api/autocomplete/location',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    login: {
+      uri: 'login',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    logout: {
+      uri: 'logout',
+      methods: ['POST'],
+      domain: null
+    },
+    register: {
+      uri: 'register',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'password.request': {
+      uri: 'password/reset',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'password.email': {
+      uri: 'password/email',
+      methods: ['POST'],
+      domain: null
+    },
+    'password.reset': {
+      uri: 'password/reset/{token}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'password.update': {
+      uri: 'password/reset',
+      methods: ['POST'],
+      domain: null
+    },
+    'password.confirm': {
+      uri: 'password/confirm',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    home: {
+      uri: '/',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'page.welcome': {
+      uri: 'welcome',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'page.about': {
+      uri: 'about',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'page.contact': {
+      uri: 'contact',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.initial': {
+      uri: 'campaigns/initial',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.index': {
+      uri: 'campaigns',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.create': {
+      uri: 'campaigns/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.store': {
+      uri: 'campaigns',
+      methods: ['POST'],
+      domain: null
+    },
+    'campaigns.show': {
+      uri: 'campaigns/{campaign}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.edit': {
+      uri: 'campaigns/{campaign}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'campaigns.update': {
+      uri: 'campaigns/{campaign}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'campaigns.destroy': {
+      uri: 'campaigns/{campaign}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    'characters.in_campaign': {
+      uri: 'campaign/{campaign}/characters',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'characters.index': {
+      uri: 'characters',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'characters.create': {
+      uri: 'characters/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'characters.store': {
+      uri: 'characters',
+      methods: ['POST'],
+      domain: null
+    },
+    'characters.show': {
+      uri: 'characters/{character}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'characters.edit': {
+      uri: 'characters/{character}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'characters.update': {
+      uri: 'characters/{character}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'characters.destroy': {
+      uri: 'characters/{character}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    'npcs.in_campaign': {
+      uri: 'campaign/{campaign}/npcs',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'npcs.index': {
+      uri: 'npcs',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'npcs.create': {
+      uri: 'npcs/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'npcs.store': {
+      uri: 'npcs',
+      methods: ['POST'],
+      domain: null
+    },
+    'npcs.show': {
+      uri: 'npcs/{npc}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'npcs.edit': {
+      uri: 'npcs/{npc}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'npcs.update': {
+      uri: 'npcs/{npc}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'npcs.destroy': {
+      uri: 'npcs/{npc}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    'factions.index': {
+      uri: 'factions',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'factions.create': {
+      uri: 'factions/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'factions.store': {
+      uri: 'factions',
+      methods: ['POST'],
+      domain: null
+    },
+    'factions.show': {
+      uri: 'factions/{faction}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'factions.edit': {
+      uri: 'factions/{faction}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'factions.update': {
+      uri: 'factions/{faction}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'factions.destroy': {
+      uri: 'factions/{faction}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    'locations.index': {
+      uri: 'locations',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'locations.create': {
+      uri: 'locations/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'locations.store': {
+      uri: 'locations',
+      methods: ['POST'],
+      domain: null
+    },
+    'locations.show': {
+      uri: 'locations/{location}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'locations.edit': {
+      uri: 'locations/{location}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'locations.update': {
+      uri: 'locations/{location}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'locations.destroy': {
+      uri: 'locations/{location}',
+      methods: ['DELETE'],
+      domain: null
+    },
+    'tasks.index': {
+      uri: 'tasks',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'tasks.create': {
+      uri: 'tasks/create',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'tasks.store': {
+      uri: 'tasks',
+      methods: ['POST'],
+      domain: null
+    },
+    'tasks.show': {
+      uri: 'tasks/{task}',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'tasks.edit': {
+      uri: 'tasks/{task}/edit',
+      methods: ['GET', 'HEAD'],
+      domain: null
+    },
+    'tasks.update': {
+      uri: 'tasks/{task}',
+      methods: ['PUT', 'PATCH'],
+      domain: null
+    },
+    'tasks.destroy': {
+      uri: 'tasks/{task}',
+      methods: ['DELETE'],
+      domain: null
     }
   },
   baseUrl: 'https://campaigner.test/',
@@ -53108,32 +58495,44 @@ if (typeof window.Ziggy !== 'undefined') {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
-/* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue */ "./node_modules/@inertiajs/inertia-vue/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _helpers_Ziggy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/Ziggy */ "./resources/js/helpers/Ziggy.js");
-/* harmony import */ var _helpers_Tailwind__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/Tailwind */ "./resources/js/helpers/Tailwind.js");
-/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue */ "./node_modules/@inertiajs/inertia-vue/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _helpers_Ziggy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers/Ziggy */ "./resources/js/helpers/Ziggy.js");
+/* harmony import */ var _helpers_Tailwind__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helpers/Tailwind */ "./resources/js/helpers/Tailwind.js");
+/* harmony import */ var vue_meta__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-meta */ "./node_modules/vue-meta/dist/vue-meta.esm.js");
+/* harmony import */ var vuetensils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetensils */ "./node_modules/vuetensils/dist/vuetensils.esm.js");
+/* harmony import */ var _js_helpers_pathify__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/js/helpers/pathify */ "./resources/js/helpers/pathify.js");
+/* harmony import */ var _js_store_main__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/js/store/main */ "./resources/js/store/main.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.productionTip = false;
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.devtools = true;
 
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Ziggy__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_2__["InertiaApp"]);
 
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Tailwind__WEBPACK_IMPORTED_MODULE_3__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Ziggy__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
-vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_meta__WEBPACK_IMPORTED_MODULE_4__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(_helpers_Tailwind__WEBPACK_IMPORTED_MODULE_4__["default"]);
+
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_meta__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].directive('clickout', vuetensils__WEBPACK_IMPORTED_MODULE_6__["clickout"]);
+
+
 var app = document.getElementById('app');
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  store: _js_store_main__WEBPACK_IMPORTED_MODULE_8__["default"],
+  plugins: [_js_helpers_pathify__WEBPACK_IMPORTED_MODULE_7__["default"].plugin],
   metaInfo: {
     title: 'Loading…',
     titleTemplate: '%s | Laravel'
   },
   render: function render(h) {
-    return h(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_1__["InertiaApp"], {
+    return h(_inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_2__["InertiaApp"], {
       props: {
         initialPage: JSON.parse(app.dataset.page),
         resolveComponent: function resolveComponent(name) {
@@ -53236,6 +58635,81 @@ var tailwindVue = {
 
 /***/ }),
 
+/***/ "./resources/js/helpers/pathify.js":
+/*!*****************************************!*\
+  !*** ./resources/js/helpers/pathify.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["default"]);
+vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["default"].options.mapping = 'simple';
+
+/***/ }),
+
+/***/ "./resources/js/store/main.js":
+/*!************************************!*\
+  !*** ./resources/js/store/main.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var state = {
+  pageTitle: 'Default',
+  headerLinks: [{
+    label: 'Homepage',
+    route: 'page.welcome'
+  }, {
+    label: 'Dashboard',
+    route: 'home'
+  }, {
+    label: 'About Us',
+    route: 'page.about'
+  }, {
+    label: 'Contact Us',
+    route: 'page.contact'
+  }]
+};
+
+var mutations = _objectSpread({}, vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["make"].mutations(state));
+
+var getters = _objectSpread({}, vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["make"].getters(state));
+
+var actions = _objectSpread({}, vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["make"].actions(state));
+
+var store = {
+  modules: {},
+  state: state,
+  mutations: mutations,
+  getters: getters,
+  actions: actions
+};
+/* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store(_objectSpread({
+  plugins: [vuex_pathify__WEBPACK_IMPORTED_MODULE_2__["default"].plugin]
+}, store)));
+
+/***/ }),
+
 /***/ "./resources/views/pages lazy recursive ^\\.\\/.*$":
 /*!**************************************************************!*\
   !*** ./resources/views/pages lazy ^\.\/.*$ namespace object ***!
@@ -53246,49 +58720,49 @@ var tailwindVue = {
 var map = {
 	"./About": [
 		"./resources/views/pages/About.vue",
-		0,
+		7,
 		1,
-		24
+		22
 	],
 	"./About.vue": [
 		"./resources/views/pages/About.vue",
-		0,
+		7,
 		1,
-		24
+		22
 	],
 	"./Auth/Login": [
 		"./resources/views/pages/Auth/Login.vue",
-		0,
+		7,
 		37
 	],
 	"./Auth/Login.vue": [
 		"./resources/views/pages/Auth/Login.vue",
-		0,
+		7,
 		37
 	],
 	"./Auth/Passwords/Email": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		0,
+		7,
 		1,
-		16
+		13
 	],
 	"./Auth/Passwords/Email.vue": [
 		"./resources/views/pages/Auth/Passwords/Email.vue",
-		0,
+		7,
 		1,
-		16
+		13
 	],
 	"./Auth/Passwords/Reset": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		0,
+		7,
 		1,
-		17
+		16
 	],
 	"./Auth/Passwords/Reset.vue": [
 		"./resources/views/pages/Auth/Passwords/Reset.vue",
-		0,
+		7,
 		1,
-		17
+		16
 	],
 	"./Auth/Register": [
 		"./resources/views/pages/Auth/Register.vue",
@@ -53300,91 +58774,91 @@ var map = {
 	],
 	"./Auth/Verify": [
 		"./resources/views/pages/Auth/Verify.vue",
-		0,
+		7,
 		1,
 		25
 	],
 	"./Auth/Verify.vue": [
 		"./resources/views/pages/Auth/Verify.vue",
-		0,
+		7,
 		1,
 		25
 	],
 	"./Campaign/Add": [
 		"./resources/views/pages/Campaign/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		18
+		17
 	],
 	"./Campaign/Add.vue": [
 		"./resources/views/pages/Campaign/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		18
+		17
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		0,
+		7,
 		1,
-		4,
+		24,
 		26
 	],
 	"./Campaign/Browse.vue": [
 		"./resources/views/pages/Campaign/Browse.vue",
-		0,
+		7,
 		1,
-		4,
+		24,
 		26
 	],
 	"./Campaign/Edit": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		12
+		11
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		12
+		11
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		0,
+		7,
 		2,
 		3,
 		15
 	],
 	"./Campaign/Initial.vue": [
 		"./resources/views/pages/Campaign/Initial.vue",
-		0,
+		7,
 		2,
 		3,
 		15
 	],
 	"./Campaign/Read": [
 		"./resources/views/pages/Campaign/Read.vue",
-		0,
+		7,
 		1,
-		8
+		6
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
-		0,
+		7,
 		1,
-		8
+		6
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
@@ -53392,7 +58866,7 @@ var map = {
 	],
 	"./Character/Add.vue": [
 		"./resources/views/pages/Character/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
@@ -53400,259 +58874,259 @@ var map = {
 	],
 	"./Character/BrowseCharacter": [
 		"./resources/views/pages/Character/BrowseCharacter.vue",
-		0,
+		7,
 		1,
-		4,
-		36
+		24,
+		5
 	],
 	"./Character/BrowseCharacter.vue": [
 		"./resources/views/pages/Character/BrowseCharacter.vue",
-		0,
+		7,
 		1,
-		4,
-		36
+		24,
+		5
 	],
 	"./Character/BrowseNpc": [
 		"./resources/views/pages/Character/BrowseNpc.vue",
-		0,
+		7,
 		1,
-		4,
+		24,
 		27
 	],
 	"./Character/BrowseNpc.vue": [
 		"./resources/views/pages/Character/BrowseNpc.vue",
-		0,
+		7,
 		1,
-		4,
+		24,
 		27
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		5
+		18
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		5
+		18
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
-		0,
+		7,
 		1,
-		6
+		0
 	],
 	"./Character/Read.vue": [
 		"./resources/views/pages/Character/Read.vue",
-		0,
+		7,
 		1,
-		6
+		0
 	],
 	"./Contact": [
 		"./resources/views/pages/Contact.vue",
-		0,
+		7,
 		1,
-		28
+		29
 	],
 	"./Contact.vue": [
 		"./resources/views/pages/Contact.vue",
-		0,
+		7,
 		1,
-		28
+		29
 	],
 	"./Faction/Add": [
 		"./resources/views/pages/Faction/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		29
+		30
 	],
 	"./Faction/Add.vue": [
 		"./resources/views/pages/Faction/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		29
+		30
 	],
 	"./Faction/Browse": [
 		"./resources/views/pages/Faction/Browse.vue",
-		0,
+		7,
 		1,
-		4,
-		30
+		24,
+		28
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
-		0,
+		7,
 		1,
-		4,
-		30
+		24,
+		28
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
-		0,
+		7,
 		2,
-		35,
+		36,
 		1,
 		3,
-		13
+		12
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
-		0,
+		7,
 		2,
-		35,
+		36,
 		1,
 		3,
-		13
+		12
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
-		0,
+		7,
 		1,
-		9
+		8
 	],
 	"./Faction/Read.vue": [
 		"./resources/views/pages/Faction/Read.vue",
-		0,
+		7,
 		1,
-		9
+		8
 	],
 	"./Home": [
 		"./resources/views/pages/Home.vue",
-		0,
+		7,
 		1,
-		20
+		4
 	],
 	"./Home.vue": [
 		"./resources/views/pages/Home.vue",
-		0,
+		7,
 		1,
-		20
+		4
 	],
 	"./Location/Add": [
 		"./resources/views/pages/Location/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		31
+		32
 	],
 	"./Location/Add.vue": [
 		"./resources/views/pages/Location/Add.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		31
+		32
 	],
 	"./Location/Browse": [
 		"./resources/views/pages/Location/Browse.vue",
-		0,
+		7,
 		1,
-		4,
-		32
+		24,
+		31
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
-		0,
+		7,
 		1,
-		4,
-		32
+		24,
+		31
 	],
 	"./Location/Edit": [
 		"./resources/views/pages/Location/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		21
+		20
 	],
 	"./Location/Edit.vue": [
 		"./resources/views/pages/Location/Edit.vue",
-		0,
+		7,
+		2,
+		1,
+		3,
+		20
+	],
+	"./Location/Read": [
+		"./resources/views/pages/Location/Read.vue",
+		7,
+		1,
+		9
+	],
+	"./Location/Read.vue": [
+		"./resources/views/pages/Location/Read.vue",
+		7,
+		1,
+		9
+	],
+	"./Task/Add": [
+		"./resources/views/pages/Task/Add.vue",
+		7,
+		2,
+		1,
+		3,
+		34
+	],
+	"./Task/Add.vue": [
+		"./resources/views/pages/Task/Add.vue",
+		7,
+		2,
+		1,
+		3,
+		34
+	],
+	"./Task/Browse": [
+		"./resources/views/pages/Task/Browse.vue",
+		7,
+		1,
+		24,
+		33
+	],
+	"./Task/Browse.vue": [
+		"./resources/views/pages/Task/Browse.vue",
+		7,
+		1,
+		24,
+		33
+	],
+	"./Task/Edit": [
+		"./resources/views/pages/Task/Edit.vue",
+		7,
 		2,
 		1,
 		3,
 		21
 	],
-	"./Location/Read": [
-		"./resources/views/pages/Location/Read.vue",
-		0,
-		1,
-		10
-	],
-	"./Location/Read.vue": [
-		"./resources/views/pages/Location/Read.vue",
-		0,
-		1,
-		10
-	],
-	"./Task/Add": [
-		"./resources/views/pages/Task/Add.vue",
-		0,
-		2,
-		1,
-		3,
-		33
-	],
-	"./Task/Add.vue": [
-		"./resources/views/pages/Task/Add.vue",
-		0,
-		2,
-		1,
-		3,
-		33
-	],
-	"./Task/Browse": [
-		"./resources/views/pages/Task/Browse.vue",
-		0,
-		1,
-		4,
-		34
-	],
-	"./Task/Browse.vue": [
-		"./resources/views/pages/Task/Browse.vue",
-		0,
-		1,
-		4,
-		34
-	],
-	"./Task/Edit": [
-		"./resources/views/pages/Task/Edit.vue",
-		0,
-		2,
-		1,
-		3,
-		22
-	],
 	"./Task/Edit.vue": [
 		"./resources/views/pages/Task/Edit.vue",
-		0,
+		7,
 		2,
 		1,
 		3,
-		22
+		21
 	],
 	"./Task/Read": [
 		"./resources/views/pages/Task/Read.vue",
-		0,
+		7,
 		1,
-		11
+		10
 	],
 	"./Task/Read.vue": [
 		"./resources/views/pages/Task/Read.vue",
-		0,
+		7,
 		1,
-		11
+		10
 	],
 	"./Welcome": [
 		"./resources/views/pages/Welcome.vue",

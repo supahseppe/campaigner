@@ -1,11 +1,7 @@
 <template>
     <section>
         <browse-layout model="campaign" :pagination="pager.links">
-            <panel
-                v-for="campaign in campaigns"
-                class="w-full h-full"
-                :key="campaign.id"
-            >
+            <panel v-for="campaign in campaigns" :key="campaign.id" class="w-full h-full">
                 <inertia-link :href="route('campaigns.show', campaign.slug)">
                     {{ campaign.title }}
                 </inertia-link>
@@ -18,6 +14,7 @@
     import MainLayout from '_Layouts/MainLayout';
     import BrowseLayout from '_Layouts/Browse/BrowseLayout';
     import Panel from '_Components/cards/Panel';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Browse',
@@ -39,10 +36,13 @@
             campaigns() {
                 return this.pager.data;
             },
+            syncedPageTitle: sync('pageTitle'),
         },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

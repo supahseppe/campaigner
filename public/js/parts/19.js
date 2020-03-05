@@ -9,6 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 //
 //
 //
@@ -24,6 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'PageHeader',
   components: {},
@@ -31,7 +33,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  computed: {},
+  computed: {
+    pageTitle: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_0__["sync"])('pageTitle')
+  },
   watch: {},
   created: function created() {},
   mounted: function mounted() {},
@@ -54,6 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_LoadingButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! _Components/LoadingButton */ "./resources/js/components/LoadingButton.vue");
 /* harmony import */ var _Components_inputs_Wysiwyg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _Components/inputs/Wysiwyg */ "./resources/js/components/inputs/Wysiwyg.vue");
 /* harmony import */ var _Components_SectionHeader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! _Components/SectionHeader */ "./resources/js/components/SectionHeader.vue");
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 //
 //
 //
@@ -109,6 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -143,10 +149,14 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  computed: {},
+  computed: {
+    syncedPageTitle: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_5__["sync"])('pageTitle')
+  },
   watch: {},
   created: function created() {},
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    this.syncedPageTitle = this.pageTitle;
+  },
   methods: {
     submit: function submit() {
       var _this = this;
@@ -190,7 +200,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "py-6 px-4 bg-gray-700 md:flex md:items-center md:justify-between"
+        "py-6 mb-6 px-4 bg-white shadow md:flex md:items-center md:justify-between"
     },
     [
       _c("div", { staticClass: "flex-1 min-w-0" }, [
@@ -198,9 +208,15 @@ var render = function() {
           "h2",
           {
             staticClass:
-              "text-2xl font-bold leading-7 text-white sm:text-3xl sm:leading-9 sm:truncate"
+              "text-2xl font-bold leading-7 sm:text-3xl sm:leading-9 sm:truncate"
           },
-          [_vm._t("default")],
+          [
+            _vm._t("default", [
+              _vm._v(
+                "\n                " + _vm._s(_vm.pageTitle) + "\n            "
+              )
+            ])
+          ],
           2
         )
       ]),

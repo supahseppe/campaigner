@@ -1,8 +1,5 @@
 <template>
     <div>
-        <section-header>
-            <h1>Dashboard</h1>
-        </section-header>
         <div class="p-4">
             <panel class="mb-6">
                 <div
@@ -73,8 +70,8 @@
 </template>
 
 <script>
+    import { sync } from 'vuex-pathify';
     import MainLayout from '_Layouts/MainLayout';
-    import SectionHeader from '_Components/SectionHeader';
     import Panel from '_Components/cards/Panel';
     import Btn from '_Components/Btn';
     import Icon from '_Components/Icon';
@@ -86,7 +83,6 @@
             Icon,
             Btn,
             Panel,
-            SectionHeader,
         },
         props: ['campaigns', 'characters'],
         data() {
@@ -95,10 +91,14 @@
                 pageDescription: 'User Dashboard',
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         metaInfo() {
             return {

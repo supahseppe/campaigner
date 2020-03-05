@@ -7,7 +7,7 @@
                     {
                         label: 'Dashboard',
                         url: null,
-                        route: 'dashboard',
+                        route: 'home',
                         route_params: {
                             campaign: this.$page.auth.user.campaign.slug,
                         },

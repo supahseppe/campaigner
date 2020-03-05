@@ -60,6 +60,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'TextInput',
   components: {},
@@ -87,18 +101,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  computed: {
-    styles: function styles() {
-      return {
-        root: '',
-        fieldset: '',
-        label: 'text-xs text-grey',
-        text: '',
-        input: 'bg-transparent border-b m-auto block border-grey w-full mb-6 text-grey pb-1',
-        description: ''
-      };
-    }
-  },
+  computed: {},
   watch: {},
   created: function created() {},
   mounted: function mounted() {},
@@ -229,7 +232,7 @@ __webpack_require__.r(__webpack_exports__);
     EditorMenuBar: tiptap__WEBPACK_IMPORTED_MODULE_0__["EditorMenuBar"],
     Icon: _Icon__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  props: ['value', 'label'],
+  props: ['value', 'label', 'rows'],
   data: function data() {
     var _this = this;
 
@@ -280,7 +283,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".ProseMirror {\n  padding: 1rem;\n  padding: 0.5rem;\n  line-height: 1.5;\n  display: block;\n  width: 100%;\n  border-width: 1px;\n  color: #374151;\n  background-color: #ffffff;\n  font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  border-radius: 0.25rem;\n  text-align: left;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  position: relative;\n}\n.ProseMirror [contenteditable='false'] {\n  white-space: normal;\n}\n.ProseMirror [contenteditable='true'] {\n  white-space: pre-wrap;\n}\n", ""]);
+exports.push([module.i, ".ProseMirror {\n  padding: 0.5rem;\n  min-height: 6rem;\n  line-height: 1.5;\n  display: block;\n  width: 100%;\n  border-width: 1px;\n  color: #374151;\n  background-color: #ffffff;\n  font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  border-radius: 0.25rem;\n  text-align: left;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  position: relative;\n}\n.ProseMirror [contenteditable='false'] {\n  white-space: normal;\n}\n.ProseMirror [contenteditable='true'] {\n  white-space: pre-wrap;\n}\n@media (min-width: 640px) {\n.ProseMirror {\n    font-size: 0.875rem;\n}\n}\n", ""]);
 
 // exports
 
@@ -373,53 +376,73 @@ var render = function() {
             staticClass: "block text-sm font-medium leading-5 text-gray-700",
             attrs: { for: _vm.id }
           },
-          [_vm._v(_vm._s(_vm.label))]
+          [_vm._v("\n        " + _vm._s(_vm.label) + "\n    ")]
         )
       : _vm._e(),
     _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "input",
-      _vm._b(
-        {
-          ref: "input",
-          staticClass: "form-input",
-          class: { error: _vm.errors.length },
-          attrs: { id: _vm.id, type: _vm.type },
-          domProps: { value: _vm.value },
-          on: {
-            input: function($event) {
-              return _vm.$emit("input", $event.target.value)
-            }
-          }
-        },
+    _c("div", { staticClass: "mt-1 relative rounded-md shadow-sm" }, [
+      _c(
         "input",
-        _vm.$attrs,
-        false
-      )
-    ),
+        _vm._b(
+          {
+            ref: "input",
+            staticClass: "form-input block w-full sm:text-sm sm:leading-5",
+            class: {
+              "pr-10 border-red-300 text-red-900 focus:border-red-300 focus:shadow-outline-red":
+                _vm.errors.length
+            },
+            attrs: { id: _vm.id, type: _vm.type },
+            domProps: { value: _vm.value },
+            on: {
+              input: function($event) {
+                return _vm.$emit("input", $event.target.value)
+              }
+            }
+          },
+          "input",
+          _vm.$attrs,
+          false
+        )
+      ),
+      _vm._v(" "),
+      _vm.errors.length
+        ? _c(
+            "div",
+            {
+              staticClass:
+                "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+            },
+            [
+              _c(
+                "svg",
+                {
+                  staticClass: "h-5 w-5 text-red-500",
+                  attrs: { fill: "currentColor", viewBox: "0 0 20 20" }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      "fill-rule": "evenodd",
+                      d:
+                        "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z",
+                      "clip-rule": "evenodd"
+                    }
+                  })
+                ]
+              )
+            ]
+          )
+        : _vm._e()
+    ]),
     _vm._v(" "),
     _vm.errors.length
-      ? _c("div", { staticClass: "form-error" }, [
-          _c("p", [_vm._v(_vm._s(_vm.errors[0]))])
+      ? _c("p", { staticClass: "mt-2 text-sm text-red-600" }, [
+          _vm._v(_vm._s(_vm.errors[0]))
         ])
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-1 relative rounded-md shadow-sm" }, [
-      _c("input", {
-        staticClass: "form-input block w-full sm:text-sm sm:leading-5",
-        attrs: { id: "email", placeholder: "you@example.com" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -461,7 +484,7 @@ var render = function() {
                   "div",
                   { staticClass: "text-black flex items-center justify-start" },
                   [
-                    _c("div", { staticClass: "mr-4" }, [
+                    _c("div", { staticClass: "mr-1 md:mr-2" }, [
                       _c(
                         "button",
                         {
@@ -483,7 +506,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "mr-4" }, [
+                    _c("div", { staticClass: "mr-1 md:mr-2" }, [
                       _c(
                         "button",
                         {
@@ -507,7 +530,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "mr-4" }, [
+                    _c("div", { staticClass: "mr-1 md:mr-2" }, [
                       _c(
                         "button",
                         {
@@ -577,7 +600,7 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "mr-4" }, [
+                    _c("div", { staticClass: "mr-1 md:mr-2" }, [
                       _c(
                         "button",
                         {

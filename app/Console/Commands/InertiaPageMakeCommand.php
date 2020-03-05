@@ -85,7 +85,7 @@ class InertiaPageMakeCommand extends Command
 
         $path = strtolower($params['path']);
         $name = strtolower($params['name']);
-        $route = "\nRoute::get('$path', 'PageController@serve')->name('page.$name');";
+        $route = "\nRoute::get('/$path', 'PageController@serve')->name('page.$name');";
 
         $this->files->append($file_loc, $route);
         $this->info('Page route created successfully.');

@@ -15,13 +15,9 @@
                                 <div
                                     class="flex items-center justify-between w-full md:w-auto"
                                 >
-                                    <a href="#">
-                                        <img
-                                            class="h-8 w-auto sm:h-10"
-                                            src="/img/workflow-mark-on-white.svg"
-                                            alt=""
-                                        />
-                                    </a>
+                                    <inertia-link :href="route('page.welcome')">
+                                        <logo color="indigo-800" />
+                                    </inertia-link>
                                     <div class="-mr-2 flex items-center md:hidden">
                                         <button
                                             type="button"
@@ -46,36 +42,21 @@
                                 </div>
                             </div>
                             <div class="hidden md:block md:ml-10 md:pr-4">
-                                <a
-                                    href="#"
-                                    class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                                >
-                                    Product
-                                </a>
-                                <a
-                                    href="#"
-                                    class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                                >
-                                    Features
-                                </a>
-                                <a
-                                    href="#"
-                                    class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                                >
-                                    Marketplace
-                                </a>
-                                <a
-                                    href="#"
-                                    class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-                                >
-                                    Company
-                                </a>
-                                <a
-                                    href="#"
-                                    class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out"
-                                >
-                                    Log in
-                                </a>
+                                <template v-for="(link, i) in headerLinks">
+                                    <a
+                                        v-if="link.route !== 'page.welcome'"
+                                        :key="i"
+                                        :href="route(link.route)"
+                                        class="ml-4 first:ml-0 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                                        :class="{
+                                            'text-indigo-500 hover:text-indigo-900 focus:text-indigo-900': isRoute(
+                                                link.route
+                                            ),
+                                        }"
+                                    >
+                                        {{ link.label }}
+                                    </a>
+                                </template>
                             </div>
                         </nav>
                     </div>
@@ -100,11 +81,7 @@
                                         class="px-5 pt-4 flex items-center justify-between"
                                     >
                                         <div>
-                                            <img
-                                                class="h-8 w-auto"
-                                                src="/img/workflow-mark-on-white.svg"
-                                                alt=""
-                                            />
+                                            <logo color="indigo-600" />
                                         </div>
                                         <div class="-mr-2">
                                             <button
@@ -129,38 +106,27 @@
                                         </div>
                                     </div>
                                     <div class="px-2 pt-2 pb-3">
-                                        <a
-                                            href="#"
-                                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                                        >
-                                            Product
-                                        </a>
-                                        <a
-                                            href="#"
-                                            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                                        >
-                                            Features
-                                        </a>
-                                        <a
-                                            href="#"
-                                            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                                        >
-                                            Marketplace
-                                        </a>
-                                        <a
-                                            href="#"
-                                            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                                        >
-                                            Company
-                                        </a>
+                                        <template v-for="(link, i) in headerLinks">
+                                            <inertia-link
+                                                :href="route(link.route)"
+                                                class="mt-1 first:mt-0 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                                                :class="{
+                                                    'text-indigo-500 hover:text-indigo-900 focus:text-indigo-900': isRoute(
+                                                        link.route
+                                                    ),
+                                                }"
+                                            >
+                                                {{ route.label }}
+                                            </inertia-link>
+                                        </template>
                                     </div>
                                     <div>
-                                        <a
-                                            href="#"
+                                        <inertia-link
+                                            :href="route('login')"
                                             class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
                                         >
                                             Log in
-                                        </a>
+                                        </inertia-link>
                                     </div>
                                 </div>
                             </div>
@@ -189,20 +155,20 @@
                                 class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
                             >
                                 <div class="rounded-md shadow">
-                                    <a
-                                        href="#"
+                                    <inertia-link
+                                        :href="route('register')"
                                         class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                                     >
                                         Get started
-                                    </a>
+                                    </inertia-link>
                                 </div>
                                 <div class="mt-3 sm:mt-0 sm:ml-3">
-                                    <a
-                                        href="#"
+                                    <inertia-link
+                                        :href="route('login')"
                                         class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                                     >
                                         Sign In
-                                    </a>
+                                    </inertia-link>
                                 </div>
                             </div>
                         </div>
@@ -769,13 +735,24 @@
 </template>
 
 <script>
+    import { sync } from 'vuex-pathify';
+    import Logo from '_Components/Logo';
+
     export default {
         metaInfo: { title: 'Welcome' },
-        components: {},
+        components: { Logo },
         data: function() {
             return {
                 open: false,
             };
+        },
+        computed: {
+            headerLinks: sync('headerLinks'),
+        },
+        methods: {
+            isRoute(name) {
+                return name === this.$page.route.name;
+            },
         },
     };
 </script>

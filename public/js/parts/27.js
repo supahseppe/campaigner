@@ -13,6 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_Browse_BrowseLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! _Layouts/Browse/BrowseLayout */ "./resources/views/layouts/Browse/BrowseLayout.vue");
 /* harmony import */ var _Components_cards_Panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! _Components/cards/Panel */ "./resources/js/components/cards/Panel.vue");
 /* harmony import */ var _Components_Btn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! _Components/Btn */ "./resources/js/components/Btn.vue");
+/* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
 //
 //
 //
@@ -97,6 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -130,11 +132,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     npcTitle: function npcTitle() {
       return this.npcs ? 'Your NPCs' : null;
-    }
+    },
+    syncedPageTitle: Object(vuex_pathify__WEBPACK_IMPORTED_MODULE_4__["sync"])('pageTitle')
   },
   watch: {},
   created: function created() {},
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    this.syncedPageTitle = this.pageTitle;
+  },
   methods: {},
   layout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   metaInfo: function metaInfo() {

@@ -3,6 +3,7 @@
 </template>
 
 <script>
+    import { sync } from 'vuex-pathify';
     import MainLayout from '_Layouts/MainLayout';
 
     export default {
@@ -10,13 +11,19 @@
         components: {},
         props: {},
         data() {
-            pageTitle: '',
-            pageDescription: '',
+            return {
+                pageTitle: 'Dummy Page',
+                pageDescription: '',
+            };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

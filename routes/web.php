@@ -16,9 +16,9 @@ use Spatie\WelcomeNotification\WelcomesNewUsers;
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('dashboard');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('page.welcome');
 
@@ -26,10 +26,6 @@ Route::get('/welcome', function () {
 //    Route::get('welcome/{user}', 'WelcomeController@showWelcomeForm')->name('welcome');
 //    Route::post('welcome/{user}', 'WelcomeController@savePassword');
 //});
-
-Route::get('/about', 'PageController@serve')->name('page.about');
-
-Route::get('/contact', 'PageController@serve')->name('page.contact');
 
 /**
  * Models
@@ -53,3 +49,6 @@ Route::resource('locations', 'LocationController');
 
 // Tasks
 Route::resource('tasks', 'TaskController');
+
+Route::get('/about', 'PageController@serve')->name('page.about');
+Route::get('/contact', 'PageController@serve')->name('page.contact');

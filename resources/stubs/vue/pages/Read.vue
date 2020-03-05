@@ -15,6 +15,7 @@
 </template>
 
 <script>
+    import { sync } from 'vuex-pathify';
     import MainLayout from '_Layouts/MainLayout';
     import Btn from '_Components/Btn';
     import SectionHeader from '_Components/SectionHeader';
@@ -37,10 +38,14 @@
                 pageDescription: `Viewing the ${this.dummy.name} dummy.`,
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

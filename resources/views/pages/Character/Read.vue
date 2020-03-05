@@ -3,10 +3,7 @@
         <section-header>
             <div>
                 <h1>{{ character.name }}</h1>
-                <p
-                    v-if="character.alias"
-                    class="text-base font-normal italic opacity-75"
-                >
+                <p v-if="character.alias" class="text-base font-normal italic opacity-75">
                     ( {{ character.alias }} )
                 </p>
             </div>
@@ -31,6 +28,7 @@
     import SectionHeader from '_Components/SectionHeader';
     import Btn from '_Components/Btn';
     import Container from '_Layouts/Container';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Character',
@@ -51,10 +49,14 @@
                 pageDescription: `Viewing the character ${this.character.name}.`,
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

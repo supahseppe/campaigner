@@ -56,6 +56,7 @@
     import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
     import AutoComplete from '_Inputs/AutoComplete';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Edit',
@@ -84,10 +85,14 @@
                 },
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {
             submit() {
                 this.sending = true;

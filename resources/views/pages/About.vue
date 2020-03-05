@@ -1,20 +1,41 @@
 <template>
-    <section class="p-4 leading-loose">
-        <h1 class="mb-3 text-2xl font-semibold">About</h1>
-        <p>
-            You want to know about Campaigner? Too bad. I'm not writing anything important
-            out.
-        </p>
-        <p>Really I'm only leaving this in the menu as an example page. Good luck!</p>
-    </section>
+    <div></div>
 </template>
 
 <script>
-    import Layout from '_Layouts/MainLayout';
+    import { sync } from 'vuex-pathify';
+    import MainLayout from '_Layouts/MainLayout';
 
     export default {
-        metaInfo: { title: 'About' },
+        name: 'AboutPage',
         components: {},
-        layout: Layout,
+        props: {},
+        data() {
+            return {
+                pageTitle: 'About Us',
+                pageDescription: '',
+            };
+        },
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
+        watch: {},
+        created() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
+        methods: {},
+        layout: MainLayout,
+        metaInfo() {
+            return {
+                title: this.pageTitle,
+                meta: [
+                    {
+                        name: 'description',
+                        content: this.pageDescription,
+                    },
+                ],
+            };
+        },
     };
 </script>

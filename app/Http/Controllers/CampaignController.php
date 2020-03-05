@@ -79,7 +79,10 @@ class CampaignController extends Controller
 
         Auth::user()->campaigns()->save($campaign);
 
-        return Redirect::route('campaigns.show', [$campaign])->with('success', 'Campaign created.');
+        if ($request->get('initial')) {
+            return Redirect::route('campaigns.edit', [$campaign])->with('success', 'Campaign created! Now we can add details.');
+        }
+        return Redirect::route('campaigns.show', [$campaign])->with('success', 'Campaign created successfully.');
     }
 
     /**

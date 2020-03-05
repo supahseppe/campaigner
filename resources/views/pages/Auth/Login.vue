@@ -72,47 +72,23 @@
 
                     <div class="mt-6">
                         <form @submit.prevent="submit">
-                            <div>
-                                <label
-                                    for="email"
-                                    class="block text-sm font-medium leading-5 text-gray-700"
-                                >
-                                    Email address
-                                </label>
-                                <div class="mt-1 rounded-md shadow-sm">
-                                    <input
-                                        id="email"
-                                        type="email"
-                                        :errors="$page.errors.email"
-                                        v-model="form.email"
-                                        required
-                                        autofocus
-                                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-
-                            <div class="mt-6">
-                                <label
-                                    for="password"
-                                    class="block text-sm font-medium leading-5 text-gray-700"
-                                >
-                                    Password
-                                </label>
-                                <div class="mt-1 rounded-md shadow-sm">
-                                    <input
-                                        id="password"
-                                        type="password"
-                                        required
-                                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
+                            <text-input
+                                v-model="form.email"
+                                label="Email Address"
+                                type="email"
+                            />
+                            <text-input
+                                v-model="form.password"
+                                label="Password"
+                                type="password"
+                                class="mt-6"
+                            />
 
                             <div class="mt-6 flex items-center justify-between">
                                 <div class="flex items-center">
                                     <input
                                         id="remember_me"
+                                        v-model="form.remember"
                                         type="checkbox"
                                         class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
                                     />
@@ -126,7 +102,7 @@
 
                                 <div class="text-sm leading-5">
                                     <a
-                                        href="#"
+                                        :href="route('password.request')"
                                         class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
                                     >
                                         Forgot your password?
@@ -160,7 +136,6 @@
 </template>
 
 <script>
-    import LoadingButton from '_Components/LoadingButton';
     import TextInput from '_Inputs/TextInput';
     import Icon from '_Components/Icon';
 
@@ -169,7 +144,6 @@
         components: {
             Icon,
             'text-input': TextInput,
-            LoadingButton,
         },
         data() {
             return {
@@ -185,11 +159,7 @@
             submit() {
                 this.sending = true;
                 this.$inertia
-                    .post('/login', {
-                        email: this.form.email,
-                        password: this.form.password,
-                        remember: this.form.remember,
-                    })
+                    .post('/login', this.form)
                     .then(() => (this.sending = false));
             },
         },

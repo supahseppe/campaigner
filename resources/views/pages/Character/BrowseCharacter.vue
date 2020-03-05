@@ -85,6 +85,7 @@
     import BrowseLayout from '_Layouts/Browse/BrowseLayout';
     import Panel from '_Components/cards/Panel';
     import Btn from '_Components/Btn';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Browse',
@@ -114,10 +115,13 @@
             npcTitle() {
                 return this.npcs ? 'Your NPCs' : null;
             },
+            syncedPageTitle: sync('pageTitle'),
         },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

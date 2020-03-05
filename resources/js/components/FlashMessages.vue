@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="py-6" v-if="$page.flash.success || $page.flash.error">
         <div
             v-if="$page.flash.success && show"
-            class="mb-8 flex items-center justify-between bg-green-500 rounded max-w-3xl mx-auto"
+            class="flex items-center justify-between bg-green-500 rounded max-w-3xl mx-auto"
         >
             <div class="flex items-center">
                 <svg
@@ -32,7 +32,7 @@
         </div>
         <div
             v-if="($page.flash.error || Object.keys($page.errors).length > 0) && show"
-            class="mb-8 flex items-center justify-between bg-red-500 rounded max-w-3xl"
+            class="flex items-center justify-between bg-red-500 rounded max-w-3xl"
         >
             <div class="flex items-center">
                 <svg

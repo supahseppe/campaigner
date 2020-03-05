@@ -1,50 +1,61 @@
 <template>
-    <div class="container mx-auto h-screen">
-        <div class="flex items-center justify-center h-full">
-            <div class="w-full max-w-sm lg:max-w-md">
-                <div
-                    class="flex flex-col break-words bg-white border border-2 rounded shadow-md"
+    <div
+        class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+    >
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="flex justify-center">
+                <logo color="indigo-800" size="xl" />
+            </div>
+            <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+                Let's create a campaign!
+            </h2>
+            <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                We'll start by just getting a title for your campaign.
+            </p>
+            <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                Don't worry! You can add more details soon.
+            </p>
+        </div>
+
+        <div class="mt-6 mx-auto w-percent-90 sm:w-full sm:max-w-md">
+            <div class="bg-white py-6 px-4 shadow sm:rounded-lg sm:px-10">
+                <form
+                    class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
+                    @submit.prevent="submit"
                 >
-                    <div
-                        class="px-6 py-3 mb-0 font-bold font-lg text-white bg-indigo-500"
-                    >
-                        Please create a campaign
-                    </div>
+                    <text-input
+                        v-model="form.title"
+                        label="Title"
+                        type="text"
+                        :errors="$page.errors.title"
+                        class="w-full"
+                        required
+                        autofocus
+                    />
 
-                    <form
-                        class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
-                        @submit.prevent="submit"
-                    >
-                        <div class="flex flex-wrap mb-6">
-                            <text-input
-                                label="Title"
-                                type="text"
-                                :errors="$page.errors.title"
-                                v-model="form.title"
-                                class="w-full mb-6"
-                                required
-                                autofocus
-                            />
-                            <div class="w-full">
-                                <wysiwyg label="Description" v-model="form.description" />
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap items-center">
-                            <loading-button
-                                :loading="sending"
+                    <div class="mt-6">
+                        <span class="block w-full rounded-md shadow-sm">
+                            <button
                                 type="submit"
-                                class="px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                                class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
                             >
-                                Submit
-                            </loading-button>
-                        </div>
-                    </form>
-                    <div class="px-6 py-3 mb-0 text-sm bg-indigo-200">
-                        <inertia-link :href="route('campaigns.index')">
-                            Already a part of a campaign? Search for it here.
-                        </inertia-link>
+                                Sign in
+                            </button>
+                        </span>
                     </div>
+                </form>
+                <div>
+                    <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                        Joining an existing campaign?
+                    </p>
+                    <p class="mt-2 text-center text-sm leading-5 text-gray-600 max-w">
+                        <inertia-link
+                            :href="route('campaigns.index', { own: false })"
+                            class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+                        >
+                            Search for it here!
+                        </inertia-link>
+                    </p>
                 </div>
             </div>
         </div>
@@ -55,10 +66,12 @@
     import TextInput from '_Components/inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
+    import Logo from '_Components/Logo';
 
     export default {
         name: 'InitialCampaign',
         components: {
+            Logo,
             Wysiwyg,
             'text-input': TextInput,
             'loading-button': LoadingButton,
@@ -86,8 +99,8 @@
                 this.sending = true;
                 this.$inertia
                     .post(url, {
-                        title: this.form.title,
-                        description: this.form.description,
+                        initial: true,
+                        ...this.form,
                     })
                     .then(() => (this.sending = false));
             },

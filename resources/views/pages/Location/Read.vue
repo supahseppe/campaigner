@@ -18,6 +18,7 @@
     import MainLayout from '_Layouts/MainLayout';
     import Btn from '_Components/Btn';
     import SectionHeader from '_Components/SectionHeader';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Location',
@@ -37,10 +38,14 @@
                 pageDescription: `Viewing the ${this.location.name} location.`,
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

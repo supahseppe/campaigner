@@ -25,6 +25,7 @@
     import MainLayout from '_Layouts/MainLayout';
     import BrowseLayout from '_Layouts/Browse/BrowseLayout';
     import Panel from '_Components/cards/Panel';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Browse',
@@ -46,11 +47,13 @@
             dummies() {
                 return this.pager.data;
             },
+            syncedPageTitle: sync('pageTitle'),
         },
         watch: {},
         created() {},
-        mounted() {},
-        methods: {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         layout: MainLayout,
         metaInfo() {
             return {

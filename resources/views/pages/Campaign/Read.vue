@@ -18,6 +18,7 @@
     import MainLayout from '_Layouts/MainLayout';
     import SectionHeader from '_Components/SectionHeader';
     import Btn from '_Components/Btn';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Campaign',
@@ -37,10 +38,14 @@
                 pageDescription: `Viewing the ${this.campaign.title} campaign.`,
             };
         },
-        computed: {},
+        computed: {
+            syncedPageTitle: sync('pageTitle'),
+        },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

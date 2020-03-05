@@ -87,6 +87,7 @@
     import MainLayout from '_Layouts/MainLayout';
     import BrowseLayout from '_Layouts/Browse/BrowseLayout';
     import Panel from '_Components/cards/Panel';
+    import { sync } from 'vuex-pathify';
 
     export default {
         name: 'Browse',
@@ -108,10 +109,13 @@
             factions() {
                 return this.pager.data;
             },
+            syncedPageTitle: sync('pageTitle'),
         },
         watch: {},
         created() {},
-        mounted() {},
+        mounted() {
+            this.syncedPageTitle = this.pageTitle;
+        },
         methods: {},
         layout: MainLayout,
         metaInfo() {

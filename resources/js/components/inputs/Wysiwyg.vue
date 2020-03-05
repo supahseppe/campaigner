@@ -1,9 +1,9 @@
 <template>
     <div>
         <p v-if="label" class="form-label">{{ label }}</p>
-        <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+        <editor-menu-bar v-slot="{ commands, isActive }" :editor="editor">
             <div class="text-black flex items-center justify-start">
-                <div class="mr-4">
+                <div class="mr-1 md:mr-2">
                     <button
                         :class="{ 'is-active': isActive.bold() }"
                         @click="commands.bold"
@@ -17,7 +17,7 @@
                         <icon icon="italic" />
                     </button>
                 </div>
-                <div class="mr-4">
+                <div class="mr-1 md:mr-2">
                     <button
                         type="button"
                         :class="{ 'is-active': isActive.bullet_list() }"
@@ -33,7 +33,7 @@
                         <icon icon="numbered" />
                     </button>
                 </div>
-                <div class="mr-4">
+                <div class="mr-1 md:mr-2">
                     <button
                         type="button"
                         :class="{ 'is-active': isActive.heading({ level: 1 }) }"
@@ -63,7 +63,7 @@
                         <icon icon="heading4" />
                     </button>
                 </div>
-                <div class="mr-4">
+                <div class="mr-1 md:mr-2">
                     <button
                         :class="{ 'is-active': isActive.link() }"
                         @click="commands.link"
@@ -110,7 +110,7 @@
             EditorMenuBar,
             Icon,
         },
-        props: ['value', 'label'],
+        props: ['value', 'label', 'rows'],
         data() {
             return {
                 editor: new Editor({
@@ -155,8 +155,7 @@
 
 <style>
     .ProseMirror {
-        padding: 1rem;
-        @apply .p-2 .leading-normal .block .w-full .border .text-gray-700 .bg-white .font-sans .rounded .text-left .appearance-none .relative;
+        @apply .p-2 .min-h-24 .leading-normal .block .w-full .border .text-gray-700 .bg-white .font-sans .rounded .text-left .appearance-none .relative;
     }
 
     .ProseMirror [contenteditable='false'] {
@@ -165,5 +164,11 @@
 
     .ProseMirror [contenteditable='true'] {
         white-space: pre-wrap;
+    }
+
+    @media (min-width: 640px) {
+        .ProseMirror {
+            @apply .text-sm;
+        }
     }
 </style>

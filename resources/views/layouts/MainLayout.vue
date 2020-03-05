@@ -42,198 +42,188 @@
                     <div class="flex-shrink-0 flex items-center px-4">
                         <img
                             class="h-8 w-auto"
-                            src="/img/logos/workflow-logo-on-dark.svg"
+                            src="/img/workflow-logo-on-dark.svg"
                             alt="Workflow"
                         />
                     </div>
                     <nav class="mt-5 px-2">
-                        <a
-                            href="#"
-                            class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10M9 21h6"
-                                />
-                            </svg>
-                            Dashboard
-                        </a>
-                        <a
-                            href="#"
-                            class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                                />
-                            </svg>
-                            Team
-                        </a>
-                        <a
-                            href="#"
-                            class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                                />
-                            </svg>
-                            Projects
-                        </a>
-                        <a
-                            href="#"
-                            class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                />
-                            </svg>
-                            Calendar
-                        </a>
-                        <a
-                            href="#"
-                            class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-                                />
-                            </svg>
-                            Documents
-                        </a>
-                        <a
-                            href="#"
-                            class="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
-                        >
-                            <svg
-                                class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150"
-                                stroke="currentColor"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                                />
-                            </svg>
-                            Reports
-                        </a>
+                        <sidebar-menu-provider>
+                            <template #default="{ links }">
+                                <nav class="mt-5 flex-1 px-2 bg-gray-800">
+                                    <div v-for="(link, i) in links" :key="i">
+                                        <inertia-link
+                                            :href="link.url"
+                                            class="mt-1 first:mt-0 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150"
+                                            :class="{
+                                                'text-white bg-gray-900': isRoute(
+                                                    link.route
+                                                ),
+                                                'cursor-not-allowed pointer-events-none opacity-75': !$page
+                                                    .auth.user.campaign,
+                                            }"
+                                        >
+                                            <icon
+                                                :icon="link.icon"
+                                                color="white"
+                                                class="mr-4"
+                                            />
+                                            {{ link.label }}
+                                        </inertia-link>
+                                        <div
+                                            v-if="i === 0 && $page.auth.user.campaign"
+                                            class="my-3 px-2"
+                                        >
+                                            <p class="text-xs text-gray-400">
+                                                Selected Campaign:
+                                            </p>
+                                            <p class="text-sm text-gray-300">
+                                                {{ $page.auth.user.campaign.title }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </template>
+                        </sidebar-menu-provider>
                     </nav>
-                </div>
-                <div class="flex-shrink-0 flex bg-gray-700 p-4">
-                    <a href="#" class="flex-shrink-0 group block">
-                        <div class="flex items-center">
-                            <div>
-                                <img
-                                    class="inline-block h-10 w-10 rounded-full"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-base leading-6 font-medium text-white">
-                                    Tom Cook
-                                </p>
-                                <p
-                                    class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150"
-                                >
-                                    View profile
-                                </p>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
         <sidebar />
         <div class="flex flex-col w-0 flex-1 overflow-hidden">
-            <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
-                <button
-                    class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
-                    @click.stop="sidebarOpen = true"
-                >
-                    <svg
-                        class="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-                </button>
-            </div>
             <main
                 class="flex-1 relative z-0 overflow-y-auto focus:outline-none"
                 tabindex="0"
             >
-                <flash-messages />
-                <slot />
+                <div class="bg-gray-800">
+                    <div class="mx-auto pr-4 sm:pr-6 lg:pr-8">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center">
+                                <div class="hidden md:block">
+                                    <div class="flex items-baseline">
+                                        <template v-for="(link, i) in headerLinks">
+                                            <inertia-link
+                                                v-if="link.route !== 'home'"
+                                                :key="i"
+                                                :href="route(link.route)"
+                                                class="ml-4 first:ml-0 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                                                :class="{
+                                                    'bg-gray-900 text-white': isRoute(
+                                                        link.route
+                                                    ),
+                                                }"
+                                            >
+                                                {{ link.label }}
+                                            </inertia-link>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden md:block">
+                                <div class="ml-4 flex items-center md:ml-6">
+                                    <button
+                                        class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
+                                    >
+                                        <svg
+                                            class="h-6 w-6"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <div
+                                        v-clickout="dropdownClickout"
+                                        class="ml-3 relative"
+                                    >
+                                        <div>
+                                            <button
+                                                class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid"
+                                                @click="dropdownOpen = !dropdownOpen"
+                                            >
+                                                <img
+                                                    class="h-8 w-8 rounded-full"
+                                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                        <transition
+                                            enter-active-class="transition ease-out duration-100"
+                                            enter-class="transform opacity-0 scale-95"
+                                            enter-to-class="transform opacity-100 scale-100"
+                                            leave-active-class="transition ease-in duration-75"
+                                            leave-class="transform opacity-100 scale-100"
+                                            leave-to-class="transform opacity-0 scale-95"
+                                        >
+                                            <div
+                                                v-show="dropdownOpen"
+                                                class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+                                            >
+                                                <div
+                                                    class="py-1 rounded-md bg-white shadow-xs"
+                                                >
+                                                    <a
+                                                        href="#"
+                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                    >
+                                                        Your Profile
+                                                    </a>
+                                                    <a
+                                                        href="#"
+                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                    >
+                                                        Settings
+                                                    </a>
+                                                    <inertia-link
+                                                        :href="route('logout')"
+                                                        method="post"
+                                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                    >
+                                                        Sign out
+                                                    </inertia-link>
+                                                </div>
+                                            </div>
+                                        </transition>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <flash-messages />
+                    <slot />
+                </div>
             </main>
         </div>
     </div>
 </template>
 
 <script>
+    import { sync } from 'vuex-pathify';
+
     import FlashMessages from '_Components/FlashMessages';
     import Sidebar from '_Layouts/Menus/Sidebar';
+    import SidebarMenuProvider from '_Layouts/Menus/SidebarMenuProvider';
+    import Icon from '_Components/Icon';
 
     export default {
         components: {
+            SidebarMenuProvider,
             Sidebar,
             FlashMessages,
+            Icon,
         },
         data: function() {
             return {
                 sidebarOpen: false,
-                open: false,
+                dropdownOpen: false,
             };
         },
         computed: {
@@ -244,10 +234,15 @@
 
                 return '-translate-x-full';
             },
+            headerLinks: sync('headerLinks'),
+            pageTitle: sync('pageTitle'),
         },
         methods: {
             isRoute(name) {
                 return name === this.$page.route.name;
+            },
+            dropdownClickout() {
+                this.dropdownOpen = false;
             },
         },
     };
