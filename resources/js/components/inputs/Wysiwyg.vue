@@ -152,23 +152,3 @@
         },
     };
 </script>
-
-<style>
-    .ProseMirror {
-        @apply .p-2 .min-h-24 .leading-normal .block .w-full .border .text-gray-700 .bg-white .font-sans .rounded .text-left .appearance-none .relative;
-    }
-
-    .ProseMirror [contenteditable='false'] {
-        white-space: normal;
-    }
-
-    .ProseMirror [contenteditable='true'] {
-        white-space: pre-wrap;
-    }
-
-    @media (min-width: 640px) {
-        .ProseMirror {
-            @apply .text-sm;
-        }
-    }
-</style>

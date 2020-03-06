@@ -4,9 +4,9 @@
 
 @import 'tailwindcss/components';
 @import './components';
+@import './nprogress';
+@import './forms';
+@import './wysiwyg';
 
 @import 'tailwindcss/utilities';
 @import './utilities';
-
-@import './nprogress';
-@import './forms';
