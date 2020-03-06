@@ -165,7 +165,8 @@ class CampaignController extends Controller
     public function autocomplete(Request $request)
     {
         $input = $request->get('q');
-        $result = Campaign::where('title', 'LIKE', '%' . $input . '%')->get();
+        $field = $request->get('field');
+        $result = Campaign::where($field, 'LIKE', '%' . $input . '%')->get();
 
         return response()->json($result);
     }

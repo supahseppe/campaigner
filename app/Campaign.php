@@ -71,6 +71,14 @@ class Campaign extends Model
         return $this->belongsToMany('App\User')->withPivot('role');
     }
 
+    public function owners() {
+        return $this->belongsToMany('App\User')->wherePivot('role', '=', 'owner');
+    }
+
+    public function players() {
+        return $this->belongsToMany('App\User')->wherePivot('role', '=', 'player');
+    }
+
     public function characters() {
         return $this->belongsToMany('App\Character')->where('npc', false);
     }

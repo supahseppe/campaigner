@@ -77,9 +77,10 @@ class DatabaseSeeder extends Seeder
 
             // Create party, Players and Characters
             $party = factory('App\Character', 5)->create();
-            $party->each(function($char) {
+            $party->each(function($char) use($campaign) {
                 $user = factory('App\User')->create();
                 $char->users()->attach($user, ['role' => 'owner']);
+                $campaign->users()->save($user, ['role' => 'player']);
             });
             $campaign->characters()->saveMany($party);
 

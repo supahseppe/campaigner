@@ -106,8 +106,8 @@
                                 Username
                             </label>
                             <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <auto-complete model="campaign" />
+                                <div class="rounded-md shadow-sm">
+                                    <auto-complete model="user" field="username" />
                                 </div>
                             </div>
                         </div>
@@ -116,181 +116,27 @@
                 <div class="mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10">
                     <div>
                         <h3 class="text-lg leading-6 font-medium text-gray-900">
-                            Notifications
+                            Factions
                         </h3>
                         <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-                            We'll always let you know about important changes, but you
-                            pick what else you want to hear about.
+                            Below, you can link existing factions or quickly create new ones.
                         </p>
                     </div>
                     <div class="mt-6 sm:mt-5">
-                        <div class="sm:border-t sm:border-gray-200 sm:pt-5">
-                            <fieldset>
-                                <div
-                                    class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline"
-                                >
-                                    <div>
-                                        <legend
-                                            class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700"
-                                        >
-                                            By Email
-                                        </legend>
-                                    </div>
-                                    <div class="mt-4 sm:mt-0 sm:col-span-2">
-                                        <div class="max-w-lg">
-                                            <div class="relative flex items-start">
-                                                <div
-                                                    class="absolute flex items-center h-5"
-                                                >
-                                                    <input
-                                                        id="comments"
-                                                        type="checkbox"
-                                                        class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                    />
-                                                </div>
-                                                <div class="pl-7 text-sm leading-5">
-                                                    <label
-                                                        for="comments"
-                                                        class="font-medium text-gray-700"
-                                                    >
-                                                        Comments
-                                                    </label>
-                                                    <p class="text-gray-500">
-                                                        Get notified when someones posts a
-                                                        comment on a posting.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="mt-4">
-                                                <div class="relative flex items-start">
-                                                    <div
-                                                        class="absolute flex items-center h-5"
-                                                    >
-                                                        <input
-                                                            id="candidates"
-                                                            type="checkbox"
-                                                            class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                        />
-                                                    </div>
-                                                    <div class="pl-7 text-sm leading-5">
-                                                        <label
-                                                            for="candidates"
-                                                            class="font-medium text-gray-700"
-                                                        >
-                                                            Candidates
-                                                        </label>
-                                                        <p class="text-gray-500">
-                                                            Get notified when a candidate
-                                                            applies for a job.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mt-4">
-                                                <div class="relative flex items-start">
-                                                    <div
-                                                        class="absolute flex items-center h-5"
-                                                    >
-                                                        <input
-                                                            id="offers"
-                                                            type="checkbox"
-                                                            class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                        />
-                                                    </div>
-                                                    <div class="pl-7 text-sm leading-5">
-                                                        <label
-                                                            for="offers"
-                                                            class="font-medium text-gray-700"
-                                                        >
-                                                            Offers
-                                                        </label>
-                                                        <p class="text-gray-500">
-                                                            Get notified when a candidate
-                                                            accepts or rejects an offer.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div
+                            class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                        >
+                            <label
+                                for="faction_name"
+                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
+                            >
+                                Faction
+                            </label>
+                            <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                <div class="rounded-md shadow-sm">
+                                    <auto-complete model="faction" field="name" />
                                 </div>
-                            </fieldset>
-                        </div>
-                        <div class="mt-6 sm:mt-5 sm:border-t sm:border-gray-200 sm:pt-5">
-                            <fieldset>
-                                <div
-                                    class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline"
-                                >
-                                    <div>
-                                        <legend
-                                            class="text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700"
-                                        >
-                                            Push Notifications
-                                        </legend>
-                                    </div>
-                                    <div class="sm:col-span-2">
-                                        <div class="max-w-lg">
-                                            <p class="text-sm leading-5 text-gray-500">
-                                                These are delivered via SMS to your mobile
-                                                phone.
-                                            </p>
-                                            <div class="mt-4">
-                                                <div class="flex items-center">
-                                                    <input
-                                                        id="push_everything"
-                                                        name="form-input push_notifications"
-                                                        type="radio"
-                                                        class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                    />
-                                                    <label
-                                                        for="push_everything"
-                                                        class="ml-3"
-                                                    >
-                                                        <span
-                                                            class="block text-sm leading-5 font-medium text-gray-700"
-                                                        >
-                                                            Everything
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="mt-4 flex items-center">
-                                                    <input
-                                                        id="push_email"
-                                                        name="form-input push_notifications"
-                                                        type="radio"
-                                                        class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                    />
-                                                    <label for="push_email" class="ml-3">
-                                                        <span
-                                                            class="block text-sm leading-5 font-medium text-gray-700"
-                                                        >
-                                                            Same as email
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="mt-4 flex items-center">
-                                                    <input
-                                                        id="push_nothing"
-                                                        name="form-input push_notifications"
-                                                        type="radio"
-                                                        class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                                                    />
-                                                    <label
-                                                        for="push_nothing"
-                                                        class="ml-3"
-                                                    >
-                                                        <span
-                                                            class="block text-sm leading-5 font-medium text-gray-700"
-                                                        >
-                                                            No push notifications
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
+                            </div>
                         </div>
                     </div>
                 </div>

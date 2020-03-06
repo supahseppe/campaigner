@@ -66,6 +66,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AutoComplete',
@@ -77,6 +86,10 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       "default": null,
       required: true
+    },
+    field: {
+      type: String,
+      "default": 'title'
     }
   },
   data: function data() {
@@ -90,15 +103,15 @@ __webpack_require__.r(__webpack_exports__);
       baseUrl: '/api/autocomplete',
       inputProps: {
         id: 'autosuggest__input',
-        placeholder: 'Search for a location',
-        "class": 'form-control',
-        name: 'hello'
+        placeholder: 'Search for something!',
+        "class": 'form-input block w-full sm:text-sm sm:leading-5',
+        name: 'auto-suggest'
       },
       suggestions: [],
       sectionConfigs: {
         "default": {
           limit: 6,
-          label: 'Locations',
+          label: '',
           onSelected: function onSelected(selected) {
             _this.selected = selected.item;
           }
@@ -112,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.suggestions = [];
       this.selected = null;
-      var url = "".concat(this.baseUrl, "/").concat(this.model, "?q=").concat(this.query);
+      var url = "".concat(this.baseUrl, "/").concat(this.model, "?field=").concat(this.field, "&q=").concat(this.query);
       axios.get(url).then(function (response) {
         if (response.data.length) {
           _this2.suggestions = [response];
@@ -120,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     }, 250),
     getSuggestionValue: function getSuggestionValue(suggestion) {
-      return suggestion.id;
+      return suggestion.item[this.field];
     }
   }
 });
@@ -271,6 +284,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/index.js?!./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css&":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css& ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (90:0)\nFile was processed with these loaders:\n * ./node_modules/vue-loader/lib/index.js\nYou may need an additional loader to handle the result of these loaders.\n| \n| \n> .autosuggest-container {\n|     @apply '.rounded-md .bg-white shadow-xs';\n| }");
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b& ***!
@@ -365,9 +389,24 @@ var render = function() {
         fn: function(ref) {
           var suggestion = ref.suggestion
           return [
-            suggestion.name
-              ? _c("div", [_vm._v(_vm._s(suggestion.name))])
-              : _c("div", [_vm._v(_vm._s(suggestion.title))])
+            _c("div", {}, [
+              _c("ul", { staticClass: "py-1" }, [
+                _c(
+                  "li",
+                  {
+                    staticClass:
+                      "block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                  },
+                  [
+                    suggestion.item.name
+                      ? _c("p", [_vm._v(_vm._s(suggestion.item.name))])
+                      : suggestion.item.username
+                      ? _c("p", [_vm._v(_vm._s(suggestion.item.username))])
+                      : _c("p", [_vm._v(_vm._s(suggestion.item.title))])
+                  ]
+                )
+              ])
+            ])
           ]
         }
       }
@@ -603,7 +642,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AutoComplete_vue_vue_type_template_id_db982cda___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AutoComplete.vue?vue&type=template&id=db982cda& */ "./resources/js/components/inputs/AutoComplete.vue?vue&type=template&id=db982cda&");
 /* harmony import */ var _AutoComplete_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AutoComplete.vue?vue&type=script&lang=js& */ "./resources/js/components/inputs/AutoComplete.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AutoComplete.vue?vue&type=style&index=0&lang=post-css& */ "./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -611,7 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _AutoComplete_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _AutoComplete_vue_vue_type_template_id_db982cda___WEBPACK_IMPORTED_MODULE_0__["render"],
   _AutoComplete_vue_vue_type_template_id_db982cda___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -640,6 +681,22 @@ component.options.__file = "resources/js/components/inputs/AutoComplete.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./AutoComplete.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/inputs/AutoComplete.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css& ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib??vue-loader-options!./AutoComplete.vue?vue&type=style&index=0&lang=post-css& */ "./node_modules/vue-loader/lib/index.js?!./resources/js/components/inputs/AutoComplete.vue?vue&type=style&index=0&lang=post-css&");
+/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_AutoComplete_vue_vue_type_style_index_0_lang_post_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

@@ -14,6 +14,18 @@
         <panel>
             <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
                 <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    Players
+                </h3>
+            </div>
+            <ul>
+                <li v-for="(user, i) in campaign.users" :key="i" class="text-sm px-4 py-3 border-t border-gray-300 first:border-0">
+                    {{ user.username }}, {{ user.pivot.role }}
+                </li>
+            </ul>
+        </panel>
+        <panel class="mt-6">
+            <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
                     Characters
                 </h3>
             </div>

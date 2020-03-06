@@ -131,7 +131,8 @@ class LocationController extends Controller
     public function autocomplete(Request $request)
     {
         $input = $request->get('q');
-        $result = Location::where('name', 'LIKE', '%' . $input . '%')->get();
+        $field = $request->get('field');
+        $result = Location::where($field, 'LIKE', '%' . $input . '%')->get();
 
         return response()->json($result);
     }

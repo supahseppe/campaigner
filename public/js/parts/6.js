@@ -206,6 +206,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -443,6 +455,46 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("panel", [
+        _c(
+          "div",
+          {
+            staticClass: "bg-white px-4 py-5 border-b border-gray-200 sm:px-6"
+          },
+          [
+            _c(
+              "h3",
+              { staticClass: "text-lg leading-6 font-medium text-gray-900" },
+              [_vm._v("\n                Players\n            ")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          _vm._l(_vm.campaign.users, function(user, i) {
+            return _c(
+              "li",
+              {
+                key: i,
+                staticClass:
+                  "text-sm px-4 py-3 border-t border-gray-300 first:border-0"
+              },
+              [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(user.username) +
+                    ", " +
+                    _vm._s(user.pivot.role) +
+                    "\n            "
+                )
+              ]
+            )
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("panel", { staticClass: "mt-6" }, [
         _c(
           "div",
           {

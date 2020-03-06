@@ -44,45 +44,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Components_Icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! _Components/Icon */ "./resources/js/components/Icon.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'TrashedMessage',
-  components: {
-    Icon: _Components_Icon__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/views/pages/Campaign/Edit.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/views/pages/Campaign/Edit.vue?vue&type=script&lang=js& ***!
@@ -99,6 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_TrashedMessage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! _Components/TrashedMessage */ "./resources/js/components/TrashedMessage.vue");
 /* harmony import */ var _Components_inputs_Wysiwyg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! _Components/inputs/Wysiwyg */ "./resources/js/components/inputs/Wysiwyg.vue");
 /* harmony import */ var vuex_pathify__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex-pathify */ "./node_modules/vuex-pathify/dist/vuex-pathify.esm.js");
+/* harmony import */ var _Inputs_AutoComplete__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! _Inputs/AutoComplete */ "./resources/js/components/inputs/AutoComplete.vue");
 //
 //
 //
@@ -266,163 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -433,6 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Edit',
   components: {
+    AutoComplete: _Inputs_AutoComplete__WEBPACK_IMPORTED_MODULE_7__["default"],
     SectionHeader: _Components_SectionHeader__WEBPACK_IMPORTED_MODULE_1__["default"],
     TextInput: _Components_inputs_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"],
     LoadingButton: _Components_LoadingButton__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -543,70 +350,6 @@ var render = function() {
         { staticClass: "mt-4 flex md:mt-0 md:ml-4" },
         [_vm._t("aside")],
         2
-      )
-    ]
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass:
-        "p-4 bg-yellow-400 rounded flex items-center justify-between max-w-3xl"
-    },
-    [
-      _c(
-        "div",
-        { staticClass: "flex items-center" },
-        [
-          _c("icon", {
-            staticClass: "flex-shrink-0 w-4 h-4 fill-yellow-800 mr-2",
-            attrs: { icon: "delete" }
-          }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "text-sm font-medium text-yellow-800" },
-            [_vm._t("default")],
-            2
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "text-sm text-yellow-800 hover:underline",
-          attrs: { tabindex: "-1", type: "button" },
-          on: {
-            click: function($event) {
-              return _vm.$emit("restore")
-            }
-          }
-        },
-        [_vm._v("\n        Restore\n    ")]
       )
     ]
   )
@@ -818,9 +561,103 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(1),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10"
+              },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-6 sm:mt-5" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
+                          attrs: { for: "player_username" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Username\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
+                        _c(
+                          "div",
+                          { staticClass: "rounded-md shadow-sm" },
+                          [
+                            _c("auto-complete", {
+                              attrs: { model: "user", field: "username" }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(2)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10"
+              },
+              [
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-6 sm:mt-5" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
+                          attrs: { for: "faction_name" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                            Faction\n                        "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
+                        _c(
+                          "div",
+                          { staticClass: "rounded-md shadow-sm" },
+                          [
+                            _c("auto-complete", {
+                              attrs: { model: "faction", field: "name" }
+                            })
+                          ],
+                          1
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ]
+            )
           ]),
           _vm._v(" "),
           _vm._m(3)
@@ -858,407 +695,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10" },
-      [
-        _c("div", [
-          _c(
-            "h3",
-            { staticClass: "text-lg leading-6 font-medium text-gray-900" },
-            [_vm._v("\n                        Players\n                    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "p",
-            { staticClass: "mt-1 max-w-2xl text-sm leading-5 text-gray-500" },
-            [
-              _vm._v(
-                "\n                        Below, you can invite players to join your campaign.\n                    "
-              )
-            ]
+    return _c("div", [
+      _c("h3", { staticClass: "text-lg leading-6 font-medium text-gray-900" }, [
+        _vm._v("\n                        Players\n                    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "mt-1 max-w-2xl text-sm leading-5 text-gray-500" },
+        [
+          _vm._v(
+            "\n                        Below, you can invite players to join your campaign.\n                    "
           )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-6 sm:mt-5" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "first_name" }
-                },
-                [
-                  _vm._v(
-                    "\n                            Username\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "first_name" }
-                  })
-                ])
-              ])
-            ]
-          )
-        ])
-      ]
-    )
+        ]
+      )
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10" },
-      [
-        _c("div", [
-          _c(
-            "h3",
-            { staticClass: "text-lg leading-6 font-medium text-gray-900" },
-            [
-              _vm._v(
-                "\n                        Notifications\n                    "
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "p",
-            { staticClass: "mt-1 max-w-2xl text-sm leading-5 text-gray-500" },
-            [
-              _vm._v(
-                "\n                        We'll always let you know about important changes, but you\n                        pick what else you want to hear about.\n                    "
-              )
-            ]
+    return _c("div", [
+      _c("h3", { staticClass: "text-lg leading-6 font-medium text-gray-900" }, [
+        _vm._v("\n                        Factions\n                    ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "mt-1 max-w-2xl text-sm leading-5 text-gray-500" },
+        [
+          _vm._v(
+            "\n                        Below, you can link existing factions or quickly create new ones.\n                    "
           )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-6 sm:mt-5" }, [
-          _c("div", { staticClass: "sm:border-t sm:border-gray-200 sm:pt-5" }, [
-            _c("fieldset", [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline"
-                },
-                [
-                  _c("div", [
-                    _c(
-                      "legend",
-                      {
-                        staticClass:
-                          "text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700"
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        By Email\n                                    "
-                        )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-4 sm:mt-0 sm:col-span-2" }, [
-                    _c("div", { staticClass: "max-w-lg" }, [
-                      _c("div", { staticClass: "relative flex items-start" }, [
-                        _c(
-                          "div",
-                          { staticClass: "absolute flex items-center h-5" },
-                          [
-                            _c("input", {
-                              staticClass:
-                                "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                              attrs: { id: "comments", type: "checkbox" }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "pl-7 text-sm leading-5" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass: "font-medium text-gray-700",
-                              attrs: { for: "comments" }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                                    Comments\n                                                "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "text-gray-500" }, [
-                            _vm._v(
-                              "\n                                                    Get notified when someones posts a\n                                                    comment on a posting.\n                                                "
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mt-4" }, [
-                        _c(
-                          "div",
-                          { staticClass: "relative flex items-start" },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "absolute flex items-center h-5" },
-                              [
-                                _c("input", {
-                                  staticClass:
-                                    "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                                  attrs: { id: "candidates", type: "checkbox" }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "pl-7 text-sm leading-5" },
-                              [
-                                _c(
-                                  "label",
-                                  {
-                                    staticClass: "font-medium text-gray-700",
-                                    attrs: { for: "candidates" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                        Candidates\n                                                    "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "text-gray-500" }, [
-                                  _vm._v(
-                                    "\n                                                        Get notified when a candidate\n                                                        applies for a job.\n                                                    "
-                                  )
-                                ])
-                              ]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "mt-4" }, [
-                        _c(
-                          "div",
-                          { staticClass: "relative flex items-start" },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "absolute flex items-center h-5" },
-                              [
-                                _c("input", {
-                                  staticClass:
-                                    "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                                  attrs: { id: "offers", type: "checkbox" }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "pl-7 text-sm leading-5" },
-                              [
-                                _c(
-                                  "label",
-                                  {
-                                    staticClass: "font-medium text-gray-700",
-                                    attrs: { for: "offers" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                        Offers\n                                                    "
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "text-gray-500" }, [
-                                  _vm._v(
-                                    "\n                                                        Get notified when a candidate\n                                                        accepts or rejects an offer.\n                                                    "
-                                  )
-                                ])
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "mt-6 sm:mt-5 sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c("fieldset", [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline"
-                  },
-                  [
-                    _c("div", [
-                      _c(
-                        "legend",
-                        {
-                          staticClass:
-                            "text-base leading-6 font-medium text-gray-900 sm:text-sm sm:leading-5 sm:text-gray-700"
-                        },
-                        [
-                          _vm._v(
-                            "\n                                        Push Notifications\n                                    "
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "sm:col-span-2" }, [
-                      _c("div", { staticClass: "max-w-lg" }, [
-                        _c(
-                          "p",
-                          { staticClass: "text-sm leading-5 text-gray-500" },
-                          [
-                            _vm._v(
-                              "\n                                            These are delivered via SMS to your mobile\n                                            phone.\n                                        "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-4" }, [
-                          _c("div", { staticClass: "flex items-center" }, [
-                            _c("input", {
-                              staticClass:
-                                "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                              attrs: {
-                                id: "push_everything",
-                                name: "form-input push_notifications",
-                                type: "radio"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "ml-3",
-                                attrs: { for: "push_everything" }
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "block text-sm leading-5 font-medium text-gray-700"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                        Everything\n                                                    "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "mt-4 flex items-center" }, [
-                            _c("input", {
-                              staticClass:
-                                "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                              attrs: {
-                                id: "push_email",
-                                name: "form-input push_notifications",
-                                type: "radio"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "ml-3",
-                                attrs: { for: "push_email" }
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "block text-sm leading-5 font-medium text-gray-700"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                        Same as email\n                                                    "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "mt-4 flex items-center" }, [
-                            _c("input", {
-                              staticClass:
-                                "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
-                              attrs: {
-                                id: "push_nothing",
-                                name: "form-input push_notifications",
-                                type: "radio"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "ml-3",
-                                attrs: { for: "push_nothing" }
-                              },
-                              [
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "block text-sm leading-5 font-medium text-gray-700"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                        No push notifications\n                                                    "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
-                )
-              ])
-            ]
-          )
-        ])
-      ]
-    )
+        ]
+      )
+    ])
   },
   function() {
     var _vm = this
@@ -1363,75 +834,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionHeader_vue_vue_type_template_id_5498b077___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SectionHeader_vue_vue_type_template_id_5498b077___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/TrashedMessage.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/components/TrashedMessage.vue ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TrashedMessage.vue?vue&type=template&id=06c4e95b& */ "./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b&");
-/* harmony import */ var _TrashedMessage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TrashedMessage.vue?vue&type=script&lang=js& */ "./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _TrashedMessage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/TrashedMessage.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrashedMessage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./TrashedMessage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TrashedMessage.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TrashedMessage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b&":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b& ***!
-  \***********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./TrashedMessage.vue?vue&type=template&id=06c4e95b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TrashedMessage.vue?vue&type=template&id=06c4e95b&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TrashedMessage_vue_vue_type_template_id_06c4e95b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

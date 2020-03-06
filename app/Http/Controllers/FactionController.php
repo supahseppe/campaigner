@@ -13,7 +13,7 @@ class FactionController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('autocomplete');
     }
 
     /**
@@ -126,5 +126,14 @@ class FactionController extends Controller
     {
         $faction->restore();
         return Redirect::back()->with('success', 'Faction restored.');
+    }
+
+    public function autocomplete(Request $request)
+    {
+        $input = $request->get('q');
+        $field = $request->get('field');
+        $result = Faction::where($field, 'LIKE', '%' . $input . '%')->get();
+
+        return response()->json($result);
     }
 }
