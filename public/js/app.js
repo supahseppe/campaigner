@@ -58457,9 +58457,9 @@ var Ziggy = {
       "domain": null
     }
   },
-  baseUrl: 'https://campaigner.test/',
+  baseUrl: 'https://campaigner.app/',
   baseProtocol: 'https',
-  baseDomain: 'campaigner.test',
+  baseDomain: 'campaigner.app',
   basePort: false,
   defaultParameters: []
 };
