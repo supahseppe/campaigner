@@ -717,7 +717,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "bg-white overflow-hidden sm:rounded-lg sm:shadow" },
+    {
+      staticClass:
+        "bg-white overflow-hidden sm:rounded-lg sm:shadow max-w-percent-90 mx-auto"
+    },
     [_vm._t("default")],
     2
   )

@@ -1,8 +1,6 @@
 <template>
     <section class="h-screen container">
-        <section-header>
-            Editing {{ campaign.title }}
-        </section-header>
+        <section-header>Editing {{ campaign.title }}</section-header>
         <form
             class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-3xl mx-auto"
             @submit.prevent="submit"
@@ -14,73 +12,18 @@
                             class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5"
                         >
                             <label
-                                for="username"
+                                for="title"
                                 class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
                             >
                                 Campaign Title
                             </label>
                             <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <text-input v-model="form.title" />
+                                <text-input id="title" v-model="form.title" />
                             </div>
                         </div>
 
                         <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="about"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                Description
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-lg flex rounded-md shadow-sm">
-                                    <wysiwyg v-model="form.description" />
-                                </div>
-                                <p class="mt-2 text-sm text-gray-500">
-                                    Write a few sentences (or more!) about your campaign.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="photo"
-                                class="block text-sm leading-5 font-medium text-gray-700"
-                            >
-                                Photo
-                            </label>
-                            <div class="mt-2 sm:mt-0 sm:col-span-2">
-                                <div class="flex items-center">
-                                    <span
-                                        class="h-12 w-12 rounded-full overflow-hidden bg-gray-100"
-                                    >
-                                        <svg
-                                            class="h-full w-full text-gray-300"
-                                            fill="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
-                                            />
-                                        </svg>
-                                    </span>
-                                    <span class="ml-5 rounded-md shadow-sm">
-                                        <button
-                                            type="button"
-                                            class="py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-                                        >
-                                            Change
-                                        </button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 pointer-events-none opacity-50"
                         >
                             <label
                                 for="cover_photo"
@@ -122,15 +65,34 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div
+                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                        >
+                            <label
+                                for="description"
+                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
+                            >
+                                Description
+                            </label>
+                            <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                <div class="max-w-lg flex rounded-md shadow-sm">
+                                    <wysiwyg id="description" v-model="form.description" />
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    Write a bit about your campaign.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-8 border-t border-gray-200 pt-8 sm:mt-5 sm:pt-10">
                     <div>
                         <h3 class="text-lg leading-6 font-medium text-gray-900">
-                            Personal Information
+                            Players
                         </h3>
                         <p class="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
-                            Use a permanent address where you can receive mail.
+                            Below, you can invite players to join your campaign.
                         </p>
                     </div>
                     <div class="mt-6 sm:mt-5">
@@ -138,155 +100,14 @@
                             class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
                         >
                             <label
-                                for="first_name"
+                                for="player_username"
                                 class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
                             >
-                                First name
+                                Username
                             </label>
                             <div class="mt-1 sm:mt-0 sm:col-span-2">
                                 <div class="max-w-xs rounded-md shadow-sm">
-                                    <input
-                                        id="first_name"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="last_name"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                Last name
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <input
-                                        id="last_name"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="email"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                Email address
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-lg rounded-md shadow-sm">
-                                    <input
-                                        id="email"
-                                        type="email"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="country"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                Country / Region
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <select
-                                        id="country"
-                                        class="block form-select w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    >
-                                        <option>United States</option>
-                                        <option>Canada</option>
-                                        <option>Mexico</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="street_address"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                Street address
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-lg rounded-md shadow-sm">
-                                    <input
-                                        id="street_address"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="city"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                City
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <input
-                                        id="city"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="state"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                State / Province
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <input
-                                        id="state"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                        >
-                            <label
-                                for="zip"
-                                class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
-                            >
-                                ZIP / Postal
-                            </label>
-                            <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <div class="max-w-xs rounded-md shadow-sm">
-                                    <input
-                                        id="zip"
-                                        class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                    />
+                                    <auto-complete model="campaign" />
                                 </div>
                             </div>
                         </div>
@@ -506,10 +327,12 @@
     import TrashedMessage from '_Components/TrashedMessage';
     import Wysiwyg from '_Components/inputs/Wysiwyg';
     import { sync } from 'vuex-pathify';
+    import AutoComplete from '_Inputs/AutoComplete';
 
     export default {
         name: 'Edit',
         components: {
+            AutoComplete,
             SectionHeader,
             TextInput,
             LoadingButton,

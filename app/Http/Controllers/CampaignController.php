@@ -97,6 +97,9 @@ class CampaignController extends Controller
             'id' => $campaign->id,
             'slug' => $campaign->slug,
         ]);
+
+        $campaign->load(['users', 'characters', 'npcs', 'factions', 'locations', 'tasks']);
+
         return Inertia::render('Campaign/Read', [
             'campaign' => $campaign
         ]);

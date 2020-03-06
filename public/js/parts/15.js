@@ -324,7 +324,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {},
   methods: {
     getTextColor: function getTextColor() {
-      var initialColor = this.color || this.iconColor;
+      var initialColor = this.color || this.textColor;
+
+      if (initialColor === 'white' || initialColor === 'black') {
+        return initialColor;
+      }
+
       var parts = initialColor.split('-');
 
       if (parts[1] === '900') {

@@ -423,182 +423,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -813,9 +637,7 @@ var render = function() {
     "section",
     { staticClass: "h-screen container" },
     [
-      _c("section-header", [
-        _vm._v("\n        Editing " + _vm._s(_vm.campaign.title) + "\n    ")
-      ]),
+      _c("section-header", [_vm._v("Editing " + _vm._s(_vm.campaign.title))]),
       _vm._v(" "),
       _c(
         "form",
@@ -845,7 +667,7 @@ var render = function() {
                       {
                         staticClass:
                           "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                        attrs: { for: "username" }
+                        attrs: { for: "title" }
                       },
                       [
                         _vm._v(
@@ -859,6 +681,7 @@ var render = function() {
                       { staticClass: "mt-1 sm:mt-0 sm:col-span-2" },
                       [
                         _c("text-input", {
+                          attrs: { id: "title" },
                           model: {
                             value: _vm.form.title,
                             callback: function($$v) {
@@ -877,112 +700,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-                  },
-                  [
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                        attrs: { for: "about" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Description\n                        "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                      _c(
-                        "div",
-                        { staticClass: "max-w-lg flex rounded-md shadow-sm" },
-                        [
-                          _c("wysiwyg", {
-                            model: {
-                              value: _vm.form.description,
-                              callback: function($$v) {
-                                _vm.$set(_vm.form, "description", $$v)
-                              },
-                              expression: "form.description"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
-                        _vm._v(
-                          "\n                                Write a few sentences (or more!) about your campaign.\n                            "
-                        )
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5"
-                  },
-                  [
-                    _c(
-                      "label",
-                      {
-                        staticClass:
-                          "block text-sm leading-5 font-medium text-gray-700",
-                        attrs: { for: "photo" }
-                      },
-                      [
-                        _vm._v(
-                          "\n                            Photo\n                        "
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-2 sm:mt-0 sm:col-span-2" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "span",
-                          {
-                            staticClass:
-                              "h-12 w-12 rounded-full overflow-hidden bg-gray-100"
-                          },
-                          [
-                            _c(
-                              "svg",
-                              {
-                                staticClass: "h-full w-full text-gray-300",
-                                attrs: {
-                                  fill: "currentColor",
-                                  viewBox: "0 0 24 24"
-                                }
-                              },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    d:
-                                      "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
-                                  }
-                                })
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm._m(0)
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                      "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5 pointer-events-none opacity-50"
                   },
                   [
                     _c(
@@ -1031,7 +749,7 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
-                            _vm._m(1),
+                            _vm._m(0),
                             _vm._v(" "),
                             _c(
                               "p",
@@ -1047,16 +765,65 @@ var render = function() {
                       )
                     ])
                   ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
+                        attrs: { for: "description" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Description\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
+                      _c(
+                        "div",
+                        { staticClass: "max-w-lg flex rounded-md shadow-sm" },
+                        [
+                          _c("wysiwyg", {
+                            attrs: { id: "description" },
+                            model: {
+                              value: _vm.form.description,
+                              callback: function($$v) {
+                                _vm.$set(_vm.form, "description", $$v)
+                              },
+                              expression: "form.description"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                        _vm._v(
+                          "\n                                Write a bit about your campaign.\n                            "
+                        )
+                      ])
+                    ])
+                  ]
                 )
               ])
             ]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(1),
             _vm._v(" "),
-            _vm._m(3)
+            _vm._m(2)
           ]),
           _vm._v(" "),
-          _vm._m(4)
+          _vm._m(3)
         ]
       )
     ],
@@ -1064,26 +831,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "ml-5 rounded-md shadow-sm" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "py-2 px-3 border border-gray-300 rounded-md text-sm leading-4 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out",
-          attrs: { type: "button" }
-        },
-        [
-          _vm._v(
-            "\n                                        Change\n                                    "
-          )
-        ]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -1119,11 +866,7 @@ var staticRenderFns = [
           _c(
             "h3",
             { staticClass: "text-lg leading-6 font-medium text-gray-900" },
-            [
-              _vm._v(
-                "\n                        Personal Information\n                    "
-              )
-            ]
+            [_vm._v("\n                        Players\n                    ")]
           ),
           _vm._v(" "),
           _c(
@@ -1131,7 +874,7 @@ var staticRenderFns = [
             { staticClass: "mt-1 max-w-2xl text-sm leading-5 text-gray-500" },
             [
               _vm._v(
-                "\n                        Use a permanent address where you can receive mail.\n                    "
+                "\n                        Below, you can invite players to join your campaign.\n                    "
               )
             ]
           )
@@ -1154,7 +897,7 @@ var staticRenderFns = [
                 },
                 [
                   _vm._v(
-                    "\n                            First name\n                        "
+                    "\n                            Username\n                        "
                   )
                 ]
               ),
@@ -1165,247 +908,6 @@ var staticRenderFns = [
                     staticClass:
                       "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
                     attrs: { id: "first_name" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "last_name" }
-                },
-                [
-                  _vm._v(
-                    "\n                            Last name\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "last_name" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "email" }
-                },
-                [
-                  _vm._v(
-                    "\n                            Email address\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-lg rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "email", type: "email" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "country" }
-                },
-                [
-                  _vm._v(
-                    "\n                            Country / Region\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c(
-                    "select",
-                    {
-                      staticClass:
-                        "block form-select w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                      attrs: { id: "country" }
-                    },
-                    [
-                      _c("option", [_vm._v("United States")]),
-                      _vm._v(" "),
-                      _c("option", [_vm._v("Canada")]),
-                      _vm._v(" "),
-                      _c("option", [_vm._v("Mexico")])
-                    ]
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "street_address" }
-                },
-                [
-                  _vm._v(
-                    "\n                            Street address\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-lg rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "street_address" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "city" }
-                },
-                [
-                  _vm._v(
-                    "\n                            City\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "city" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "state" }
-                },
-                [
-                  _vm._v(
-                    "\n                            State / Province\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "state" }
-                  })
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5"
-            },
-            [
-              _c(
-                "label",
-                {
-                  staticClass:
-                    "block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2",
-                  attrs: { for: "zip" }
-                },
-                [
-                  _vm._v(
-                    "\n                            ZIP / Postal\n                        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-1 sm:mt-0 sm:col-span-2" }, [
-                _c("div", { staticClass: "max-w-xs rounded-md shadow-sm" }, [
-                  _c("input", {
-                    staticClass:
-                      "form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5",
-                    attrs: { id: "zip" }
                   })
                 ])
               ])

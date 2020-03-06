@@ -166,7 +166,12 @@
         mounted() {},
         methods: {
             getTextColor() {
-                let initialColor = this.color || this.iconColor;
+                let initialColor = this.color || this.textColor;
+
+                if (initialColor === 'white' || initialColor === 'black') {
+                    return initialColor;
+                }
+
                 let parts = initialColor.split('-');
 
                 if (parts[1] === '900') {

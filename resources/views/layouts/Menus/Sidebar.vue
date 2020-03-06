@@ -4,11 +4,7 @@
             <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                 <div class="flex items-center flex-shrink-0 px-4">
                     <inertia-link :href="route('page.welcome')">
-                        <img
-                            class="h-8 w-auto"
-                            src="/img/workflow-logo-on-dark.svg"
-                            alt="Workflow"
-                        />
+                        <logo text-color="white" icon-color="indigo-400" size="lg" />
                     </inertia-link>
                 </div>
                 <sidebar-menu-provider>
@@ -50,10 +46,12 @@
 <script>
     import SidebarMenuProvider from '_Layouts/Menus/SidebarMenuProvider';
     import Icon from '_Components/Icon';
+    import Logo from '_Components/Logo';
 
     export default {
         name: 'Sidebar',
         components: {
+            Logo,
             SidebarMenuProvider,
             Icon,
         },

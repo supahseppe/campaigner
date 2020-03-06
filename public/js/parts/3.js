@@ -466,6 +466,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "w-full" },
     [
       _vm.label
         ? _c("p", { staticClass: "form-label" }, [_vm._v(_vm._s(_vm.label))])

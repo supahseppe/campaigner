@@ -412,7 +412,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.sending = true;
-      this.$inertia.post('/login', this.form).then(function () {
+      this.$inertia.post(this.route('login'), this.form).then(function () {
         return _this.sending = false;
       });
     }

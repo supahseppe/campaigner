@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-full">
         <p v-if="label" class="form-label">{{ label }}</p>
         <editor-menu-bar v-slot="{ commands, isActive }" :editor="editor">
             <div class="text-black flex items-center justify-start">

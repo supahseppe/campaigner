@@ -28,10 +28,11 @@ class HomeController extends Controller
         return Inertia::render('Home', [
             'campaigns' => Auth::user()->campaigns()
                 ->paginate(5)
-                ->only('title'),
+                ->only('title', 'slug'),
             'characters' => Auth::user()->characters()
+                ->with('player:username,slug')
                 ->paginate(5)
-                ->only('name'),
+                ->only('active', 'name', 'alias', 'high_concept', 'slug', 'player'),
         ]);
     }
 }

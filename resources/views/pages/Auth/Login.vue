@@ -159,7 +159,7 @@
             submit() {
                 this.sending = true;
                 this.$inertia
-                    .post('/login', this.form)
+                    .post(this.route('login'), this.form)
                     .then(() => (this.sending = false));
             },
         },
