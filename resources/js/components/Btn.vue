@@ -24,21 +24,26 @@
                 type: String,
                 default: 'indigo',
             },
+            wide: {
+                type: Boolean,
+                default: false,
+            }
         },
         data() {
             return {};
         },
         computed: {
             classes() {
-                return [
+                let base = [
                     'inline-flex',
                     'items-center',
+                    'justify-center',
                     'px-4',
                     'py-2',
                     'border',
                     'border-transparent',
-                    'text-base',
-                    'leading-6',
+                    'text-sm',
+                    'leading-5',
                     'font-medium',
                     'rounded-md',
                     'text-white',
@@ -52,6 +57,12 @@
                     'ease-in-out',
                     'duration-150',
                 ];
+
+                if (this.wide) {
+                    base.push('w-full');
+                }
+
+                return base;
             },
         },
         watch: {},

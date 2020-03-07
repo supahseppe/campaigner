@@ -36,6 +36,16 @@ class InertiaJsServiceProvider extends ServiceProvider
                         'email' => Auth::user()->email,
                         'campaign' => Auth::user()->campaign,
                     ] : null,
+                    'sessions' => [
+                            'resent' => Session::get('resent'),
+                            'status' => Session::get('status'),
+                        ],
+                    'routes' => [
+                        'login' => Route::has('login'),
+                        'logout' => Route::has('logout'),
+                        'register' => Route::has('register'),
+                        'password_request' => Route::has('password.request'),
+                    ],
                 ];
             },
             'flash' => function () {
@@ -54,19 +64,8 @@ class InertiaJsServiceProvider extends ServiceProvider
                     'name' => Route::currentRouteName(),
                 ];
             },
-            'auth_sessions' => function () {
-                return [
-                    'resent' => Session::get('resent'),
-                    'status' => Session::get('status'),
-                ];
-            },
-            'auth_routes' => function () {
-                return [
-                    'login' => Route::has('login'),
-                    'logout' => Route::has('logout'),
-                    'register' => Route::has('register'),
-                    'password_request' => Route::has('password.request'),
-                ];
+            'takeover' => function () {
+                return Session::get('takeover');
             },
         ]);
     }

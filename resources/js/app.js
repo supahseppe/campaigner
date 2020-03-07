@@ -19,8 +19,14 @@ Vue.use(VueTailwind);
 import VueMeta from 'vue-meta';
 Vue.use(VueMeta);
 
+import PortalVue from 'portal-vue'
+Vue.use(PortalVue)
+
 import { clickout } from 'vuetensils';
 Vue.directive('clickout', clickout);
+
+// Animate.css
+require('vue2-animate/dist/vue2-animate.min.css');
 
 import pathify from '@/js/helpers/pathify';
 import store from '@/js/store/main';

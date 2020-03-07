@@ -131,6 +131,7 @@ class CampaignController extends Controller
      */
     public function edit(Campaign $campaign)
     {
+        $campaign->load(['players', 'characters', 'npcs', 'factions', 'locations', 'tasks']);
         return Inertia::render('Campaign/Edit', [
             'campaign' => $campaign
         ]);

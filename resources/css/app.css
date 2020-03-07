@@ -7,6 +7,7 @@
 @import './nprogress';
 @import './forms';
 @import './wysiwyg';
+@import './autocomplete';
 
 @import 'tailwindcss/utilities';
 @import './utilities';

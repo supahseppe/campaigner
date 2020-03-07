@@ -1,0 +1,19 @@
+.autosuggest__results-container {
+    @apply .rounded-md .bg-white .shadow-xs;
+}
+
+.autosuggest__results-container ul {
+    @apply .py-1;
+}
+
+.autosuggest__results-container li {
+    @apply .block .px-4 .py-2 .text-sm .leading-5 .text-gray-700;
+}
+
+.autosuggest__results-container li:hover {
+    @apply .bg-gray-100 .text-gray-900;
+}
+
+.autosuggest__results-container li:focus {
+    @apply .outline-none .bg-gray-100 .text-gray-900;
+}

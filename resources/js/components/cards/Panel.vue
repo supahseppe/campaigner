@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white overflow-hidden sm:rounded-lg sm:shadow max-w-percent-90 mx-auto">
+    <div class="bg-white overflow-hidden rounded sm:rounded-lg shadow max-w-percent-90 mx-auto">
         <slot />
     </div>
 </template>

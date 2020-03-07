@@ -23,6 +23,7 @@
     import Undo from '_Icons/Undo';
     import Redo from '_Icons/Redo';
     import Delete from '_Icons/Delete';
+    import CloseCircle from '_Icons/CloseCircle';
     import GlobeModel from '_Icons/GlobeModel';
     import DramaMasks from '_Icons/DramaMasks';
     import GuyFawkesMask from '_Icons/GuyFawkesMask';
@@ -35,6 +36,7 @@
     import Google from '_Icons/Google';
     import Facebook from '_Icons/Facebook';
     import Twitter from '_Icons/Twitter';
+    import Email from '_Icons/Email';
 
     export default {
         name: 'Icon',
@@ -65,6 +67,8 @@
             Google,
             Facebook,
             Twitter,
+            Email,
+            'x-circle': CloseCircle,
         },
         props: {
             icon: {

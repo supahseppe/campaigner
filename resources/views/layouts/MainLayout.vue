@@ -202,6 +202,7 @@
                 </div>
             </main>
         </div>
+        <portal-target name="right-panel" class="absolute right-0 inset-y-0 w-full pointer-events-none" />
     </div>
 </template>
 
