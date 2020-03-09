@@ -93,11 +93,8 @@ class CampaignController extends Controller
      */
     public function show(Campaign $campaign)
     {
-        Session::put('campaign', [
-            'id' => $campaign->id,
-            'slug' => $campaign->slug,
-        ]);
-
+        $user = Auth::user();
+        $user->campaign = $campaign;
         $campaign->load(['users', 'characters', 'npcs', 'factions', 'locations', 'tasks']);
 
         return Inertia::render('Campaign/Read', [

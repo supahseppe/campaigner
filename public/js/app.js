@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"dabe2deb3ee509594d71","1":"559346709e30aee2ded1","2":"58669869e97dda72156d","3":"c293d3bfeaa281a3346f","4":"da5db397a897506985d0","6":"f310cbbc4d9d30ea3f59","7":"bb9f8bb1473e45b0f58c","8":"cefce35b27e183988c98","9":"f362ea6136baf287f952","10":"647db342fe1bf70a55b8","11":"10df46788f88ec5dc191","12":"6a9994b6f975ee34852c","13":"49914cd50b28389b8079","14":"3ffa62a1ca35c9e06a7f","15":"962b930a3e6779067c04","16":"632bf2e76f946af7e5ea","17":"3decff8d9c28fdcd207b","18":"9bebf22638279978585e","19":"2044261c16addab00f16","20":"83fb7cd47eaea55a0fb8","21":"d14fd657a3ab5ab6db83","22":"9c5d0be64b5d4cd65946","23":"8bc22fab83b763066394","24":"36ab20c65745f5788d9b","25":"000f7375932aa8fea14a","26":"c18d8052c2edf6700fbb","27":"d13afc32e45dcbb3f569","28":"8e95333cbe093611fea3","29":"32ec2abc1d64524f2ecb","30":"ce73cf26ead5b4071682","31":"3c39a0a54078ae82a149","32":"360ce072c7cf27a7c9d9","33":"13f2ffad9c798e93797f","34":"1c13308271acace83e76","35":"e42353bca95ea8704312","36":"f02354af96139827e229","37":"8b8a3388a5e58fe1117c","38":"db9ee55363934790e760","39":"679401ccc4394a9630a0"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"dabe2deb3ee509594d71","1":"559346709e30aee2ded1","2":"58669869e97dda72156d","3":"c293d3bfeaa281a3346f","4":"de95bddf4ba507190435","5":"9be48b12d94782ea0b3f","6":"f310cbbc4d9d30ea3f59","7":"21e7f38b45ea0443dc0a","8":"f17d2573c44b425087cd","9":"f362ea6136baf287f952","10":"647db342fe1bf70a55b8","11":"10df46788f88ec5dc191","12":"6a9994b6f975ee34852c","13":"49914cd50b28389b8079","14":"3ffa62a1ca35c9e06a7f","15":"962b930a3e6779067c04","16":"632bf2e76f946af7e5ea","17":"3decff8d9c28fdcd207b","18":"9bebf22638279978585e","19":"2044261c16addab00f16","20":"83fb7cd47eaea55a0fb8","21":"1915de3ef75833662f3e","22":"9c5d0be64b5d4cd65946","23":"8bc22fab83b763066394","24":"36ab20c65745f5788d9b","25":"000f7375932aa8fea14a","26":"c18d8052c2edf6700fbb","27":"e2424a9c1d48123bbab5","28":"8e95333cbe093611fea3","29":"32ec2abc1d64524f2ecb","30":"ce73cf26ead5b4071682","31":"3c39a0a54078ae82a149","32":"360ce072c7cf27a7c9d9","33":"13f2ffad9c798e93797f","34":"1c13308271acace83e76","35":"e42353bca95ea8704312","36":"f02354af96139827e229","37":"075004273a5610e3fe13","38":"08ac202d8e4fb46ac72a","39":"ea65ade232b5b1d2d34a","40":"844d6af0413439dc77c7","41":"b2f4b2359556ec53f3ca","42":"da3544bca4fadd51b257","43":"60668ea9f199ed29aadf","44":"d3f69bf80f3b3a12559d","45":"67e88fa500557faef7ba","46":"811737b62fe0d52b9534","47":"f1754882b697d7d679f6","48":"18142c94d5400c8f7094","49":"c894c398b3f0fdb4a123","50":"9dc8934acd23314499a3","51":"4c33f8cb652df8999a63","52":"86701411a46ddaed2dfb","53":"b29ad29ecc31e9279d9c","54":"9875a8eceb53962d3991","55":"04160e222607cce0546c","56":"b061c309fa56c3975cf5","57":"2ea99582eeae35292aae","58":"19cc8f0443e058774f83"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -59728,6 +59728,11 @@ var Ziggy = {
       "uri": "contact",
       "methods": ["GET", "HEAD"],
       "domain": null
+    },
+    "modal": {
+      "uri": "modal",
+      "methods": ["POST"],
+      "domain": null
     }
   },
   baseUrl: 'https://campaigner.test/',
@@ -60085,14 +60090,14 @@ var map = {
 		0,
 		33,
 		6,
-		39
+		42
 	],
 	"./Campaign/AutoCompleteSection.vue": [
 		"./resources/views/pages/Campaign/AutoCompleteSection.vue",
 		0,
 		33,
 		6,
-		39
+		42
 	],
 	"./Campaign/Browse": [
 		"./resources/views/pages/Campaign/Browse.vue",
@@ -60116,7 +60121,7 @@ var map = {
 		1,
 		3,
 		6,
-		21
+		38
 	],
 	"./Campaign/Edit.vue": [
 		"./resources/views/pages/Campaign/Edit.vue",
@@ -60126,7 +60131,7 @@ var map = {
 		1,
 		3,
 		6,
-		21
+		38
 	],
 	"./Campaign/Initial": [
 		"./resources/views/pages/Campaign/Initial.vue",
@@ -60146,13 +60151,15 @@ var map = {
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
 		1,
-		8
+		8,
+		5
 	],
 	"./Campaign/Read.vue": [
 		"./resources/views/pages/Campaign/Read.vue",
 		0,
 		1,
-		8
+		8,
+		5
 	],
 	"./Character/Add": [
 		"./resources/views/pages/Character/Add.vue",
@@ -60175,28 +60182,32 @@ var map = {
 		0,
 		1,
 		4,
-		28
+		28,
+		40
 	],
 	"./Character/BrowseCharacter.vue": [
 		"./resources/views/pages/Character/BrowseCharacter.vue",
 		0,
 		1,
 		4,
-		28
+		28,
+		40
 	],
 	"./Character/BrowseNpc": [
 		"./resources/views/pages/Character/BrowseNpc.vue",
 		0,
 		1,
 		4,
-		29
+		29,
+		41
 	],
 	"./Character/BrowseNpc.vue": [
 		"./resources/views/pages/Character/BrowseNpc.vue",
 		0,
 		1,
 		4,
-		29
+		29,
+		41
 	],
 	"./Character/Edit": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -60204,7 +60215,8 @@ var map = {
 		2,
 		1,
 		3,
-		7
+		7,
+		39
 	],
 	"./Character/Edit.vue": [
 		"./resources/views/pages/Character/Edit.vue",
@@ -60212,7 +60224,8 @@ var map = {
 		2,
 		1,
 		3,
-		7
+		7,
+		39
 	],
 	"./Character/Read": [
 		"./resources/views/pages/Character/Read.vue",
@@ -60259,14 +60272,16 @@ var map = {
 		0,
 		1,
 		4,
-		32
+		32,
+		43
 	],
 	"./Faction/Browse.vue": [
 		"./resources/views/pages/Faction/Browse.vue",
 		0,
 		1,
 		4,
-		32
+		32,
+		43
 	],
 	"./Faction/Edit": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -60275,7 +60290,7 @@ var map = {
 		33,
 		1,
 		3,
-		38
+		21
 	],
 	"./Faction/Edit.vue": [
 		"./resources/views/pages/Faction/Edit.vue",
@@ -60284,7 +60299,7 @@ var map = {
 		33,
 		1,
 		3,
-		38
+		21
 	],
 	"./Faction/Read": [
 		"./resources/views/pages/Faction/Read.vue",
@@ -60331,14 +60346,16 @@ var map = {
 		0,
 		1,
 		4,
-		35
+		35,
+		44
 	],
 	"./Location/Browse.vue": [
 		"./resources/views/pages/Location/Browse.vue",
 		0,
 		1,
 		4,
-		35
+		35,
+		44
 	],
 	"./Location/Edit": [
 		"./resources/views/pages/Location/Edit.vue",

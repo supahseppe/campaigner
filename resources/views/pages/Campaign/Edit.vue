@@ -121,11 +121,7 @@
                                         </p>
                                     </div>
                                     <div class="w-full flex">
-                                        <btn
-                                            class="ml-auto"
-                                            color="gray"
-                                            @click.stop.prevent=""
-                                        >
+                                        <btn class="ml-auto" color="gray">
                                             View Profile
                                         </btn>
                                     </div>
@@ -229,7 +225,14 @@
                                         <btn
                                             class="ml-auto"
                                             color="gray"
-                                            @click.stop.prevent=""
+                                            @click.stop.prevent="
+                                                getModal({
+                                                    model: 'faction',
+                                                    method: 'show',
+                                                    slug: faction.slug,
+                                                    view: 'faction.read',
+                                                })
+                                            "
                                         >
                                             View
                                         </btn>
@@ -243,6 +246,9 @@
                                     </div>
                                 </div>
                             </panel>
+                            <portal v-if="takeover" to="right-panel">
+                                <quick-access :view="takeover.view" />
+                            </portal>
                         </div>
                     </div>
                     <div class="mt-6 sm:mt-5">
@@ -344,8 +350,14 @@
                 </div>
             </div>
             <div class="mt-6 border-t border-gray-200 pt-5">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <btn wide type="button" color="gray" @click.stop.prevent="">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                    <btn
+                        wide
+                        type="button"
+                        color="gray"
+                        class="xl:col-start-2"
+                        @click.stop.prevent=""
+                    >
                         Cancel
                     </btn>
                     <btn wide type="submit" @click.stop.prevent="">
@@ -354,14 +366,6 @@
                 </div>
             </div>
         </form>
-        <portal to="right-panel" v-if="takeover">
-            <quick-access>
-                <p>
-                    This slot content will be rendered wherever the "portal-target" with name
-                    'right-panel' is located.
-                </p>
-            </quick-access>
-        </portal>
     </section>
 </template>
 
@@ -478,6 +482,18 @@
                     const index = key - 1;
                     array.splice(index, 1);
                 }
+            },
+            getModal(params) {
+                this.$inertia.post(
+                    this.route('modal').url(),
+                    { action: 'open', ...params },
+                    {
+                        replace: false,
+                        preserveState: true,
+                        preserveScroll: true,
+                        only: ['takeover'],
+                    }
+                );
             },
         },
         layout: MainLayout,

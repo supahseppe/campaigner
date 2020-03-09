@@ -52,3 +52,5 @@ Route::resource('tasks', 'TaskController');
 
 Route::get('/about', 'PageController@serve')->name('page.about');
 Route::get('/contact', 'PageController@serve')->name('page.contact');
+
+Route::post('/modal', 'ModalController@handle')->name('modal');

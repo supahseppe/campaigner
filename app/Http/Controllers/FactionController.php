@@ -64,7 +64,7 @@ class FactionController extends Controller
      * @param  \App\Faction $faction
      * @return \Inertia\Response
      */
-    public function show(Faction $faction)
+    public function show(Request $request, Faction $faction)
     {
         return Inertia::render('Faction/Read', [
             'faction' => $faction

@@ -36,7 +36,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            'defaultCampaign' => \App\Http\Middleware\CheckDefaultCampaign::class,
+            \App\Http\Middleware\CheckDefaultCampaign::class,
+            \App\Http\Middleware\InterceptModalRequests::class,
         ],
 
         'api' => [
