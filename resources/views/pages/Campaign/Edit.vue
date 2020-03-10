@@ -230,7 +230,6 @@
                                                     model: 'faction',
                                                     method: 'show',
                                                     slug: faction.slug,
-                                                    view: 'faction.read',
                                                 })
                                             "
                                         >
@@ -245,10 +244,17 @@
                                         </btn>
                                     </div>
                                 </div>
+                                <portal
+                                    v-if="
+                                        takeover &&
+                                            takeover[faction.slug] &&
+                                            takeoverVisible
+                                    "
+                                    to="right-panel"
+                                >
+                                    <quick-access :modal-key="faction.slug" />
+                                </portal>
                             </panel>
-                            <portal v-if="takeover" to="right-panel">
-                                <quick-access :view="takeover.view" />
-                            </portal>
                         </div>
                     </div>
                     <div class="mt-6 sm:mt-5">
@@ -427,7 +433,16 @@
         },
         computed: {
             takeover() {
-                return this.$page.takeover;
+                if (this.$page.takeover) {
+                    return this.$page.takeover;
+                }
+                return null;
+            },
+            takeoverVisible() {
+                if (!this.takeover) {
+                    return false;
+                }
+                return !!Object.keys(this.$page.takeover).length;
             },
             syncedPageTitle: sync('pageTitle'),
         },
@@ -491,7 +506,6 @@
                         replace: false,
                         preserveState: true,
                         preserveScroll: true,
-                        only: ['takeover'],
                     }
                 );
             },

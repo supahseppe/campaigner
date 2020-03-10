@@ -65,11 +65,7 @@ class InertiaJsServiceProvider extends ServiceProvider
                 ];
             },
             'takeover' => function () {
-                if (Session::has('takeover')) {
-                    return json_decode(Session::get('takeover'));
-                }
-
-                return null;
+                return Session::get('takeover');
             },
         ]);
     }

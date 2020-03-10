@@ -13,9 +13,12 @@ class ModalController extends Controller
     {
         $action = $request->get('action');
         if ($action == 'open') {
-            $request->headers->set('X-Modal-Request', 'true');
-
             $model_name = $request->get('model');
+
+            $request->headers->set('X-Modal-Request', 'true');
+            $request->headers->set('X-Modal-Key', $request->get('slug'));
+            $request->headers->set('X-Modal-Model', $model_name);
+
             $model_stud =  Str::studly($model_name);
             $qualified = "\\App\\$model_stud";
             $model = $qualified::findBySlug($request->get('slug'));

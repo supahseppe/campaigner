@@ -59,9 +59,13 @@
             'task.add': AddTask,
         },
         props: {
-            view: {
+            modalKey: {
                 type: String,
                 default: null,
+            },
+            side: {
+                type: String,
+                default: 'right',
             },
         },
         data() {
@@ -69,23 +73,52 @@
         },
         computed: {
             containerClasses() {
-                let base = [
-                    'bg-white shadow',
-                    'p-6',
-                    'absolute',
-                    'right-0',
-                    'inset-y-0',
-                    'w-percent-80',
-                    'md:w-percent-70',
-                    'xxl:w-percent-60',
-                ];
+                let base = ['bg-white shadow', 'p-6', 'absolute'];
+
+                let sides = this.sideClasses();
 
                 return base;
             },
+            sideClasses() {
+                switch (this.side) {
+                    case 'right':
+                        return [
+                            'right-0',
+                            'inset-y-0',
+                            'w-percent-80',
+                            'md:w-percent-70',
+                            'xxl:w-percent-60',
+                        ];
+                    case 'left':
+                        return [
+                            'left-0',
+                            'inset-y-0',
+                            'w-percent-80',
+                            'md:w-percent-70',
+                            'xxl:w-percent-60',
+                        ];
+                    case 'bottom':
+                        return ['bottom-0', 'inset-x-0', 'h-percent-70'];
+                }
+            },
+            width() {
+                let multiplier = null;
+                return 0;
+            },
+            takeover() {
+                return this.$page.takeover[this.modalKey];
+            },
+            view() {
+                if (this.takeover) {
+                    return this.takeover.view;
+                }
+                return null;
+            },
             componentProps() {
-                const name = this.$page.takeover.model;
-                const model = this.$page.takeover[name];
-                return { [name]: JSON.parse(model) };
+                if (this.takeover) {
+                    return this.takeover.props;
+                }
+                return null;
             },
         },
         watch: {},
