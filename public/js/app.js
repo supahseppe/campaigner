@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"f6c51f1edc02091eb1f9","1":"df06b5a182810c8a61e4","2":"58669869e97dda72156d","3":"c293d3bfeaa281a3346f","4":"de95bddf4ba507190435","5":"c1a77cff6ebbfa7ab1ed","6":"f310cbbc4d9d30ea3f59","7":"15055eabd2d5d036225e","8":"25b2b80922f989618d5d","9":"0c73f36d4f2a1850b03f","10":"27c865a5dd41d20b7ab5","11":"010d4e454ce6cb7ef13d","12":"e8b9e2cf2f3a24643332","13":"8c7b2c021a4e62bf5d9a","14":"2a5f6c5ae6a4d93fc3cc","15":"0f8477c525a2e7fb87cb","16":"244280923f0aa1589b6b","17":"70cd151fd59d1460afb9","18":"c3cbbbdf395dde0f34ca","19":"0f2826cb64f838f94183","20":"f0d499e7ae08628fa3a3","21":"72f8351ffffa4d9ccef5","22":"0ee467f0e12965b28c74","23":"0398b7c3335b191dfb10","24":"5ead53c7963bc5bb0fd3","25":"a4ba624449750d44884e","26":"ff6a72e50296cca050db","27":"a533dcac2ff22951aeca","28":"5f59b99278125a44ce66","29":"8a84a3a46400a239f6f4","30":"6bea39f3ee7111efa7c3","31":"4af7b6f81e3aa71ea34f","32":"7c7583693347a81fd49d","33":"582670bc892178917496","34":"d34b58f3317a6c017e64","35":"b90d02399222eb59235b","36":"a1dc8baa99bd3a4d4a0e","37":"c7dca6945aa5415258e0","38":"3835b4637906966e7f7d","39":"328b6c7dcf1da0a74ad3","40":"05b36ac381dc637776e1","42":"713616bbbbd98af31b1d","43":"8cca8b5f89b13d8c49e4","44":"06819ed5fad9820687d7","45":"67e88fa500557faef7ba","46":"811737b62fe0d52b9534","47":"f1754882b697d7d679f6","48":"18142c94d5400c8f7094","49":"c894c398b3f0fdb4a123","50":"9dc8934acd23314499a3","51":"4c33f8cb652df8999a63","52":"86701411a46ddaed2dfb","53":"b29ad29ecc31e9279d9c","54":"9875a8eceb53962d3991","55":"04160e222607cce0546c","56":"b061c309fa56c3975cf5","57":"2ea99582eeae35292aae","58":"19cc8f0443e058774f83","59":"33c3606f91e34bd4cbc3","60":"e3ec966b4aafb8572a34"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/parts/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"13b921b934dbbe316fab","1":"df06b5a182810c8a61e4","2":"58669869e97dda72156d","3":"c293d3bfeaa281a3346f","4":"de95bddf4ba507190435","5":"c1a77cff6ebbfa7ab1ed","6":"f310cbbc4d9d30ea3f59","7":"15055eabd2d5d036225e","8":"25b2b80922f989618d5d","9":"0c73f36d4f2a1850b03f","10":"27c865a5dd41d20b7ab5","11":"010d4e454ce6cb7ef13d","12":"e8b9e2cf2f3a24643332","13":"8c7b2c021a4e62bf5d9a","14":"2a5f6c5ae6a4d93fc3cc","15":"0f8477c525a2e7fb87cb","16":"244280923f0aa1589b6b","17":"70cd151fd59d1460afb9","18":"c3cbbbdf395dde0f34ca","19":"0f2826cb64f838f94183","20":"f0d499e7ae08628fa3a3","21":"72f8351ffffa4d9ccef5","22":"0ee467f0e12965b28c74","23":"0398b7c3335b191dfb10","24":"5ead53c7963bc5bb0fd3","25":"a4ba624449750d44884e","26":"ff6a72e50296cca050db","27":"a533dcac2ff22951aeca","28":"5f59b99278125a44ce66","29":"8a84a3a46400a239f6f4","30":"86586db82d6989a980bf","31":"4af7b6f81e3aa71ea34f","32":"7c7583693347a81fd49d","33":"582670bc892178917496","34":"d34b58f3317a6c017e64","35":"b90d02399222eb59235b","36":"a1dc8baa99bd3a4d4a0e","37":"c7dca6945aa5415258e0","38":"3835b4637906966e7f7d","39":"328b6c7dcf1da0a74ad3","40":"05b36ac381dc637776e1","42":"713616bbbbd98af31b1d","43":"8cca8b5f89b13d8c49e4","44":"06819ed5fad9820687d7","45":"67e88fa500557faef7ba","46":"811737b62fe0d52b9534","47":"f1754882b697d7d679f6","48":"18142c94d5400c8f7094","49":"c894c398b3f0fdb4a123","50":"9dc8934acd23314499a3","51":"4c33f8cb652df8999a63","52":"86701411a46ddaed2dfb","53":"b29ad29ecc31e9279d9c","54":"9875a8eceb53962d3991","55":"04160e222607cce0546c","56":"b061c309fa56c3975cf5","57":"2ea99582eeae35292aae","58":"19cc8f0443e058774f83","59":"44ff43a93629b93c19cb","60":"e3ec966b4aafb8572a34"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -40889,6 +40889,10 @@ const defaultOptions = {
   componentPrefix: 'c-',
 };
 
+const prefixNegativeModifiers = function(base, modifier) {
+  return _.startsWith(modifier, '-') ? `-${base}-${modifier.slice(1)}` : `${base}-${modifier}`;
+};
+
 const camelCaseToKebabCase = function(string) {
   return string
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
@@ -40903,7 +40907,7 @@ module.exports = plugin.withOptions(function(options = {}) {
     const textIndentUtilities = _.fromPairs(
       _.map(theme('textIndent'), (value, modifier) => {
         return [
-          `.${e(`indent-${modifier}`)}`,
+          `.${e(prefixNegativeModifiers('indent', modifier))}`,
           {
             textIndent: value,
           },
@@ -43711,7 +43715,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! deepmerge */ "./node_modules/vue-meta/node_modules/deepmerge/dist/cjs.js");
 /* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_0__);
 /**
- * vue-meta v2.3.2
+ * vue-meta v2.3.3
  * (c) 2020
  * - Declan de Wet
  * - Sébastien Chopin (@Atinux)
@@ -43722,9 +43726,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var version = "2.3.2";
+var version = "2.3.3";
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -43928,7 +43934,7 @@ var tagsWithoutEndTag = ['base', 'meta', 'link']; // HTML elements which can hav
 var tagsWithInnerContent = ['noscript', 'script', 'style']; // Attributes which are inserted as childNodes instead of HTMLAttribute
 
 var tagAttributeAsInnerContent = ['innerHTML', 'cssText', 'json'];
-var tagProperties = ['once', 'template']; // Attributes which should be added with data- prefix
+var tagProperties = ['once', 'skip', 'template']; // Attributes which should be added with data- prefix
 
 var commonDataAttributes = ['body', 'pbody']; // from: https://github.com/kangax/html-minifier/blob/gh-pages/src/htmlminifier.js#L202
 
@@ -44033,22 +44039,6 @@ function includes(array, value) {
   return array.includes(value);
 }
 
-function ensureIsArray(arg, key) {
-  if (!key || !isObject(arg)) {
-    return isArray(arg) ? arg : [];
-  }
-
-  if (!isArray(arg[key])) {
-    arg[key] = [];
-  }
-
-  return arg;
-}
-function ensuredPush(object, key, el) {
-  ensureIsArray(object, key);
-  object[key].push(el);
-}
-
 function hasMetaInfo(vm) {
   vm = vm || this;
   return vm && (vm[rootConfigKey] === true || isObject(vm[rootConfigKey]));
@@ -44105,6 +44095,8 @@ function createMixin(Vue, options) {
 
   return {
     beforeCreate: function beforeCreate() {
+      var _this2 = this;
+
       var rootKey = '$root';
       var $root = this[rootKey];
       var $options = this.$options;
@@ -44174,7 +44166,7 @@ function createMixin(Vue, options) {
           // if computed $metaInfo exists, watch it for updates & trigger a refresh
           // when it changes (i.e. automatically handle async actions that affect metaInfo)
           // credit for this suggestion goes to [Sébastien Chopin](https://github.com/Atinux)
-          ensuredPush($options, 'created', function () {
+          this.$on('hook:created', function () {
             this.$watch('$metaInfo', function () {
               triggerUpdate(options, this[rootKey], 'watcher');
             });
@@ -44192,7 +44184,7 @@ function createMixin(Vue, options) {
         if (!$root[rootConfigKey].initialized) {
           if (!$root[rootConfigKey].initializedSsr) {
             $root[rootConfigKey].initializedSsr = true;
-            ensuredPush($options, 'beforeMount', function () {
+            this.$on('hook:beforeMount', function () {
               var $root = this; // if this Vue-app was server rendered, set the appId to 'ssr'
               // only one SSR app per page is supported
 
@@ -44203,7 +44195,7 @@ function createMixin(Vue, options) {
           } // we use the mounted hook here as on page load
 
 
-          ensuredPush($options, 'mounted', function () {
+          this.$on('hook:mounted', function () {
             var $root = this[rootKey];
 
             if (!$root[rootConfigKey].initialized) {
@@ -44243,8 +44235,38 @@ function createMixin(Vue, options) {
             addNavGuards($root);
           }
         }
-      } // do not trigger refresh on the server side
+      }
 
+      this.$on('hook:destroyed', function () {
+        var _this = this;
+
+        // do not trigger refresh:
+        // - when user configured to not wait for transitions on destroyed
+        // - when the component doesnt have a parent
+        // - doesnt have metaInfo defined
+        if (!this.$parent || !hasMetaInfo(this)) {
+          return;
+        }
+
+        delete this._hasMetaInfo;
+        this.$nextTick(function () {
+          if (!options.waitOnDestroyed || !_this.$el || !_this.$el.offsetParent) {
+            triggerUpdate(options, _this.$root, 'destroyed');
+            return;
+          } // Wait that element is hidden before refreshing meta tags (to support animations)
+
+
+          var interval = setInterval(function () {
+            if (_this.$el && _this.$el.offsetParent !== null) {
+              /* istanbul ignore next line */
+              return;
+            }
+
+            clearInterval(interval);
+            triggerUpdate(options, _this.$root, 'destroyed');
+          }, 50);
+        });
+      }); // do not trigger refresh on the server side
 
       if (this.$isServer) {
         /* istanbul ignore next */
@@ -44253,40 +44275,9 @@ function createMixin(Vue, options) {
 
 
       updateOnLifecycleHook.forEach(function (lifecycleHook) {
-        ensuredPush($options, lifecycleHook, function () {
+        _this2.$on("hook:".concat(lifecycleHook), function () {
           triggerUpdate(options, this[rootKey], lifecycleHook);
         });
-      });
-    },
-    // TODO: move back into beforeCreate when Vue issue is resolved
-    destroyed: function destroyed() {
-      var _this = this;
-
-      // do not trigger refresh:
-      // - when user configured to not wait for transitions on destroyed
-      // - when the component doesnt have a parent
-      // - doesnt have metaInfo defined
-      if (!this.$parent || !hasMetaInfo(this)) {
-        return;
-      }
-
-      delete this._hasMetaInfo;
-      this.$nextTick(function () {
-        if (!options.waitOnDestroyed || !_this.$el || !_this.$el.offsetParent) {
-          triggerUpdate(options, _this.$root, 'destroyed');
-          return;
-        } // Wait that element is hidden before refreshing meta tags (to support animations)
-
-
-        var interval = setInterval(function () {
-          if (_this.$el && _this.$el.offsetParent !== null) {
-            /* istanbul ignore next line */
-            return;
-          }
-
-          clearInterval(interval);
-          triggerUpdate(options, _this.$root, 'destroyed');
-        }, 50);
       });
     }
   };
@@ -44323,6 +44314,18 @@ function getOptions(options) {
   }
 
   return optionsCopy;
+}
+
+function ensureIsArray(arg, key) {
+  if (!key || !isObject(arg)) {
+    return isArray(arg) ? arg : [];
+  }
+
+  if (!isArray(arg[key])) {
+    arg[key] = [];
+  }
+
+  return arg;
 }
 
 var serverSequences = [[/&/g, '&amp;'], [/</g, '&lt;'], [/>/g, '&gt;'], [/"/g, '&quot;'], [/'/g, '&#x27;']];
@@ -44904,7 +44907,11 @@ function updateTag(appId, options, type, tags, head, body) {
     }
 
     var newElement = document.createElement(type);
-    newElement.setAttribute(attribute, appId);
+
+    if (!tag.once) {
+      newElement.setAttribute(attribute, appId);
+    }
+
     Object.keys(tag).forEach(function (attr) {
       /* istanbul ignore next */
       if (includes(tagProperties, attr)) {
@@ -58275,8 +58282,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
 /**
- * vuex v3.1.2
- * (c) 2019 Evan You
+ * vuex v3.1.3
+ * (c) 2020 Evan You
  * @license MIT
  */
 function applyMixin (Vue) {
@@ -58668,7 +58675,10 @@ Store.prototype.commit = function commit (_type, _payload, _options) {
       handler(payload);
     });
   });
-  this._subscribers.forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
 
   if (
      true &&
@@ -58700,6 +58710,7 @@ Store.prototype.dispatch = function dispatch (_type, _payload) {
 
   try {
     this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
       .filter(function (sub) { return sub.before; })
       .forEach(function (sub) { return sub.before(action, this$1.state); });
   } catch (e) {
@@ -59068,9 +59079,7 @@ function enableStrictMode (store) {
 }
 
 function getNestedState (state, path) {
-  return path.length
-    ? path.reduce(function (state, key) { return state[key]; }, state)
-    : state
+  return path.reduce(function (state, key) { return state[key]; }, state)
 }
 
 function unifyObjectStyle (type, payload, options) {
@@ -59313,7 +59322,7 @@ function getModuleByNamespace (store, helper, namespace) {
 var index_esm = {
   Store: Store,
   install: install,
-  version: '3.1.2',
+  version: '3.1.3',
   mapState: mapState,
   mapMutations: mapMutations,
   mapGetters: mapGetters,
