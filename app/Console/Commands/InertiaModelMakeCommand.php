@@ -185,7 +185,7 @@ class InertiaModelMakeCommand extends ModelMakeCommand
      */
     protected function createVueComponents($input, $name)
     {
-        $stubs = $this->files->allFiles(base_path() . '/resources/stubs/vue/pages');
+        $stubs = $this->files->allFiles(base_path() . '/stubs/vue/pages');
 
         foreach ($stubs as $stub) {
             $path = base_path() . '/resources/views/pages/' . $input . '/' . $stub->getFilename();
@@ -208,6 +208,6 @@ class InertiaModelMakeCommand extends ModelMakeCommand
      */
     protected function getStub()
     {
-        return base_path() . '/resources/stubs/model.stub';
+        return base_path() . '/stubs/model.stub';
     }
 }

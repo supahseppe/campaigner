@@ -102,7 +102,7 @@ class InertiaPageMakeCommand extends Command
         $input = trim($this->argument('name'));
         $params = $this->getParams($input);
 
-        $file = $this->files->get(base_path() . '/resources/stubs/vue/Page.vue');
+        $file = $this->files->get(base_path() . '/stubs/vue/Page.vue');
         $path = base_path() . '/resources/views/pages/' . $params['path'] . '.vue';
 
         $corrected_file = $this->replaceDummy($file, $params['name']);

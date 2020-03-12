@@ -1,5 +1,8 @@
 <template>
     <section class="h-screen container">
+        <trashed-message v-if="dummy.deleted_at" class="mb-6" @restore="restore">
+            This dummy has been deleted.
+        </trashed-message>
         <form
             class="w-full p-4 bg-white rounded md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
             @submit.prevent="submit"
@@ -14,12 +17,21 @@
                     required
                     autofocus
                 />
-                <div class="w-full">
+                <div class="w-full mb-6">
                     <wysiwyg v-model="form.description" label="Description" />
                 </div>
             </div>
 
-            <div class="flex flex-wrap items-center">
+            <div class="flex flex-wrap items-center justify-between">
+                <button
+                    v-if="!dummy.deleted_at"
+                    class="text-red-600 hover:underline"
+                    tabindex="-1"
+                    type="button"
+                    @click="destroy"
+                >
+                    Delete Dummy
+                </button>
                 <loading-button
                     :loading="sending"
                     type="submit"
@@ -34,27 +46,34 @@
 
 <script>
     import MainLayout from '_Layouts/MainLayout';
-    import TextInput from '_Components/inputs/TextInput';
+    import TextInput from '_Inputs/TextInput';
     import LoadingButton from '_Components/LoadingButton';
-    import Wysiwyg from '_Components/inputs/Wysiwyg';
+    import TrashedMessage from '_Components/TrashedMessage';
+    import Wysiwyg from '_Inputs/Wysiwyg';
     import { sync } from 'vuex-pathify';
 
     export default {
-        name: 'Create',
+        name: 'Edit',
         components: {
+            TextInput,
+            LoadingButton,
+            TrashedMessage,
             Wysiwyg,
-            'text-input': TextInput,
-            'loading-button': LoadingButton,
         },
-        props: {},
+        props: {
+            dummy: {
+                type: Object,
+                default: () => {},
+            },
+        },
         data() {
             return {
-                pageTitle: 'Adding new dummy',
-                pageDescription: 'Adding a new dummy',
+                pageTitle: `Editing ${this.dummy.name}`,
+                pageDescription: 'Updating a dummy.',
                 sending: false,
                 form: {
-                    title: null,
-                    description: null,
+                    title: this.dummy.name,
+                    description: this.dummy.description,
                 },
             };
         },
@@ -68,9 +87,20 @@
         },
         methods: {
             submit() {
-                const url = this.route('dummies.store');
                 this.sending = true;
-                this.$inertia.post(url, this.form).then(() => (this.sending = false));
+                this.$inertia
+                    .patch(this.route('dummies.update', this.dummy.slug), this.form)
+                    .then(() => (this.sending = false));
+            },
+            destroy() {
+                if (confirm('Are you sure you want to delete this dummy?')) {
+                    this.$inertia.delete(this.route('dummies.destroy', this.dummy.slug));
+                }
+            },
+            restore() {
+                if (confirm('Are you sure you want to restore this dummy?')) {
+                    this.$inertia.put(this.route('dummies.restore', this.dummy.slug));
+                }
             },
         },
         layout: MainLayout,

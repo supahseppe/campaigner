@@ -24,9 +24,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  */
 
 Route::name('autocomplete.')->prefix('autocomplete')->group(function () {
-    Route::get('/user', 'UserController@autocomplete')->name('autocomplete');
-    Route::get('/campaign', 'CampaignController@autocomplete')->name('autocomplete');
-    Route::get('/faction', 'FactionController@autocomplete')->name('autocomplete');
-    Route::get('/location', 'LocationController@autocomplete')->name('autocomplete');
+    Route::get('/related', 'AutoCompleteController@serve')->name('related');
+    Route::get('/user', 'UserController@autocomplete')->name('user');
+    Route::get('/campaign', 'CampaignController@autocomplete')->name('campaign');
+    Route::get('/faction', 'FactionController@autocomplete')->name('faction');
+    Route::get('/location', 'LocationController@autocomplete')->name('location');
 });
 

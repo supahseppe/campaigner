@@ -70,7 +70,7 @@ var EditCampaign = function EditCampaign() {
 };
 
 var EditCharacter = function EditCharacter() {
-  return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! _Pages/Character/Edit */ "./resources/views/pages/Character/Edit.vue"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! _Pages/Character/Edit */ "./resources/views/pages/Character/Edit.vue"));
 };
 
 var EditFaction = function EditFaction() {

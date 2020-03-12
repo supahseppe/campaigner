@@ -79,7 +79,7 @@ class ManyToManyMigrationCreate extends Command
         $names[] = Str::lower(trim($this->argument('second')));
         sort($names);
 
-        $file = $this->files->get(base_path() . '/resources/stubs/migration.create.many-to-many.stub');
+        $file = $this->files->get(base_path() . '/stubs/migration.create.many-to-many.stub');
         $time = Carbon::now();
         $time_formatted = $time->format('Y_m_d_his');
         $path = base_path() . '/database/migrations/' . $time_formatted . '_create_' . $names[0] . '_' . $names[1] . '_table.php';

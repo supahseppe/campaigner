@@ -76,6 +76,8 @@
         "webpack-cli": "^3.3.11"
     },
     "dependencies": {
-        "prosemirror-tables": "^1.0.0"
+        "fuse.js": "^4.0.4-beta",
+        "prosemirror-tables": "^1.0.0",
+        "tippy.js": "^6.0.3"
     }
 }

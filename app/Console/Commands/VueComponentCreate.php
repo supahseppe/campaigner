@@ -85,7 +85,7 @@ class VueComponentCreate extends Command
         $input = trim($this->argument('name'));
         $params = $this->getParams($input);
 
-        $file = $this->files->get(base_path() . '/resources/stubs/vue/Component.vue');
+        $file = $this->files->get(base_path() . '/stubs/vue/Component.vue');
         $path = base_path() . '/resources/js/components/' . $params['path'] . '.vue';
 
         $corrected_file = $this->replaceDummy($file, $params['name']);
