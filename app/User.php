@@ -6,7 +6,6 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Spatie\WelcomeNotification\ReceivesWelcomeNotification;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable

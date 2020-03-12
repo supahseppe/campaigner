@@ -7,11 +7,10 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
 
         <script src="{{ mix('js/app.js') }}" defer></script>
 
-        @preload
         @routes
     </head>
     <body>

@@ -1,14 +1,21 @@
 <template>
-    <div></div>
+    <container>
+        <h1
+            class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:leading-9 sm:truncate"
+        >
+            Contact Us
+        </h1>
+    </container>
 </template>
 
 <script>
     import { sync } from 'vuex-pathify';
-    import MainLayout from '_Layouts/MainLayout';
+    import MarketingLayout from '_Layouts/MarketingLayout';
+    import Container from '_Layouts/Container';
 
     export default {
         name: 'ContactPage',
-        components: {},
+        components: { Container },
         props: {},
         data() {
             return {
@@ -25,7 +32,7 @@
             this.syncedPageTitle = this.pageTitle;
         },
         methods: {},
-        layout: MainLayout,
+        layout: MarketingLayout,
         metaInfo() {
             return {
                 title: this.pageTitle,
